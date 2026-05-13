@@ -57,15 +57,18 @@ def _main_run_tab(canonical: dict) -> None:
         st.caption(f"Normal paused at: {prog['normal_paused_at']}")
 
     st.divider()
-    st.caption("Batch size is locked to 1.")
+    batch_size = st.number_input("Batch size", min_value=1, max_value=20, value=1, step=1)
+    st.warning("Runs stop automatically on first save/push/validation failure.")
     if st.button("Run next model", type="primary"):
         with st.spinner("Running next model..."):
-            result = run_next_model()
+            result = run_next_model(batch_size=int(batch_size))
+        processed = result.get("processed_count", 0)
         if result.get("ok"):
-            st.success(f"Resolved seed `{result['seed_id']}` "
-                       f"(added={result.get('added_count')}, merged={result.get('merged_count')})")
+            st.success(f"Batch completed: processed {processed} seed(s).")
         else:
-            st.error(f"Run failed: {result.get('error')}")
+            st.error(f"Run stopped: {result.get('stop_reason') or 'unknown error'}")
+            if result.get("stop_reason") and "ahead of GitHub" in result["stop_reason"]:
+                st.warning(result["stop_reason"])
         st.json(result)
 
 

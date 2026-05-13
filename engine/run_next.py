@@ -15,7 +15,6 @@ Critical rules:
 from __future__ import annotations
 
 import copy
-import json
 from datetime import datetime, timezone
 from typing import Any, Callable
 
@@ -31,6 +30,123 @@ from engine.merge_variants import merge_variants
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _problem_progress(summary: dict) -> dict:
+    return summary.get("problem_queue_progress") or {}
+
+
+def _state_snapshot(canonical: dict) -> dict:
+    summary = queue.summarize_state(canonical)
+    progress = _problem_progress(summary)
+    needs_retry_seed_ids = list((canonical.get("batch_state") or {}).get("needs_retry_seed_ids") or [])
+    return {
+        "mode": summary["mode"],
+        "selected_seed_id": summary["selected_seed_id"],
+        "next_seed_id": summary["next_seed_id"],
+        "last_completed_seed_id": summary["last_completed_seed_id"],
+        "variants": summary["variants_count"],
+        "processed": summary["processed_seed_count"],
+        "needs_retry": summary["needs_retry_count"],
+        "progress": progress.get("current_position"),
+        "problem_total": progress.get("total"),
+        "problem_completed": progress.get("completed"),
+        "problem_pending": progress.get("pending"),
+        "needs_retry_seed_ids": needs_retry_seed_ids,
+    }
+
+
+def _result_progress(snapshot: dict) -> str | None:
+    return snapshot.get("progress")
+
+
+def _build_seed_result(seed_id: str, *, ok: bool, before: dict, after: dict,
+                       run_result: dict) -> dict:
+    return {
+        "seed_id": seed_id,
+        "ok": ok,
+        "added_count": run_result.get("added_count", 0),
+        "merged_count": run_result.get("merged_count", 0),
+        "save_ok": bool((run_result.get("save") or {}).get("ok")),
+        "push_ok": bool((run_result.get("push") or {}).get("ok")),
+        "variants_before": before["variants"],
+        "variants_after": after["variants"],
+        "needs_retry_before": before["needs_retry"],
+        "needs_retry_after": after["needs_retry"],
+        "progress_before": _result_progress(before),
+        "progress_after": _result_progress(after),
+    }
+
+
+def _final_state_from_canonical(canonical: dict | None) -> dict | None:
+    if canonical is None:
+        return None
+    summary = queue.summarize_state(canonical)
+    progress = _problem_progress(summary)
+    return {
+        "variants": summary["variants_count"],
+        "processed": summary["processed_seed_count"],
+        "needs_retry": summary["needs_retry_count"],
+        "completed": progress.get("completed"),
+        "pending": progress.get("pending"),
+        "position": progress.get("current_position"),
+        "selected_next_seed": summary["selected_seed_id"],
+        "normal_next_seed_id": summary["next_seed_id"],
+        "normal_last_completed_seed_id": summary["last_completed_seed_id"],
+    }
+
+
+def _reload_canonical_checked() -> tuple[dict | None, str | None]:
+    try:
+        canonical = load_canonical()
+    except Exception as exc:
+        return None, f"canonical reload failed: {exc}"
+    ok, errs = validate_canonical(canonical)
+    if not ok:
+        return canonical, f"canonical reload validation failed: {errs}"
+    return canonical, None
+
+
+def _expected_progress_position(*, total: int | None, completed: int | None,
+                                pending: int | None) -> str | None:
+    if total is None or completed is None or pending is None:
+        return None
+    if pending > 0:
+        return f"{completed + 1} / {total}"
+    return f"{total} / {total}"
+
+
+def _validate_successful_transition(before: dict, after: dict) -> list[str]:
+    errors: list[str] = []
+    if after["variants"] < before["variants"]:
+        errors.append("variants count decreased")
+    if before["mode"] == "problem_queue":
+        if after["needs_retry"] >= before["needs_retry"]:
+            errors.append("needs_retry count did not decrease after a successful problem_queue seed")
+        if before["next_seed_id"] != after["next_seed_id"]:
+            errors.append("normal next_seed_id changed while needs_retry is not empty")
+        if before["last_completed_seed_id"] != after["last_completed_seed_id"]:
+            errors.append("normal last_completed_seed_id changed while needs_retry is not empty")
+        if after["problem_total"] != before["problem_total"]:
+            errors.append("problem queue total changed")
+        if after["problem_completed"] != (before["problem_completed"] + 1):
+            errors.append("problem queue completed count did not advance correctly")
+        if after["problem_pending"] != (before["problem_pending"] - 1):
+            errors.append("problem queue pending count did not advance correctly")
+        expected_position = _expected_progress_position(
+            total=after["problem_total"],
+            completed=after["problem_completed"],
+            pending=after["problem_pending"],
+        )
+        if after["progress"] != expected_position:
+            errors.append("progress did not advance correctly")
+        if after["needs_retry"] > 0:
+            expected_selected = (after["needs_retry_seed_ids"] or [None])[0]
+            if after["selected_seed_id"] != expected_selected:
+                errors.append("selected next seed is not needs_retry_seed_ids[0]")
+            if after["selected_seed_id"] == after["next_seed_id"]:
+                errors.append("selected seed became normal next_seed_id while needs_retry is not empty")
+    return errors
 
 
 def _has_dedupe_or_no_variants_proof(seed_id: str, dedupe_proof: list[dict],
@@ -153,10 +269,14 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
             push_result = {"ok": False, "error": "push returned non-dict"}
 
     overall_ok = bool(save_result.get("ok")) and bool(push_result.get("ok", True))
+    warning = None
+    if save_result.get("ok") and not bool(push_result.get("ok", True)):
+        warning = "Push failed after local save; local canonical is ahead of GitHub."
     return {
         "ok": overall_ok,
         "save": save_result,
         "push": push_result,
+        "warning": warning,
         "error": (None if overall_ok else (push_result.get("error") or save_result.get("error"))),
     }
 
@@ -235,9 +355,10 @@ def run_selected_seed(seed_id: str, *,
             "ok": False,
             "seed_id": seed_id,
             "mode": mode,
-            "error": save_push.get("error"),
+            "error": save_push.get("warning") or save_push.get("error"),
             "save": save_push.get("save"),
             "push": save_push.get("push"),
+            "warning": save_push.get("warning"),
             "added_count": merge_res["added_count"],
             "merged_count": merge_res["merged_count"],
         }
@@ -252,17 +373,101 @@ def run_selected_seed(seed_id: str, *,
         "no_variants_reason": no_variants_reason,
         "save": save_push.get("save"),
         "push": save_push.get("push"),
+        "warning": save_push.get("warning"),
         "error": None,
     }
 
 
 def run_next_model(*, run_seed_fn: Callable | None = None,
+                   batch_size: int = 1,
                    push_fn: Callable | None = None,
                    retry_hint: bool = False) -> dict:
-    """Run whichever seed the queue picks next."""
-    canonical = load_canonical()
-    selection = queue.select_next_seed(canonical)
-    seed_id = selection.get("selected_seed_id")
-    if not seed_id:
-        return {"ok": False, "error": "no seed available", "mode": selection.get("mode")}
-    return run_selected_seed(seed_id, run_seed_fn=run_seed_fn, push_fn=push_fn, retry_hint=retry_hint)
+    """Run up to ``batch_size`` seeds sequentially."""
+    try:
+        requested_batch_size = int(batch_size)
+    except (TypeError, ValueError):
+        requested_batch_size = 0
+    if requested_batch_size < 1 or requested_batch_size > 20:
+        return {
+            "ok": False,
+            "requested_batch_size": batch_size,
+            "processed_count": 0,
+            "stopped_early": True,
+            "stop_reason": "batch_size must be between 1 and 20",
+            "results": [],
+            "final_state": _final_state_from_canonical(load_canonical()),
+        }
+
+    results: list[dict] = []
+    stop_reason: str | None = None
+
+    for _ in range(requested_batch_size):
+        canonical_before = load_canonical()
+        before = _state_snapshot(canonical_before)
+        seed_id = before.get("selected_seed_id")
+        if not seed_id:
+            break
+
+        run_result = run_selected_seed(
+            seed_id,
+            run_seed_fn=run_seed_fn,
+            push_fn=push_fn,
+            retry_hint=retry_hint,
+        )
+        canonical_after, reload_error = _reload_canonical_checked()
+        after = _state_snapshot(canonical_after or canonical_before)
+        seed_result = _build_seed_result(
+            seed_id,
+            ok=False,
+            before=before,
+            after=after,
+            run_result=run_result,
+        )
+
+        if not run_result.get("ok"):
+            results.append(seed_result)
+            stop_reason = run_result.get("warning") or run_result.get("error") or "seed run failed"
+            break
+
+        if reload_error:
+            results.append(seed_result)
+            stop_reason = reload_error
+            break
+
+        transition_errors = _validate_successful_transition(before, after)
+        if transition_errors:
+            results.append(
+                _build_seed_result(
+                    seed_id,
+                    ok=False,
+                    before=before,
+                    after=after,
+                    run_result=run_result,
+                )
+            )
+            stop_reason = "; ".join(transition_errors)
+            break
+
+        results.append(
+            _build_seed_result(
+                seed_id,
+                ok=True,
+                before=before,
+                after=after,
+                run_result=run_result,
+            )
+        )
+
+    final_canonical, final_reload_error = _reload_canonical_checked()
+    processed_count = sum(1 for item in results if item.get("ok"))
+    if stop_reason is None and final_reload_error:
+        stop_reason = final_reload_error
+    return {
+        "ok": stop_reason is None,
+        "requested_batch_size": requested_batch_size,
+        "processed_count": processed_count,
+        "stopped_early": stop_reason is not None,
+        "stop_reason": stop_reason,
+        "results": results,
+        "final_state": _final_state_from_canonical(final_canonical),
+    }
