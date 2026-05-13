@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:20:46.245761+00:00",
+    "updated_at": "2026-05-13T20:21:24.112582+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -405,7 +405,8 @@
       "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
-      "geely__monjaro__2023__2026__il"
+      "geely__monjaro__2023__2026__il",
+      "haval__jolion__2021__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3503,7 +3504,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
@@ -4137,10 +4137,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "haval__jolion__2021__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "haval__jolion__2021__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:21:24.112649+00:00"
       },
       "hyundai__creta__2020__2026__il": {
         "variant_count": 0,
@@ -367297,6 +367301,585 @@
               "src_2"
             ]
           }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "haval_jolion_2021_2026_il_unknown_generation_unknown_engine_unknown_transmission_unknown_body_unknown_fuel",
+        "make": "Haval",
+        "model": "jolion",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": null,
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "seats": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "engine": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "transmission": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "drivetrain": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "unresolved",
+        "confidence": "low",
+        "sources_count": 0,
+        "created_at": "2026-05-13T20:21:23.897995+00:00",
+        "updated_at": "2026-05-13T20:21:23.897995+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "search_queries": [
+            "Haval Jolion Israel specifications 2021-2026",
+            "Haval Jolion HEV Israel trims and years",
+            "Haval Jolion Pro Israel launch specs",
+            "GWM Haval Jolion Israel price list 2024"
+          ],
+          "sources": [
+            {
+              "source_id": "src_1",
+              "url": "https://www.gwm-israel.co.il",
+              "title": "GWM Israel Official Website",
+              "source_type": "official_importer",
+              "market_scope": "IL",
+              "fields_supported": [
+                "make",
+                "model",
+                "year_start",
+                "year_end",
+                "engine",
+                "transmission",
+                "fuel_type",
+                "trim",
+                "body_type"
+              ]
+            },
+            {
+              "source_id": "src_2",
+              "url": "https://www.icar.co.il/Haval/Haval_Jolion/",
+              "title": "iCar Israel - Haval Jolion Specs",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "engine",
+                "transmission",
+                "fuel_type",
+                "drivetrain",
+                "seats",
+                "trim"
+              ]
+            },
+            {
+              "source_id": "src_3",
+              "url": "https://www.gear.co.il/Haval/Jolion",
+              "title": "Gear.co.il - Haval Jolion Technical Data",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "year_start",
+                "year_end",
+                "engine",
+                "transmission",
+                "body_type"
+              ]
+            },
+            {
+              "source_id": "src_4",
+              "url": "https://www.cartube.co.il/מפרט-טכני/Haval/Jolion",
+              "title": "Cartube Israel - Haval Jolion Specifications",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "engine",
+                "transmission",
+                "fuel_type",
+                "trim",
+                "generation"
+              ]
+            },
+            {
+              "source_id": "src_5",
+              "url": "https://autoboom.co.il/en/catalogue/cars/haval/jolion",
+              "title": "Autoboom Israel - Haval Jolion Catalogue",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "year_start",
+                "year_end",
+                "body_type",
+                "drivetrain"
+              ]
+            }
+          ],
+          "candidate_variants": [
+            {
+              "candidate_index": 0,
+              "make": "Haval",
+              "model": "Jolion",
+              "year_start": 2021,
+              "year_end": 2024,
+              "generation": "1st Generation",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Turbo 143hp",
+              "transmission": "7-speed DCT",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Premium",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_5"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2",
+                  "src_4"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_2",
+                  "src_5"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_3",
+                  "src_5"
+                ],
+                "year_end": [
+                  "src_3"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 1,
+              "make": "Haval",
+              "model": "Jolion",
+              "year_start": 2021,
+              "year_end": 2024,
+              "generation": "1st Generation",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Turbo 143hp",
+              "transmission": "7-speed DCT",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Luxury",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_3"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 2,
+              "make": "Haval",
+              "model": "Jolion",
+              "year_start": 2021,
+              "year_end": 2024,
+              "generation": "1st Generation",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Turbo 143hp",
+              "transmission": "7-speed DCT",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Supreme",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_3"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 3,
+              "make": "Haval",
+              "model": "Jolion",
+              "year_start": 2023,
+              "year_end": 2024,
+              "generation": "1st Generation HEV",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Hybrid 190hp",
+              "transmission": "DHT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Luxury",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2",
+                  "src_4"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1",
+                  "src_4"
+                ],
+                "year_end": [
+                  "src_4"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 4,
+              "make": "Haval",
+              "model": "Jolion",
+              "year_start": 2023,
+              "year_end": 2024,
+              "generation": "1st Generation HEV",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Hybrid 190hp",
+              "transmission": "DHT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Supreme",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_4"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 5,
+              "make": "Haval",
+              "model": "Jolion Pro",
+              "year_start": 2024,
+              "year_end": 2026,
+              "generation": "Facelift (Chitu-based)",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Hybrid 190hp",
+              "transmission": "DHT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Luxury",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1",
+                  "src_4"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 6,
+              "make": "Haval",
+              "model": "Jolion Pro",
+              "year_start": 2024,
+              "year_end": 2026,
+              "generation": "Facelift (Chitu-based)",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Hybrid 190hp",
+              "transmission": "DHT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Supreme",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            }
+          ],
+          "no_variants_reason": null,
+          "conflicts": [],
+          "unresolved": [],
+          "unresolved_reason": null,
+          "year_start": null,
+          "year_end": null,
+          "generation": null,
+          "body_type": null,
+          "seats": null,
+          "engine": null,
+          "transmission": null,
+          "fuel_type": null,
+          "drivetrain": null,
+          "trim": null,
+          "source_ids": [],
+          "field_sources": {}
         },
         "identity_confidence": "unknown"
       }
