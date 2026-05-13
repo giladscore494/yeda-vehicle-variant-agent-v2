@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:23:59.985957+00:00",
+    "updated_at": "2026-05-13T20:24:13.711279+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -410,7 +410,8 @@
       "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
-      "honda__cr-v__1997__2026__il"
+      "honda__cr-v__1997__2026__il",
+      "honda__cr-z__2010__2016__il"
     ],
     "processed_seeds": [
       {
@@ -3508,7 +3509,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__cr-z__2010__2016__il",
       "honda__e:ny1__2023__2026__il",
       "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
@@ -3750,10 +3750,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__cr-z__2010__2016__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__cr-z__2010__2016__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:24:13.711340+00:00"
       },
       "honda__e:ny1__2023__2026__il": {
         "variant_count": 0,
@@ -372183,6 +372187,346 @@
             ],
             "trim": [
               "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2010_2013_il_zf1_1_5l_i_vtec_hybrid_124hp_manual_6_speed_hatchback_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "ZF1",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC Hybrid 124hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual 6-speed",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:24:13.549094+00:00",
+        "updated_at": "2026-05-13T20:24:13.549094+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2010,
+          "year_end": 2013,
+          "generation": "ZF1",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "1.5L i-VTEC Hybrid 124hp",
+          "transmission": "Manual 6-speed",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Luxury",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2013_2016_il_zf2_facelift_1_5l_i_vtec_hybrid_137hp_manual_6_speed_hatchback_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "ZF2 Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC Hybrid 137hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual 6-speed",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:24:13.549147+00:00",
+        "updated_at": "2026-05-13T20:24:13.549147+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2013,
+          "year_end": 2016,
+          "generation": "ZF2 Facelift",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "1.5L i-VTEC Hybrid 137hp",
+          "transmission": "Manual 6-speed",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Luxury",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
             ]
           }
         },
