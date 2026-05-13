@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:20:29.708129+00:00",
+    "updated_at": "2026-05-13T20:20:46.245761+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -404,7 +404,8 @@
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
-      "geely__coolray__2023__2026__il"
+      "geely__coolray__2023__2026__il",
+      "geely__monjaro__2023__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3502,7 +3503,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
@@ -3822,10 +3822,20 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "geely__monjaro__2023__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "geely__monjaro__2023__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 1,
+        "dedupe_proof": [
+          {
+            "incoming_variant_id": "geely_monjaro_2024_2026_il_1st_generation_2_0l_turbo_235_hp_8_speed_at_suv_petrol",
+            "matched_existing_variant_id": "geely_monjaro_2024_2026_il_1st_generation_2_0l_turbo_235_hp_8_speed_at_suv_petrol",
+            "action": "merged"
+          }
+        ],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:20:46.245795+00:00"
       },
       "hyundai__ioniq__2016__2022__il": {
         "variant_count": 0,
@@ -367112,6 +367122,179 @@
             "trim": [
               "src_2",
               "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_monjaro_2024_2026_il_1st_generation_2_0l_turbo_235_hp_8_speed_at_suv_petrol",
+        "make": "Geely",
+        "model": "Monjaro",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo (235 hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed AT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 14,
+        "created_at": "2026-05-13T20:20:46.093119+00:00",
+        "updated_at": "2026-05-13T20:20:46.245702+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Geely",
+          "model": "Monjaro",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "1st Generation",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L Turbo (235 hp)",
+          "transmission": "8-speed AT",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "Luxury",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_5"
+            ],
+            "seats": [
+              "src_1",
+              "src_3"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_5"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_5"
+            ],
+            "trim": [
+              "src_1",
+              "src_2"
             ]
           }
         },
