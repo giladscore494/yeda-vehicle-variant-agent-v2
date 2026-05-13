@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:29:09.377649+00:00",
+    "updated_at": "2026-05-13T20:29:35.926033+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -413,7 +413,8 @@
       "honda__cr-v__1997__2026__il",
       "honda__cr-z__2010__2016__il",
       "honda__e:ny1__2023__2026__il",
-      "honda__fr-v__2004__2009__il"
+      "honda__fr-v__2004__2009__il",
+      "honda__hr-v__2015__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3511,7 +3512,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__hr-v__2015__2026__il",
       "honda__insight__2009__2014__il",
       "honda__insight__2018__2022__il",
       "honda__jazz__2001__2026__il",
@@ -3886,10 +3886,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__hr-v__2015__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__hr-v__2015__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:29:35.926112+00:00"
       },
       "bmw__850i__2018__2026__il": {
         "seed_id": "bmw__850i__2018__2026__il",
@@ -373587,6 +373591,363 @@
               "src_1"
             ]
           }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_hr_v_2015_2026_il_unknown_generation_unknown_engine_unknown_transmission_unknown_body_unknown_fuel",
+        "make": "Honda",
+        "model": "hr-v",
+        "aliases": [],
+        "year_start": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": null,
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "seats": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "engine": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "transmission": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "drivetrain": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "unresolved",
+        "confidence": "low",
+        "sources_count": 0,
+        "created_at": "2026-05-13T20:29:35.640186+00:00",
+        "updated_at": "2026-05-13T20:29:35.640186+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "search_queries": [
+            "honda hr-v israel specifications 2015-2026",
+            "honda hr-v 2015-2021 israel engine transmission trims",
+            "honda hr-v 2022-2026 israel hybrid specs",
+            "מפרט טכני הונדה HR-V ישראל"
+          ],
+          "sources": [
+            {
+              "source_id": "src_1",
+              "url": "https://www.honda.co.il",
+              "title": "Honda Israel Official Website",
+              "source_type": "official_importer",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "seats",
+                "engine",
+                "transmission",
+                "fuel_type",
+                "drivetrain",
+                "generation",
+                "trim"
+              ]
+            },
+            {
+              "source_id": "src_2",
+              "url": "https://www.icar.co.il/honda/honda_hr-v/",
+              "title": "iCar Israel - Honda HR-V Specs",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "year_start",
+                "year_end",
+                "engine",
+                "transmission",
+                "trim"
+              ]
+            },
+            {
+              "source_id": "src_3",
+              "url": "https://www.carzone.co.il/honda/hr-v/",
+              "title": "Carzone Israel - Honda HR-V Price List and Specs",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "year_start",
+                "year_end",
+                "engine",
+                "fuel_type",
+                "trim"
+              ]
+            },
+            {
+              "source_id": "src_4",
+              "url": "https://www.cartube.co.il/honda/hr-v",
+              "title": "Cartube Israel - Honda HR-V Reviews and Specs",
+              "source_type": "israeli_review",
+              "market_scope": "IL",
+              "fields_supported": [
+                "generation",
+                "engine",
+                "transmission"
+              ]
+            },
+            {
+              "source_id": "src_5",
+              "url": "https://autoboom.co.il/en/catalogue/cars/honda/hr-v",
+              "title": "Autoboom Israel - Honda HR-V Generations",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "year_start",
+                "year_end",
+                "generation"
+              ]
+            }
+          ],
+          "candidate_variants": [
+            {
+              "candidate_index": 0,
+              "make": "Honda",
+              "model": "HR-V",
+              "year_start": 2015,
+              "year_end": 2018,
+              "generation": "2nd Generation (RU)",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5 i-VTEC (130hp)",
+              "transmission": "CVT",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Comfort, Elegance, Executive",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_5"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_5"
+                ],
+                "year_start": [
+                  "src_5"
+                ],
+                "year_end": [
+                  "src_5"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 1,
+              "make": "Honda",
+              "model": "HR-V",
+              "year_start": 2019,
+              "year_end": 2021,
+              "generation": "2nd Generation Facelift (RU)",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5 i-VTEC (130hp)",
+              "transmission": "CVT",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Elegance, Executive",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_5"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_5"
+                ],
+                "year_start": [
+                  "src_5"
+                ],
+                "year_end": [
+                  "src_5"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 2,
+              "make": "Honda",
+              "model": "HR-V",
+              "year_start": 2022,
+              "year_end": 2026,
+              "generation": "3rd Generation (RV)",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5 i-MMD e:HEV (131hp)",
+              "transmission": "e-CVT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Elegance, Advance, Advance Style",
+              "source_ids": [
+                "src_1",
+                "src_3",
+                "src_4",
+                "src_5"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_3",
+                  "src_4"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_4"
+                ],
+                "fuel_type": [
+                  "src_1",
+                  "src_3"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_4",
+                  "src_5"
+                ],
+                "year_start": [
+                  "src_5"
+                ],
+                "year_end": [
+                  "src_3",
+                  "src_5"
+                ],
+                "trim": [
+                  "src_1",
+                  "src_3"
+                ]
+              }
+            }
+          ],
+          "no_variants_reason": null,
+          "conflicts": [],
+          "unresolved": [],
+          "unresolved_reason": null,
+          "year_start": null,
+          "year_end": null,
+          "generation": null,
+          "body_type": null,
+          "seats": null,
+          "engine": null,
+          "transmission": null,
+          "fuel_type": null,
+          "drivetrain": null,
+          "trim": null,
+          "source_ids": [],
+          "field_sources": {}
         },
         "identity_confidence": "unknown"
       }
