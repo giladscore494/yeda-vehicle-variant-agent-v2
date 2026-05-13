@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:24:13.711279+00:00",
+    "updated_at": "2026-05-13T20:28:44.445687+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -411,7 +411,8 @@
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
       "honda__cr-v__1997__2026__il",
-      "honda__cr-z__2010__2016__il"
+      "honda__cr-z__2010__2016__il",
+      "honda__e:ny1__2023__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3509,7 +3510,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__e:ny1__2023__2026__il",
       "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
       "honda__insight__2009__2014__il",
@@ -3760,10 +3760,20 @@
         "resolved_at": "2026-05-13T20:24:13.711340+00:00"
       },
       "honda__e:ny1__2023__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__e:ny1__2023__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 1,
+        "dedupe_proof": [
+          {
+            "incoming_variant_id": "honda_e_ny1_2023_2026_il_1st_generation_150kw_electric_motor_automatic_suv_electric",
+            "matched_existing_variant_id": "honda_e_ny1_2023_2026_il_1st_generation_150kw_electric_motor_automatic_suv_electric",
+            "action": "merged"
+          }
+        ],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:28:44.445732+00:00"
       },
       "hyundai__coupe__1996__2009__il": {
         "variant_count": 0,
@@ -372527,6 +372537,192 @@
             ],
             "trim": [
               "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_e_ny1_2023_2026_il_1st_generation_150kw_electric_motor_automatic_suv_electric",
+        "make": "Honda",
+        "model": "e:Ny1",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "engine": {
+          "value": "150kW Electric Motor",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "trim": {
+          "value": "Elegance",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 21,
+        "created_at": "2026-05-13T20:28:44.300435+00:00",
+        "updated_at": "2026-05-13T20:28:44.445608+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "e:Ny1",
+          "year_start": 2023,
+          "year_end": 2026,
+          "generation": "1st Generation",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "150kW Electric Motor",
+          "transmission": "Automatic",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": "Elegance",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1",
+              "src_2",
+              "src_3"
             ]
           }
         },
