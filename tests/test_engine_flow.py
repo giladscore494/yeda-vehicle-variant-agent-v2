@@ -296,11 +296,13 @@ def test_batch_size_20_sequential_success(workspace, monkeypatch):
     from engine.canonical_store import save_canonical_atomic as real_save
 
     def _save_wrapper(data, path=None):
-        save_calls.append((data["batch_state"]["processed_seed_ids"] or [None])[-1])
+        processed_ids = data["batch_state"].get("processed_seed_ids") or []
+        save_calls.append(processed_ids[-1] if processed_ids else None)
         return real_save(data, path=path)
 
     def _push_wrapper(canonical, commit_message=None):
-        push_calls.append((canonical["batch_state"]["processed_seed_ids"] or [None])[-1])
+        processed_ids = canonical["batch_state"].get("processed_seed_ids") or []
+        push_calls.append(processed_ids[-1] if processed_ids else None)
         return _noop_push(canonical, commit_message=commit_message)
 
     monkeypatch.setattr("engine.run_next.save_canonical_atomic", _save_wrapper)

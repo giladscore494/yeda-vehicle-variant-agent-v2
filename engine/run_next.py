@@ -27,6 +27,8 @@ from engine.canonical_store import (
 )
 from engine.merge_variants import merge_variants
 
+MAX_BATCH_SIZE = 20
+
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -141,7 +143,8 @@ def _validate_successful_transition(before: dict, after: dict) -> list[str]:
         if after["progress"] != expected_position:
             errors.append("progress did not advance correctly")
         if after["needs_retry"] > 0:
-            expected_selected = (after["needs_retry_seed_ids"] or [None])[0]
+            expected_ids = after.get("needs_retry_seed_ids") or []
+            expected_selected = expected_ids[0] if expected_ids else None
             if after["selected_seed_id"] != expected_selected:
                 errors.append("selected next seed is not needs_retry_seed_ids[0]")
             if after["selected_seed_id"] == after["next_seed_id"]:
@@ -387,13 +390,13 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
         requested_batch_size = int(batch_size)
     except (TypeError, ValueError):
         requested_batch_size = 0
-    if requested_batch_size < 1 or requested_batch_size > 20:
+    if requested_batch_size < 1 or requested_batch_size > MAX_BATCH_SIZE:
         return {
             "ok": False,
             "requested_batch_size": batch_size,
             "processed_count": 0,
             "stopped_early": True,
-            "stop_reason": "batch_size must be between 1 and 20",
+            "stop_reason": f"batch_size must be between 1 and {MAX_BATCH_SIZE}",
             "results": [],
             "final_state": _final_state_from_canonical(load_canonical()),
         }
