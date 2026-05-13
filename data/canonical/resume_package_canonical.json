@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T19:48:59.989597+00:00",
+    "updated_at": "2026-05-13T20:16:08.259080+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -395,7 +395,8 @@
       "infiniti__qx70__2009__2017__il",
       "isuzu__d-max__2002__2026__il",
       "bmw__850i__2018__2026__il",
-      "bmw__z4_sdrive20i__2019__2026__il"
+      "bmw__z4_sdrive20i__2019__2026__il",
+      "daewoo__lacetti__2003__2011__il"
     ],
     "processed_seeds": [
       {
@@ -3493,7 +3494,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
@@ -4022,10 +4022,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "daewoo__lacetti__2003__2011__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "daewoo__lacetti__2003__2011__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:16:08.259136+00:00"
       },
       "hyundai__grandeur__2006__2020__il": {
         "variant_count": 0,
@@ -362448,6 +362452,382 @@
               "src_3"
             ]
           }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2003_2011_il_unknown_generation_unknown_engine_unknown_transmission_unknown_body_unknown_fuel",
+        "make": "Daewoo",
+        "model": "lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2011,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": null,
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "seats": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "engine": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "transmission": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "drivetrain": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "unresolved",
+        "confidence": "low",
+        "sources_count": 0,
+        "created_at": "2026-05-13T20:16:08.103666+00:00",
+        "updated_at": "2026-05-13T20:16:08.103666+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "search_queries": [
+            "Daewoo Lacetti 2003-2004 Israel specifications",
+            "Daewoo Lacetti 1.6 automatic sedan Israel specs",
+            "Daewoo Lacetti 5-door hatchback 2004 Israel",
+            "דייהו לאסטי 2003-2004 מפרט טכני"
+          ],
+          "sources": [
+            {
+              "source_id": "src_1",
+              "url": "https://www.icar.co.il/דייהו/לאסטי/gen/2003-2004/",
+              "title": "Daewoo Lacetti 2003-2004 - iCar",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "engine",
+                "transmission",
+                "year_start",
+                "year_end"
+              ]
+            },
+            {
+              "source_id": "src_2",
+              "url": "https://www.gear.co.il/דייהו/לאסטי/2003-2004",
+              "title": "Daewoo Lacetti Technical Data - Gear.co.il",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "engine",
+                "transmission",
+                "fuel_type",
+                "seats"
+              ]
+            },
+            {
+              "source_id": "src_3",
+              "url": "https://autoboom.co.il/en/catalogue/cars/daewoo/lacetti/1-generation",
+              "title": "Daewoo Lacetti 1st Generation Israel - Autoboom",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "engine",
+                "drivetrain",
+                "year_start",
+                "year_end"
+              ]
+            }
+          ],
+          "candidate_variants": [
+            {
+              "candidate_index": 0,
+              "make": "Daewoo",
+              "model": "Lacetti",
+              "year_start": 2003,
+              "year_end": 2004,
+              "generation": "1st Generation (J200)",
+              "body_type": "Sedan",
+              "seats": 5,
+              "engine": "1.6L E-TEC II 1598cc",
+              "transmission": "4-speed automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "SX",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_3"
+                ],
+                "generation": [
+                  "src_3"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            },
+            {
+              "candidate_index": 1,
+              "make": "Daewoo",
+              "model": "Lacetti",
+              "year_start": 2003,
+              "year_end": 2004,
+              "generation": "1st Generation (J200)",
+              "body_type": "Sedan",
+              "seats": 5,
+              "engine": "1.6L E-TEC II 1598cc",
+              "transmission": "5-speed manual",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "SX",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_3"
+                ],
+                "generation": [
+                  "src_3"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            },
+            {
+              "candidate_index": 2,
+              "make": "Daewoo",
+              "model": "Lacetti",
+              "year_start": 2004,
+              "year_end": 2004,
+              "generation": "1st Generation (J200)",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.6L E-TEC II 1598cc",
+              "transmission": "4-speed automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "SX",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_3"
+                ],
+                "generation": [
+                  "src_3"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            },
+            {
+              "candidate_index": 3,
+              "make": "Daewoo",
+              "model": "Lacetti",
+              "year_start": 2004,
+              "year_end": 2004,
+              "generation": "1st Generation (J200)",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.6L E-TEC II 1598cc",
+              "transmission": "5-speed manual",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "SX",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_3"
+                ],
+                "generation": [
+                  "src_3"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            }
+          ],
+          "no_variants_reason": null,
+          "conflicts": [],
+          "unresolved": [],
+          "unresolved_reason": null,
+          "year_start": null,
+          "year_end": null,
+          "generation": null,
+          "body_type": null,
+          "seats": null,
+          "engine": null,
+          "transmission": null,
+          "fuel_type": null,
+          "drivetrain": null,
+          "trim": null,
+          "source_ids": [],
+          "field_sources": {}
         },
         "identity_confidence": "unknown"
       }
