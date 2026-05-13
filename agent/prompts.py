@@ -8,12 +8,188 @@ def build_discovery_prompt(seed: dict, market: str = "IL") -> str:
     model = seed.get("model") if isinstance(seed, dict) else getattr(seed, "model", "")
     year_start = seed.get("year_start") if isinstance(seed, dict) else getattr(seed, "year_start", None)
     year_end = seed.get("year_end") if isinstance(seed, dict) else getattr(seed, "year_end", None)
-    return f"""Return compact JSON only. JSON only. No prose. No markdown.
-Research make={make}, model={model}, year_start={year_start}, year_end={year_end}, market={market}.
-Return valid minified JSON only. No markdown. No prose. No trailing commas. No unfinished fields.
-Do not include notes, explanations, or reason strings.
+    return f"""Return compact JSON only. JSON only. No prose. No markdown. No trailing commas. No unfinished fields.
+
+TASK: Research vehicle variants for make={make}, model={model}, year_start={year_start}, year_end={year_end}, market={market}.
+
+==== ACCURACY OVER SPEED ====
+Do not rush.
+Prefer fewer accurate variants over many weak variants.
+Take the time to verify every returned field before including it.
+Do not complete the task by guessing.
+Returning partial/uncertain/null is better than inventing data.
+Accuracy is more important than quantity or completeness of output.
+
+==== FIELD-BY-FIELD VERIFICATION ====
+For every candidate variant, verify each of the following fields independently:
+  make, model, trim/variant_name, generation/platform, year_start, year_end,
+  body_type, engine, power output (if known), transmission, drivetrain,
+  fuel_type, seating capacity (if known), market_scope, confidence_level,
+  source_basis/evidence note.
+
+Each field must be filled only if there is supporting evidence or strong cross-source consistency.
+If a field is uncertain, use null and lower confidence_level.
+Do not fill a field just to make the output look complete.
+
+==== NO INVENTED PRECISION ====
+Do not invent exact trims, engines, transmissions, drivetrains, year ranges, or body types just to make the output appear complete.
+
+BAD behavior:
+  - creating a full variant whose fields have no identified source basis
+  - mixing global trims with local market trims without noting the distinction
+  - using regional trim names as if confirmed for the target market
+  - creating "complete" variants from weak or inferred evidence
+
+GOOD behavior:
+  - return fewer variants, each well-supported
+  - mark market_scope as "global-reference-only" when target-market confirmation is absent
+  - lower confidence_level when evidence is thin
+  - include uncertainty explicitly in source_basis/evidence notes
+
+==== SEED BOUNDARY RULE ====
+Only return variants whose year range overlaps the requested seed year range ({year_start}-{year_end}).
+Do NOT return variants that fall entirely outside the seed range.
+If historical data exists outside the seed range, mention it only in source_basis notes; do not return it as a candidate variant.
+
+==== MODEL-FAMILY CONSISTENCY ====
+Only return variants that belong to the requested model family: {make} {model}.
+Do not return variants from a neighboring model, unrelated model, different generation family, or similarly named model unless it is clearly the same official model family.
+A well-known modern marketed form of the same model (e.g., an evolution carrying a closely related name) may be included only when it is evidently the same product line.
+Do not mix variants across different official model families even if they share a platform.
+
+==== BODY TYPE ACCURACY ====
+Use official body type terminology when known. Do not collapse distinct official body styles into generic or misleading labels.
+  - Gran Coupe → Gran Coupe (not Sedan)
+  - Roadster → Roadster (not Convertible)
+  - Convertible/Cabriolet → Convertible
+  - Coupe → Coupe
+  - Hatchback → Hatchback (not Sedan)
+  - SUV/Crossover may be used only when the exact distinction is uncertain
+
+==== TRIM VS PACKAGE SEPARATION ====
+Do not mix trim level, body style, special packages, editions, and marketing packages into one trim string.
+
+BAD:   "trim": "SportLine / Elegant / Carbon Edition / First Edition"
+GOOD:  "trim": "SportLine"
+       put edition/package names in source_basis notes: "Packages/editions noted: Elegant, Carbon Edition, First Edition. May vary by market."
+
+Keep trim clean. If the schema has no separate packages field, put package/edition names in source_basis — not in trim.
+
+==== ENGINE VERIFICATION ====
+Engine must be specific when known.
+GOOD: "4.4L V8 TwinPower Turbo, 530 hp" | "2.0L turbo petrol, 197 hp" | "2.0L e:HEV hybrid"
+BAD:  "petrol engine" | "various engines" | "unknown engine" | "multiple options"
+
+If multiple distinct engine variants existed and are supported by evidence, split them into separate candidate variants only when each is actually relevant to the seed/model/market.
+Do not split variants to create more output — only split when the engine difference is meaningful and evidenced.
+
+==== TRANSMISSION VERIFICATION ====
+Transmission must be normalized and evidence-backed.
+Allowed values (examples): "6-speed manual", "7-speed DCT", "8-speed automatic", "e-CVT", "CVT", "single-speed EV"
+Do not guess transmission based only on brand/model assumptions.
+
+==== DRIVETRAIN VERIFICATION ====
+Normalize drivetrain to one of: FWD | RWD | AWD | 4WD
+Do not invent drivetrain. If multiple drivetrains exist and are supported, split variants only when each is evidenced.
+
+==== FUEL TYPE VERIFICATION ====
+Normalize fuel_type to one of: Petrol | Diesel | Hybrid | Plug-in Hybrid | Electric | Mild Hybrid | LPG
+Do not mix fuel types within a single variant.
+
+==== ISRAELI MARKET PRIORITY ====
+The primary target market is Israel (IL).
+
+Evidence priority (highest to lowest):
+  1. Israeli importer/official dealer data
+  2. Israeli official price lists or spec sheets
+  3. Israeli listings (as supporting evidence only)
+  4. Manufacturer official global/European sources
+  5. Reliable international spec databases (as secondary support)
+
+If no Israeli market confirmation exists:
+  - market_scope must be "global-reference-only" or "IL-likely"
+  - confidence_level cannot be "high"
+  - source_basis must explicitly state that IL confirmation was not found
+
+==== EVIDENCE PER VARIANT ====
+Every returned variant must include a source_basis/evidence note that explains:
+  - what was verified for this variant
+  - whether the source is IL-confirmed or global reference
+  - whether each key field is exact or inferred
+
+Example evidence note:
+  "Official manufacturer documentation confirms body style and powertrain with specific engine and transmission. IL-market availability not confirmed; marked IL-likely/global-reference."
+
+==== CONFIDENCE LEVELS ====
+high:
+  - core fields complete (body_type, engine, transmission, drivetrain, fuel_type)
+  - source-backed with identified evidence
+  - internally consistent
+  - preferably IL-confirmed
+
+medium:
+  - core technical fields present
+  - official or reliable global sources exist
+  - IL market not fully confirmed
+
+partial:
+  - useful but incomplete
+  - some core fields unknown
+  - should not be treated as final
+
+reject / no variant:
+  - too vague or unknown-only
+  - year range entirely outside seed
+  - model family mismatch
+  - no useful technical fields can be filled
+
+==== UNKNOWN HANDLING ====
+If a variant cannot be produced with at least body_type + (engine or powertrain) + (transmission or drivetrain or fuel_type), do not fabricate it.
+Instead return:
+  - no_variants_reason (from the allowed enum below)
+  - or a low-confidence note in source_basis explaining what is missing and why
+
+==== OUTPUT DISCIPLINE ====
+Return strict JSON only.
+No markdown. No prose outside JSON. No commentary. No unsupported variant expansion.
+
+==== VARIANT COUNT DISCIPLINE ====
+Do not maximize the number of variants.
+Return only distinct meaningful variants.
+
+A "distinct variant" differs by one or more meaningful dimensions:
+  - generation or platform
+  - body type
+  - powertrain or engine
+  - drivetrain
+  - major trim or variant name
+  - fuel type
+
+Do not create separate variants for cosmetic packages or minor editions unless they affect core technical specifications.
+
+==== SELF-CHECK BEFORE RETURNING ====
+Before returning JSON, silently perform this checklist for every candidate variant:
+  1. Does it match the seed make ({make})?
+  2. Does it match the seed model family ({model})?
+  3. Does its year range overlap the seed ({year_start}-{year_end})?
+  4. Is body_type official or safely normalized (not collapsed into a misleading label)?
+  5. Is trim clean and not mixed with packages or editions?
+  6. Are engine, transmission, drivetrain, and fuel_type each individually supported by evidence?
+  7. Is market_scope honest (not overclaiming IL confirmation)?
+  8. Is confidence_level not overstated?
+  9. Is source_basis present and meaningful?
+  10. Would this variant pass a deterministic quality gate?
+
+If the answer to any question is NO:
+  - fix the offending field
+  - lower confidence_level
+  - remove the variant entirely
+  - or return no_variants_reason
+
+==== OUTPUT FORMAT ====
 Return max 8 candidate_variants and max 5 sources.
 Top-level keys: search_queries, sources, candidate_variants, no_variants_reason, conflicts, unresolved, unresolved_reason.
+
 If no candidate variants can be found, return:
   candidate_variants: []
   no_variants_reason: one of:
@@ -21,6 +197,7 @@ If no candidate variants can be found, return:
     duplicate_existing_variant_only | seed_out_of_scope | model_discontinued_before_market_period |
     source_conflict_unresolved | blocked_by_validation
 Never return an empty candidate_variants list without no_variants_reason.
+
 Candidate shape:
 {{
   "candidate_index": 0,
@@ -29,18 +206,42 @@ Candidate shape:
   "generation": "", "body_type": "", "seats": 5,
   "engine": "", "transmission": "", "fuel_type": "",
   "drivetrain": "", "trim": "",
+  "market_scope": "IL|IL-likely|global-reference-only|GLOBAL|EU|UNKNOWN",
+  "confidence_level": "high|medium|partial",
+  "source_basis": "",
   "source_ids": [],
   "field_sources": {{
     "body_type": [], "seats": [], "engine": [], "transmission": [], "fuel_type": [],
     "drivetrain": [], "generation": [], "year_start": [], "year_end": [], "trim": []
   }}
 }}
+
 Source shape:
 {{
   "source_id": "src_1", "url": "", "title": "",
   "source_type": "official_importer|israeli_specs|israeli_review|price_list|global_fallback|unknown",
   "market_scope": "IL|EU|GLOBAL|UNKNOWN", "fields_supported": []
 }}
+
+==== EXAMPLE: CLEAN vs DIRTY VARIANT ====
+BAD (do not return this):
+{{
+  "trim": "SportLine / Elegant / Carbon Edition",
+  "body_type": "Sedan",
+  "confidence_level": "high",
+  "source_basis": ""
+}}
+
+GOOD (return this instead):
+{{
+  "trim": "SportLine",
+  "body_type": "Gran Coupe",
+  "market_scope": "global-reference-only",
+  "confidence_level": "medium",
+  "source_basis": "Official manufacturer source confirms body style (Gran Coupe) and powertrain; IL-specific package availability not confirmed. Editions noted in documentation: Elegant, Carbon Edition — listed here for reference, not as separate variants."
+}}
+
+This example illustrates the general rules: keep trim clean, use accurate body type terminology, be honest about market scope, never overstate confidence, always include evidence notes.
 """
 
 
