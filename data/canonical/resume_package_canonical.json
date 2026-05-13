@@ -3485,11 +3485,6 @@
         "created_at": "2026-05-09T21:33:45.946202+00:00"
       },
       {
-        "seed_id": "s1",
-        "reason": "zero_variants_without_explanation_after_retries",
-        "created_at": "2026-05-10T00:40:56.845050+00:00"
-      },
-      {
         "seed_id": "hyundai__nexo__2019__2026__il",
         "reason": "zero_variants_without_explanation_after_retries",
         "created_at": "2026-05-10T12:57:31.358172+00:00"
@@ -3735,28 +3730,13 @@
       "needs_retry_count_after": 55,
       "failed_seed_ids_after": [
         "haval__h6__2022__2026__il",
-        "hyundai__nexo__2019__2026__il",
-        "s1"
+        "hyundai__nexo__2019__2026__il"
       ],
       "next_seed_after_repair": "bmw__850i__2018__2026__il",
       "safe_to_continue_after_repair": false,
       "ui_message": "54 false-processed zero-variant seed(s) still need repair. Next: bmw__850i__2018__2026__il"
     },
     "seed_accounting": {
-      "s1": {
-        "seed_id": "s1",
-        "batch_id": null,
-        "attempts": 3,
-        "candidates_returned": 0,
-        "valid_variants_built": 0,
-        "variants_added_to_canonical": 0,
-        "variants_deduped_or_merged": 0,
-        "dedupe_proof": [],
-        "no_variants_reason": null,
-        "marked_processed": false,
-        "status": "failed_after_retries",
-        "failure_reason": "zero_variants_without_explanation_after_retries"
-      },
       "hummer__h3__2005__2010__il": {
         "variant_count": 0,
         "repair_status": "moved_from_processed_to_needs_retry",
