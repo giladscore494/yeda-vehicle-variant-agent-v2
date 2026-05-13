@@ -274,7 +274,7 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
     overall_ok = bool(save_result.get("ok")) and bool(push_result.get("ok", True))
     warning = None
     if save_result.get("ok") and not bool(push_result.get("ok", True)):
-        warning = "Push failed after local save; local canonical is ahead of GitHub."
+        warning = "Push failed after local save; the local canonical is ahead of GitHub."
     return {
         "ok": overall_ok,
         "save": save_result,
