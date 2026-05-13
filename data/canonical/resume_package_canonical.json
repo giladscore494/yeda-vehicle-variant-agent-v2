@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:21:24.112582+00:00",
+    "updated_at": "2026-05-13T20:22:05.453764+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -406,7 +406,8 @@
       "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
-      "haval__jolion__2021__2026__il"
+      "haval__jolion__2021__2026__il",
+      "honda__accord__1990__2024__il"
     ],
     "processed_seeds": [
       {
@@ -3504,7 +3505,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
       "honda__cr-v__1997__2026__il",
@@ -3894,10 +3894,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__accord__1990__2024__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__accord__1990__2024__il",
+        "variants_added_to_canonical": 8,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:22:05.453808+00:00"
       },
       "honda__civic__1990__2026__il": {
         "variant_count": 0,
@@ -367880,6 +367884,1248 @@
           "trim": null,
           "source_ids": [],
           "field_sources": {}
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_1990_1993_il_4th_generation_cb_2_0l_sohc_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 1990,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 1993,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Generation (CB)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L SOHC",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "EX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313778+00:00",
+        "updated_at": "2026-05-13T20:22:05.313778+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 1990,
+          "year_end": 1993,
+          "generation": "4th Generation (CB)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L SOHC",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "EX",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_1999_2002_il_6th_generation_cg_ch_2_0l_vtec_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 1999,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2002,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "6th Generation (CG/CH)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L VTEC",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "LS",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313849+00:00",
+        "updated_at": "2026-05-13T20:22:05.313849+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 1999,
+          "year_end": 2002,
+          "generation": "6th Generation (CG/CH)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L VTEC",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS",
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2003_2008_il_7th_generation_cl_cm_2_0l_i_vtec_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "7th Generation (CL/CM)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L i-VTEC",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Executive",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313886+00:00",
+        "updated_at": "2026-05-13T20:22:05.313886+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2003,
+          "year_end": 2008,
+          "generation": "7th Generation (CL/CM)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L i-VTEC",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Executive",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_5"
+            ],
+            "year_end": [
+              "src_5"
+            ],
+            "trim": [
+              "src_5"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2008_2015_il_8th_generation_cu_2_0l_i_vtec_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "8th Generation (CU)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L i-VTEC",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313916+00:00",
+        "updated_at": "2026-05-13T20:22:05.313916+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2008,
+          "year_end": 2015,
+          "generation": "8th Generation (CU)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L i-VTEC",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2008_2015_il_8th_generation_cu_2_4l_i_vtec_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "8th Generation (CU)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.4L i-VTEC",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313946+00:00",
+        "updated_at": "2026-05-13T20:22:05.313946+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2008,
+          "year_end": 2015,
+          "generation": "8th Generation (CU)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.4L i-VTEC",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Luxury",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2015_2017_il_9th_generation_cr_2_0l_hybrid_e_cvt_sedan_hybrid",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "9th Generation (CR)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "E-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "EX-L",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.313975+00:00",
+        "updated_at": "2026-05-13T20:22:05.313975+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2015,
+          "year_end": 2017,
+          "generation": "9th Generation (CR)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L Hybrid",
+          "transmission": "E-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "EX-L",
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2018_2022_il_10th_generation_cv_2_0l_hybrid_e_cvt_sedan_hybrid",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2018,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "10th Generation (CV)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "E-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "EX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.314004+00:00",
+        "updated_at": "2026-05-13T20:22:05.314004+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 6,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2018,
+          "year_end": 2022,
+          "generation": "10th Generation (CV)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L Hybrid",
+          "transmission": "E-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "EX",
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_5"
+            ],
+            "year_end": [
+              "src_5"
+            ],
+            "trim": [
+              "src_5"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2023_2024_il_11th_generation_cy_2_0l_hybrid_e_cvt_sedan_hybrid",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "11th Generation (CY)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "E-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Sport",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:22:05.314034+00:00",
+        "updated_at": "2026-05-13T20:22:05.314034+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 7,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2023,
+          "year_end": 2024,
+          "generation": "11th Generation (CY)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L Hybrid",
+          "transmission": "E-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Sport",
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_4"
+            ],
+            "transmission": [
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_4"
+            ]
+          }
         },
         "identity_confidence": "unknown"
       }
