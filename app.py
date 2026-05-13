@@ -64,7 +64,10 @@ def _main_run_tab(canonical: dict) -> None:
             result = run_next_model(batch_size=int(batch_size))
         processed = result.get("processed_count", 0)
         if result.get("ok"):
-            st.success(f"Batch completed: processed {processed} seed(s).")
+            st.success(
+                f"Batch completed: processed {processed} of "
+                f"{result.get('requested_batch_size')} seed(s)."
+            )
         else:
             st.error(f"Run stopped: {result.get('stop_reason') or 'unknown error'}")
             if result.get("stop_reason") and "ahead of GitHub" in result["stop_reason"]:

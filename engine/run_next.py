@@ -109,8 +109,8 @@ def _reload_canonical_checked() -> tuple[dict | None, str | None]:
     return canonical, None
 
 
-def _expected_progress_position(*, total: int | None, completed: int | None,
-                                pending: int | None) -> str | None:
+def _format_progress_position(*, total: int | None, completed: int | None,
+                              pending: int | None) -> str | None:
     if total is None or completed is None or pending is None:
         return None
     if pending > 0:
@@ -135,7 +135,7 @@ def _validate_successful_transition(before: dict, after: dict) -> list[str]:
             errors.append("problem queue completed count did not advance correctly")
         if after["problem_pending"] != (before["problem_pending"] - 1):
             errors.append("problem queue pending count did not advance correctly")
-        expected_position = _expected_progress_position(
+        expected_position = _format_progress_position(
             total=after["problem_total"],
             completed=after["problem_completed"],
             pending=after["problem_pending"],
@@ -386,17 +386,26 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
                    push_fn: Callable | None = None,
                    retry_hint: bool = False) -> dict:
     """Run up to ``batch_size`` seeds sequentially."""
+    invalid_batch_input = None
     try:
         requested_batch_size = int(batch_size)
     except (TypeError, ValueError):
+        invalid_batch_input = batch_size
         requested_batch_size = 0
     if requested_batch_size < 1 or requested_batch_size > MAX_BATCH_SIZE:
+        if invalid_batch_input is not None:
+            stop_reason = (
+                f'Invalid batch_size "{invalid_batch_input}": '
+                f"must be an integer between 1 and {MAX_BATCH_SIZE}"
+            )
+        else:
+            stop_reason = f"batch_size must be between 1 and {MAX_BATCH_SIZE}"
         return {
             "ok": False,
             "requested_batch_size": batch_size,
             "processed_count": 0,
             "stopped_early": True,
-            "stop_reason": f"batch_size must be between 1 and {MAX_BATCH_SIZE}",
+            "stop_reason": stop_reason,
             "results": [],
             "final_state": _final_state_from_canonical(load_canonical()),
         }
@@ -419,21 +428,29 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
         )
         canonical_after, reload_error = _reload_canonical_checked()
         after = _state_snapshot(canonical_after or canonical_before)
-        seed_result = _build_seed_result(
-            seed_id,
-            ok=False,
-            before=before,
-            after=after,
-            run_result=run_result,
-        )
-
         if not run_result.get("ok"):
-            results.append(seed_result)
+            results.append(
+                _build_seed_result(
+                    seed_id,
+                    ok=False,
+                    before=before,
+                    after=after,
+                    run_result=run_result,
+                )
+            )
             stop_reason = run_result.get("warning") or run_result.get("error") or "seed run failed"
             break
 
         if reload_error:
-            results.append(seed_result)
+            results.append(
+                _build_seed_result(
+                    seed_id,
+                    ok=False,
+                    before=before,
+                    after=after,
+                    run_result=run_result,
+                )
+            )
             stop_reason = reload_error
             break
 
