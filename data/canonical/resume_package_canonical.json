@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:18:43.438407+00:00",
+    "updated_at": "2026-05-13T20:19:16.753436+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -401,7 +401,8 @@
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
-      "fiat__linea__2007__2018__il"
+      "fiat__linea__2007__2018__il",
+      "fiat__tipo__2016__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3499,7 +3500,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
@@ -4020,10 +4020,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "fiat__tipo__2016__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "fiat__tipo__2016__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:19:16.753485+00:00"
       },
       "honda__cr-v__1997__2026__il": {
         "variant_count": 0,
@@ -365802,6 +365806,603 @@
               "src_1"
             ]
           }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2016_2026_il_unknown_generation_unknown_engine_unknown_transmission_unknown_body_unknown_fuel",
+        "make": "Fiat",
+        "model": "tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": null,
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "seats": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "engine": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "transmission": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "drivetrain": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "unresolved",
+        "confidence": "low",
+        "sources_count": 0,
+        "created_at": "2026-05-13T20:19:16.584155+00:00",
+        "updated_at": "2026-05-13T20:19:16.584155+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "search_queries": [
+            "fiat tipo israel specs 2016-2026",
+            "fiat tipo sedan 1.4 manual israel",
+            "fiat tipo 1.6 automatic israel specs",
+            "fiat tipo cross 1.5 mhev israel",
+            "fiat tipo hatchback 1.0 turbo israel"
+          ],
+          "sources": [
+            {
+              "source_id": "src_1",
+              "url": "https://autoboom.co.il/en/catalogue/fiat/tipo",
+              "title": "Fiat Tipo Catalog - Autoboom Israel",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "engine",
+                "transmission",
+                "fuel_type",
+                "year_start",
+                "year_end"
+              ]
+            },
+            {
+              "source_id": "src_2",
+              "url": "https://www.icar.co.il/fiat/fiat_tipo/fiat_tipo_new/",
+              "title": "Fiat Tipo - iCar Israel",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "trim",
+                "engine",
+                "transmission",
+                "year_start",
+                "year_end"
+              ]
+            },
+            {
+              "source_id": "src_3",
+              "url": "https://www.gear.co.il/דגמים/פיאט/טיפו",
+              "title": "Fiat Tipo Models - Gear.co.il",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "seats",
+                "engine",
+                "transmission"
+              ]
+            },
+            {
+              "source_id": "src_4",
+              "url": "https://www.cartube.co.il/מפרט-טכני/פיאט/טיפו",
+              "title": "Fiat Tipo Technical Specs - Cartube Israel",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "engine",
+                "transmission",
+                "fuel_type",
+                "drivetrain"
+              ]
+            },
+            {
+              "source_id": "src_5",
+              "url": "https://www.fiat.co.il/",
+              "title": "Fiat Israel Official Website",
+              "source_type": "official_importer",
+              "market_scope": "IL",
+              "fields_supported": [
+                "trim",
+                "engine",
+                "year_start"
+              ]
+            }
+          ],
+          "candidate_variants": [
+            {
+              "candidate_index": 0,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2016,
+              "year_end": 2020,
+              "generation": "Type 356",
+              "body_type": "Sedan",
+              "seats": 5,
+              "engine": "1.4L 16V Fire 95hp",
+              "transmission": "Manual",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Pop",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_3"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_4"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 1,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2016,
+              "year_end": 2020,
+              "generation": "Type 356",
+              "body_type": "Sedan",
+              "seats": 5,
+              "engine": "1.6L E-Torq 110hp",
+              "transmission": "Automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Lounge",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_4"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 2,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2016,
+              "year_end": 2020,
+              "generation": "Type 356",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.6L E-Torq 110hp",
+              "transmission": "Automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Lounge",
+              "source_ids": [
+                "src_1",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_3"
+                ],
+                "engine": [
+                  "src_1"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            },
+            {
+              "candidate_index": 3,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2017,
+              "year_end": 2020,
+              "generation": "Type 356",
+              "body_type": "Sedan",
+              "seats": 5,
+              "engine": "1.6L MultiJet 120hp",
+              "transmission": "DCT",
+              "fuel_type": "Diesel",
+              "drivetrain": "FWD",
+              "trim": "Comfort",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 4,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2021,
+              "year_end": 2022,
+              "generation": "Type 356 Facelift",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.0L FireFly Turbo 100hp",
+              "transmission": "Manual",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "City Life",
+              "source_ids": [
+                "src_2",
+                "src_4"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_4"
+                ],
+                "generation": [
+                  "src_2"
+                ],
+                "year_start": [
+                  "src_2"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 5,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2022,
+              "year_end": 2024,
+              "generation": "Type 356 Facelift",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.5L MHEV 130hp",
+              "transmission": "DCT",
+              "fuel_type": "Hybrid",
+              "drivetrain": "FWD",
+              "trim": "Cross",
+              "source_ids": [
+                "src_2",
+                "src_5"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_2"
+                ],
+                "seats": [
+                  "src_2"
+                ],
+                "engine": [
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_2"
+                ],
+                "generation": [
+                  "src_2"
+                ],
+                "year_start": [
+                  "src_2"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_5"
+                ]
+              }
+            },
+            {
+              "candidate_index": 6,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2016,
+              "year_end": 2019,
+              "generation": "Type 356",
+              "body_type": "Station Wagon",
+              "seats": 5,
+              "engine": "1.6L E-Torq 110hp",
+              "transmission": "Automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Lounge",
+              "source_ids": [
+                "src_1",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_3"
+                ],
+                "engine": [
+                  "src_1"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_1"
+                ],
+                "trim": [
+                  "src_1"
+                ]
+              }
+            },
+            {
+              "candidate_index": 7,
+              "make": "Fiat",
+              "model": "Tipo",
+              "year_start": 2017,
+              "year_end": 2020,
+              "generation": "Type 356",
+              "body_type": "Hatchback",
+              "seats": 5,
+              "engine": "1.6L MultiJet 120hp",
+              "transmission": "DCT",
+              "fuel_type": "Diesel",
+              "drivetrain": "FWD",
+              "trim": "Lounge",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1"
+                ],
+                "transmission": [
+                  "src_1"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_1"
+                ],
+                "year_start": [
+                  "src_1"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            }
+          ],
+          "no_variants_reason": null,
+          "conflicts": [],
+          "unresolved": [],
+          "unresolved_reason": null,
+          "year_start": null,
+          "year_end": null,
+          "generation": null,
+          "body_type": null,
+          "seats": null,
+          "engine": null,
+          "transmission": null,
+          "fuel_type": null,
+          "drivetrain": null,
+          "trim": null,
+          "source_ids": [],
+          "field_sources": {}
         },
         "identity_confidence": "unknown"
       }
