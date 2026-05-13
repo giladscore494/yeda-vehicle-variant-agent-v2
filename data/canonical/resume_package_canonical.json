@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:19:47.516899+00:00",
+    "updated_at": "2026-05-13T20:20:29.708129+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -403,7 +403,8 @@
       "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
-      "ford__ecosport__2013__2022__il"
+      "ford__ecosport__2013__2022__il",
+      "geely__coolray__2023__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3501,7 +3502,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
@@ -3944,10 +3944,30 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "geely__coolray__2023__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "geely__coolray__2023__2026__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 3,
+        "dedupe_proof": [
+          {
+            "incoming_variant_id": "geely_coolray_2023_2026_il_1st_generation_facelift_1_5l_turbo_4_cylinder_172hp_7_speed_dct_suv_petrol",
+            "matched_existing_variant_id": "geely_coolray_2023_2026_il_1st_generation_facelift_1_5l_turbo_4_cylinder_172hp_7_speed_dct_suv_petrol",
+            "action": "merged"
+          },
+          {
+            "incoming_variant_id": "geely_coolray_2023_2026_il_1st_generation_facelift_1_5l_turbo_4_cylinder_172hp_7_speed_dct_suv_petrol",
+            "matched_existing_variant_id": "geely_coolray_2023_2026_il_1st_generation_facelift_1_5l_turbo_4_cylinder_172hp_7_speed_dct_suv_petrol",
+            "action": "merged"
+          },
+          {
+            "incoming_variant_id": "geely_coolray_2023_2023_il_1st_generation_1_5l_turbo_3_cylinder_177hp_7_speed_dct_suv_petrol",
+            "matched_existing_variant_id": "geely_coolray_2023_2023_il_1st_generation_1_5l_turbo_3_cylinder_177hp_7_speed_dct_suv_petrol",
+            "action": "merged"
+          }
+        ],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:20:29.708157+00:00"
       },
       "hyundai__ioniq_6__2023__2026__il": {
         "variant_count": 0,
@@ -366747,6 +366767,353 @@
           "trim": null,
           "source_ids": [],
           "field_sources": {}
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_coolray_2023_2026_il_1st_generation_facelift_1_5l_turbo_4_cylinder_172hp_7_speed_dct_suv_petrol",
+        "make": "Geely",
+        "model": "Coolray",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo 4-Cylinder 172hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "7-Speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 17,
+        "created_at": "2026-05-13T20:20:29.540743+00:00",
+        "updated_at": "2026-05-13T20:20:29.707972+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Geely",
+          "model": "Coolray",
+          "year_start": 2023,
+          "year_end": 2026,
+          "generation": "1st Generation Facelift",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo 4-Cylinder 172hp",
+          "transmission": "7-Speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Luxury",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_5"
+            ],
+            "seats": [
+              "src_1",
+              "src_5"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_2",
+              "src_5"
+            ],
+            "drivetrain": [
+              "src_2",
+              "src_5"
+            ],
+            "generation": [
+              "src_2",
+              "src_4"
+            ],
+            "year_start": [
+              "src_1",
+              "src_3"
+            ],
+            "year_end": [
+              "src_1",
+              "src_3"
+            ],
+            "trim": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_coolray_2023_2023_il_1st_generation_1_5l_turbo_3_cylinder_177hp_7_speed_dct_suv_petrol",
+        "make": "Geely",
+        "model": "Coolray",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo 3-Cylinder 177hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-Speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-13T20:20:29.540941+00:00",
+        "updated_at": "2026-05-13T20:20:29.708099+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Geely",
+          "model": "Coolray",
+          "year_start": 2023,
+          "year_end": 2023,
+          "generation": "1st Generation",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo 3-Cylinder 177hp",
+          "transmission": "7-Speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "source_ids": [
+            "src_2",
+            "src_3",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_5"
+            ],
+            "seats": [
+              "src_5"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_2",
+              "src_5"
+            ],
+            "drivetrain": [
+              "src_2",
+              "src_5"
+            ],
+            "generation": [
+              "src_2",
+              "src_5"
+            ],
+            "year_start": [
+              "src_3"
+            ],
+            "year_end": [
+              "src_3"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
+            ]
+          }
         },
         "identity_confidence": "unknown"
       }
