@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:28:44.445687+00:00",
+    "updated_at": "2026-05-13T20:29:09.377649+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -412,7 +412,8 @@
       "honda__civic_type_r__2017__2023__il",
       "honda__cr-v__1997__2026__il",
       "honda__cr-z__2010__2016__il",
-      "honda__e:ny1__2023__2026__il"
+      "honda__e:ny1__2023__2026__il",
+      "honda__fr-v__2004__2009__il"
     ],
     "processed_seeds": [
       {
@@ -3510,7 +3511,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
       "honda__insight__2009__2014__il",
       "honda__insight__2018__2022__il",
@@ -4012,10 +4012,20 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__fr-v__2004__2009__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__fr-v__2004__2009__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 1,
+        "dedupe_proof": [
+          {
+            "incoming_variant_id": "honda_fr_v_2007_2009_il_1st_generation_facelift_1_8_i_vtec_140hp_5_speed_automatic_mpv_petrol",
+            "matched_existing_variant_id": "honda_fr_v_2007_2009_il_1st_generation_facelift_1_8_i_vtec_140hp_5_speed_automatic_mpv_petrol",
+            "action": "merged"
+          }
+        ],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:29:09.377679+00:00"
       },
       "hyundai__i10__2008__2026__il": {
         "variant_count": 0,
@@ -372723,6 +372733,858 @@
               "src_1",
               "src_2",
               "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_fr_v_2005_2007_il_1st_generation_1_7_vtec_125hp_5_speed_manual_mpv_petrol",
+        "make": "Honda",
+        "model": "FR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "MPV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 6,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "engine": {
+          "value": "1.7 VTEC (125hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-Speed Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 14,
+        "created_at": "2026-05-13T20:29:09.183416+00:00",
+        "updated_at": "2026-05-13T20:29:09.183416+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "FR-V",
+          "year_start": 2005,
+          "year_end": 2007,
+          "generation": "1st Generation",
+          "body_type": "MPV",
+          "seats": 6,
+          "engine": "1.7 VTEC (125hp)",
+          "transmission": "5-Speed Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2",
+              "src_5"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_fr_v_2005_2007_il_1st_generation_2_0_i_vtec_150hp_6_speed_manual_mpv_petrol",
+        "make": "Honda",
+        "model": "FR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "MPV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 6,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0 i-VTEC (150hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-Speed Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Executive",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:29:09.183526+00:00",
+        "updated_at": "2026-05-13T20:29:09.183526+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "FR-V",
+          "year_start": 2005,
+          "year_end": 2007,
+          "generation": "1st Generation",
+          "body_type": "MPV",
+          "seats": 6,
+          "engine": "2.0 i-VTEC (150hp)",
+          "transmission": "6-Speed Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Executive",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_fr_v_2005_2007_il_1st_generation_2_0_i_vtec_150hp_5_speed_automatic_mpv_petrol",
+        "make": "Honda",
+        "model": "FR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "MPV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 6,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0 i-VTEC (150hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-Speed Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Executive",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:29:09.183585+00:00",
+        "updated_at": "2026-05-13T20:29:09.183585+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "FR-V",
+          "year_start": 2005,
+          "year_end": 2007,
+          "generation": "1st Generation",
+          "body_type": "MPV",
+          "seats": 6,
+          "engine": "2.0 i-VTEC (150hp)",
+          "transmission": "5-Speed Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Executive",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_fr_v_2007_2009_il_1st_generation_facelift_1_8_i_vtec_140hp_6_speed_manual_mpv_petrol",
+        "make": "Honda",
+        "model": "FR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation (Facelift)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "MPV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 6,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.8 i-VTEC (140hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-Speed Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Elegance",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:29:09.183638+00:00",
+        "updated_at": "2026-05-13T20:29:09.183638+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "FR-V",
+          "year_start": 2007,
+          "year_end": 2009,
+          "generation": "1st Generation (Facelift)",
+          "body_type": "MPV",
+          "seats": 6,
+          "engine": "1.8 i-VTEC (140hp)",
+          "transmission": "6-Speed Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Elegance",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_fr_v_2007_2009_il_1st_generation_facelift_1_8_i_vtec_140hp_5_speed_automatic_mpv_petrol",
+        "make": "Honda",
+        "model": "FR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation (Facelift)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "MPV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 6,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.8 i-VTEC (140hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-Speed Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Elegance",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:29:09.183686+00:00",
+        "updated_at": "2026-05-13T20:29:09.377588+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Honda",
+          "model": "FR-V",
+          "year_start": 2007,
+          "year_end": 2009,
+          "generation": "1st Generation (Facelift)",
+          "body_type": "MPV",
+          "seats": 6,
+          "engine": "1.8 i-VTEC (140hp)",
+          "transmission": "5-Speed Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Elegance",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
             ]
           }
         },
