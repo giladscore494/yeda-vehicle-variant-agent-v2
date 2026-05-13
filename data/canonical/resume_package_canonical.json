@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:22:45.115981+00:00",
+    "updated_at": "2026-05-13T20:23:21.259951+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -408,7 +408,8 @@
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
-      "honda__civic__1990__2026__il"
+      "honda__civic__1990__2026__il",
+      "honda__civic_type_r__2017__2023__il"
     ],
     "processed_seeds": [
       {
@@ -3506,7 +3507,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__civic_type_r__2017__2023__il",
       "honda__cr-v__1997__2026__il",
       "honda__cr-z__2010__2016__il",
       "honda__e:ny1__2023__2026__il",
@@ -3950,10 +3950,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__civic_type_r__2017__2023__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__civic_type_r__2017__2023__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:23:21.260016+00:00"
       },
       "hyundai__ix35__2010__2015__il": {
         "variant_count": 0,
@@ -370505,6 +370509,364 @@
             ],
             "trim": [
               "src_1",
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_civic_type_r_2017_2021_il_10th_generation_fk8_2_0l_vtec_turbo_320_hp_6_speed_manual_hatchback_petrol",
+        "make": "Honda",
+        "model": "Civic Type R",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "10th Generation (FK8)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L VTEC Turbo (320 hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "6-Speed Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Standard",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 16,
+        "created_at": "2026-05-13T20:23:21.104099+00:00",
+        "updated_at": "2026-05-13T20:23:21.104099+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Civic Type R",
+          "year_start": 2017,
+          "year_end": 2021,
+          "generation": "10th Generation (FK8)",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "2.0L VTEC Turbo (320 hp)",
+          "transmission": "6-Speed Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Standard",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_2",
+              "src_5"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_5"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3",
+              "src_4"
+            ],
+            "year_start": [
+              "src_4",
+              "src_5"
+            ],
+            "year_end": [
+              "src_4",
+              "src_5"
+            ],
+            "trim": [
+              "src_2",
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_civic_type_r_2023_2023_il_11th_generation_fl5_2_0l_vtec_turbo_329_hp_6_speed_manual_hatchback_petrol",
+        "make": "Honda",
+        "model": "Civic Type R",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "11th Generation (FL5)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L VTEC Turbo (329 hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "6-Speed Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Standard",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 16,
+        "created_at": "2026-05-13T20:23:21.104181+00:00",
+        "updated_at": "2026-05-13T20:23:21.104181+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "Civic Type R",
+          "year_start": 2023,
+          "year_end": 2023,
+          "generation": "11th Generation (FL5)",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "2.0L VTEC Turbo (329 hp)",
+          "transmission": "6-Speed Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Standard",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_2",
+              "src_5"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_5"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3",
+              "src_4"
+            ],
+            "year_start": [
+              "src_4",
+              "src_5"
+            ],
+            "year_end": [
+              "src_4",
+              "src_5"
+            ],
+            "trim": [
+              "src_2",
               "src_4"
             ]
           }
