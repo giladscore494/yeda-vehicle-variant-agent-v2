@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-10T18:19:24+00:00",
+    "updated_at": "2026-05-13T20:59:43.929504+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -393,7 +393,8 @@
       "infiniti__qx50__2014__2022__il",
       "infiniti__qx60__2014__2022__il",
       "infiniti__qx70__2009__2017__il",
-      "isuzu__d-max__2002__2026__il"
+      "isuzu__d-max__2002__2026__il",
+      "bmw__850i__2018__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3491,7 +3492,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "bmw__850i__2018__2026__il",
       "bmw__z4_sdrive20i__2019__2026__il",
       "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
@@ -3846,10 +3846,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "bmw__850i__2018__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "bmw__850i__2018__2026__il",
+        "variants_added_to_canonical": 3,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:59:43.929546+00:00"
       },
       "hyundai__i30__2007__2025__il": {
         "variant_count": 0,
@@ -361059,6 +361063,503 @@
           }
         ],
         "source_ids": []
+      },
+      {
+        "variant_id": "bmw_m850i_2019_2026_il_g15_4_4l_v8_twin_turbo_530hp_8_speed_automatic_coupe_petrol",
+        "make": "BMW",
+        "model": "M850i",
+        "aliases": [],
+        "year_start": {
+          "value": 2019,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "G15",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "4.4L V8 Twin-Turbo 530hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Elegant / Carbon Edition / First Edition",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:59:43.786398+00:00",
+        "updated_at": "2026-05-13T20:59:43.786398+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "BMW",
+          "model": "M850i",
+          "year_start": 2019,
+          "year_end": 2026,
+          "generation": "G15",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "4.4L V8 Twin-Turbo 530hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "Elegant / Carbon Edition / First Edition",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "seats": [
+              "src_4"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_2",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_4"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_1",
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "bmw_m850i_2019_2026_il_g14_4_4l_v8_twin_turbo_530hp_8_speed_automatic_convertible_petrol",
+        "make": "BMW",
+        "model": "M850i",
+        "aliases": [],
+        "year_start": {
+          "value": 2019,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "G14",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Convertible",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "4.4L V8 Twin-Turbo 530hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Elegant / Carbon Edition",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-13T20:59:43.786458+00:00",
+        "updated_at": "2026-05-13T20:59:43.786458+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "BMW",
+          "model": "M850i",
+          "year_start": 2019,
+          "year_end": 2026,
+          "generation": "G14",
+          "body_type": "Convertible",
+          "seats": 4,
+          "engine": "4.4L V8 Twin-Turbo 530hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "Elegant / Carbon Edition",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "seats": [
+              "src_4"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_2",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_4"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "bmw_m850i_2020_2026_il_g16_4_4l_v8_twin_turbo_530hp_8_speed_automatic_sedan_petrol",
+        "make": "BMW",
+        "model": "M850i",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "G16",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "4.4L V8 Twin-Turbo 530hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Elegant / Carbon Edition / Jeff Koons Edition",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-13T20:59:43.786490+00:00",
+        "updated_at": "2026-05-13T20:59:43.786490+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "BMW",
+          "model": "M850i",
+          "year_start": 2020,
+          "year_end": 2026,
+          "generation": "G16",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "4.4L V8 Twin-Turbo 530hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "Elegant / Carbon Edition / Jeff Koons Edition",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
