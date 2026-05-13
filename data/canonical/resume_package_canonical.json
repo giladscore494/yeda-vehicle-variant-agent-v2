@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:17:43.818997+00:00",
+    "updated_at": "2026-05-13T20:18:14.225879+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -399,7 +399,8 @@
       "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
-      "fiat__bravo__1995__2014__il"
+      "fiat__bravo__1995__2014__il",
+      "fiat__freemont__2011__2016__il"
     ],
     "processed_seeds": [
       {
@@ -3497,7 +3498,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
@@ -3778,10 +3778,20 @@
         "resolved_at": "2026-05-13T20:17:43.819077+00:00"
       },
       "fiat__freemont__2011__2016__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "fiat__freemont__2011__2016__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 1,
+        "dedupe_proof": [
+          {
+            "incoming_variant_id": "fiat_freemont_2012_2016_il_1st_generation_2_4l_170hp_6_speed_automatic_suv_petrol",
+            "matched_existing_variant_id": "fiat_freemont_2012_2016_il_1st_generation_2_4l_170hp_6_speed_automatic_suv_petrol",
+            "action": "merged"
+          }
+        ],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:18:14.225932+00:00"
       },
       "hyundai__atos__1997__2014__il": {
         "variant_count": 0,
@@ -364519,6 +364529,331 @@
             ],
             "trim": [
               "src_1",
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_freemont_2012_2016_il_1st_generation_2_4l_170hp_6_speed_automatic_suv_petrol",
+        "make": "Fiat",
+        "model": "Freemont",
+        "aliases": [],
+        "year_start": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 7,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.4L 170hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Urban",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-13T20:18:13.913129+00:00",
+        "updated_at": "2026-05-13T20:18:14.225618+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Fiat",
+          "model": "Freemont",
+          "year_start": 2012,
+          "year_end": 2016,
+          "generation": "1st Generation",
+          "body_type": "SUV",
+          "seats": 7,
+          "engine": "2.4L 170hp",
+          "transmission": "6-speed Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Urban",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1",
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_freemont_2012_2014_il_1st_generation_3_6l_v6_280hp_6_speed_automatic_suv_petrol",
+        "make": "Fiat",
+        "model": "Freemont",
+        "aliases": [],
+        "year_start": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 7,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "3.6L V6 280hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Lounge",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-13T20:18:13.913292+00:00",
+        "updated_at": "2026-05-13T20:18:13.913292+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Fiat",
+          "model": "Freemont",
+          "year_start": 2012,
+          "year_end": 2014,
+          "generation": "1st Generation",
+          "body_type": "SUV",
+          "seats": 7,
+          "engine": "3.6L V6 280hp",
+          "transmission": "6-speed Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "Lounge",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
               "src_2"
             ]
           }
