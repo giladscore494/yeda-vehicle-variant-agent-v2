@@ -413,8 +413,8 @@ def test_progress_after_batch(workspace):
     )
 
     assert result["ok"] is True, result
-    assert result["final_state"]["completed"] == 22
-    assert result["final_state"]["pending"] == 32
+    assert result["final_state"]["completed"] == CURRENT_COMPLETED + 20
+    assert result["final_state"]["pending"] == CURRENT_NEEDS_RETRY - 20
     assert result["final_state"]["position"] == "23 / 54"
     assert result["final_state"]["selected_next_seed"] == initial_needs_retry[20]
 
