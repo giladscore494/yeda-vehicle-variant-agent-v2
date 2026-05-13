@@ -273,7 +273,7 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
 
     overall_ok = bool(save_result.get("ok")) and bool(push_result.get("ok", True))
     warning = None
-    if save_result.get("ok") and push_fn is not None and not push_result.get("ok", False):
+    if save_result.get("ok") and push_fn is not None and push_result.get("ok") is False:
         warning = "Push failed after local save; the local canonical is ahead of GitHub."
     return {
         "ok": overall_ok,
@@ -358,7 +358,7 @@ def run_selected_seed(seed_id: str, *,
             "ok": False,
             "seed_id": seed_id,
             "mode": mode,
-            "error": save_push.get("warning") or save_push.get("error"),
+            "error": save_push.get("error"),
             "save": save_push.get("save"),
             "push": save_push.get("push"),
             "warning": save_push.get("warning"),
