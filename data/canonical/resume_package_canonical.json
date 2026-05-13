@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T19:47:29.308999+00:00",
+    "updated_at": "2026-05-13T19:48:59.989597+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -394,7 +394,8 @@
       "infiniti__qx60__2014__2022__il",
       "infiniti__qx70__2009__2017__il",
       "isuzu__d-max__2002__2026__il",
-      "bmw__850i__2018__2026__il"
+      "bmw__850i__2018__2026__il",
+      "bmw__z4_sdrive20i__2019__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3492,7 +3493,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "bmw__z4_sdrive20i__2019__2026__il",
       "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
@@ -3952,10 +3952,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "bmw__z4_sdrive20i__2019__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "bmw__z4_sdrive20i__2019__2026__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T19:48:59.989631+00:00"
       },
       "hyundai__h1__1997__2021__il": {
         "variant_count": 0,
@@ -362097,6 +362101,351 @@
             "trim": [
               "src_1",
               "src_5"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "bmw_z4_2019_2022_il_g29_2_0l_b48_turbocharged_i4_197hp_8_speed_steptronic_automatic_roadster_petrol",
+        "make": "BMW",
+        "model": "Z4",
+        "aliases": [],
+        "year_start": {
+          "value": 2019,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "G29",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Roadster",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 2,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L B48 Turbocharged I4 197hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed Steptronic Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Sport / M-Sport",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 15,
+        "created_at": "2026-05-13T19:48:59.850787+00:00",
+        "updated_at": "2026-05-13T19:48:59.850787+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "BMW",
+          "model": "Z4",
+          "year_start": 2019,
+          "year_end": 2022,
+          "generation": "G29",
+          "body_type": "Roadster",
+          "seats": 2,
+          "engine": "2.0L B48 Turbocharged I4 197hp",
+          "transmission": "8-speed Steptronic Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "RWD",
+          "trim": "Sport / M-Sport",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_4"
+            ],
+            "seats": [
+              "src_1",
+              "src_4"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_3"
+            ],
+            "generation": [
+              "src_2",
+              "src_4"
+            ],
+            "year_start": [
+              "src_2",
+              "src_4"
+            ],
+            "year_end": [
+              "src_2",
+              "src_4"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "bmw_z4_2023_2026_il_g29_lci_2_0l_b48_turbocharged_i4_197hp_8_speed_steptronic_automatic_roadster_petrol",
+        "make": "BMW",
+        "model": "Z4",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "G29 LCI",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Roadster",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L B48 Turbocharged I4 197hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed Steptronic Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "M-Design",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 14,
+        "created_at": "2026-05-13T19:48:59.850842+00:00",
+        "updated_at": "2026-05-13T19:48:59.850842+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "BMW",
+          "model": "Z4",
+          "year_start": 2023,
+          "year_end": 2026,
+          "generation": "G29 LCI",
+          "body_type": "Roadster",
+          "seats": 2,
+          "engine": "2.0L B48 Turbocharged I4 197hp",
+          "transmission": "8-speed Steptronic Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "RWD",
+          "trim": "M-Design",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_3"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
             ]
           }
         },
