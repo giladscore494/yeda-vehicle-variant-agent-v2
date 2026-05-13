@@ -72,6 +72,27 @@ def _main_run_tab(canonical: dict) -> None:
             st.error(f"Run stopped: {result.get('stop_reason') or 'unknown error'}")
             if result.get("stop_reason") and "ahead of GitHub" in result["stop_reason"]:
                 st.warning(result["stop_reason"])
+        # Show per-seed quality summary
+        for item in result.get("results") or []:
+            seed_id = item.get("seed_id", "?")
+            added = item.get("added_count", 0)
+            merged = item.get("merged_count", 0)
+            rejected = item.get("rejected_count", 0)
+            warnings = item.get("quality_warnings") or []
+            levels = item.get("accepted_quality_levels") or []
+            if item.get("ok"):
+                st.caption(
+                    f"Resolved seed {seed_id}: "
+                    f"accepted={added + merged}, rejected={rejected}, "
+                    f"warnings={len(warnings)}, "
+                    f"quality_levels={levels}"
+                )
+            else:
+                st.caption(
+                    f"Failed seed {seed_id}: "
+                    f"error={item.get('error') or 'unknown'}, "
+                    f"rejected={rejected}"
+                )
         st.json(result)
 
 

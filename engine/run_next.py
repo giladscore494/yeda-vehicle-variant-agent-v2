@@ -26,6 +26,7 @@ from engine.canonical_store import (
     validate_canonical,
 )
 from engine.merge_variants import merge_variants
+from engine.quality_gate import validate_candidate_variants_quality
 
 MAX_BATCH_SIZE = 20
 
@@ -64,11 +65,19 @@ def _result_progress(snapshot: dict) -> str | None:
 
 def _build_seed_result(seed_id: str, *, ok: bool, before: dict, after: dict,
                        run_result: dict) -> dict:
+    quality_report = run_result.get("quality_report") or {}
+    accepted_levels = [
+        av.get("quality_level")
+        for av in (quality_report.get("accepted_variants") or [])
+    ]
     return {
         "seed_id": seed_id,
         "ok": ok,
         "added_count": run_result.get("added_count", 0),
         "merged_count": run_result.get("merged_count", 0),
+        "rejected_count": quality_report.get("rejected", 0),
+        "quality_warnings": quality_report.get("warnings") or [],
+        "accepted_quality_levels": accepted_levels,
         "save_ok": bool((run_result.get("save") or {}).get("ok")),
         "push_ok": bool((run_result.get("push") or {}).get("ok")),
         "variants_before": before["variants"],
@@ -322,6 +331,26 @@ def run_selected_seed(seed_id: str, *,
 
     variants = run_result.get("variants") or []
     no_variants_reason = run_result.get("no_variants_reason")
+    seed_info = run_result.get("seed") or {}
+
+    # Run quality gate: filter and normalise variants before merging into canonical.
+    quality_report: dict | None = None
+    if variants:
+        quality_report = validate_candidate_variants_quality(variants, seed_info)
+        if quality_report["all_rejected"] and not no_variants_reason:
+            return {
+                "ok": False,
+                "seed_id": seed_id,
+                "mode": mode,
+                "error": "quality_gate_failed_no_accepted_variants",
+                "quality_report": quality_report,
+                "added_count": 0,
+                "merged_count": 0,
+                "save": None,
+                "push": None,
+            }
+        variants = quality_report["accepted_variant_objects"]
+
     merge_res = merge_result_into_canonical(
         canonical, seed_id, variants, no_variants_reason, mode,
     )
@@ -374,6 +403,7 @@ def run_selected_seed(seed_id: str, *,
         "merged_count": merge_res["merged_count"],
         "dedupe_proof": merge_res["dedupe_proof"],
         "no_variants_reason": no_variants_reason,
+        "quality_report": quality_report,
         "save": save_push.get("save"),
         "push": save_push.get("push"),
         "warning": save_push.get("warning"),
