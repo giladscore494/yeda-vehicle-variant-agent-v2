@@ -20,7 +20,7 @@ from core.final_export_builder import build_final_export, export_as_json_bytes
 from engine import queue
 from engine.canonical_store import load_canonical, validate_canonical, canonical_path
 from engine.merge_variants import merge_variants
-from engine.run_next import run_next_model, run_selected_seed
+from engine.run_next import MAX_BATCH_SIZE, run_next_model, run_selected_seed
 
 
 st.set_page_config(page_title="Vehicle Variant Engine v2", layout="wide")
@@ -57,15 +57,21 @@ def _main_run_tab(canonical: dict) -> None:
         st.caption(f"Normal paused at: {prog['normal_paused_at']}")
 
     st.divider()
-    st.caption("Batch size is locked to 1.")
+    batch_size = st.number_input("Batch size", min_value=1, max_value=MAX_BATCH_SIZE, value=1, step=1)
+    st.warning("Runs stop automatically on first save/push/validation failure.")
     if st.button("Run next model", type="primary"):
         with st.spinner("Running next model..."):
-            result = run_next_model()
+            result = run_next_model(batch_size=int(batch_size))
+        processed = result.get("processed_count", 0)
         if result.get("ok"):
-            st.success(f"Resolved seed `{result['seed_id']}` "
-                       f"(added={result.get('added_count')}, merged={result.get('merged_count')})")
+            st.success(
+                f"Batch completed: processed {processed} of "
+                f"{result.get('requested_batch_size')} seed(s)."
+            )
         else:
-            st.error(f"Run failed: {result.get('error')}")
+            st.error(f"Run stopped: {result.get('stop_reason') or 'unknown error'}")
+            if result.get("stop_reason") and "ahead of GitHub" in result["stop_reason"]:
+                st.warning(result["stop_reason"])
         st.json(result)
 
 
