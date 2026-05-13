@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-13T20:19:16.753436+00:00",
+    "updated_at": "2026-05-13T20:19:47.516899+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -402,7 +402,8 @@
       "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
-      "fiat__tipo__2016__2026__il"
+      "fiat__tipo__2016__2026__il",
+      "ford__ecosport__2013__2022__il"
     ],
     "processed_seeds": [
       {
@@ -3500,7 +3501,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
@@ -3834,10 +3834,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "ford__ecosport__2013__2022__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "ford__ecosport__2013__2022__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-13T20:19:47.516976+00:00"
       },
       "hyundai__i25__1994__2026__il": {
         "variant_count": 0,
@@ -366377,6 +366381,346 @@
                 ],
                 "year_start": [
                   "src_1"
+                ],
+                "year_end": [
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            }
+          ],
+          "no_variants_reason": null,
+          "conflicts": [],
+          "unresolved": [],
+          "unresolved_reason": null,
+          "year_start": null,
+          "year_end": null,
+          "generation": null,
+          "body_type": null,
+          "seats": null,
+          "engine": null,
+          "transmission": null,
+          "fuel_type": null,
+          "drivetrain": null,
+          "trim": null,
+          "source_ids": [],
+          "field_sources": {}
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "ford_ecosport_2013_2022_il_unknown_generation_unknown_engine_unknown_transmission_unknown_body_unknown_fuel",
+        "make": "Ford",
+        "model": "ecosport",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": null,
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "seats": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "engine": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "transmission": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "drivetrain": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "unresolved",
+        "confidence": "low",
+        "sources_count": 0,
+        "created_at": "2026-05-13T20:19:47.225168+00:00",
+        "updated_at": "2026-05-13T20:19:47.225168+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "search_queries": [
+            "Ford EcoSport Israel specifications 2014-2017",
+            "Ford EcoSport 1.5 PowerShift Israel specs",
+            "Ford EcoSport 1.0 EcoBoost Israel 2018-2021",
+            "פורד אקוספורט מפרט טכני ישראל",
+            "Ford EcoSport Titanium vs Trend Israel"
+          ],
+          "sources": [
+            {
+              "source_id": "src_1",
+              "url": "https://autoboom.co.il/en/catalogue/cars/ford/ecosport/2-generation/suv-5-doors-1.5-powershift-gasoline-112-hp-fwd",
+              "title": "Ford EcoSport 2nd Gen 1.5 PowerShift Specs - Autoboom",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "body_type",
+                "engine",
+                "transmission",
+                "year_start",
+                "year_end",
+                "fuel_type",
+                "drivetrain"
+              ]
+            },
+            {
+              "source_id": "src_2",
+              "url": "https://www.icar.co.il/%D7%A4%D7%95%D7%A8%D7%93/%D7%90%D7%A7%D7%95%D7%A1%D7%A4%D7%95%D7%A8%D7%98/%D7%A4%D7%95%D7%A8%D7%93_%D7%90%D7%A7%D7%95%D7%A1%D7%A4%D7%95%D7%A8%D7%98_%D7%99%D7%93_%D7%A9%D7%A0%D7%99%D7%94_%D7%9319/",
+              "title": "Ford EcoSport - iCar Israel",
+              "source_type": "israeli_specs",
+              "market_scope": "IL",
+              "fields_supported": [
+                "trim",
+                "engine",
+                "transmission",
+                "year_start",
+                "year_end"
+              ]
+            },
+            {
+              "source_id": "src_3",
+              "url": "https://www.auto.co.il/model/ford-ecosport_g1249",
+              "title": "Ford EcoSport Review and Specs - Auto.co.il",
+              "source_type": "israeli_review",
+              "market_scope": "IL",
+              "fields_supported": [
+                "generation",
+                "body_type",
+                "seats",
+                "engine"
+              ]
+            },
+            {
+              "source_id": "src_4",
+              "url": "https://en.wikipedia.org/wiki/Ford_EcoSport",
+              "title": "Ford EcoSport - Wikipedia",
+              "source_type": "global_fallback",
+              "market_scope": "GLOBAL",
+              "fields_supported": [
+                "generation",
+                "body_type",
+                "drivetrain"
+              ]
+            }
+          ],
+          "candidate_variants": [
+            {
+              "candidate_index": 0,
+              "make": "Ford",
+              "model": "EcoSport",
+              "year_start": 2014,
+              "year_end": 2017,
+              "generation": "2nd Generation",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Ti-VCT 112hp",
+              "transmission": "6-speed PowerShift",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Trend",
+              "source_ids": [
+                "src_1",
+                "src_2",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1",
+                  "src_3"
+                ],
+                "seats": [
+                  "src_3"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1",
+                  "src_4"
+                ],
+                "generation": [
+                  "src_3",
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1",
+                  "src_2"
+                ],
+                "year_end": [
+                  "src_1",
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 1,
+              "make": "Ford",
+              "model": "EcoSport",
+              "year_start": 2014,
+              "year_end": 2017,
+              "generation": "2nd Generation",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.5L Ti-VCT 112hp",
+              "transmission": "6-speed PowerShift",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Titanium",
+              "source_ids": [
+                "src_1",
+                "src_2"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_1"
+                ],
+                "seats": [
+                  "src_1"
+                ],
+                "engine": [
+                  "src_1",
+                  "src_2"
+                ],
+                "transmission": [
+                  "src_1",
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_1"
+                ],
+                "drivetrain": [
+                  "src_1"
+                ],
+                "generation": [
+                  "src_4"
+                ],
+                "year_start": [
+                  "src_1",
+                  "src_2"
+                ],
+                "year_end": [
+                  "src_1",
+                  "src_2"
+                ],
+                "trim": [
+                  "src_2"
+                ]
+              }
+            },
+            {
+              "candidate_index": 2,
+              "make": "Ford",
+              "model": "EcoSport",
+              "year_start": 2018,
+              "year_end": 2021,
+              "generation": "2nd Generation Facelift",
+              "body_type": "SUV",
+              "seats": 5,
+              "engine": "1.0L EcoBoost 125hp",
+              "transmission": "6-speed Automatic",
+              "fuel_type": "Petrol",
+              "drivetrain": "FWD",
+              "trim": "Titanium",
+              "source_ids": [
+                "src_2",
+                "src_3"
+              ],
+              "field_sources": {
+                "body_type": [
+                  "src_3"
+                ],
+                "seats": [
+                  "src_3"
+                ],
+                "engine": [
+                  "src_2",
+                  "src_3"
+                ],
+                "transmission": [
+                  "src_2"
+                ],
+                "fuel_type": [
+                  "src_2"
+                ],
+                "drivetrain": [
+                  "src_4"
+                ],
+                "generation": [
+                  "src_3"
+                ],
+                "year_start": [
+                  "src_2"
                 ],
                 "year_end": [
                   "src_2"
