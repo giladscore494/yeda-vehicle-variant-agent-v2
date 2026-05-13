@@ -273,7 +273,7 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
 
     overall_ok = bool(save_result.get("ok")) and bool(push_result.get("ok", True))
     warning = None
-    if save_result.get("ok") and not bool(push_result.get("ok", True)):
+    if save_result.get("ok") and push_fn is not None and not push_result.get("ok", False):
         warning = "Push failed after local save; the local canonical is ahead of GitHub."
     return {
         "ok": overall_ok,
@@ -386,16 +386,14 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
                    push_fn: Callable | None = None,
                    retry_hint: bool = False) -> dict:
     """Run up to ``batch_size`` seeds sequentially."""
-    invalid_batch_input = None
     try:
         requested_batch_size = int(batch_size)
     except (TypeError, ValueError):
-        invalid_batch_input = batch_size
-        requested_batch_size = 0
-    if requested_batch_size < 1 or requested_batch_size > MAX_BATCH_SIZE:
-        if invalid_batch_input is not None:
+        requested_batch_size = None
+    if requested_batch_size is None or requested_batch_size < 1 or requested_batch_size > MAX_BATCH_SIZE:
+        if requested_batch_size is None:
             stop_reason = (
-                f'Invalid batch_size "{invalid_batch_input}": '
+                f'Invalid batch_size "{batch_size}": '
                 f"must be an integer between 1 and {MAX_BATCH_SIZE}"
             )
         else:

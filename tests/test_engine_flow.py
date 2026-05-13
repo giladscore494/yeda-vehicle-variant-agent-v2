@@ -24,12 +24,12 @@ GMC = "gmc__yukon__2000__2026__il"
 DAEWOO = "daewoo__lacetti__2003__2011__il"
 DAIHATSU = "daihatsu__copen__2002__2012__il"
 DS9 = "ds_automobiles__ds_9__2020__2026__il"
-BASELINE_VARIANTS = 1331
-BASELINE_PROCESSED = 386
-BASELINE_NEEDS_RETRY = 52
-BASELINE_TOTAL_PROBLEMS = 54
-BASELINE_COMPLETED = 2
-BASELINE_POSITION = "3 / 54"
+INITIAL_VARIANTS = 1331
+INITIAL_PROCESSED = 386
+INITIAL_NEEDS_RETRY = 52
+INITIAL_TOTAL_PROBLEMS = 54
+INITIAL_COMPLETED = 2
+INITIAL_POSITION = "3 / 54"
 
 
 @pytest.fixture
@@ -135,9 +135,9 @@ def test_clean_canonical_loads(workspace):
     canonical = _load(workspace)
     variants = canonical["accumulated_clean_export"]["variants"]
     bs = canonical["batch_state"]
-    assert len(variants) == BASELINE_VARIANTS
-    assert len(bs["processed_seed_ids"]) == BASELINE_PROCESSED
-    assert len(bs["needs_retry_seed_ids"]) == BASELINE_NEEDS_RETRY
+    assert len(variants) == INITIAL_VARIANTS
+    assert len(bs["processed_seed_ids"]) == INITIAL_PROCESSED
+    assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
     assert bs["needs_retry_seed_ids"][0] == DAEWOO
 
     text = json.dumps(canonical)
@@ -160,10 +160,10 @@ def test_select_next_problem_seed(workspace):
 def test_progress_before_current_problem_seed(workspace):
     canonical = _load(workspace)
     prog = queue.compute_problem_queue_progress(canonical)
-    assert prog["total"] == BASELINE_TOTAL_PROBLEMS
-    assert prog["completed"] == BASELINE_COMPLETED
-    assert prog["pending"] == BASELINE_NEEDS_RETRY
-    assert prog["current_position"] == BASELINE_POSITION
+    assert prog["total"] == INITIAL_TOTAL_PROBLEMS
+    assert prog["completed"] == INITIAL_COMPLETED
+    assert prog["pending"] == INITIAL_NEEDS_RETRY
+    assert prog["current_position"] == INITIAL_POSITION
     assert prog["current_seed"] == DAEWOO
 
 
@@ -181,12 +181,12 @@ def test_current_problem_seed_success_persists_before_progress(workspace):
     bs = after["batch_state"]
     assert DAEWOO not in bs["needs_retry_seed_ids"]
     assert bs["needs_retry_seed_ids"][0] == DAIHATSU
-    assert len(bs["needs_retry_seed_ids"]) == BASELINE_NEEDS_RETRY - 1
+    assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY - 1
 
     prog = queue.compute_problem_queue_progress(after)
-    assert prog["total"] == BASELINE_TOTAL_PROBLEMS
-    assert prog["pending"] == BASELINE_NEEDS_RETRY - 1
-    assert prog["completed"] == BASELINE_COMPLETED + 1
+    assert prog["total"] == INITIAL_TOTAL_PROBLEMS
+    assert prog["pending"] == INITIAL_NEEDS_RETRY - 1
+    assert prog["completed"] == INITIAL_COMPLETED + 1
     assert prog["current_position"] == "4 / 54"
     assert prog["current_seed"] == DAIHATSU
 
@@ -215,13 +215,13 @@ def test_failed_save_does_not_advance(workspace, monkeypatch):
     after = _load(workspace)
     bs = after["batch_state"]
     assert bs["needs_retry_seed_ids"][0] == DAEWOO
-    assert len(bs["needs_retry_seed_ids"]) == BASELINE_NEEDS_RETRY
+    assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
     assert len(after["accumulated_clean_export"]["variants"]) == variants_before
 
     prog = queue.compute_problem_queue_progress(after)
-    assert prog["pending"] == BASELINE_NEEDS_RETRY
-    assert prog["completed"] == BASELINE_COMPLETED
-    assert prog["current_position"] == BASELINE_POSITION
+    assert prog["pending"] == INITIAL_NEEDS_RETRY
+    assert prog["completed"] == INITIAL_COMPLETED
+    assert prog["current_position"] == INITIAL_POSITION
 
 
 def test_second_problem_seed_after_first(workspace):
@@ -232,11 +232,11 @@ def test_second_problem_seed_after_first(workspace):
 
     after = _load(workspace)
     bs = after["batch_state"]
-    assert len(bs["needs_retry_seed_ids"]) == BASELINE_NEEDS_RETRY - 2
+    assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY - 2
     prog = queue.compute_problem_queue_progress(after)
-    assert prog["total"] == BASELINE_TOTAL_PROBLEMS
-    assert prog["pending"] == BASELINE_NEEDS_RETRY - 2
-    assert prog["completed"] == BASELINE_COMPLETED + 2
+    assert prog["total"] == INITIAL_TOTAL_PROBLEMS
+    assert prog["pending"] == INITIAL_NEEDS_RETRY - 2
+    assert prog["completed"] == INITIAL_COMPLETED + 2
     assert prog["current_position"] == "5 / 54"
     assert bs["needs_retry_seed_ids"][0] == DS9
 
@@ -322,8 +322,8 @@ def test_batch_size_20_sequential_success(workspace, monkeypatch):
     assert push_calls == expected_order
     assert [item["seed_id"] for item in result["results"]] == expected_order
     assert all(item["ok"] is True for item in result["results"])
-    assert result["final_state"]["pending"] == BASELINE_NEEDS_RETRY - 20
-    assert result["final_state"]["completed"] == BASELINE_COMPLETED + 20
+    assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
+    assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
     assert result["final_state"]["position"] == "23 / 54"
     assert result["final_state"]["normal_next_seed_id"] == HAVAL
     assert result["final_state"]["normal_last_completed_seed_id"] == GMC
@@ -413,8 +413,8 @@ def test_progress_after_batch(workspace):
     )
 
     assert result["ok"] is True, result
-    assert result["final_state"]["completed"] == BASELINE_COMPLETED + 20
-    assert result["final_state"]["pending"] == BASELINE_NEEDS_RETRY - 20
+    assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
+    assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
     assert result["final_state"]["position"] == "23 / 54"
     assert result["final_state"]["selected_next_seed"] == initial_needs_retry[20]
 
