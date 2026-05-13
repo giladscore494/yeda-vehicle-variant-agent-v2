@@ -72,12 +72,15 @@ def _get_field_value(field: Any) -> Any:
     return field
 
 
+_EMPTY_VALUES = frozenset(("", "unknown", "n/a", "none", "null",
+                           "various", "various engines"))
+
+
 def _is_empty(value: Any) -> bool:
     if value is None:
         return True
     if isinstance(value, str):
-        return value.strip().lower() in ("", "unknown", "n/a", "none", "null",
-                                         "various", "various engines")
+        return value.strip().lower() in _EMPTY_VALUES
     return False
 
 
@@ -211,6 +214,23 @@ def _normalize_name(name: str) -> str:
     return re.sub(r"[^a-z0-9]", "", (name or "").lower())
 
 
+def _are_model_names_compatible(nm_var: str, nm_seed: str) -> bool:
+    """Return True when the variant model name is compatible with the seed model name.
+
+    Compatible means one of:
+    - exact match (after normalisation)
+    - seed name is a substring of variant name (e.g. seed="850i", var="m850ixdrive")
+    - variant name is a substring of seed name (e.g. seed="z4sdrive20i", var="z4")
+    """
+    if nm_var == nm_seed:
+        return True
+    if nm_seed and nm_seed in nm_var:
+        return True
+    if nm_var and nm_var in nm_seed:
+        return True
+    return False
+
+
 def _check_make_model(variant: dict, seed: dict) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -228,7 +248,7 @@ def _check_make_model(variant: dict, seed: dict) -> tuple[list[str], list[str]]:
     if var_model and seed_model:
         nm_var = _normalize_name(var_model)
         nm_seed = _normalize_name(seed_model)
-        if nm_var != nm_seed and nm_seed not in nm_var and nm_var not in nm_seed:
+        if not _are_model_names_compatible(nm_var, nm_seed):
             warnings.append(
                 f"model_name_differs: variant model '{var_model}' "
                 f"differs from seed model '{seed_model}'"
