@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:52:43.862690+00:00",
+    "updated_at": "2026-05-14T20:53:59.024249+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -424,7 +424,8 @@
       "honda__stream__2001__2014__il",
       "honda__zr-v__2023__2026__il",
       "hongqi__e-hs9__2022__2026__il",
-      "hummer__h2__2003__2009__il"
+      "hummer__h2__2003__2009__il",
+      "hummer__h3__2005__2010__il"
     ],
     "processed_seeds": [
       {
@@ -3522,7 +3523,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hummer__h3__2005__2010__il",
       "hyundai__atos__1997__2014__il",
       "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
@@ -3738,10 +3738,14 @@
     },
     "seed_accounting": {
       "hummer__h3__2005__2010__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hummer__h3__2005__2010__il",
+        "variants_added_to_canonical": 3,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:53:59.024297+00:00"
       },
       "honda__insight__2009__2014__il": {
         "seed_id": "honda__insight__2009__2014__il",
@@ -378665,6 +378669,512 @@
             "trim": [
               "src_autoboom",
               "src_wiki"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hummer_h3_2005_2006_il_first_generation_gmt345_3_5l_inline_5_220_hp_4_speed_automatic_suv_petrol",
+        "make": "Hummer",
+        "model": "h3",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2006,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation (GMT345)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "3.5L inline-5, 220 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "4WD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T20:53:58.800949+00:00",
+        "updated_at": "2026-05-14T20:53:58.800949+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hummer",
+          "model": "h3",
+          "year_start": 2005,
+          "year_end": 2006,
+          "generation": "First Generation (GMT345)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "3.5L inline-5, 220 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "4WD",
+          "trim": "Luxury",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Yad2 Israeli price list confirms 2006 Hummer H3 Luxury with 3.5L 220hp engine and automatic transmission. Production started in 2005.",
+          "source_ids": [
+            "yad2_il",
+            "icar_il",
+            "wiki_he"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il",
+              "wiki_he"
+            ],
+            "seats": [
+              "icar_il"
+            ],
+            "engine": [
+              "yad2_il",
+              "wiki_he"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [
+              "icar_il",
+              "wiki_he"
+            ],
+            "generation": [
+              "wiki_he"
+            ],
+            "year_start": [
+              "yad2_il",
+              "wiki_he"
+            ],
+            "year_end": [
+              "yad2_il",
+              "wiki_he"
+            ],
+            "trim": [
+              "yad2_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hummer_h3_2007_2010_il_first_generation_gmt345_3_7l_inline_5_242_hp_4_speed_automatic_suv_petrol",
+        "make": "Hummer",
+        "model": "h3",
+        "aliases": [],
+        "year_start": {
+          "value": 2007,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation (GMT345)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "3.7L inline-5, 242 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "yad2_il",
+            "icar_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "4WD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Adventure",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T20:53:58.801008+00:00",
+        "updated_at": "2026-05-14T20:53:58.801008+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Hummer",
+          "model": "h3",
+          "year_start": 2007,
+          "year_end": 2010,
+          "generation": "First Generation (GMT345)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "3.7L inline-5, 242 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "4WD",
+          "trim": "Adventure",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Yad2 Israeli price list and iCar confirm 2007-2010 Hummer H3 Adventure with 3.7L 242hp engine and automatic transmission.",
+          "source_ids": [
+            "yad2_il",
+            "icar_il",
+            "wiki_he"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il",
+              "wiki_he"
+            ],
+            "seats": [
+              "icar_il"
+            ],
+            "engine": [
+              "yad2_il",
+              "icar_il",
+              "wiki_he"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [
+              "icar_il",
+              "wiki_he"
+            ],
+            "generation": [
+              "wiki_he"
+            ],
+            "year_start": [
+              "yad2_il",
+              "icar_il",
+              "wiki_he"
+            ],
+            "year_end": [
+              "yad2_il",
+              "icar_il",
+              "wiki_he"
+            ],
+            "trim": [
+              "yad2_il",
+              "icar_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hummer_h3_2008_2010_il_first_generation_gmt345_5_3l_v8_300_hp_4_speed_automatic_suv_petrol",
+        "make": "Hummer",
+        "model": "h3",
+        "aliases": [],
+        "year_start": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation (GMT345)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "5.3L V8, 300 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "autoboom_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "4WD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "autoboom_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Alpha",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "autoboom_il",
+            "wiki_he"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T20:53:58.801041+00:00",
+        "updated_at": "2026-05-14T20:53:58.801041+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Hummer",
+          "model": "h3",
+          "year_start": 2008,
+          "year_end": 2010,
+          "generation": "First Generation (GMT345)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "5.3L V8, 300 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "4WD",
+          "trim": "Alpha",
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Autoboom IL database and global specs confirm the 5.3L V8 Alpha variant. Official IL importer (UMI) availability is not definitively confirmed in price lists, but it is listed in local databases.",
+          "source_ids": [
+            "autoboom_il",
+            "wiki_he"
+          ],
+          "field_sources": {
+            "body_type": [
+              "wiki_he"
+            ],
+            "seats": [
+              "wiki_he"
+            ],
+            "engine": [
+              "autoboom_il",
+              "wiki_he"
+            ],
+            "transmission": [
+              "autoboom_il"
+            ],
+            "fuel_type": [
+              "autoboom_il"
+            ],
+            "drivetrain": [
+              "autoboom_il",
+              "wiki_he"
+            ],
+            "generation": [
+              "wiki_he"
+            ],
+            "year_start": [
+              "autoboom_il",
+              "wiki_he"
+            ],
+            "year_end": [
+              "autoboom_il",
+              "wiki_he"
+            ],
+            "trim": [
+              "autoboom_il",
+              "wiki_he"
             ]
           }
         },
