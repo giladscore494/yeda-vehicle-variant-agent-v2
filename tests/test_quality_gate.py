@@ -6,6 +6,7 @@ tests that verify the gate is enforced inside run_selected_seed.
 from __future__ import annotations
 
 import copy
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -26,6 +27,9 @@ from engine import run_next
 from engine.canonical_store import load_canonical
 
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
+# A synthetic seed injected into needs_retry for problem-queue integration tests.
+_SYNTH_PQ_SEED = "zztest__qgtest__2020__2026__il"
+# Seed ID used as a test subject in save/quality-gate tests (not from needs_retry).
 FIAT_BRAVO = "fiat__bravo__1995__2014__il"
 
 
@@ -42,6 +46,22 @@ def workspace(tmp_path, monkeypatch):
     shutil.copy2(src, dst)
     monkeypatch.setenv("CANONICAL_PATH", str(dst))
     monkeypatch.chdir(tmp_path)
+    return tmp_path
+
+
+@pytest.fixture
+def workspace_pq(tmp_path, monkeypatch):
+    """Copy real canonical with one synthetic problem-queue seed injected."""
+    src = REPO_ROOT / CANONICAL_REL
+    dst_dir = tmp_path / "data" / "canonical"
+    dst_dir.mkdir(parents=True)
+    dst = dst_dir / "resume_package_canonical.json"
+    shutil.copy2(src, dst)
+    monkeypatch.setenv("CANONICAL_PATH", str(dst))
+    monkeypatch.chdir(tmp_path)
+    data = json.loads(dst.read_text(encoding="utf-8"))
+    data["batch_state"]["needs_retry_seed_ids"] = [_SYNTH_PQ_SEED]
+    dst.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return tmp_path
 
 
@@ -378,24 +398,24 @@ def _runner_two_good_one_bad(seed_id: str, *, retry_hint: bool = False) -> dict:
     }
 
 
-def test_do_not_save_all_rejected_variants(workspace):
+def test_do_not_save_all_rejected_variants(workspace_pq):
     """When all variants are rejected, canonical is unchanged and seed stays in needs_retry."""
-    before = _load(workspace)
+    before = _load(workspace_pq)
     variants_before = len(before["accumulated_clean_export"]["variants"])
     needs_retry_before = list(before["batch_state"]["needs_retry_seed_ids"])
 
     result = run_next.run_selected_seed(
-        FIAT_BRAVO, run_seed_fn=_runner_all_bad, push_fn=_noop_push,
+        _SYNTH_PQ_SEED, run_seed_fn=_runner_all_bad, push_fn=_noop_push,
     )
 
     assert result["ok"] is False
     assert result.get("error") == "quality_gate_failed_no_accepted_variants"
 
-    after = _load(workspace)
+    after = _load(workspace_pq)
     # Canonical unchanged
     assert len(after["accumulated_clean_export"]["variants"]) == variants_before
     # Seed still in needs_retry
-    assert FIAT_BRAVO in after["batch_state"]["needs_retry_seed_ids"]
+    assert _SYNTH_PQ_SEED in after["batch_state"]["needs_retry_seed_ids"]
     assert after["batch_state"]["needs_retry_seed_ids"] == needs_retry_before
 
 

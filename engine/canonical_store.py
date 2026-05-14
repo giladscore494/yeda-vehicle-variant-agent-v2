@@ -50,6 +50,32 @@ def load_canonical(path: Path | None = None) -> dict:
     return data
 
 
+def repair_canonical_buckets(canonical: dict) -> dict:
+    """Rebuild top-level verified_variants and partial_variants from accumulated_clean_export.variants.
+
+    Splits variants by verification_status:
+    - ``"verified"`` → ``verified_variants``
+    - everything else → ``partial_variants``
+
+    Ensures ``len(verified_variants) + len(partial_variants) == len(accumulated_clean_export.variants)``.
+    Mutates *canonical* in place and returns it.
+    """
+    ace = canonical.get("accumulated_clean_export") or {}
+    variants = ace.get("variants") or []
+    verified: list[dict] = []
+    partial: list[dict] = []
+    for v in variants:
+        if not isinstance(v, dict):
+            continue
+        if v.get("verification_status") == "verified":
+            verified.append(v)
+        else:
+            partial.append(v)
+    canonical["verified_variants"] = verified
+    canonical["partial_variants"] = partial
+    return canonical
+
+
 def refresh_canonical_counts(canonical: dict) -> dict:
     """Recompute all counts from actual data in canonical.
 
@@ -165,8 +191,9 @@ def save_canonical_atomic(data: dict, path: Path | None = None) -> dict:
     p = Path(path) if path else canonical_path()
     p.parent.mkdir(parents=True, exist_ok=True)
 
-    # Always refresh counts from actual data before validating or writing.
+    # Always refresh counts and top-level buckets from actual data before validating or writing.
     refresh_canonical_counts(data)
+    repair_canonical_buckets(data)
 
     ok, errs = validate_canonical(data)
     if not ok:
