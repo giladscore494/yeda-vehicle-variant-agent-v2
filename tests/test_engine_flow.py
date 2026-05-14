@@ -722,6 +722,7 @@ def test_load_seed_catalog_from_canonical_fallback(workspace):
     (workspace / SEED_CATALOG_REL).unlink()
     canonical = _load(workspace)
     canonical["seed_catalog"] = [GMC, HAVAL, HAVAL_CATALOG_NEXT]
+    canonical["batch_state"]["total_seeds"] = 3
     canonical["batch_state"]["next_seed_id"] = HAVAL
     canonical["batch_state"]["last_completed_seed_id"] = GMC
     assert queue.load_seed_catalog(canonical) == [GMC, HAVAL, HAVAL_CATALOG_NEXT]

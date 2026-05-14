@@ -425,7 +425,10 @@ def test_save_only_accepted_variants(workspace):
     variants_before = len(before["accumulated_clean_export"]["variants"])
 
     result = run_next.run_selected_seed(
-        FIAT_BRAVO, run_seed_fn=_runner_two_good_one_bad, push_fn=_noop_push,
+        FIAT_BRAVO,
+        run_seed_fn=_runner_two_good_one_bad,
+        push_fn=_noop_push,
+        seed_catalog=[FIAT_BRAVO],
     )
 
     assert result["ok"] is True, result

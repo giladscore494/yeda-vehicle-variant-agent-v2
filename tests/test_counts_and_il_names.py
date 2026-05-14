@@ -146,7 +146,12 @@ def test_counts_do_not_stay_anchored_after_bmw(workspace):
     bmw_variants = [_make_stub_variant(f"bmw__530i__2020__2024__il__v{i}") for i in range(3)]
 
     runner = _make_runner_returning(bmw_variants)
-    result = run_next.run_selected_seed(seed_id, run_seed_fn=runner, push_fn=_noop_push)
+    result = run_next.run_selected_seed(
+        seed_id,
+        run_seed_fn=runner,
+        push_fn=_noop_push,
+        seed_catalog=[seed_id],
+    )
     assert result["ok"] is True, result
 
     # Reload from disk (what was actually saved)
