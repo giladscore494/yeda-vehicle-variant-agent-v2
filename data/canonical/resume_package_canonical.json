@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T21:14:21.766864+00:00",
+    "updated_at": "2026-05-14T21:14:52.895881+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -441,7 +441,8 @@
       "hyundai__i25__1994__2026__il",
       "hyundai__i30__2007__2025__il",
       "hyundai__i40__2011__2019__il",
-      "hyundai__ioniq_5__2021__2026__il"
+      "hyundai__ioniq_5__2021__2026__il",
+      "hyundai__ioniq_5_n__2024__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3539,7 +3540,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__ioniq_5_n__2024__2026__il",
       "hyundai__ioniq_6__2023__2026__il",
       "hyundai__ioniq__2016__2022__il",
       "hyundai__ix35__2010__2015__il",
@@ -4198,10 +4198,14 @@
         "resolved_at": "2026-05-14T21:05:11.386678+00:00"
       },
       "hyundai__ioniq_5_n__2024__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__ioniq_5_n__2024__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T21:14:52.895931+00:00"
       },
       "honda__legend__2000__2012__il": {
         "seed_id": "honda__legend__2000__2012__il",
@@ -390528,6 +390532,171 @@
             ],
             "trim": [
               "src_gear"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_n_2024_2026_il_1st_gen_dual_electric_motor_84_kwh_650_hp_single_speed_ev_crossover_suv_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5 N",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Dual Electric Motor, 84 kWh, 650 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "N Performance",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T21:14:52.732705+00:00",
+        "updated_at": "2026-05-14T21:14:52.732705+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "Ioniq 5 N",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "Crossover SUV",
+          "seats": 5,
+          "engine": "Dual Electric Motor, 84 kWh, 650 hp",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "AWD",
+          "trim": "N Performance",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli automotive portals (Cartube, Yad2, EV Magazine). Sold in Israel starting late 2024. Features dual electric motors producing 650 hp (with N Grin Boost), AWD, and a single-speed transmission.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_3"
+            ],
+            "generation": [],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2"
             ]
           }
         },
