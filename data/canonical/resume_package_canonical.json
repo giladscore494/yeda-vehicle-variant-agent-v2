@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T21:17:18.107324+00:00",
+    "updated_at": "2026-05-14T21:18:36.844960+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -444,7 +444,8 @@
       "hyundai__ioniq_5__2021__2026__il",
       "hyundai__ioniq_5_n__2024__2026__il",
       "hyundai__ioniq_6__2023__2026__il",
-      "hyundai__ioniq__2016__2022__il"
+      "hyundai__ioniq__2016__2022__il",
+      "hyundai__ix35__2010__2015__il"
     ],
     "processed_seeds": [
       {
@@ -3542,7 +3543,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il"
     ],
@@ -4020,10 +4020,14 @@
         "resolved_at": "2026-05-14T13:02:46.674669+00:00"
       },
       "hyundai__ix35__2010__2015__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__ix35__2010__2015__il",
+        "variants_added_to_canonical": 3,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T21:18:36.845011+00:00"
       },
       "geely__coolray__2023__2026__il": {
         "seed_id": "geely__coolray__2023__2026__il",
@@ -391875,6 +391879,528 @@
               "src_wiki_global"
             ],
             "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ix35_2010_2015_il_lm_2_0l_petrol_154_163_hp_6_speed_automatic_suv_petrol",
+        "make": "Hyundai",
+        "model": "ix35",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "LM",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Petrol, 154-163 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "trim": {
+          "value": "Prime",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 15,
+        "created_at": "2026-05-14T21:18:36.643446+00:00",
+        "updated_at": "2026-05-14T21:18:36.643446+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "ix35",
+          "year_start": 2010,
+          "year_end": 2015,
+          "generation": "LM",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L Petrol, 154-163 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Prime",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli price lists (Yad2, Gear, iCar) for 2010-2015. 2.0L petrol engine produced 163 hp initially, updated to 154 hp. Other trims available in IL include Supreme, Inspire, and Open Sky.",
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar_ix35"
+            ],
+            "seats": [
+              "src_gear_ix35"
+            ],
+            "engine": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "transmission": [
+              "src_icar_ix35",
+              "src_gear_ix35"
+            ],
+            "fuel_type": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "drivetrain": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "generation": [
+              "src_icar_ix35"
+            ],
+            "year_start": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "year_end": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "trim": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ix35_2010_2015_il_lm_2_4l_petrol_174_hp_6_speed_automatic_suv_petrol",
+        "make": "Hyundai",
+        "model": "ix35",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "LM",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.4L Petrol, 174 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "4WD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Elite",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T21:18:36.643579+00:00",
+        "updated_at": "2026-05-14T21:18:36.643579+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Hyundai",
+          "model": "ix35",
+          "year_start": 2010,
+          "year_end": 2015,
+          "generation": "LM",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.4L Petrol, 174 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "4WD",
+          "trim": "Elite",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli price lists (Yad2, iCar) for 2010-2015. The 2.4L petrol engine was offered exclusively with 4WD and the top Elite trim.",
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar_ix35"
+            ],
+            "seats": [
+              "src_gear_ix35"
+            ],
+            "engine": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "transmission": [
+              "src_icar_ix35"
+            ],
+            "fuel_type": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "drivetrain": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "generation": [
+              "src_icar_ix35"
+            ],
+            "year_start": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "year_end": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "trim": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ix35_2010_2015_il_lm_2_0l_crdi_diesel_184_hp_6_speed_automatic_suv_diesel",
+        "make": "Hyundai",
+        "model": "ix35",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "LM",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L CRDi Diesel, 184 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Diesel",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "drivetrain": {
+          "value": "4WD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "trim": {
+          "value": "Inspire",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 15,
+        "created_at": "2026-05-14T21:18:36.643635+00:00",
+        "updated_at": "2026-05-14T21:18:36.643635+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Hyundai",
+          "model": "ix35",
+          "year_start": 2010,
+          "year_end": 2015,
+          "generation": "LM",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L CRDi Diesel, 184 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Diesel",
+          "drivetrain": "4WD",
+          "trim": "Inspire",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli price lists (Yad2, Gear, iCar) for 2010-2015. The 2.0L diesel engine produced 184 hp and was paired with 4WD. Other trims available in IL include Open Sky and Elite.",
+          "source_ids": [
+            "src_icar_ix35",
+            "src_yad2_ix35",
+            "src_gear_ix35"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar_ix35"
+            ],
+            "seats": [
+              "src_gear_ix35"
+            ],
+            "engine": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "transmission": [
+              "src_icar_ix35",
+              "src_gear_ix35"
+            ],
+            "fuel_type": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "drivetrain": [
+              "src_icar_ix35",
+              "src_yad2_ix35",
+              "src_gear_ix35"
+            ],
+            "generation": [
+              "src_icar_ix35"
+            ],
+            "year_start": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "year_end": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ],
+            "trim": [
+              "src_icar_ix35",
+              "src_yad2_ix35"
+            ]
           }
         },
         "identity_confidence": "unknown"
