@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T12:58:43.961295+00:00",
+    "updated_at": "2026-05-14T13:00:11.675675+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -406,7 +406,8 @@
       "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
-      "haval__jolion__2021__2026__il"
+      "haval__jolion__2021__2026__il",
+      "honda__accord__1990__2024__il"
     ],
     "processed_seeds": [
       {
@@ -3504,7 +3505,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
       "honda__cr-v__1997__2026__il",
@@ -3882,10 +3882,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__accord__1990__2024__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__accord__1990__2024__il",
+        "variants_added_to_canonical": 8,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T13:00:11.675749+00:00"
       },
       "honda__civic__1990__2026__il": {
         "variant_count": 0,
@@ -367886,6 +367890,1245 @@
             ],
             "year_end": [
               "src_icar_2026"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2008_2015_il_8th_gen_european_2_0l_i_vtec_petrol_5_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "8th Gen (European)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L i-VTEC petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Luxury",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_gear_il",
+            "src_icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T13:00:11.481790+00:00",
+        "updated_at": "2026-05-14T13:00:11.481790+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2008,
+          "year_end": 2015,
+          "generation": "8th Gen (European)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L i-VTEC petrol",
+          "transmission": "5-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Luxury",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli official importer (Meir) data and price lists confirm the 8th gen European Accord was sold in Israel until 2015 with a 2.0L petrol engine and 5-speed automatic. Trims included Luxury, Premium, and Executive.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_gear_il",
+            "src_icar_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_gear_il"
+            ],
+            "transmission": [
+              "src_autoboom_il",
+              "src_gear_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il",
+              "src_gear_il"
+            ],
+            "year_end": [
+              "src_autoboom_il",
+              "src_gear_il"
+            ],
+            "trim": [
+              "src_gear_il",
+              "src_icar_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2008_2015_il_8th_gen_european_2_4l_i_vtec_petrol_5_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "8th Gen (European)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.4L i-VTEC petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Executive",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:00:11.481882+00:00",
+        "updated_at": "2026-05-14T13:00:11.481882+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2008,
+          "year_end": 2015,
+          "generation": "8th Gen (European)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.4L i-VTEC petrol",
+          "transmission": "5-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Executive",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom Israel and Israeli specs confirm the 2.4L petrol engine variant for the 8th gen European Accord in Israel.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_icar_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il"
+            ],
+            "transmission": [
+              "src_autoboom_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il"
+            ],
+            "year_end": [
+              "src_autoboom_il"
+            ],
+            "trim": [
+              "src_icar_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2003_2008_il_7th_gen_european_2_0l_i_vtec_petrol_5_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "7th Gen (European)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L i-VTEC petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T13:00:11.481940+00:00",
+        "updated_at": "2026-05-14T13:00:11.481940+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2003,
+          "year_end": 2008,
+          "generation": "7th Gen (European)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L i-VTEC petrol",
+          "transmission": "5-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli price lists and Autoboom data confirm the 7th gen European Accord was sold in Israel with a 2.0L petrol engine and 5-speed automatic transmission.",
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il"
+            ],
+            "transmission": [
+              "src_autoboom_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il"
+            ],
+            "year_end": [
+              "src_autoboom_il"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2003_2008_il_7th_gen_european_2_4l_i_vtec_petrol_5_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "7th Gen (European)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.4L i-VTEC petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T13:00:11.481992+00:00",
+        "updated_at": "2026-05-14T13:00:11.481992+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2003,
+          "year_end": 2008,
+          "generation": "7th Gen (European)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.4L i-VTEC petrol",
+          "transmission": "5-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli price lists and Autoboom data confirm the 2.4L petrol engine variant for the 7th gen European Accord in Israel.",
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il"
+            ],
+            "transmission": [
+              "src_autoboom_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il"
+            ],
+            "year_end": [
+              "src_autoboom_il"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2014_2017_il_9th_gen_us_2_0l_i_vtec_hybrid_e_cvt_sedan_hybrid",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "9th Gen (US)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L i-VTEC Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "EX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T13:00:11.482064+00:00",
+        "updated_at": "2026-05-14T13:00:11.482064+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2014,
+          "year_end": 2017,
+          "generation": "9th Gen (US)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L i-VTEC Hybrid",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "EX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive news confirms parallel importer Albar sold the 9th gen US Accord Hybrid in Israel starting around 2014 in EX and EX-L trims.",
+          "source_ids": [
+            "src_gear_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear_il"
+            ],
+            "seats": [],
+            "engine": [
+              "src_gear_il"
+            ],
+            "transmission": [
+              "src_gear_il"
+            ],
+            "fuel_type": [
+              "src_gear_il"
+            ],
+            "drivetrain": [
+              "src_gear_il"
+            ],
+            "generation": [
+              "src_gear_il"
+            ],
+            "year_start": [
+              "src_gear_il"
+            ],
+            "year_end": [
+              "src_gear_il"
+            ],
+            "trim": [
+              "src_gear_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_2018_2022_il_10th_gen_1_5l_vtec_turbo_petrol_cvt_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 2018,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "10th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.5L VTEC Turbo petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 5,
+        "created_at": "2026-05-14T13:00:11.482117+00:00",
+        "updated_at": "2026-05-14T13:00:11.482117+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 2018,
+          "year_end": 2022,
+          "generation": "10th Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.5L VTEC Turbo petrol",
+          "transmission": "CVT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Israeli automotive reviews note that after 2015, the Accord was imported via parallel import from North America. The 1.5L Turbo CVT is the standard US powertrain for the 10th gen.",
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_auto_il"
+            ],
+            "seats": [],
+            "engine": [
+              "src_auto_il"
+            ],
+            "transmission": [
+              "src_auto_il"
+            ],
+            "fuel_type": [
+              "src_auto_il"
+            ],
+            "drivetrain": [
+              "src_auto_il"
+            ],
+            "generation": [
+              "src_auto_il"
+            ],
+            "year_start": [
+              "src_auto_il"
+            ],
+            "year_end": [
+              "src_auto_il"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_1998_2002_il_6th_gen_2_0l_petrol_4_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 1998,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2002,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "6th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T13:00:11.482169+00:00",
+        "updated_at": "2026-05-14T13:00:11.482169+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 6,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 1998,
+          "year_end": 2002,
+          "generation": "6th Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L petrol",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom Israel data confirms the 6th gen Accord was sold in Israel with a 2.0L petrol engine and automatic transmission.",
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il"
+            ],
+            "transmission": [
+              "src_autoboom_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il"
+            ],
+            "year_end": [
+              "src_autoboom_il"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_accord_1993_1998_il_5th_gen_2_0l_petrol_4_speed_automatic_sedan_petrol",
+        "make": "Honda",
+        "model": "Accord",
+        "aliases": [],
+        "year_start": {
+          "value": 1993,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 1998,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "5th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T13:00:11.482239+00:00",
+        "updated_at": "2026-05-14T13:00:11.482239+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 7,
+          "make": "Honda",
+          "model": "Accord",
+          "year_start": 1993,
+          "year_end": 1998,
+          "generation": "5th Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "2.0L petrol",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom Israel data confirms the 5th gen Accord was sold in Israel with a 2.0L petrol engine and automatic transmission.",
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_autoboom_il"
+            ],
+            "engine": [
+              "src_autoboom_il"
+            ],
+            "transmission": [
+              "src_autoboom_il"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_autoboom_il"
+            ],
+            "generation": [
+              "src_autoboom_il"
+            ],
+            "year_start": [
+              "src_autoboom_il"
+            ],
+            "year_end": [
+              "src_autoboom_il"
             ],
             "trim": []
           }
