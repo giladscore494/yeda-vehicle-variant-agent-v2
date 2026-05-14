@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:28:38.319681+00:00",
+    "updated_at": "2026-05-14T23:29:44.989294+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -452,7 +452,8 @@
       "volkswagen__polo__1990__2026__il",
       "volkswagen__up!__2012__2023__il",
       "volkswagen__e-up!__2014__2023__il",
-      "volkswagen__golf__1990__2026__il"
+      "volkswagen__golf__1990__2026__il",
+      "volkswagen__golf_gti__1990__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -897,15 +898,16 @@
       "volkswagen__polo__1990__2026__il",
       "volkswagen__up!__2012__2023__il",
       "volkswagen__e-up!__2014__2023__il",
-      "volkswagen__golf__1990__2026__il"
+      "volkswagen__golf__1990__2026__il",
+      "volkswagen__golf_gti__1990__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__golf__1990__2026__il",
-    "next_seed_id": "volkswagen__golf_gti__1990__2026__il",
+    "last_completed_seed_id": "volkswagen__golf_gti__1990__2026__il",
+    "next_seed_id": "volkswagen__golf_r__2010__2026__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1693,6 +1695,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:28:38.319755+00:00"
+      },
+      "volkswagen__golf_gti__1990__2026__il": {
+        "seed_id": "volkswagen__golf_gti__1990__2026__il",
+        "variants_added_to_canonical": 6,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:29:44.989375+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -216274,6 +216286,997 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2025_2026_il_mk8_5_2_0l_turbo_petrol_265_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2025,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 265 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 8,
+      "created_at": "2026-05-14T23:29:44.826588+00:00",
+      "updated_at": "2026-05-14T23:29:44.826588+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI",
+        "official_marketed_name_il": "פולקסווגן גולף GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2025,
+        "year_end": 2026,
+        "generation": "Mk8.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 265 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portals (cartube.co.il, iCar) confirm the 2025-2026 facelifted Mk8.5 Golf GTI is marketed in Israel as 'פולקסווגן גולף GTI' with a 265 hp 2.0L turbo engine and 7-speed DSG.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2"
+          ],
+          "transmission": [
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2021_2024_il_mk8_2_0l_turbo_petrol_245_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2021,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 245 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:29:44.826642+00:00",
+      "updated_at": "2026-05-14T23:29:44.826642+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI",
+        "official_marketed_name_il": "פולקסווגן גולף GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2021,
+        "year_end": 2024,
+        "generation": "Mk8",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 245 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portals (iCar, cartube.co.il) confirm the Mk8 Golf GTI was marketed in Israel from 2021 to 2024 with a 245 hp 2.0L turbo engine and 7-speed DSG.",
+        "source_ids": [
+          "src_1"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2017_2020_il_mk7_5_2_0l_turbo_petrol_245_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2020,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk7.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 245 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Performance",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:29:44.826674+00:00",
+      "updated_at": "2026-05-14T23:29:44.826674+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI Performance",
+        "official_marketed_name_il": "פולקסווגן גולף GTI Performance",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2017,
+        "year_end": 2020,
+        "generation": "Mk7.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 245 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Performance",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli reviews (TheCar, iCar) confirm the facelifted Mk7 (Mk7.5) was sold in Israel as 'פולקסווגן גולף GTI Performance' featuring a 245 hp engine and 7-speed DSG.",
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_3"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_3"
+          ],
+          "transmission": [
+            "src_1",
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1",
+            "src_3"
+          ],
+          "year_start": [
+            "src_1",
+            "src_3"
+          ],
+          "year_end": [
+            "src_1",
+            "src_3"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2013_2017_il_mk7_2_0l_turbo_petrol_220_hp_6_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2013,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk7",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 220 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:29:44.826701+00:00",
+      "updated_at": "2026-05-14T23:29:44.826701+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 3,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI",
+        "official_marketed_name_il": "פולקסווגן גולף GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2013,
+        "year_end": 2017,
+        "generation": "Mk7",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 220 hp",
+        "transmission": "6-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portal iCar confirms the Mk7 Golf GTI was marketed in Israel from 2013 to 2017 with a 220 hp 2.0L turbo engine and 6-speed DSG.",
+        "source_ids": [
+          "src_1"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2009_2012_il_mk6_2_0l_turbo_petrol_210_hp_6_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2009,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2012,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 210 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:29:44.826726+00:00",
+      "updated_at": "2026-05-14T23:29:44.826726+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 4,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI",
+        "official_marketed_name_il": "פולקסווגן גולף GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2009,
+        "year_end": 2012,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 210 hp",
+        "transmission": "6-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portal iCar confirms the Mk6 Golf GTI was marketed in Israel from 2009 to 2012 with a 210 hp 2.0L turbo engine and 6-speed DSG.",
+        "source_ids": [
+          "src_1"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_gti_2005_2008_il_mk5_2_0l_tfsi_petrol_200_hp_6_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf GTI",
+      "aliases": [],
+      "year_start": {
+        "value": 2005,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2008,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TFSI Petrol, 200 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:29:44.826753+00:00",
+      "updated_at": "2026-05-14T23:29:44.826753+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 5,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "global_model_name": "Volkswagen Golf GTI",
+        "official_marketed_name_il": "פולקסווגן גולף GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2005,
+        "year_end": 2008,
+        "generation": "Mk5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TFSI Petrol, 200 hp",
+        "transmission": "6-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Historical data from Israeli automotive portals confirms the Mk5 Golf GTI was marketed in Israel from 2005 to 2008 with a 200 hp 2.0L TFSI engine and 6-speed DSG.",
+        "source_ids": [
+          "src_1"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -430041,6 +431044,997 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2025_2026_il_mk8_5_2_0l_turbo_petrol_265_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2025,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 265 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T23:29:44.826588+00:00",
+        "updated_at": "2026-05-14T23:29:44.826588+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI",
+          "official_marketed_name_il": "פולקסווגן גולף GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2025,
+          "year_end": 2026,
+          "generation": "Mk8.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 265 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (cartube.co.il, iCar) confirm the 2025-2026 facelifted Mk8.5 Golf GTI is marketed in Israel as 'פולקסווגן גולף GTI' with a 265 hp 2.0L turbo engine and 7-speed DSG.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2021_2024_il_mk8_2_0l_turbo_petrol_245_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 245 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:29:44.826642+00:00",
+        "updated_at": "2026-05-14T23:29:44.826642+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI",
+          "official_marketed_name_il": "פולקסווגן גולף GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2021,
+          "year_end": 2024,
+          "generation": "Mk8",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 245 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (iCar, cartube.co.il) confirm the Mk8 Golf GTI was marketed in Israel from 2021 to 2024 with a 245 hp 2.0L turbo engine and 7-speed DSG.",
+          "source_ids": [
+            "src_1"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2017_2020_il_mk7_5_2_0l_turbo_petrol_245_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk7.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 245 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Performance",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:29:44.826674+00:00",
+        "updated_at": "2026-05-14T23:29:44.826674+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI Performance",
+          "official_marketed_name_il": "פולקסווגן גולף GTI Performance",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2017,
+          "year_end": 2020,
+          "generation": "Mk7.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 245 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Performance",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli reviews (TheCar, iCar) confirm the facelifted Mk7 (Mk7.5) was sold in Israel as 'פולקסווגן גולף GTI Performance' featuring a 245 hp engine and 7-speed DSG.",
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_3"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_3"
+            ],
+            "transmission": [
+              "src_1",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1",
+              "src_3"
+            ],
+            "year_start": [
+              "src_1",
+              "src_3"
+            ],
+            "year_end": [
+              "src_1",
+              "src_3"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2013_2017_il_mk7_2_0l_turbo_petrol_220_hp_6_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk7",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 220 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:29:44.826701+00:00",
+        "updated_at": "2026-05-14T23:29:44.826701+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI",
+          "official_marketed_name_il": "פולקסווגן גולף GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2013,
+          "year_end": 2017,
+          "generation": "Mk7",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 220 hp",
+          "transmission": "6-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portal iCar confirms the Mk7 Golf GTI was marketed in Israel from 2013 to 2017 with a 220 hp 2.0L turbo engine and 6-speed DSG.",
+          "source_ids": [
+            "src_1"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2009_2012_il_mk6_2_0l_turbo_petrol_210_hp_6_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 210 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:29:44.826726+00:00",
+        "updated_at": "2026-05-14T23:29:44.826726+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI",
+          "official_marketed_name_il": "פולקסווגן גולף GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2009,
+          "year_end": 2012,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 210 hp",
+          "transmission": "6-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portal iCar confirms the Mk6 Golf GTI was marketed in Israel from 2009 to 2012 with a 210 hp 2.0L turbo engine and 6-speed DSG.",
+          "source_ids": [
+            "src_1"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_gti_2005_2008_il_mk5_2_0l_tfsi_petrol_200_hp_6_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TFSI Petrol, 200 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:29:44.826753+00:00",
+        "updated_at": "2026-05-14T23:29:44.826753+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Volkswagen",
+          "model": "Golf GTI",
+          "global_model_name": "Volkswagen Golf GTI",
+          "official_marketed_name_il": "פולקסווגן גולף GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2005,
+          "year_end": 2008,
+          "generation": "Mk5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TFSI Petrol, 200 hp",
+          "transmission": "6-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Historical data from Israeli automotive portals confirms the Mk5 Golf GTI was marketed in Israel from 2005 to 2008 with a 200 hp 2.0L TFSI engine and 6-speed DSG.",
+          "source_ids": [
+            "src_1"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -430108,17 +432102,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1541,
+    "total_variants": 1547,
     "verified": 788,
-    "partial": 753,
+    "partial": 759,
     "makes_count": 39,
-    "models_count": 441,
+    "models_count": 442,
     "unresolved": 1,
-    "processed_seeds": 443,
+    "processed_seeds": 444,
     "needs_retry_seeds": 0,
-    "variants": 1541,
+    "variants": 1547,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:28:38.329942+00:00"
+    "last_updated_at": "2026-05-14T23:29:44.999829+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
