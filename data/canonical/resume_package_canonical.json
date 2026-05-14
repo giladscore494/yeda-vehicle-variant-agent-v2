@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:59:53.915362+00:00",
+    "updated_at": "2026-05-14T21:00:47.284420+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -430,7 +430,8 @@
       "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
       "hyundai__coupe__1996__2009__il",
-      "hyundai__creta__2020__2026__il"
+      "hyundai__creta__2020__2026__il",
+      "hyundai__elantra__1990__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3528,7 +3529,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__elantra__1990__2026__il",
       "hyundai__excel__1990__1998__il",
       "hyundai__getz__2002__2011__il",
       "hyundai__grandeur__2006__2020__il",
@@ -3779,13 +3779,13 @@
       },
       "hyundai__coupe__1996__2009__il": {
         "seed_id": "hyundai__coupe__1996__2009__il",
-        "variants_added_to_canonical": 6,
+        "variants_added_to_canonical": 5,
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": null,
         "marked_processed": true,
         "status": "resolved",
-        "resolved_at": "2026-05-14T20:59:10.204350+00:00"
+        "resolved_at": "2026-05-14T20:58:53.562833+00:00"
       },
       "fiat__bravo__1995__2014__il": {
         "seed_id": "fiat__bravo__1995__2014__il",
@@ -3828,10 +3828,14 @@
         "resolved_at": "2026-05-14T04:08:55.268986+00:00"
       },
       "hyundai__elantra__1990__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__elantra__1990__2026__il",
+        "variants_added_to_canonical": 4,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T21:00:47.284457+00:00"
       },
       "honda__insight__2018__2022__il": {
         "seed_id": "honda__insight__2018__2022__il",
@@ -4207,7 +4211,7 @@
         "no_variants_reason": "model_not_sold_in_market",
         "marked_processed": true,
         "status": "resolved",
-        "resolved_at": "2026-05-14T20:59:53.915400+00:00"
+        "resolved_at": "2026-05-14T20:59:34.051163+00:00"
       },
       "haval__h6__2022__2026__il": {
         "seed_id": "haval__h6__2022__2026__il",
@@ -380695,7 +380699,7 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_1996_1999_il_generation_1_1_6l_petrol_114_hp_automatic_coupe_petrol",
+        "variant_id": "hyundai_coupe_1996_2001_il_i_2_0l_petrol_139_hp_automatic_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -380704,12 +380708,12 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 1999,
+          "value": 2001,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "Generation 1",
+          "value": "I",
           "used_in_compare": false
         },
         "body_type": {
@@ -380718,7 +380722,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380729,161 +380733,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "engine": {
-          "value": "1.6L petrol, 114 hp",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "transmission": {
-          "value": "Automatic",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "fuel_type": {
-          "value": "Petrol",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "drivetrain": {
-          "value": "FWD",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "trim": {
-          "value": null,
-          "status": "unknown",
-          "confidence": "low",
-          "sources_count": 0,
-          "source_ids": [],
-          "used_in_compare": false,
-          "reason": "unknown from 0 source(s)"
-        },
-        "doors": null,
-        "verification_status": "partial",
-        "confidence": "medium",
-        "sources_count": 6,
-        "created_at": "2026-05-14T20:59:10.064706+00:00",
-        "updated_at": "2026-05-14T20:59:10.064706+00:00",
-        "notes": [],
-        "candidate_raw": {
-          "candidate_index": 0,
-          "make": "Hyundai",
-          "model": "Coupe",
-          "year_start": 1996,
-          "year_end": 1999,
-          "generation": "Generation 1",
-          "body_type": "Coupe",
-          "seats": 4,
-          "engine": "1.6L petrol, 114 hp",
-          "transmission": "Automatic",
-          "fuel_type": "Petrol",
-          "drivetrain": "FWD",
-          "trim": null,
-          "market_scope": "IL",
-          "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 1.6L AT variant for Generation 1 (1996-1999) in Israel.",
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "field_sources": {
-            "body_type": [
-              "autoboom_il_coupe"
-            ],
-            "seats": [
-              "autoboom_il_coupe"
-            ],
-            "engine": [
-              "autoboom_il_coupe"
-            ],
-            "transmission": [
-              "autoboom_il_coupe"
-            ],
-            "fuel_type": [
-              "autoboom_il_coupe"
-            ],
-            "drivetrain": [
-              "autoboom_il_coupe"
-            ],
-            "generation": [
-              "autoboom_il_coupe"
-            ],
-            "year_start": [
-              "autoboom_il_coupe"
-            ],
-            "year_end": [
-              "autoboom_il_coupe",
-              "fxp_il_forum"
-            ],
-            "trim": []
-          }
-        },
-        "identity_confidence": "unknown"
-      },
-      {
-        "variant_id": "hyundai_coupe_1996_1999_il_generation_1_2_0l_petrol_139_hp_manual_coupe_petrol",
-        "make": "Hyundai",
-        "model": "Coupe",
-        "aliases": [],
-        "year_start": {
-          "value": 1996,
-          "used_in_compare": false
-        },
-        "year_end": {
-          "value": 1999,
-          "used_in_compare": false
-        },
-        "market": "IL",
-        "generation": {
-          "value": "Generation 1",
-          "used_in_compare": false
-        },
-        "body_type": {
-          "value": "Coupe",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
-        },
-        "seats": {
-          "value": 4,
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380894,18 +380744,18 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "transmission": {
-          "value": "Manual",
+          "value": "Automatic",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380916,7 +380766,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380927,7 +380777,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380945,16 +380795,167 @@
         "verification_status": "partial",
         "confidence": "medium",
         "sources_count": 6,
-        "created_at": "2026-05-14T20:59:10.064762+00:00",
-        "updated_at": "2026-05-14T20:59:10.064762+00:00",
+        "created_at": "2026-05-14T20:58:53.404729+00:00",
+        "updated_at": "2026-05-14T20:58:53.404729+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "Coupe",
+          "year_start": 1996,
+          "year_end": 2001,
+          "generation": "I",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.0L petrol, 139 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Yad2 price list confirms 1997-1999 2.0L 139hp automatic version with 4 seats in Israel.",
+          "source_ids": [
+            "yad2_price_list"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_price_list"
+            ],
+            "seats": [
+              "yad2_price_list"
+            ],
+            "engine": [
+              "yad2_price_list"
+            ],
+            "transmission": [
+              "yad2_price_list"
+            ],
+            "fuel_type": [
+              "yad2_price_list"
+            ],
+            "drivetrain": [
+              "autoboom_il"
+            ],
+            "generation": [
+              "autoboom_il"
+            ],
+            "year_start": [
+              "autoboom_il"
+            ],
+            "year_end": [
+              "autoboom_il"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_coupe_1996_2001_il_i_2_0l_petrol_139_hp_manual_coupe_petrol",
+        "make": "Hyundai",
+        "model": "Coupe",
+        "aliases": [],
+        "year_start": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2001,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "I",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol, 139 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 5,
+        "created_at": "2026-05-14T20:58:53.404781+00:00",
+        "updated_at": "2026-05-14T20:58:53.404781+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 1,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 1996,
-          "year_end": 1999,
-          "generation": "Generation 1",
+          "year_end": 2001,
+          "generation": "I",
           "body_type": "Coupe",
           "seats": 4,
           "engine": "2.0L petrol, 139 hp",
@@ -380962,40 +380963,37 @@
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
           "trim": null,
-          "market_scope": "IL",
-          "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 2.0L MT (139 hp) variant for Generation 1 (1996-1999) in Israel.",
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Manual transmission likely available for the 1st generation 2.0L in Israel, though Yad2 snippet specifically highlighted the automatic.",
           "source_ids": [
-            "autoboom_il_coupe"
+            "yad2_price_list"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il_coupe"
+              "yad2_price_list"
             ],
             "seats": [
-              "autoboom_il_coupe"
+              "yad2_price_list"
             ],
             "engine": [
-              "autoboom_il_coupe"
+              "yad2_price_list"
             ],
-            "transmission": [
-              "autoboom_il_coupe"
-            ],
+            "transmission": [],
             "fuel_type": [
-              "autoboom_il_coupe"
+              "yad2_price_list"
             ],
             "drivetrain": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "generation": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "year_start": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "year_end": [
-              "autoboom_il_coupe",
-              "fxp_il_forum"
+              "autoboom_il"
             ],
             "trim": []
           }
@@ -381003,7 +381001,7 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2002_2005_il_generation_2_2_0l_petrol_143_hp_automatic_coupe_petrol",
+        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_0l_petrol_138_143_hp_manual_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -381012,12 +381010,12 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2005,
+          "value": 2009,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "Generation 2",
+          "value": "II",
           "used_in_compare": false
         },
         "body_type": {
@@ -381026,7 +381024,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381037,43 +381035,48 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.0L petrol, 143 hp",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
+          "value": "2.0L petrol, 138-143 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
           "source_ids": [
-            "autoboom_il_coupe"
+            "ynet_2002",
+            "gear_il",
+            "autoboom_il"
           ],
           "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
+          "reason": "verified from 3 source(s)"
         },
         "transmission": {
-          "value": "Automatic",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
+          "value": "Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
           "source_ids": [
-            "autoboom_il_coupe"
+            "ynet_2002",
+            "gear_il",
+            "autoboom_il"
           ],
           "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
+          "reason": "verified from 3 source(s)"
         },
         "fuel_type": {
           "value": "Petrol",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
           "source_ids": [
-            "autoboom_il_coupe"
+            "gear_il",
+            "autoboom_il"
           ],
           "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
+          "reason": "verified from 2 source(s)"
         },
         "drivetrain": {
           "value": "FWD",
@@ -381081,84 +381084,94 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "trim": {
-          "value": null,
-          "status": "unknown",
-          "confidence": "low",
-          "sources_count": 0,
-          "source_ids": [],
-          "used_in_compare": false,
-          "reason": "unknown from 0 source(s)"
+          "value": "FX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
         },
         "doors": null,
         "verification_status": "partial",
         "confidence": "medium",
-        "sources_count": 6,
-        "created_at": "2026-05-14T20:59:10.064794+00:00",
-        "updated_at": "2026-05-14T20:59:10.064794+00:00",
+        "sources_count": 12,
+        "created_at": "2026-05-14T20:58:53.404822+00:00",
+        "updated_at": "2026-05-14T20:58:53.404822+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 2,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 2002,
-          "year_end": 2005,
-          "generation": "Generation 2",
+          "year_end": 2009,
+          "generation": "II",
           "body_type": "Coupe",
           "seats": 4,
-          "engine": "2.0L petrol, 143 hp",
-          "transmission": "Automatic",
+          "engine": "2.0L petrol, 138-143 hp",
+          "transmission": "Manual",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
-          "trim": null,
+          "trim": "FX",
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 2.0L AT (143 hp) variant for Generation 2 (2002-2005) in Israel. Note: 1999-2002 models were generally not imported to IL.",
+          "source_basis": "Ynet (2002), Gear, and Autoboom confirm 2.0L 138-143hp manual version launched in Israel for the 2nd generation. Autoboom lists 'FX' trim.",
           "source_ids": [
-            "autoboom_il_coupe",
-            "fxp_il_forum"
+            "ynet_2002",
+            "gear_il",
+            "autoboom_il"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "seats": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "engine": [
-              "autoboom_il_coupe"
+              "ynet_2002",
+              "gear_il",
+              "autoboom_il"
             ],
             "transmission": [
-              "autoboom_il_coupe"
+              "ynet_2002",
+              "gear_il",
+              "autoboom_il"
             ],
             "fuel_type": [
-              "autoboom_il_coupe"
+              "gear_il",
+              "autoboom_il"
             ],
             "drivetrain": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "generation": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
             "year_start": [
-              "autoboom_il_coupe",
-              "fxp_il_forum"
+              "ynet_2002",
+              "autoboom_il"
             ],
             "year_end": [
-              "autoboom_il_coupe"
+              "autoboom_il"
             ],
-            "trim": []
+            "trim": [
+              "autoboom_il"
+            ]
           }
         },
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2002_2005_il_generation_2_2_7l_v6_petrol_170_hp_manual_coupe_petrol",
+        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_7l_v6_petrol_167_170_hp_automatic_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -381167,24 +381180,25 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2005,
+          "value": 2009,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "Generation 2",
+          "value": "II",
           "used_in_compare": false
         },
         "body_type": {
           "value": "Coupe",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
           "source_ids": [
-            "autoboom_il_coupe"
+            "icar_il",
+            "autoboom_il"
           ],
           "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
+          "reason": "verified from 2 source(s)"
         },
         "seats": {
           "value": 4,
@@ -381192,29 +381206,377 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.7L V6 petrol, 170 hp",
+          "value": "2.7L V6 petrol, 167-170 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 4,
+          "source_ids": [
+            "ynet_2002",
+            "icar_il",
+            "gear_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 4 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 4,
+          "source_ids": [
+            "ynet_2002",
+            "icar_il",
+            "gear_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 4 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "gear_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "FX",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 16,
+        "created_at": "2026-05-14T20:58:53.404851+00:00",
+        "updated_at": "2026-05-14T20:58:53.404851+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Hyundai",
+          "model": "Coupe",
+          "year_start": 2002,
+          "year_end": 2009,
+          "generation": "II",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.7L V6 petrol, 167-170 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "FX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Ynet (2002), iCar, and Gear confirm 2.7L V6 167-170hp automatic version launched in Israel. Autoboom lists 'FX' trim.",
+          "source_ids": [
+            "ynet_2002",
+            "icar_il",
+            "gear_il",
+            "autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "seats": [
+              "autoboom_il"
+            ],
+            "engine": [
+              "ynet_2002",
+              "icar_il",
+              "gear_il",
+              "autoboom_il"
+            ],
+            "transmission": [
+              "ynet_2002",
+              "icar_il",
+              "gear_il",
+              "autoboom_il"
+            ],
+            "fuel_type": [
+              "gear_il",
+              "autoboom_il"
+            ],
+            "drivetrain": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "generation": [
+              "autoboom_il"
+            ],
+            "year_start": [
+              "ynet_2002",
+              "icar_il",
+              "autoboom_il"
+            ],
+            "year_end": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "trim": [
+              "autoboom_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_7l_v6_petrol_167_170_hp_manual_coupe_petrol",
+        "make": "Hyundai",
+        "model": "Coupe",
+        "aliases": [],
+        "year_start": {
+          "value": 2002,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "II",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.7L V6 petrol, 167-170 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "FX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T20:58:53.404880+00:00",
+        "updated_at": "2026-05-14T20:58:53.404880+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Hyundai",
+          "model": "Coupe",
+          "year_start": 2002,
+          "year_end": 2009,
+          "generation": "II",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.7L V6 petrol, 167-170 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "FX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "iCar and Autoboom confirm 2.7L V6 manual version available in Israel for the 2nd generation.",
+          "source_ids": [
+            "icar_il",
+            "autoboom_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "seats": [
+              "autoboom_il"
+            ],
+            "engine": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "transmission": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "fuel_type": [
+              "autoboom_il"
+            ],
+            "drivetrain": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "generation": [
+              "autoboom_il"
+            ],
+            "year_start": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "year_end": [
+              "icar_il",
+              "autoboom_il"
+            ],
+            "trim": [
+              "autoboom_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_elantra_2000_2006_il_xd_1_6l_petrol_4_speed_automatic_sedan_petrol",
+        "make": "Hyundai",
+        "model": "elantra",
+        "aliases": [],
+        "year_start": {
+          "value": 2000,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2006,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "XD",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia_elantra"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia_elantra"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "transmission": {
-          "value": "Manual",
+          "value": "4-speed automatic",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381225,7 +381587,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381236,7 +381598,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381254,56 +381616,56 @@
         "verification_status": "partial",
         "confidence": "medium",
         "sources_count": 6,
-        "created_at": "2026-05-14T20:59:10.064822+00:00",
-        "updated_at": "2026-05-14T20:59:10.064822+00:00",
+        "created_at": "2026-05-14T21:00:46.999074+00:00",
+        "updated_at": "2026-05-14T21:00:46.999074+00:00",
         "notes": [],
         "candidate_raw": {
-          "candidate_index": 3,
+          "candidate_index": 0,
           "make": "Hyundai",
-          "model": "Coupe",
-          "year_start": 2002,
-          "year_end": 2005,
-          "generation": "Generation 2",
-          "body_type": "Coupe",
-          "seats": 4,
-          "engine": "2.7L V6 petrol, 170 hp",
-          "transmission": "Manual",
+          "model": "elantra",
+          "year_start": 2000,
+          "year_end": 2006,
+          "generation": "XD",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L petrol",
+          "transmission": "4-speed automatic",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
           "trim": null,
           "market_scope": "IL",
-          "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 2.7L V6 MT (170 hp) variant for Generation 2 (2002-2005) in Israel.",
+          "confidence_level": "medium",
+          "source_basis": "Historical data confirms the XD generation was sold as Elantra in Israel with a 1.6L petrol engine and 4-speed automatic transmission.",
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "seats": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "engine": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "transmission": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "fuel_type": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "drivetrain": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "generation": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "year_start": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "year_end": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "trim": []
           }
@@ -381311,63 +381673,63 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2005_2009_il_generation_2_facelift_2_0l_petrol_138_hp_manual_coupe_petrol",
+        "variant_id": "hyundai_elantra_2011_2015_il_md_1_6l_petrol_132_hp_6_speed_automatic_sedan_petrol",
         "make": "Hyundai",
-        "model": "Coupe",
+        "model": "elantra",
         "aliases": [],
         "year_start": {
-          "value": 2005,
+          "value": 2011,
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2009,
+          "value": 2015,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "Generation 2 Facelift",
+          "value": "MD",
           "used_in_compare": false
         },
         "body_type": {
-          "value": "Coupe",
+          "value": "Sedan",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "seats": {
-          "value": 4,
+          "value": 5,
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.0L petrol, 138 hp",
+          "value": "1.6L petrol, 132 hp",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "transmission": {
-          "value": "Manual",
+          "value": "6-speed automatic",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381378,7 +381740,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381389,18 +381751,18 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "trim": {
-          "value": "FX",
+          "value": "Inspire",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381409,122 +381771,125 @@
         "verification_status": "partial",
         "confidence": "medium",
         "sources_count": 7,
-        "created_at": "2026-05-14T20:59:10.064850+00:00",
-        "updated_at": "2026-05-14T20:59:10.064850+00:00",
+        "created_at": "2026-05-14T21:00:46.999122+00:00",
+        "updated_at": "2026-05-14T21:00:46.999122+00:00",
         "notes": [],
         "candidate_raw": {
-          "candidate_index": 4,
+          "candidate_index": 1,
           "make": "Hyundai",
-          "model": "Coupe",
-          "year_start": 2005,
-          "year_end": 2009,
-          "generation": "Generation 2 Facelift",
-          "body_type": "Coupe",
-          "seats": 4,
-          "engine": "2.0L petrol, 138 hp",
-          "transmission": "Manual",
+          "model": "elantra",
+          "year_start": 2011,
+          "year_end": 2015,
+          "generation": "MD",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L petrol, 132 hp",
+          "transmission": "6-speed automatic",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
-          "trim": "FX",
+          "trim": "Inspire",
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 2.0L MT (138 hp) FX trim variant for Generation 2 Facelift (2005-2009) in Israel.",
+          "source_basis": "Confirmed by Israeli automotive portals (Gear) for the 2011-2015 period. Marketed locally as 'i35 Elantra' or 'i35'. Features a 1.6L petrol engine with 132 hp and a 6-speed automatic transmission.",
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_gear_i35",
+            "src_wikipedia_elantra"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ],
             "seats": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ],
             "engine": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ],
             "transmission": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ],
             "fuel_type": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ],
             "drivetrain": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "generation": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "year_start": [
-              "autoboom_il_coupe"
+              "src_gear_i35",
+              "src_wikipedia_elantra"
             ],
             "year_end": [
-              "autoboom_il_coupe"
+              "src_gear_i35",
+              "src_wikipedia_elantra"
             ],
             "trim": [
-              "autoboom_il_coupe"
+              "src_gear_i35"
             ]
           }
         },
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2005_2009_il_generation_2_facelift_2_7l_v6_petrol_167_hp_automatic_coupe_petrol",
+        "variant_id": "hyundai_elantra_2016_2020_il_ad_1_6l_gdi_petrol_127_hp_6_speed_automatic_sedan_petrol",
         "make": "Hyundai",
-        "model": "Coupe",
+        "model": "elantra",
         "aliases": [],
         "year_start": {
-          "value": 2005,
+          "value": 2016,
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2009,
+          "value": 2020,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "Generation 2 Facelift",
+          "value": "AD",
           "used_in_compare": false
         },
         "body_type": {
-          "value": "Coupe",
+          "value": "Sedan",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "seats": {
-          "value": 4,
+          "value": 5,
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.7L V6 petrol, 167 hp",
+          "value": "1.6L GDI petrol, 127 hp",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "transmission": {
-          "value": "Automatic",
+          "value": "6-speed automatic",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381535,7 +381900,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381546,18 +381911,18 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_wikipedia_elantra"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "trim": {
-          "value": "FX",
+          "value": "Inspire",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381566,59 +381931,221 @@
         "verification_status": "partial",
         "confidence": "medium",
         "sources_count": 7,
-        "created_at": "2026-05-14T20:59:10.064878+00:00",
-        "updated_at": "2026-05-14T20:59:10.064878+00:00",
+        "created_at": "2026-05-14T21:00:46.999153+00:00",
+        "updated_at": "2026-05-14T21:00:46.999153+00:00",
         "notes": [],
         "candidate_raw": {
-          "candidate_index": 5,
+          "candidate_index": 2,
           "make": "Hyundai",
-          "model": "Coupe",
-          "year_start": 2005,
-          "year_end": 2009,
-          "generation": "Generation 2 Facelift",
-          "body_type": "Coupe",
-          "seats": 4,
-          "engine": "2.7L V6 petrol, 167 hp",
-          "transmission": "Automatic",
+          "model": "elantra",
+          "year_start": 2016,
+          "year_end": 2020,
+          "generation": "AD",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L GDI petrol, 127 hp",
+          "transmission": "6-speed automatic",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
-          "trim": "FX",
+          "trim": "Inspire",
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Autoboom IL specs confirm 2.7L V6 AT (167 hp) FX trim variant for Generation 2 Facelift (2005-2009) in Israel.",
+          "source_basis": "Confirmed by Auto.co.il for the 2016 launch in Israel. Reverted to the 'Elantra' name. Powered by a 1.6L GDI engine producing 127 hp, mated to a 6-speed automatic transmission.",
           "source_ids": [
-            "autoboom_il_coupe"
+            "src_auto_elantra_2016",
+            "src_wikipedia_elantra"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
             ],
             "seats": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "engine": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
             ],
             "transmission": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
             ],
             "fuel_type": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
             ],
             "drivetrain": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "generation": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "year_start": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
             ],
             "year_end": [
-              "autoboom_il_coupe"
+              "src_wikipedia_elantra"
             ],
             "trim": [
-              "autoboom_il_coupe"
+              "src_auto_elantra_2016"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_elantra_2021_2026_il_cn7_1_6l_hybrid_139_hp_6_speed_dct_sedan_hybrid",
+        "make": "Hyundai",
+        "model": "elantra",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "CN7",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autocom_elantra_hybrid"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia_elantra"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L hybrid, 139 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autocom_elantra_hybrid",
+            "src_icar_elantra_hybrid"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DCT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autocom_elantra_hybrid"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_elantra_hybrid"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia_elantra"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Premium",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar_elantra_hybrid"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T21:00:46.999177+00:00",
+        "updated_at": "2026-05-14T21:00:46.999177+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Hyundai",
+          "model": "elantra",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "CN7",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L hybrid, 139 hp",
+          "transmission": "6-speed DCT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Premium",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by multiple Israeli sources (iCar, Autocom) for the CN7 generation. Exclusively sold as a hybrid in Israel with a 1.6L engine and electric motor producing 139 hp combined, using a 6-speed dual-clutch transmission.",
+          "source_ids": [
+            "src_icar_elantra_hybrid",
+            "src_autocom_elantra_hybrid",
+            "src_wikipedia_elantra"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autocom_elantra_hybrid"
+            ],
+            "seats": [
+              "src_wikipedia_elantra"
+            ],
+            "engine": [
+              "src_autocom_elantra_hybrid",
+              "src_icar_elantra_hybrid"
+            ],
+            "transmission": [
+              "src_autocom_elantra_hybrid"
+            ],
+            "fuel_type": [
+              "src_icar_elantra_hybrid"
+            ],
+            "drivetrain": [
+              "src_wikipedia_elantra"
+            ],
+            "generation": [
+              "src_wikipedia_elantra"
+            ],
+            "year_start": [
+              "src_autocom_elantra_hybrid"
+            ],
+            "year_end": [
+              "src_icar_elantra_hybrid"
+            ],
+            "trim": [
+              "src_icar_elantra_hybrid"
             ]
           }
         },
