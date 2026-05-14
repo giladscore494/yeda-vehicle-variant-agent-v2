@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:49:55.835605+00:00",
+    "updated_at": "2026-05-14T20:50:47.033490+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -421,7 +421,8 @@
       "honda__legend__2000__2012__il",
       "honda__odyssey__1999__2020__il",
       "honda__prelude__1992__2001__il",
-      "honda__stream__2001__2014__il"
+      "honda__stream__2001__2014__il",
+      "honda__zr-v__2023__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3519,7 +3520,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__zr-v__2023__2026__il",
       "hongqi__e-hs9__2022__2026__il",
       "hummer__h2__2003__2009__il",
       "hummer__h3__2005__2010__il",
@@ -3874,10 +3874,14 @@
         "resolved_at": "2026-05-14T20:49:55.835658+00:00"
       },
       "honda__zr-v__2023__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__zr-v__2023__2026__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:50:47.033524+00:00"
       },
       "honda__hr-v__2015__2026__il": {
         "seed_id": "honda__hr-v__2015__2026__il",
@@ -377349,6 +377353,183 @@
               "src_3"
             ],
             "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_zr_v_2026_2026_il_1st_generation_2_0l_e_hev_184_hp_e_cvt_crossover_hybrid",
+        "make": "Honda",
+        "model": "ZR-V",
+        "aliases": [],
+        "year_start": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L e:HEV (184 hp)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Elegance",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 15,
+        "created_at": "2026-05-14T20:50:46.900828+00:00",
+        "updated_at": "2026-05-14T20:50:46.900828+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "ZR-V",
+          "year_start": 2026,
+          "year_end": 2026,
+          "generation": "1st Generation",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "2.0L e:HEV (184 hp)",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Elegance",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli specs and reviews confirm the launch of the ZR-V in Israel in January 2026 with a 2.0L e:HEV hybrid powertrain and FWD. Elegance is the base trim.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_3"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1",
+              "src_2"
+            ]
           }
         },
         "identity_confidence": "unknown"
