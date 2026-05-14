@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T14:10:42.525134+00:00",
+    "updated_at": "2026-05-14T20:48:51.513175+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -419,7 +419,8 @@
       "honda__insight__2018__2022__il",
       "honda__jazz__2001__2026__il",
       "honda__legend__2000__2012__il",
-      "honda__odyssey__1999__2020__il"
+      "honda__odyssey__1999__2020__il",
+      "honda__prelude__1992__2001__il"
     ],
     "processed_seeds": [
       {
@@ -3517,7 +3518,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__prelude__1992__2001__il",
       "honda__stream__2001__2014__il",
       "honda__zr-v__2023__2026__il",
       "hongqi__e-hs9__2022__2026__il",
@@ -3938,10 +3938,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__prelude__1992__2001__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__prelude__1992__2001__il",
+        "variants_added_to_canonical": 4,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:48:51.513244+00:00"
       },
       "hummer__h2__2003__2009__il": {
         "variant_count": 0,
@@ -375894,6 +375898,644 @@
               "src_global_honda"
             ],
             "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_prelude_1992_1996_il_4th_gen_2_0l_petrol_133_hp_automatic_coupe_petrol",
+        "make": "Honda",
+        "model": "Prelude",
+        "aliases": [],
+        "year_start": {
+          "value": 1992,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol, 133 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "2.0i",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T20:48:51.251157+00:00",
+        "updated_at": "2026-05-14T20:48:51.251157+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Prelude",
+          "year_start": 1992,
+          "year_end": 1996,
+          "generation": "4th Gen",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.0L petrol, 133 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "2.0i",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom IL catalog confirms 4th generation (1992-1996) 2.0L 133 hp with automatic transmission and FWD for the Israeli market.",
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_4th_gen"
+            ],
+            "seats": [
+              "src_autoboom_4th_gen"
+            ],
+            "engine": [
+              "src_autoboom_4th_gen"
+            ],
+            "transmission": [
+              "src_autoboom_4th_gen"
+            ],
+            "fuel_type": [
+              "src_autoboom_4th_gen"
+            ],
+            "drivetrain": [
+              "src_autoboom_4th_gen"
+            ],
+            "generation": [
+              "src_autoboom_4th_gen"
+            ],
+            "year_start": [
+              "src_autoboom_4th_gen"
+            ],
+            "year_end": [
+              "src_autoboom_4th_gen"
+            ],
+            "trim": [
+              "src_autoboom_4th_gen"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_prelude_1992_1996_il_4th_gen_2_2l_petrol_185_hp_automatic_coupe_petrol",
+        "make": "Honda",
+        "model": "Prelude",
+        "aliases": [],
+        "year_start": {
+          "value": 1992,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.2L petrol, 185 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "2.2i",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T20:48:51.251249+00:00",
+        "updated_at": "2026-05-14T20:48:51.251249+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "Prelude",
+          "year_start": 1992,
+          "year_end": 1996,
+          "generation": "4th Gen",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.2L petrol, 185 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "2.2i",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom IL catalog confirms 4th generation (1992-1996) 2.2L 185 hp with automatic transmission and FWD for the Israeli market.",
+          "source_ids": [
+            "src_autoboom_4th_gen"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_4th_gen"
+            ],
+            "seats": [
+              "src_autoboom_4th_gen"
+            ],
+            "engine": [
+              "src_autoboom_4th_gen"
+            ],
+            "transmission": [
+              "src_autoboom_4th_gen"
+            ],
+            "fuel_type": [
+              "src_autoboom_4th_gen"
+            ],
+            "drivetrain": [
+              "src_autoboom_4th_gen"
+            ],
+            "generation": [
+              "src_autoboom_4th_gen"
+            ],
+            "year_start": [
+              "src_autoboom_4th_gen"
+            ],
+            "year_end": [
+              "src_autoboom_4th_gen"
+            ],
+            "trim": [
+              "src_autoboom_4th_gen"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_prelude_1997_2000_il_5th_gen_2_0l_petrol_136_hp_4_speed_automatic_coupe_petrol",
+        "make": "Honda",
+        "model": "Prelude",
+        "aliases": [],
+        "year_start": {
+          "value": 1997,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2000,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "5th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol, 136 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_wheel_5th_gen",
+            "src_yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "2.0i",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T20:48:51.251300+00:00",
+        "updated_at": "2026-05-14T20:48:51.251300+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "Prelude",
+          "year_start": 1997,
+          "year_end": 2000,
+          "generation": "5th Gen",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.0L petrol, 136 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "2.0i",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Wheel magazine historical review and Yad2 price list confirm 5th generation 2.0L 136 hp sold in Israel between 1997-2000. All IL-market cars were automatic.",
+          "source_ids": [
+            "src_wheel_5th_gen",
+            "src_yad2_price_list"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_wheel_5th_gen"
+            ],
+            "seats": [
+              "src_wheel_5th_gen"
+            ],
+            "engine": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "transmission": [
+              "src_wheel_5th_gen"
+            ],
+            "fuel_type": [
+              "src_wheel_5th_gen"
+            ],
+            "drivetrain": [
+              "src_wheel_5th_gen"
+            ],
+            "generation": [
+              "src_wheel_5th_gen"
+            ],
+            "year_start": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "year_end": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "trim": [
+              "src_yad2_price_list"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_prelude_1997_2000_il_5th_gen_2_2l_petrol_185_hp_4_speed_automatic_coupe_petrol",
+        "make": "Honda",
+        "model": "Prelude",
+        "aliases": [],
+        "year_start": {
+          "value": 1997,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2000,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "5th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.2L petrol, 185 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_wheel_5th_gen",
+            "src_yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wheel_5th_gen"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "2.2 VTi",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2_price_list"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T20:48:51.251347+00:00",
+        "updated_at": "2026-05-14T20:48:51.251347+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "Prelude",
+          "year_start": 1997,
+          "year_end": 2000,
+          "generation": "5th Gen",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.2L petrol, 185 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "2.2 VTi",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Wheel magazine historical review and Yad2 price list confirm 5th generation 2.2L 185 hp sold in Israel between 1997-2000. All IL-market cars were automatic.",
+          "source_ids": [
+            "src_wheel_5th_gen",
+            "src_yad2_price_list"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_wheel_5th_gen"
+            ],
+            "seats": [
+              "src_wheel_5th_gen"
+            ],
+            "engine": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "transmission": [
+              "src_wheel_5th_gen"
+            ],
+            "fuel_type": [
+              "src_wheel_5th_gen"
+            ],
+            "drivetrain": [
+              "src_wheel_5th_gen"
+            ],
+            "generation": [
+              "src_wheel_5th_gen"
+            ],
+            "year_start": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "year_end": [
+              "src_wheel_5th_gen",
+              "src_yad2_price_list"
+            ],
+            "trim": [
+              "src_yad2_price_list"
+            ]
           }
         },
         "identity_confidence": "unknown"
