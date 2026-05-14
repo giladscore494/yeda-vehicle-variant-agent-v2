@@ -157,20 +157,20 @@ Allowed market_scope values:
    marketed name was confirmed.
 
    GOOD:
-   {
+   {{
      "global_model_name": "Daewoo Lacetti",
      "official_marketed_name_il": "Chevrolet Optra",
      "market_scope": "IL-confirmed",
      "source_basis": "Israeli market sources identify the Lacetti-based sedan
        as Chevrolet Optra; specs cross-checked with global Lacetti/Optra data."
-   }
+   }}
 
    BAD:
-   {
+   {{
      "model": "Daewoo Lacetti",
      "market_scope": "IL-confirmed",
      "source_basis": "Common model name."
-   }
+   }}
 
 7. official_marketed_name_il is the primary field.
    global_model_name, alternate_names, rebadged_as, previous_name are secondary
