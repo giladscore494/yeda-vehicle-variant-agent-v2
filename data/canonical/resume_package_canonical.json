@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:26:08.487890+00:00",
+    "updated_at": "2026-05-14T23:27:19.019842+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -450,7 +450,8 @@
       "infiniti__qx80__2010__2022__il",
       "haval__h6__2022__2026__il",
       "volkswagen__polo__1990__2026__il",
-      "volkswagen__up!__2012__2023__il"
+      "volkswagen__up!__2012__2023__il",
+      "volkswagen__e-up!__2014__2023__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -893,15 +894,16 @@
       "infiniti__qx80__2010__2022__il",
       "haval__h6__2022__2026__il",
       "volkswagen__polo__1990__2026__il",
-      "volkswagen__up!__2012__2023__il"
+      "volkswagen__up!__2012__2023__il",
+      "volkswagen__e-up!__2014__2023__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__up!__2012__2023__il",
-    "next_seed_id": "volkswagen__e-up!__2014__2023__il",
+    "last_completed_seed_id": "volkswagen__e-up!__2014__2023__il",
+    "next_seed_id": "volkswagen__golf__1990__2026__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1669,6 +1671,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:26:08.487993+00:00"
+      },
+      "volkswagen__e-up!__2014__2023__il": {
+        "seed_id": "volkswagen__e-up!__2014__2023__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:27:19.019927+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -214559,6 +214571,346 @@
       "packages_or_editions": [
         "Edition"
       ]
+    },
+    {
+      "variant_id": "volkswagen_e_up_2014_2016_il_1st_gen_electric_motor_82_hp_60_kw_18_7_kwh_battery_single_speed_ev_hatchback_electric",
+      "make": "Volkswagen",
+      "model": "e-up!",
+      "aliases": [],
+      "year_start": {
+        "value": 2014,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2016,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 4,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "Electric motor, 82 hp (60 kW), 18.7 kWh battery",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "Single-speed EV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Electric",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Electric",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 9,
+      "created_at": "2026-05-14T23:27:18.782081+00:00",
+      "updated_at": "2026-05-14T23:27:18.782081+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "e-up!",
+        "global_model_name": "Volkswagen e-up!",
+        "official_marketed_name_il": "פולקסווגן e-אפ!",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "VW e-up!",
+          "Volkswagen up! Electric"
+        ],
+        "rebadged_as": null,
+        "year_start": 2014,
+        "year_end": 2016,
+        "generation": "1st Gen",
+        "body_type": "Hatchback",
+        "seats": 4,
+        "engine": "Electric motor, 82 hp (60 kW), 18.7 kWh battery",
+        "transmission": "Single-speed EV",
+        "fuel_type": "Electric",
+        "drivetrain": "FWD",
+        "trim": "Electric",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Carzone IL lists the e-up! for years 2014-2016 in Israel. Global specs confirm the 82 hp and 18.7 kWh battery for this pre-facelift period.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_e_up_2020_2023_il_1st_gen_electric_motor_83_hp_61_kw_32_3_kwh_battery_single_speed_ev_hatchback_electric",
+      "make": "Volkswagen",
+      "model": "e-up!",
+      "aliases": [],
+      "year_start": {
+        "value": 2020,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2023,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 4,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "Electric motor, 83 hp (61 kW), 32.3 kWh battery",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "Single-speed EV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Electric",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Electric",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 8,
+      "created_at": "2026-05-14T23:27:18.782153+00:00",
+      "updated_at": "2026-05-14T23:27:18.782153+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "e-up!",
+        "global_model_name": "Volkswagen e-up!",
+        "official_marketed_name_il": "פולקסווגן e-אפ!",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "VW e-up!",
+          "Volkswagen up! Electric"
+        ],
+        "rebadged_as": null,
+        "year_start": 2020,
+        "year_end": 2023,
+        "generation": "1st Gen",
+        "body_type": "Hatchback",
+        "seats": 4,
+        "engine": "Electric motor, 83 hp (61 kW), 32.3 kWh battery",
+        "transmission": "Single-speed EV",
+        "fuel_type": "Electric",
+        "drivetrain": "FWD",
+        "trim": "Electric",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Carzone IL and CarClick IL confirm the upgraded 83 hp version was sold in Israel (including via parallel import) in recent years (2020-2024). Packages/editions noted in IL: Edition Electric.",
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -426635,6 +426987,346 @@
         "packages_or_editions": [
           "Edition"
         ]
+      },
+      {
+        "variant_id": "volkswagen_e_up_2014_2016_il_1st_gen_electric_motor_82_hp_60_kw_18_7_kwh_battery_single_speed_ev_hatchback_electric",
+        "make": "Volkswagen",
+        "model": "e-up!",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 82 hp (60 kW), 18.7 kWh battery",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T23:27:18.782081+00:00",
+        "updated_at": "2026-05-14T23:27:18.782081+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "e-up!",
+          "global_model_name": "Volkswagen e-up!",
+          "official_marketed_name_il": "פולקסווגן e-אפ!",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "VW e-up!",
+            "Volkswagen up! Electric"
+          ],
+          "rebadged_as": null,
+          "year_start": 2014,
+          "year_end": 2016,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "Electric motor, 82 hp (60 kW), 18.7 kWh battery",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": "Electric",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Carzone IL lists the e-up! for years 2014-2016 in Israel. Global specs confirm the 82 hp and 18.7 kWh battery for this pre-facelift period.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_e_up_2020_2023_il_1st_gen_electric_motor_83_hp_61_kw_32_3_kwh_battery_single_speed_ev_hatchback_electric",
+        "make": "Volkswagen",
+        "model": "e-up!",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 83 hp (61 kW), 32.3 kWh battery",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T23:27:18.782153+00:00",
+        "updated_at": "2026-05-14T23:27:18.782153+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "e-up!",
+          "global_model_name": "Volkswagen e-up!",
+          "official_marketed_name_il": "פולקסווגן e-אפ!",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "VW e-up!",
+            "Volkswagen up! Electric"
+          ],
+          "rebadged_as": null,
+          "year_start": 2020,
+          "year_end": 2023,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "Electric motor, 83 hp (61 kW), 32.3 kWh battery",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": "Electric",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Carzone IL and CarClick IL confirm the upgraded 83 hp version was sold in Israel (including via parallel import) in recent years (2020-2024). Packages/editions noted in IL: Edition Electric.",
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -426702,17 +427394,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1531,
+    "total_variants": 1533,
     "verified": 788,
-    "partial": 743,
+    "partial": 745,
     "makes_count": 39,
-    "models_count": 439,
+    "models_count": 440,
     "unresolved": 1,
-    "processed_seeds": 441,
+    "processed_seeds": 442,
     "needs_retry_seeds": 0,
-    "variants": 1531,
+    "variants": 1533,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:26:08.498199+00:00"
+    "last_updated_at": "2026-05-14T23:27:19.031229+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
