@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T12:53:22.069369+00:00",
+    "updated_at": "2026-05-14T12:54:42.678186+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -401,7 +401,8 @@
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
-      "fiat__linea__2007__2018__il"
+      "fiat__linea__2007__2018__il",
+      "fiat__tipo__2016__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3499,7 +3500,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
@@ -4014,10 +4014,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "fiat__tipo__2016__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "fiat__tipo__2016__2026__il",
+        "variants_added_to_canonical": 7,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:54:42.678238+00:00"
       },
       "honda__cr-v__1997__2026__il": {
         "variant_count": 0,
@@ -365452,6 +365456,1153 @@
               "src_global_specs"
             ],
             "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2016_2021_il_1st_gen_type_356_1_6l_e_torq_petrol_110_hp_6_speed_automatic_sedan_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L E-torQ petrol, 110 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_cartube",
+            "src_icar",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T12:54:42.529872+00:00",
+        "updated_at": "2026-05-14T12:54:42.529872+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2016,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L E-torQ petrol, 110 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Multiple Israeli automotive portals (Cartube, iCar, Carzone) confirm the 1.6L 110hp automatic Sedan was launched in Israel in March 2016 in Comfort and Lounge trims.",
+          "source_ids": [
+            "src_cartube",
+            "src_icar",
+            "src_carzone"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "seats": [
+              "src_carzone"
+            ],
+            "engine": [
+              "src_cartube",
+              "src_icar",
+              "src_carzone"
+            ],
+            "transmission": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube",
+              "src_icar"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2016_2021_il_1st_gen_type_356_1_4l_fire_petrol_95_hp_6_speed_manual_sedan_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L Fire petrol, 95 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T12:54:42.529943+00:00",
+        "updated_at": "2026-05-14T12:54:42.529943+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2016,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.4L Fire petrol, 95 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Cartube confirms the 1.4L 95hp manual Sedan was launched in Israel in 2016 alongside the 1.6L automatic.",
+          "source_ids": [
+            "src_cartube"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2017_2021_il_1st_gen_type_356_1_6l_e_torq_petrol_110_hp_6_speed_automatic_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L E-torQ petrol, 110 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Lounge",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:54:42.529977+00:00",
+        "updated_at": "2026-05-14T12:54:42.529977+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2017,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L E-torQ petrol, 110 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Lounge",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Cartube and iCar confirm the Hatchback version with the 1.6L 110hp automatic powertrain was introduced to the Israeli market in April 2017.",
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "transmission": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube",
+              "src_icar"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2017_2021_il_1st_gen_type_356_1_4l_t_jet_turbo_petrol_120_hp_6_speed_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L T-Jet turbo petrol, 120 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Sportivo",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:54:42.530021+00:00",
+        "updated_at": "2026-05-14T12:54:42.530021+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2017,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L T-Jet turbo petrol, 120 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Sportivo",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "iCar and Gear portals confirm the 1.4L turbo 120hp manual Hatchback was sold in Israel under the Sportivo trim.",
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "seats": [
+              "src_icar"
+            ],
+            "engine": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_icar"
+            ],
+            "drivetrain": [
+              "src_icar"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_icar",
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2017_2021_il_1st_gen_type_356_1_6l_e_torq_petrol_110_hp_6_speed_automatic_station_wagon_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Wagon",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L E-torQ petrol, 110 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T12:54:42.530075+00:00",
+        "updated_at": "2026-05-14T12:54:42.530075+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2017,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Station Wagon",
+          "seats": 5,
+          "engine": "1.6L E-torQ petrol, 110 hp",
+          "transmission": "6-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Cartube confirms the Station Wagon (SW) 1.6L petrol automatic was introduced in Israel in 2017.",
+          "source_ids": [
+            "src_cartube"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2017_2021_il_1st_gen_type_356_1_6l_multijet_turbo_diesel_120_hp_6_speed_automatic_dct_station_wagon_diesel",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (Type 356)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Wagon",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L MultiJet turbo diesel, 120 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automatic (DCT)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Diesel",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:54:42.530128+00:00",
+        "updated_at": "2026-05-14T12:54:42.530128+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2017,
+          "year_end": 2021,
+          "generation": "1st Gen (Type 356)",
+          "body_type": "Station Wagon",
+          "seats": 5,
+          "engine": "1.6L MultiJet turbo diesel, 120 hp",
+          "transmission": "6-speed automatic (DCT)",
+          "fuel_type": "Diesel",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Yad2 and Cartube confirm the 1.6L diesel 120hp automatic Station Wagon was available in the Israeli market.",
+          "source_ids": [
+            "src_yad2",
+            "src_cartube"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_yad2",
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_yad2",
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_yad2",
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_yad2",
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_tipo_2021_2023_il_1st_gen_facelift_1_0l_firefly_turbo_petrol_100_hp_manual_crossover_petrol",
+        "make": "Fiat",
+        "model": "Tipo",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L FireFly turbo petrol, 100 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Cross",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T12:54:42.530177+00:00",
+        "updated_at": "2026-05-14T12:54:42.530177+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 6,
+          "make": "Fiat",
+          "model": "Tipo",
+          "year_start": 2021,
+          "year_end": 2023,
+          "generation": "1st Gen Facelift",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "1.0L FireFly turbo petrol, 100 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Cross",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Cartube and iCar confirm the 2021 facelift introduced the Tipo Cross to Israel with a new 1.0L turbo 100hp engine.",
+          "source_ids": [
+            "src_cartube",
+            "src_icar"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube",
+              "src_icar"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube"
+            ]
           }
         },
         "identity_confidence": "unknown"
