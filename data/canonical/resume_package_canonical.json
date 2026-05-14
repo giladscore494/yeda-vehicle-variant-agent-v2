@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T13:16:11.392926+00:00",
+    "updated_at": "2026-05-14T13:17:21.211023+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -414,7 +414,8 @@
       "honda__cr-z__2010__2016__il",
       "honda__e:ny1__2023__2026__il",
       "honda__fr-v__2004__2009__il",
-      "honda__hr-v__2015__2026__il"
+      "honda__hr-v__2015__2026__il",
+      "honda__insight__2009__2014__il"
     ],
     "processed_seeds": [
       {
@@ -3512,7 +3513,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__insight__2009__2014__il",
       "honda__insight__2018__2022__il",
       "honda__jazz__2001__2026__il",
       "honda__legend__2000__2012__il",
@@ -3744,10 +3744,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__insight__2009__2014__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__insight__2009__2014__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T13:17:21.211096+00:00"
       },
       "honda__cr-z__2010__2016__il": {
         "seed_id": "honda__cr-z__2010__2016__il",
@@ -373424,6 +373428,198 @@
             ],
             "trim": [
               "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_insight_2009_2014_il_2nd_gen_1_3l_i_vtec_ima_hybrid_98_hp_cvt_hatchback_hybrid",
+        "make": "Honda",
+        "model": "Insight",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "2nd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.3L i-VTEC IMA Hybrid, 98 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 4,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 4 source(s)"
+        },
+        "transmission": {
+          "value": "CVT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 20,
+        "created_at": "2026-05-14T13:17:20.966423+00:00",
+        "updated_at": "2026-05-14T13:17:20.966423+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Insight",
+          "year_start": 2009,
+          "year_end": 2014,
+          "generation": "2nd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.3L i-VTEC IMA Hybrid, 98 hp",
+          "transmission": "CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (iCar, Carzone, Carwiz) confirm the 2nd generation Insight was sold in Israel from 2009 to 2014 with a single 1.3L hybrid powertrain (1339cc, 98 hp combined) and CVT. 'Comfort' was the base trim level.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_2",
+              "src_3"
+            ],
+            "engine": [
+              "src_1",
+              "src_2",
+              "src_3",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2",
+              "src_3"
+            ],
+            "generation": [
+              "src_1",
+              "src_3",
+              "src_4"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2",
+              "src_4"
+            ],
+            "trim": [
+              "src_1",
+              "src_2",
+              "src_3"
             ]
           }
         },
