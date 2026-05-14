@@ -60,10 +60,13 @@ _VAGUE_ENGINE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Keywords that indicate Israeli market evidence in source_basis text.
+_IL_EVIDENCE_KEYWORDS = ("israel", "il-confirmed", "importer", "israeli", "local market")
 
 # ---------------------------------------------------------------------------
 # Internal field helpers
 # ---------------------------------------------------------------------------
+
 
 def _get_field_value(field: Any) -> Any:
     """Extract .value from a VerifiedField dict, or return the plain value."""
@@ -333,8 +336,7 @@ def _check_il_marketed_name(variant: dict) -> tuple[list[str], list[str]]:
                 "market_scope=IL-confirmed requires official_marketed_name_il"
             )
         if source_basis:
-            il_keywords = ("israel", "il-confirmed", "importer", "israeli", "local market")
-            if not any(kw in source_basis.lower() for kw in il_keywords):
+            if not any(kw in source_basis.lower() for kw in _IL_EVIDENCE_KEYWORDS):
                 warnings.append(
                     "il_confirmed_but_source_basis_lacks_israeli_evidence"
                 )

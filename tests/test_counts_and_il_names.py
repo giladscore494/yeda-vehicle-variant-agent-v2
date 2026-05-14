@@ -38,6 +38,12 @@ from engine import queue, run_next
 
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
 
+# Magic-number constants used in count tests.  These values have no special meaning
+# except to represent a deliberately stale/incorrect count so mismatch is detectable.
+_STALE_COUNT_VALUE = 1323          # historic anchored count that triggered the original bug
+_COUNT_MISMATCH_OFFSET = 999       # large offset used to force a detectable mismatch
+_DASHBOARD_STALE_OFFSET = 500      # offset used to verify dashboard reads actual list length
+
 
 # ---------------------------------------------------------------------------
 # Fixtures / helpers
@@ -106,9 +112,9 @@ def test_refresh_counts_after_merge(workspace):
     canonical = load_canonical()
     variants_before = len(canonical["accumulated_clean_export"]["variants"])
 
-    # Manually simulate stale counts at 1323
-    canonical.setdefault("counts", {})["total_variants"] = 1323
-    assert canonical["counts"]["total_variants"] == 1323  # confirm stale
+    # Manually simulate stale counts at historic anchor value
+    canonical.setdefault("counts", {})["total_variants"] = _STALE_COUNT_VALUE
+    assert canonical["counts"]["total_variants"] == _STALE_COUNT_VALUE  # confirm stale
 
     # Add 3 new variants
     new_variants = [
@@ -134,7 +140,7 @@ def test_counts_do_not_stay_anchored_after_bmw(workspace):
     variants_before = len(canonical["accumulated_clean_export"]["variants"])
 
     # Simulate stale anchor
-    canonical.setdefault("counts", {})["total_variants"] = 1323
+    canonical.setdefault("counts", {})["total_variants"] = _STALE_COUNT_VALUE
 
     seed_id = "bmw__530i__2020__2024__il"
     bmw_variants = [_make_stub_variant(f"bmw__530i__2020__2024__il__v{i}") for i in range(3)]
@@ -165,7 +171,7 @@ def test_validate_rejects_stale_counts(workspace):
     actual = len(canonical["accumulated_clean_export"]["variants"])
 
     # Inject a deliberately wrong count
-    wrong_count = actual + 999
+    wrong_count = actual + _COUNT_MISMATCH_OFFSET
     canonical.setdefault("counts", {})["total_variants"] = wrong_count
 
     ok, errs = validate_canonical(canonical)
@@ -181,7 +187,7 @@ def test_validate_auto_refresh_on_save(workspace):
     actual = len(canonical["accumulated_clean_export"]["variants"])
 
     # Inject stale count — save should fix it
-    canonical.setdefault("counts", {})["total_variants"] = 1323
+    canonical.setdefault("counts", {})["total_variants"] = _STALE_COUNT_VALUE
 
     result = save_canonical_atomic(canonical)
     assert result["ok"] is True, f"save failed: {result.get('error')}"
@@ -196,7 +202,7 @@ def test_dashboard_uses_actual_variant_count(workspace):
     actual = len(canonical["accumulated_clean_export"]["variants"])
 
     # Set a stale count
-    canonical.setdefault("counts", {})["total_variants"] = actual - 500
+    canonical.setdefault("counts", {})["total_variants"] = actual - _DASHBOARD_STALE_OFFSET
 
     summary = queue.summarize_state(canonical)
     # The dashboard metric must reflect actual list length

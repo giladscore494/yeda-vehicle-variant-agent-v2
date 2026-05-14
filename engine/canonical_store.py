@@ -63,7 +63,7 @@ def refresh_canonical_counts(canonical: dict) -> dict:
     counts = canonical.setdefault("counts", {})
     total_variants = len(variants)
     counts["total_variants"] = total_variants
-    counts["variants"] = total_variants  # legacy alias kept in sync
+    counts["variants"] = total_variants  # legacy alias — kept in sync until migrated away
     counts["processed_seeds"] = len(bs.get("processed_seed_ids") or [])
     counts["needs_retry_seeds"] = len(bs.get("needs_retry_seed_ids") or [])
     if bs.get("total_seeds") is not None:

@@ -26,7 +26,7 @@ from engine import run_next
 from engine.canonical_store import load_canonical
 
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
-DAEWOO = "fiat__bravo__1995__2014__il"
+FIAT_BRAVO = "fiat__bravo__1995__2014__il"
 
 
 # ---------------------------------------------------------------------------
@@ -59,9 +59,9 @@ SEED_2018_2026 = {
 }
 
 SEED_DAEWOO = {
-    "seed_id": DAEWOO,
+    "seed_id": FIAT_BRAVO,
     "make": "Fiat",
-    "model": "bravo",
+    "model": "Bravo",
     "year_start": 1995,
     "year_end": 2014,
     "market": "IL",
@@ -385,7 +385,7 @@ def test_do_not_save_all_rejected_variants(workspace):
     needs_retry_before = list(before["batch_state"]["needs_retry_seed_ids"])
 
     result = run_next.run_selected_seed(
-        DAEWOO, run_seed_fn=_runner_all_bad, push_fn=_noop_push,
+        FIAT_BRAVO, run_seed_fn=_runner_all_bad, push_fn=_noop_push,
     )
 
     assert result["ok"] is False
@@ -395,7 +395,7 @@ def test_do_not_save_all_rejected_variants(workspace):
     # Canonical unchanged
     assert len(after["accumulated_clean_export"]["variants"]) == variants_before
     # Seed still in needs_retry
-    assert DAEWOO in after["batch_state"]["needs_retry_seed_ids"]
+    assert FIAT_BRAVO in after["batch_state"]["needs_retry_seed_ids"]
     assert after["batch_state"]["needs_retry_seed_ids"] == needs_retry_before
 
 
@@ -405,7 +405,7 @@ def test_save_only_accepted_variants(workspace):
     variants_before = len(before["accumulated_clean_export"]["variants"])
 
     result = run_next.run_selected_seed(
-        DAEWOO, run_seed_fn=_runner_two_good_one_bad, push_fn=_noop_push,
+        FIAT_BRAVO, run_seed_fn=_runner_two_good_one_bad, push_fn=_noop_push,
     )
 
     assert result["ok"] is True, result
@@ -417,4 +417,4 @@ def test_save_only_accepted_variants(workspace):
     # At least 2 variants added (or merged if IDs already exist)
     assert len(after["accumulated_clean_export"]["variants"]) >= variants_before
     # Seed removed from needs_retry
-    assert DAEWOO not in after["batch_state"]["needs_retry_seed_ids"]
+    assert FIAT_BRAVO not in after["batch_state"]["needs_retry_seed_ids"]
