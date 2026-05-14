@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T12:51:14.501954+00:00",
+    "updated_at": "2026-05-14T12:51:51.057638+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -399,7 +399,8 @@
       "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
-      "fiat__bravo__1995__2014__il"
+      "fiat__bravo__1995__2014__il",
+      "fiat__freemont__2011__2016__il"
     ],
     "processed_seeds": [
       {
@@ -3497,7 +3498,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
@@ -3778,10 +3778,14 @@
         "resolved_at": "2026-05-14T12:51:14.501997+00:00"
       },
       "fiat__freemont__2011__2016__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "fiat__freemont__2011__2016__il",
+        "variants_added_to_canonical": 0,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": "model_not_sold_in_market",
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:51:51.057678+00:00"
       },
       "hyundai__atos__1997__2014__il": {
         "variant_count": 0,
@@ -4100,7 +4104,9 @@
         "failure_reason": "zero_variants_without_explanation_after_retries"
       }
     },
-    "no_variants_by_seed": {},
+    "no_variants_by_seed": {
+      "fiat__freemont__2011__2016__il": "model_not_sold_in_market"
+    },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
     "zero_variant_policy": "retry_then_block",
