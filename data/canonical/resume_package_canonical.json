@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T21:19:41.760861+00:00",
+    "updated_at": "2026-05-14T21:20:44.979350+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -446,7 +446,8 @@
       "hyundai__ioniq_6__2023__2026__il",
       "hyundai__ioniq__2016__2022__il",
       "hyundai__ix35__2010__2015__il",
-      "hyundai__kona__2017__2026__il"
+      "hyundai__kona__2017__2026__il",
+      "infiniti__qx80__2010__2022__il"
     ],
     "processed_seeds": [
       {
@@ -3543,9 +3544,7 @@
         "created_at": "2026-05-10T12:57:31.358172+00:00"
       }
     ],
-    "needs_retry_seed_ids": [
-      "infiniti__qx80__2010__2022__il"
-    ],
+    "needs_retry_seed_ids": [],
     "false_processed_seed_ids": [
       "bmw__850i__2018__2026__il",
       "bmw__z4_sdrive20i__2019__2026__il",
@@ -4008,10 +4007,14 @@
         "resolved_at": "2026-05-14T21:19:41.760903+00:00"
       },
       "infiniti__qx80__2010__2022__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "infiniti__qx80__2010__2022__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T21:20:44.979419+00:00"
       },
       "honda__civic_type_r__2017__2023__il": {
         "seed_id": "honda__civic_type_r__2017__2023__il",
@@ -393042,6 +393045,165 @@
             "trim": [
               "src_3"
             ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "infiniti_qx80_2014_2022_il_z62_5_6l_v8_7_speed_automatic_suv_petrol",
+        "make": "Infiniti",
+        "model": "QX80",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Z62",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 7,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_edmunds_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "5.6L V8",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_edmunds_global"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_edmunds_global"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_autoboom_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_edmunds_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T21:20:44.784539+00:00",
+        "updated_at": "2026-05-14T21:20:44.784539+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Infiniti",
+          "model": "QX80",
+          "year_start": 2014,
+          "year_end": 2022,
+          "generation": "Z62",
+          "body_type": "SUV",
+          "seats": 7,
+          "engine": "5.6L V8",
+          "transmission": "7-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "RWD",
+          "trim": null,
+          "market_scope": "global-reference-only",
+          "confidence_level": "medium",
+          "source_basis": "Global specifications. Israeli sources (iCar, Autoboom) explicitly state the QX80 was not officially imported to Israel during these years. Specs reflect the standard global/US model. Global trims include Luxe, Premium Select, and Sensory. 8-seat configuration was optional. Note: The QX80 nameplate was introduced in 2014, replacing the QX56.",
+          "source_ids": [
+            "src_icar_il",
+            "src_autoboom_il",
+            "src_edmunds_global"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il"
+            ],
+            "seats": [
+              "src_edmunds_global"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_edmunds_global"
+            ],
+            "transmission": [
+              "src_autoboom_il",
+              "src_edmunds_global"
+            ],
+            "fuel_type": [
+              "src_autoboom_il"
+            ],
+            "drivetrain": [
+              "src_edmunds_global"
+            ],
+            "generation": [
+              "src_edmunds_global"
+            ],
+            "year_start": [
+              "src_edmunds_global"
+            ],
+            "year_end": [
+              "src_edmunds_global"
+            ],
+            "trim": []
           }
         },
         "identity_confidence": "unknown"
