@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T04:06:26.080692+00:00",
+    "updated_at": "2026-05-14T04:07:55.402291+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -395,7 +395,8 @@
       "infiniti__qx70__2009__2017__il",
       "isuzu__d-max__2002__2026__il",
       "bmw__850i__2018__2026__il",
-      "bmw__z4_sdrive20i__2019__2026__il"
+      "bmw__z4_sdrive20i__2019__2026__il",
+      "daewoo__lacetti__2003__2011__il"
     ],
     "processed_seeds": [
       {
@@ -3493,7 +3494,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
@@ -4022,10 +4022,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "daewoo__lacetti__2003__2011__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "daewoo__lacetti__2003__2011__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T04:07:55.402328+00:00"
       },
       "hyundai__grandeur__2006__2020__il": {
         "variant_count": 0,
@@ -362090,6 +362094,773 @@
             "trim": [
               "src_icar_il",
               "src_carzone_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2004_2010_il_j200_1_6l_petrol_109_hp_automatic_sedan_petrol",
+        "make": "Daewoo",
+        "model": "Lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "J200",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "auto_il_review"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 109 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "trim": {
+          "value": "LS",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T04:07:55.258775+00:00",
+        "updated_at": "2026-05-14T04:07:55.258775+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Daewoo",
+          "model": "Lacetti",
+          "year_start": 2004,
+          "year_end": 2010,
+          "generation": "J200",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L petrol, 109 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Marketed exclusively in Israel as the Chevrolet Optra. Israeli listings (Yad2) confirm the 1.6L (109 hp) engine with automatic transmission in Sedan body style, primarily in LS trim.",
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_il",
+              "auto_il_review"
+            ],
+            "seats": [],
+            "engine": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [],
+            "generation": [
+              "auto_il_review"
+            ],
+            "year_start": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "year_end": [
+              "yad2_il"
+            ],
+            "trim": [
+              "yad2_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2004_2010_il_j200_1_6l_petrol_109_hp_automatic_hatchback_petrol",
+        "make": "Daewoo",
+        "model": "Lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "J200",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 109 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "trim": {
+          "value": "LS Plus",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T04:07:55.258824+00:00",
+        "updated_at": "2026-05-14T04:07:55.258824+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Daewoo",
+          "model": "Lacetti",
+          "year_start": 2004,
+          "year_end": 2010,
+          "generation": "J200",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L petrol, 109 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS Plus",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Marketed exclusively in Israel as the Chevrolet Optra (often Optra5). Israeli listings confirm the 1.6L (109 hp) engine with automatic transmission in Hatchback body style, often in LS Plus trim.",
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_il"
+            ],
+            "seats": [],
+            "engine": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [],
+            "generation": [
+              "auto_il_review"
+            ],
+            "year_start": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "year_end": [
+              "yad2_il"
+            ],
+            "trim": [
+              "yad2_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2004_2010_il_j200_1_8l_petrol_122_hp_automatic_sedan_petrol",
+        "make": "Daewoo",
+        "model": "Lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "J200",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.8L petrol, 122 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "trim": {
+          "value": "LS Plus",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T04:07:55.258855+00:00",
+        "updated_at": "2026-05-14T04:07:55.258855+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Daewoo",
+          "model": "Lacetti",
+          "year_start": 2004,
+          "year_end": 2010,
+          "generation": "J200",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.8L petrol, 122 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS Plus",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Marketed exclusively in Israel as the Chevrolet Optra. Israeli listings confirm the 1.8L (122 hp) engine with automatic transmission in Sedan body style, often in LS Plus trim.",
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_il"
+            ],
+            "seats": [],
+            "engine": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [],
+            "generation": [
+              "auto_il_review"
+            ],
+            "year_start": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "year_end": [
+              "yad2_il"
+            ],
+            "trim": [
+              "yad2_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2004_2010_il_j200_1_6l_petrol_109_hp_manual_sedan_petrol",
+        "make": "Daewoo",
+        "model": "Lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "J200",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 109 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "trim": {
+          "value": "LS",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T04:07:55.258882+00:00",
+        "updated_at": "2026-05-14T04:07:55.258882+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Daewoo",
+          "model": "Lacetti",
+          "year_start": 2004,
+          "year_end": 2010,
+          "generation": "J200",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L petrol, 109 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Marketed exclusively in Israel as the Chevrolet Optra. Israeli listings confirm the 1.6L (109 hp) engine with manual transmission in Sedan body style.",
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_il"
+            ],
+            "seats": [],
+            "engine": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [],
+            "generation": [
+              "auto_il_review"
+            ],
+            "year_start": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "year_end": [
+              "yad2_il"
+            ],
+            "trim": [
+              "yad2_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "daewoo_lacetti_2004_2010_il_j200_1_6l_petrol_109_hp_manual_hatchback_petrol",
+        "make": "Daewoo",
+        "model": "Lacetti",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "J200",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 109 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "trim": {
+          "value": "LS",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "yad2_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T04:07:55.258906+00:00",
+        "updated_at": "2026-05-14T04:07:55.258906+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Daewoo",
+          "model": "Lacetti",
+          "year_start": 2004,
+          "year_end": 2010,
+          "generation": "J200",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L petrol, 109 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "LS",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Marketed exclusively in Israel as the Chevrolet Optra. Israeli listings confirm the 1.6L (109 hp) engine with manual transmission in Hatchback body style.",
+          "source_ids": [
+            "yad2_il",
+            "ynet_il_news"
+          ],
+          "field_sources": {
+            "body_type": [
+              "yad2_il"
+            ],
+            "seats": [],
+            "engine": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "transmission": [
+              "yad2_il"
+            ],
+            "fuel_type": [
+              "yad2_il"
+            ],
+            "drivetrain": [],
+            "generation": [
+              "auto_il_review"
+            ],
+            "year_start": [
+              "yad2_il",
+              "ynet_il_news"
+            ],
+            "year_end": [
+              "yad2_il"
+            ],
+            "trim": [
+              "yad2_il"
             ]
           }
         },
