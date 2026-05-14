@@ -21,15 +21,17 @@ from engine.canonical_store import load_canonical, save_canonical_atomic
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
 HAVAL = "haval__h6__2022__2026__il"
 GMC = "gmc__yukon__2000__2026__il"
-DAEWOO = "daewoo__lacetti__2003__2011__il"
-DAIHATSU = "daihatsu__copen__2002__2012__il"
-DS9 = "ds_automobiles__ds_9__2020__2026__il"
-INITIAL_VARIANTS = 1331
-INITIAL_PROCESSED = 386
-INITIAL_NEEDS_RETRY = 52
+# The following constants refer to the first three seeds currently in needs_retry.
+# Update these when the canonical advances.
+FIAT_BRAVO = "fiat__bravo__1995__2014__il"
+FIAT_FREEMONT = "fiat__freemont__2011__2016__il"
+FIAT_LINEA = "fiat__linea__2007__2018__il"
+INITIAL_VARIANTS = 1340
+INITIAL_PROCESSED = 389
+INITIAL_NEEDS_RETRY = 49
 INITIAL_TOTAL_PROBLEMS = 54
-INITIAL_COMPLETED = 2
-INITIAL_POSITION = "3 / 54"
+INITIAL_COMPLETED = 5
+INITIAL_POSITION = "6 / 54"
 
 
 @pytest.fixture
@@ -138,7 +140,7 @@ def test_clean_canonical_loads(workspace):
     assert len(variants) == INITIAL_VARIANTS
     assert len(bs["processed_seed_ids"]) == INITIAL_PROCESSED
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
-    assert bs["needs_retry_seed_ids"][0] == DAEWOO
+    assert bs["needs_retry_seed_ids"][0] == FIAT_BRAVO
 
     text = json.dumps(canonical)
     assert '"s1"' not in text
@@ -151,7 +153,7 @@ def test_select_next_problem_seed(workspace):
     canonical = _load(workspace)
     selection = queue.select_next_seed(canonical)
     assert selection["mode"] == "problem_queue"
-    assert selection["selected_seed_id"] == DAEWOO
+    assert selection["selected_seed_id"] == FIAT_BRAVO
     bs = canonical["batch_state"]
     assert bs["next_seed_id"] == HAVAL
     assert bs["last_completed_seed_id"] == GMC
@@ -164,7 +166,7 @@ def test_progress_before_current_problem_seed(workspace):
     assert prog["completed"] == INITIAL_COMPLETED
     assert prog["pending"] == INITIAL_NEEDS_RETRY
     assert prog["current_position"] == INITIAL_POSITION
-    assert prog["current_seed"] == DAEWOO
+    assert prog["current_seed"] == FIAT_BRAVO
 
 
 def test_current_problem_seed_success_persists_before_progress(workspace):
@@ -172,23 +174,23 @@ def test_current_problem_seed_success_persists_before_progress(workspace):
     variants_before = len(before["accumulated_clean_export"]["variants"])
 
     result = run_next.run_selected_seed(
-        DAEWOO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
+        FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
     )
     assert result["ok"] is True, result
-    assert result["seed_id"] == DAEWOO
+    assert result["seed_id"] == FIAT_BRAVO
 
     after = _load(workspace)
     bs = after["batch_state"]
-    assert DAEWOO not in bs["needs_retry_seed_ids"]
-    assert bs["needs_retry_seed_ids"][0] == DAIHATSU
+    assert FIAT_BRAVO not in bs["needs_retry_seed_ids"]
+    assert bs["needs_retry_seed_ids"][0] == FIAT_FREEMONT
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY - 1
 
     prog = queue.compute_problem_queue_progress(after)
     assert prog["total"] == INITIAL_TOTAL_PROBLEMS
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 1
     assert prog["completed"] == INITIAL_COMPLETED + 1
-    assert prog["current_position"] == "4 / 54"
-    assert prog["current_seed"] == DAIHATSU
+    assert prog["current_position"] == "7 / 54"
+    assert prog["current_seed"] == FIAT_FREEMONT
 
     assert len(after["accumulated_clean_export"]["variants"]) >= variants_before
     # Normal cursor frozen
@@ -207,14 +209,14 @@ def test_failed_save_does_not_advance(workspace, monkeypatch):
     monkeypatch.setattr("engine.run_next.save_canonical_atomic", _fake_save)
 
     result = run_next.run_selected_seed(
-        DAEWOO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
+        FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
     )
     assert result["ok"] is False
     assert "simulated save failure" in (result.get("error") or "")
 
     after = _load(workspace)
     bs = after["batch_state"]
-    assert bs["needs_retry_seed_ids"][0] == DAEWOO
+    assert bs["needs_retry_seed_ids"][0] == FIAT_BRAVO
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
     assert len(after["accumulated_clean_export"]["variants"]) == variants_before
 
@@ -225,9 +227,9 @@ def test_failed_save_does_not_advance(workspace, monkeypatch):
 
 
 def test_second_problem_seed_after_first(workspace):
-    r1 = run_next.run_selected_seed(DAEWOO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r1 = run_next.run_selected_seed(FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r1["ok"] is True
-    r2 = run_next.run_selected_seed(DAIHATSU, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r2 = run_next.run_selected_seed(FIAT_FREEMONT, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r2["ok"] is True
 
     after = _load(workspace)
@@ -237,8 +239,8 @@ def test_second_problem_seed_after_first(workspace):
     assert prog["total"] == INITIAL_TOTAL_PROBLEMS
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 2
     assert prog["completed"] == INITIAL_COMPLETED + 2
-    assert prog["current_position"] == "5 / 54"
-    assert bs["needs_retry_seed_ids"][0] == DS9
+    assert prog["current_position"] == "8 / 54"
+    assert bs["needs_retry_seed_ids"][0] == FIAT_LINEA
 
 
 def test_no_external_state(workspace, monkeypatch):
@@ -249,12 +251,12 @@ def test_no_external_state(workspace, monkeypatch):
 
     canonical = _load(workspace)
     selection = queue.select_next_seed(canonical)
-    assert selection["selected_seed_id"] == DAEWOO
+    assert selection["selected_seed_id"] == FIAT_BRAVO
 
     # Deleting data/output also must not affect anything.
     shutil.rmtree(out)
     canonical2 = _load(workspace)
-    assert queue.select_next_seed(canonical2)["selected_seed_id"] == DAEWOO
+    assert queue.select_next_seed(canonical2)["selected_seed_id"] == FIAT_BRAVO
 
 
 def test_stale_external_files_ignored(workspace):
@@ -268,19 +270,19 @@ def test_stale_external_files_ignored(workspace):
     canonical = _load(workspace)
     selection = queue.select_next_seed(canonical)
     assert selection["mode"] == "problem_queue"
-    assert selection["selected_seed_id"] == DAEWOO
+    assert selection["selected_seed_id"] == FIAT_BRAVO
     bs = canonical["batch_state"]
     assert bs["next_seed_id"] == HAVAL
 
 
 def test_normal_cursor_frozen(workspace):
-    r1 = run_next.run_selected_seed(DAEWOO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r1 = run_next.run_selected_seed(FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r1["ok"] is True
     after_first = _load(workspace)
     assert after_first["batch_state"]["next_seed_id"] == HAVAL
     assert after_first["batch_state"]["last_completed_seed_id"] == GMC
 
-    r2 = run_next.run_selected_seed(DAIHATSU, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r2 = run_next.run_selected_seed(FIAT_FREEMONT, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r2["ok"] is True
     after_second = _load(workspace)
     assert after_second["batch_state"]["next_seed_id"] == HAVAL
@@ -324,7 +326,7 @@ def test_batch_size_20_sequential_success(workspace, monkeypatch):
     assert all(item["ok"] is True for item in result["results"])
     assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
     assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
-    assert result["final_state"]["position"] == "23 / 54"
+    assert result["final_state"]["position"] == "26 / 54"
     assert result["final_state"]["normal_next_seed_id"] == HAVAL
     assert result["final_state"]["normal_last_completed_seed_id"] == GMC
 
@@ -373,7 +375,7 @@ def test_batch_stops_on_push_failure(workspace):
     assert result["processed_count"] == 0
     assert result["stopped_early"] is True
     assert "ahead of GitHub" in (result["stop_reason"] or "")
-    assert runner_calls == [DAEWOO]
+    assert runner_calls == [FIAT_BRAVO]
     assert result["results"][0]["push_ok"] is False
 
 
@@ -415,7 +417,7 @@ def test_progress_after_batch(workspace):
     assert result["ok"] is True, result
     assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
     assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
-    assert result["final_state"]["position"] == "23 / 54"
+    assert result["final_state"]["position"] == "26 / 54"
     assert result["final_state"]["selected_next_seed"] == initial_needs_retry[20]
 
 

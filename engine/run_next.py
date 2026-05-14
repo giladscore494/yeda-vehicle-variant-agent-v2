@@ -22,6 +22,7 @@ from agent.runner import run_seed as _default_run_seed
 from engine import queue
 from engine.canonical_store import (
     load_canonical,
+    refresh_canonical_counts,
     save_canonical_atomic,
     validate_canonical,
 )
@@ -261,6 +262,10 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
     NOT attempted. If push fails, the on-disk canonical remains the new state
     but the caller may treat the overall operation as failed.
     """
+    # Refresh counts from actual data before validation so stale stored counts
+    # do not block the save.
+    refresh_canonical_counts(candidate)
+
     ok, errs = validate_canonical(candidate)
     if not ok:
         return {"ok": False, "save": None, "push": None,
