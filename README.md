@@ -47,7 +47,8 @@ tests/
   - otherwise → mode is `normal_batch`, selected seed is
     `batch_state.next_seed_id`.
 - Normal-batch cursor advancement requires a stable seed catalog from
-  `data/seeds/vehicle_model_seeds_il.json` or an embedded canonical fallback.
+  `data/seeds/vehicle_model_seeds_il.json` (or the alternate explicit path
+  `data/seed_catalog_il.json`) or an embedded canonical fallback.
 - During problem-queue runs the normal cursor
   (`next_seed_id`, `last_completed_seed_id`) is FROZEN.
 - Problem-queue progress is computed dynamically every load — never persisted

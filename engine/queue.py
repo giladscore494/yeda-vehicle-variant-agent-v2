@@ -67,7 +67,9 @@ def validate_seed_catalog(seed_catalog: list[str], canonical: dict, *,
             duplicates.append(seed_id)
         seen.add(seed_id)
     if duplicates:
-        errors.append(f"seed catalog contains duplicate seed_id values: {duplicates[:5]}")
+        sample = duplicates[:5]
+        suffix = "" if len(duplicates) <= 5 else f" (showing first 5 of {len(duplicates)})"
+        errors.append(f"seed catalog contains duplicate seed_id values: {sample}{suffix}")
 
     bs = _batch_state(canonical)
     next_seed_id = bs.get("next_seed_id")
