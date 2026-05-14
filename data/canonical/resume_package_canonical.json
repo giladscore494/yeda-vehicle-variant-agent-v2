@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:29:44.989294+00:00",
+    "updated_at": "2026-05-14T23:31:08.487285+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -453,7 +453,8 @@
       "volkswagen__up!__2012__2023__il",
       "volkswagen__e-up!__2014__2023__il",
       "volkswagen__golf__1990__2026__il",
-      "volkswagen__golf_gti__1990__2026__il"
+      "volkswagen__golf_gti__1990__2026__il",
+      "volkswagen__golf_r__2010__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -899,15 +900,16 @@
       "volkswagen__up!__2012__2023__il",
       "volkswagen__e-up!__2014__2023__il",
       "volkswagen__golf__1990__2026__il",
-      "volkswagen__golf_gti__1990__2026__il"
+      "volkswagen__golf_gti__1990__2026__il",
+      "volkswagen__golf_r__2010__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__golf_gti__1990__2026__il",
-    "next_seed_id": "volkswagen__golf_r__2010__2026__il",
+    "last_completed_seed_id": "volkswagen__golf_r__2010__2026__il",
+    "next_seed_id": "volkswagen__golf_variant__1993__2026__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1705,6 +1707,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:29:44.989375+00:00"
+      },
+      "volkswagen__golf_r__2010__2026__il": {
+        "seed_id": "volkswagen__golf_r__2010__2026__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:31:08.487372+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -217277,6 +217289,804 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_r_2011_2013_il_mk6_2_0l_tsi_turbo_petrol_255_hp_6_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "aliases": [],
+      "year_start": {
+        "value": 2011,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2013,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "unverified",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unverified from 0 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo petrol, 255 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "R",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:31:08.314266+00:00",
+      "updated_at": "2026-05-14T23:31:08.314266+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "global_model_name": "Volkswagen Golf R (Mk6)",
+        "official_marketed_name_il": "Volkswagen Golf R",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "Golf R20"
+        ],
+        "rebadged_as": null,
+        "year_start": 2011,
+        "year_end": 2013,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo petrol, 255 hp",
+        "transmission": "6-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "R",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portal (Cartube) confirms the Mk6 Golf R was launched in Israel in July 2011 with a 255 hp 2.0L TSI engine (detuned for hot climate) and 6-speed DSG.",
+        "source_ids": [
+          "src_1"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [],
+          "engine": [
+            "src_1"
+          ],
+          "transmission": [
+            "src_1"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_r_2014_2016_il_mk7_2_0l_tsi_turbo_petrol_300_hp_6_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "aliases": [],
+      "year_start": {
+        "value": 2014,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2016,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk7",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "unverified",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unverified from 0 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo petrol, 300 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "R",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:31:08.314317+00:00",
+      "updated_at": "2026-05-14T23:31:08.314317+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "global_model_name": "Volkswagen Golf R (Mk7)",
+        "official_marketed_name_il": "Volkswagen Golf R",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2014,
+        "year_end": 2016,
+        "generation": "Mk7",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo petrol, 300 hp",
+        "transmission": "6-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "R",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli sources confirm the Mk7 Golf R was marketed with a 300 hp 2.0L turbo engine, AWD, and DSG transmission.",
+        "source_ids": [
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [],
+          "engine": [
+            "src_2"
+          ],
+          "transmission": [
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_r_2017_2020_il_mk7_5_2_0l_tsi_turbo_petrol_310_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "aliases": [],
+      "year_start": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2020,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk7.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "unverified",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unverified from 0 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo petrol, 310 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "R",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:31:08.314371+00:00",
+      "updated_at": "2026-05-14T23:31:08.314371+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "global_model_name": "Volkswagen Golf R (Mk7.5)",
+        "official_marketed_name_il": "Volkswagen Golf R",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2017,
+        "year_end": 2020,
+        "generation": "Mk7.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo petrol, 310 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "R",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli sources confirm the facelifted Mk7.5 Golf R featured an upgraded 310 hp engine and AWD.",
+        "source_ids": [
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_3"
+          ],
+          "seats": [],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_3"
+          ],
+          "generation": [
+            "src_3"
+          ],
+          "year_start": [
+            "src_3"
+          ],
+          "year_end": [
+            "src_3"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_r_2021_2024_il_mk8_2_0l_tsi_turbo_petrol_320_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "aliases": [],
+      "year_start": {
+        "value": 2021,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "unverified",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unverified from 0 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo petrol, 320 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "R",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:31:08.314412+00:00",
+      "updated_at": "2026-05-14T23:31:08.314412+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 3,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "global_model_name": "Volkswagen Golf R (Mk8)",
+        "official_marketed_name_il": "Volkswagen Golf R",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2021,
+        "year_end": 2024,
+        "generation": "Mk8",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo petrol, 320 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "R",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli pricing and spec sites confirm the Mk8 Golf R is sold in Israel with a 320 hp 2.0L engine, 7-speed DSG, and AWD.",
+        "source_ids": [
+          "src_4",
+          "src_5"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_4"
+          ],
+          "seats": [],
+          "engine": [
+            "src_4"
+          ],
+          "transmission": [
+            "src_4"
+          ],
+          "fuel_type": [
+            "src_4"
+          ],
+          "drivetrain": [
+            "src_4"
+          ],
+          "generation": [
+            "src_4"
+          ],
+          "year_start": [
+            "src_4"
+          ],
+          "year_end": [
+            "src_4"
+          ],
+          "trim": [
+            "src_4"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_r_2024_2026_il_mk8_5_2_0l_tsi_turbo_petrol_333_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "aliases": [],
+      "year_start": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "unverified",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unverified from 0 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo petrol, 333 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "R",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:31:08.314440+00:00",
+      "updated_at": "2026-05-14T23:31:08.314440+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 4,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "global_model_name": "Volkswagen Golf R (Mk8.5)",
+        "official_marketed_name_il": "Volkswagen Golf R",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2024,
+        "year_end": 2026,
+        "generation": "Mk8.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo petrol, 333 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "R",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli sources (Carzone) confirm 2025 sales of the updated Golf R with 333 hp. Packages noted: Black Edition, Performance.",
+        "source_ids": [
+          "src_5"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_5"
+          ],
+          "seats": [],
+          "engine": [
+            "src_5"
+          ],
+          "transmission": [
+            "src_5"
+          ],
+          "fuel_type": [
+            "src_5"
+          ],
+          "drivetrain": [
+            "src_5"
+          ],
+          "generation": [
+            "src_5"
+          ],
+          "year_start": [
+            "src_5"
+          ],
+          "year_end": [
+            "src_5"
+          ],
+          "trim": [
+            "src_5"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -432035,6 +432845,804 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_r_2011_2013_il_mk6_2_0l_tsi_turbo_petrol_255_hp_6_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "aliases": [],
+        "year_start": {
+          "value": 2011,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo petrol, 255 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "R",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:31:08.314266+00:00",
+        "updated_at": "2026-05-14T23:31:08.314266+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "Golf R",
+          "global_model_name": "Volkswagen Golf R (Mk6)",
+          "official_marketed_name_il": "Volkswagen Golf R",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "Golf R20"
+          ],
+          "rebadged_as": null,
+          "year_start": 2011,
+          "year_end": 2013,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo petrol, 255 hp",
+          "transmission": "6-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "R",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portal (Cartube) confirms the Mk6 Golf R was launched in Israel in July 2011 with a 255 hp 2.0L TSI engine (detuned for hot climate) and 6-speed DSG.",
+          "source_ids": [
+            "src_1"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_r_2014_2016_il_mk7_2_0l_tsi_turbo_petrol_300_hp_6_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk7",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo petrol, 300 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "R",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:31:08.314317+00:00",
+        "updated_at": "2026-05-14T23:31:08.314317+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "Golf R",
+          "global_model_name": "Volkswagen Golf R (Mk7)",
+          "official_marketed_name_il": "Volkswagen Golf R",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2014,
+          "year_end": 2016,
+          "generation": "Mk7",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo petrol, 300 hp",
+          "transmission": "6-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "R",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli sources confirm the Mk7 Golf R was marketed with a 300 hp 2.0L turbo engine, AWD, and DSG transmission.",
+          "source_ids": [
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_r_2017_2020_il_mk7_5_2_0l_tsi_turbo_petrol_310_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "aliases": [],
+        "year_start": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk7.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo petrol, 310 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "R",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:31:08.314371+00:00",
+        "updated_at": "2026-05-14T23:31:08.314371+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Volkswagen",
+          "model": "Golf R",
+          "global_model_name": "Volkswagen Golf R (Mk7.5)",
+          "official_marketed_name_il": "Volkswagen Golf R",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2017,
+          "year_end": 2020,
+          "generation": "Mk7.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo petrol, 310 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "R",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli sources confirm the facelifted Mk7.5 Golf R featured an upgraded 310 hp engine and AWD.",
+          "source_ids": [
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_3"
+            ],
+            "year_end": [
+              "src_3"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_r_2021_2024_il_mk8_2_0l_tsi_turbo_petrol_320_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo petrol, 320 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "R",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:31:08.314412+00:00",
+        "updated_at": "2026-05-14T23:31:08.314412+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Volkswagen",
+          "model": "Golf R",
+          "global_model_name": "Volkswagen Golf R (Mk8)",
+          "official_marketed_name_il": "Volkswagen Golf R",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2021,
+          "year_end": 2024,
+          "generation": "Mk8",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo petrol, 320 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "R",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli pricing and spec sites confirm the Mk8 Golf R is sold in Israel with a 320 hp 2.0L engine, 7-speed DSG, and AWD.",
+          "source_ids": [
+            "src_4",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_4"
+            ],
+            "seats": [],
+            "engine": [
+              "src_4"
+            ],
+            "transmission": [
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_4"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_4"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_r_2024_2026_il_mk8_5_2_0l_tsi_turbo_petrol_333_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo petrol, 333 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "R",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:31:08.314440+00:00",
+        "updated_at": "2026-05-14T23:31:08.314440+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Volkswagen",
+          "model": "Golf R",
+          "global_model_name": "Volkswagen Golf R (Mk8.5)",
+          "official_marketed_name_il": "Volkswagen Golf R",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "Mk8.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo petrol, 333 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "R",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli sources (Carzone) confirm 2025 sales of the updated Golf R with 333 hp. Packages noted: Black Edition, Performance.",
+          "source_ids": [
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_5"
+            ],
+            "seats": [],
+            "engine": [
+              "src_5"
+            ],
+            "transmission": [
+              "src_5"
+            ],
+            "fuel_type": [
+              "src_5"
+            ],
+            "drivetrain": [
+              "src_5"
+            ],
+            "generation": [
+              "src_5"
+            ],
+            "year_start": [
+              "src_5"
+            ],
+            "year_end": [
+              "src_5"
+            ],
+            "trim": [
+              "src_5"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -432102,17 +433710,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1547,
+    "total_variants": 1552,
     "verified": 788,
-    "partial": 759,
+    "partial": 764,
     "makes_count": 39,
-    "models_count": 442,
+    "models_count": 443,
     "unresolved": 1,
-    "processed_seeds": 444,
+    "processed_seeds": 445,
     "needs_retry_seeds": 0,
-    "variants": 1547,
+    "variants": 1552,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:29:44.999829+00:00"
+    "last_updated_at": "2026-05-14T23:31:08.498090+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
