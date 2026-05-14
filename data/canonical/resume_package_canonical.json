@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:16:57.551595+00:00",
+    "updated_at": "2026-05-14T23:26:08.487890+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -449,7 +449,8 @@
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il",
       "haval__h6__2022__2026__il",
-      "volkswagen__polo__1990__2026__il"
+      "volkswagen__polo__1990__2026__il",
+      "volkswagen__up!__2012__2023__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -891,15 +892,16 @@
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il",
       "haval__h6__2022__2026__il",
-      "volkswagen__polo__1990__2026__il"
+      "volkswagen__polo__1990__2026__il",
+      "volkswagen__up!__2012__2023__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__polo__1990__2026__il",
-    "next_seed_id": "volkswagen__up!__2012__2023__il",
+    "last_completed_seed_id": "volkswagen__up!__2012__2023__il",
+    "next_seed_id": "volkswagen__e-up!__2014__2023__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1657,6 +1659,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:16:57.551685+00:00"
+      },
+      "volkswagen__up!__2012__2023__il": {
+        "seed_id": "volkswagen__up!__2012__2023__il",
+        "variants_added_to_canonical": 3,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:26:08.487993+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -214031,6 +214043,522 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_up_2014_2017_il_1st_gen_1_0l_3_cylinder_petrol_75_hp_5_speed_manual_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "up!",
+      "aliases": [],
+      "year_start": {
+        "value": 2014,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 4,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.0L 3-cylinder petrol, 75 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "5-speed manual",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Move up!",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:26:08.324997+00:00",
+      "updated_at": "2026-05-14T23:26:08.324997+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "up!",
+        "global_model_name": "Volkswagen up!",
+        "official_marketed_name_il": "פולקסווגן אפ!",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "VW up!"
+        ],
+        "rebadged_as": "SEAT Mii, Skoda Citigo",
+        "year_start": 2014,
+        "year_end": 2017,
+        "generation": "1st Gen",
+        "body_type": "Hatchback",
+        "seats": 4,
+        "engine": "1.0L 3-cylinder petrol, 75 hp",
+        "transmission": "5-speed manual",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Move up!",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli price lists (Yad2, Carzone) and official importer announcements confirm the 1.0L 75hp manual version was sold in Israel starting March 2014 under the 'Move up!' trim.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1",
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_1",
+            "src_2"
+          ],
+          "year_end": [
+            "src_1",
+            "src_2"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_up_2014_2017_il_1st_gen_1_0l_3_cylinder_petrol_75_hp_5_speed_automated_manual_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "up!",
+      "aliases": [],
+      "year_start": {
+        "value": 2014,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 4,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.0L 3-cylinder petrol, 75 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "5-speed automated manual",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Move up!",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:26:08.325075+00:00",
+      "updated_at": "2026-05-14T23:26:08.325075+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "up!",
+        "global_model_name": "Volkswagen up!",
+        "official_marketed_name_il": "פולקסווגן אפ!",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "VW up!"
+        ],
+        "rebadged_as": "SEAT Mii, Skoda Citigo",
+        "year_start": 2014,
+        "year_end": 2017,
+        "generation": "1st Gen",
+        "body_type": "Hatchback",
+        "seats": 4,
+        "engine": "1.0L 3-cylinder petrol, 75 hp",
+        "transmission": "5-speed automated manual",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Move up!",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli price lists (Yad2, Carzone) confirm the 1.0L 75hp with a 5-speed robotic/automated manual transmission was sold in Israel starting March 2014.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1",
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_1",
+            "src_2"
+          ],
+          "year_end": [
+            "src_1",
+            "src_2"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_up_2023_2023_il_1st_gen_electric_motor_83_hp_single_speed_ev_hatchback_electric",
+      "make": "Volkswagen",
+      "model": "up!",
+      "aliases": [],
+      "year_start": {
+        "value": 2023,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2023,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 4,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "Electric motor, 83 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "Single-speed EV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Electric",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "e-up!",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:26:08.325110+00:00",
+      "updated_at": "2026-05-14T23:26:08.325110+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Volkswagen",
+        "model": "up!",
+        "global_model_name": "Volkswagen e-up!",
+        "official_marketed_name_il": "פולקסווגן e-אפ!",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "VW e-up!"
+        ],
+        "rebadged_as": null,
+        "year_start": 2023,
+        "year_end": 2023,
+        "generation": "1st Gen",
+        "body_type": "Hatchback",
+        "seats": 4,
+        "engine": "Electric motor, 83 hp",
+        "transmission": "Single-speed EV",
+        "fuel_type": "Electric",
+        "drivetrain": "FWD",
+        "trim": "e-up! Edition",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli car catalog (Carzone) and Yad2 price lists confirm the electric e-up! (83 hp) was sold in Israel around 2023-2024.",
+        "source_ids": [
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_3"
+          ],
+          "seats": [
+            "src_3"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_3"
+          ],
+          "generation": [
+            "src_3"
+          ],
+          "year_start": [
+            "src_3"
+          ],
+          "year_end": [
+            "src_3"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown",
+      "packages_or_editions": [
+        "Edition"
+      ]
     }
   ],
   "accumulated_clean_export": {
@@ -425591,6 +426119,522 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_up_2014_2017_il_1st_gen_1_0l_3_cylinder_petrol_75_hp_5_speed_manual_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "up!",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L 3-cylinder petrol, 75 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Move up!",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:26:08.324997+00:00",
+        "updated_at": "2026-05-14T23:26:08.324997+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "up!",
+          "global_model_name": "Volkswagen up!",
+          "official_marketed_name_il": "פולקסווגן אפ!",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "VW up!"
+          ],
+          "rebadged_as": "SEAT Mii, Skoda Citigo",
+          "year_start": 2014,
+          "year_end": 2017,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "1.0L 3-cylinder petrol, 75 hp",
+          "transmission": "5-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Move up!",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli price lists (Yad2, Carzone) and official importer announcements confirm the 1.0L 75hp manual version was sold in Israel starting March 2014 under the 'Move up!' trim.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_up_2014_2017_il_1st_gen_1_0l_3_cylinder_petrol_75_hp_5_speed_automated_manual_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "up!",
+        "aliases": [],
+        "year_start": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L 3-cylinder petrol, 75 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed automated manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Move up!",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:26:08.325075+00:00",
+        "updated_at": "2026-05-14T23:26:08.325075+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "up!",
+          "global_model_name": "Volkswagen up!",
+          "official_marketed_name_il": "פולקסווגן אפ!",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "VW up!"
+          ],
+          "rebadged_as": "SEAT Mii, Skoda Citigo",
+          "year_start": 2014,
+          "year_end": 2017,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "1.0L 3-cylinder petrol, 75 hp",
+          "transmission": "5-speed automated manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Move up!",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli price lists (Yad2, Carzone) confirm the 1.0L 75hp with a 5-speed robotic/automated manual transmission was sold in Israel starting March 2014.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_up_2023_2023_il_1st_gen_electric_motor_83_hp_single_speed_ev_hatchback_electric",
+        "make": "Volkswagen",
+        "model": "up!",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 83 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "e-up!",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:26:08.325110+00:00",
+        "updated_at": "2026-05-14T23:26:08.325110+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Volkswagen",
+          "model": "up!",
+          "global_model_name": "Volkswagen e-up!",
+          "official_marketed_name_il": "פולקסווגן e-אפ!",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "VW e-up!"
+          ],
+          "rebadged_as": null,
+          "year_start": 2023,
+          "year_end": 2023,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 4,
+          "engine": "Electric motor, 83 hp",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": "e-up! Edition",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli car catalog (Carzone) and Yad2 price lists confirm the electric e-up! (83 hp) was sold in Israel around 2023-2024.",
+          "source_ids": [
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_3"
+            ],
+            "year_end": [
+              "src_3"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown",
+        "packages_or_editions": [
+          "Edition"
+        ]
       }
     ],
     "quality_gate": {
@@ -425658,17 +426702,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1528,
+    "total_variants": 1531,
     "verified": 788,
-    "partial": 740,
+    "partial": 743,
     "makes_count": 39,
-    "models_count": 438,
+    "models_count": 439,
     "unresolved": 1,
-    "processed_seeds": 440,
+    "processed_seeds": 441,
     "needs_retry_seeds": 0,
-    "variants": 1528,
+    "variants": 1531,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:16:57.561432+00:00"
+    "last_updated_at": "2026-05-14T23:26:08.498199+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
