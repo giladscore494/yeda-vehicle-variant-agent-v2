@@ -31,6 +31,8 @@ storage/
 data/
   canonical/
     resume_package_canonical.json      THE source of truth
+  seeds/
+    vehicle_model_seeds_il.json        Stable IL seed catalog (993 seeds)
 tests/
   test_engine_flow.py                  contract tests for the engine
 ```
@@ -44,6 +46,9 @@ tests/
     `problem_queue`, selected seed is `needs_retry_seed_ids[0]`.
   - otherwise → mode is `normal_batch`, selected seed is
     `batch_state.next_seed_id`.
+- Normal-batch cursor advancement requires a stable seed catalog from
+  `data/seeds/vehicle_model_seeds_il.json` (or the alternate explicit path
+  `data/seed_catalog_il.json`) or an embedded canonical fallback.
 - During problem-queue runs the normal cursor
   (`next_seed_id`, `last_completed_seed_id`) is FROZEN.
 - Problem-queue progress is computed dynamically every load — never persisted

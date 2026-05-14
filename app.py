@@ -60,8 +60,24 @@ def _main_run_tab(canonical: dict) -> None:
     batch_size = st.number_input("Batch size", min_value=1, max_value=MAX_BATCH_SIZE, value=1, step=1)
     st.warning("Runs stop automatically on first save/push/validation failure.")
     if st.button("Run next model", type="primary"):
+        latest_canonical = _load()
+        if latest_canonical is None:
+            return
+        latest_summary = queue.summarize_state(latest_canonical)
+        seed_catalog: list[str] | None = None
+        if latest_summary["mode"] == "normal_batch":
+            try:
+                seed_catalog = queue.load_seed_catalog(latest_canonical)
+            except ValueError as exc:
+                st.error(f"Normal batch is blocked before run: {exc}")
+                return
+        else:
+            try:
+                seed_catalog = queue.load_seed_catalog(latest_canonical)
+            except ValueError:
+                seed_catalog = None
         with st.spinner("Running next model..."):
-            result = run_next_model(batch_size=int(batch_size))
+            result = run_next_model(batch_size=int(batch_size), seed_catalog=seed_catalog)
         processed = result.get("processed_count", 0)
         if result.get("ok"):
             st.success(

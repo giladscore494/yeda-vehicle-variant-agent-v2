@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T21:20:44.979350+00:00",
+    "updated_at": "2026-05-14T22:45:04.425513+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -447,7 +447,8 @@
       "hyundai__ioniq__2016__2022__il",
       "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
-      "infiniti__qx80__2010__2022__il"
+      "infiniti__qx80__2010__2022__il",
+      "haval__h6__2022__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -887,14 +888,15 @@
       "hyundai__ioniq__2016__2022__il",
       "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
-      "infiniti__qx80__2010__2022__il"
+      "infiniti__qx80__2010__2022__il",
+      "haval__h6__2022__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "gmc__yukon__2000__2026__il",
+    "last_completed_seed_id": "haval__h6__2022__2026__il",
     "next_seed_id": "haval__h6__2022__2026__il",
     "run_history": [],
     "failed_details": [
@@ -1021,10 +1023,8 @@
         "hyundai__kona__2017__2026__il",
         "infiniti__qx80__2010__2022__il"
       ],
-      "fixed_count": 0,
-      "fixed_seed_ids": [],
-      "unresolved_count": 54,
-      "unresolved_seed_ids": [
+      "fixed_count": 54,
+      "fixed_seed_ids": [
         "bmw__850i__2018__2026__il",
         "bmw__z4_sdrive20i__2019__2026__il",
         "daewoo__lacetti__2003__2011__il",
@@ -1083,17 +1083,17 @@
       "newly_detected_count": 0,
       "newly_detected_seed_ids": [],
       "variants_added_by_seed": {},
-      "remaining_to_fix_count": 54,
+      "remaining_to_fix_count": 0,
       "processed_seed_count_before": 438,
-      "processed_seed_count_after": 384,
-      "needs_retry_count_after": 55,
+      "processed_seed_count_after": 438,
+      "needs_retry_count_after": 0,
       "failed_seed_ids_after": [
-        "haval__h6__2022__2026__il",
         "hyundai__nexo__2019__2026__il"
       ],
-      "next_seed_after_repair": "bmw__850i__2018__2026__il",
-      "safe_to_continue_after_repair": false,
-      "ui_message": "54 false-processed zero-variant seed(s) still need repair. Next: bmw__850i__2018__2026__il"
+      "next_seed_after_repair": "haval__h6__2022__2026__il",
+      "safe_to_continue_after_repair": true,
+      "ui_message": "Zero-variant repair queue completed. Normal batch can continue from haval__h6__2022__2026__il.",
+      "completed_at": "2026-05-14T22:23:26+00:00"
     },
     "seed_accounting": {
       "hummer__h3__2005__2010__il": {
@@ -1638,17 +1638,13 @@
       },
       "haval__h6__2022__2026__il": {
         "seed_id": "haval__h6__2022__2026__il",
-        "batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
-        "attempts": 3,
-        "candidates_returned": 0,
-        "valid_variants_built": 0,
-        "variants_added_to_canonical": 0,
+        "variants_added_to_canonical": 4,
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": null,
-        "marked_processed": false,
-        "status": "failed_after_retries",
-        "failure_reason": "zero_variants_without_explanation_after_retries"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T22:45:04.425568+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -212479,6 +212475,664 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_hybrid_2_speed_dht_suv_hybrid",
+      "make": "Haval",
+      "model": "h6",
+      "aliases": [],
+      "year_start": {
+        "value": 2022,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "3rd Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.5L Turbo Hybrid",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "2-speed DHT",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Hybrid",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "HEV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T22:45:04.267183+00:00",
+      "updated_at": "2026-05-14T22:45:04.267183+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Haval",
+        "model": "h6",
+        "global_model_name": "Haval H6",
+        "official_marketed_name_il": null,
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2022,
+        "year_end": 2026,
+        "generation": "3rd Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "1.5L Turbo Hybrid",
+        "transmission": "2-speed DHT",
+        "fuel_type": "Hybrid",
+        "drivetrain": "FWD",
+        "trim": "HEV",
+        "market_scope": "IL-likely",
+        "market_name_confidence": "unknown",
+        "confidence_level": "medium",
+        "source_basis": "Global specs for 3rd Gen Haval H6 HEV. Israeli market launch planned for 2026 according to local automotive press (Globes), but exact local marketed name and trim details are not yet fully confirmed; global model name used as reference.",
+        "source_ids": [
+          "src_1",
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_plug_in_hybrid_2_speed_dht_suv_plug_in_hybrid",
+      "make": "Haval",
+      "model": "h6",
+      "aliases": [],
+      "year_start": {
+        "value": 2022,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "3rd Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.5L Turbo Plug-in Hybrid",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "2-speed DHT",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Plug-in Hybrid",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "PHEV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T22:45:04.267289+00:00",
+      "updated_at": "2026-05-14T22:45:04.267289+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Haval",
+        "model": "h6",
+        "global_model_name": "Haval H6",
+        "official_marketed_name_il": null,
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2022,
+        "year_end": 2026,
+        "generation": "3rd Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "1.5L Turbo Plug-in Hybrid",
+        "transmission": "2-speed DHT",
+        "fuel_type": "Plug-in Hybrid",
+        "drivetrain": "FWD",
+        "trim": "PHEV",
+        "market_scope": "IL-likely",
+        "market_name_confidence": "unknown",
+        "confidence_level": "medium",
+        "source_basis": "Global specs for 3rd Gen Haval H6 PHEV. GWM announced a 2026 return to Israel with PHEV and HEV models, likely including the H6. Israeli marketed name not confirmed; global model name used as reference only.",
+        "source_ids": [
+          "src_1",
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_petrol_7_speed_dct_suv_petrol",
+      "make": "Haval",
+      "model": "h6",
+      "aliases": [],
+      "year_start": {
+        "value": 2022,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "3rd Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.5L Turbo petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DCT",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "1.5T",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T22:45:04.267327+00:00",
+      "updated_at": "2026-05-14T22:45:04.267327+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Haval",
+        "model": "h6",
+        "global_model_name": "Haval H6",
+        "official_marketed_name_il": null,
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2022,
+        "year_end": 2026,
+        "generation": "3rd Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "1.5L Turbo petrol",
+        "transmission": "7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "1.5T",
+        "market_scope": "global-reference-only",
+        "market_name_confidence": "unknown",
+        "confidence_level": "medium",
+        "source_basis": "Global specs for 3rd Gen Haval H6 1.5T petrol. Israeli marketed name not confirmed; global model name used as reference only.",
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "haval_h6_2022_2026_il_3rd_gen_2_0l_turbo_petrol_9_speed_dct_suv_petrol",
+      "make": "Haval",
+      "model": "h6",
+      "aliases": [],
+      "year_start": {
+        "value": 2022,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "3rd Gen",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "9-speed DCT",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "AWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "2.0T",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T22:45:04.267358+00:00",
+      "updated_at": "2026-05-14T22:45:04.267358+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 3,
+        "make": "Haval",
+        "model": "h6",
+        "global_model_name": "Haval H6",
+        "official_marketed_name_il": null,
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2022,
+        "year_end": 2026,
+        "generation": "3rd Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "2.0L Turbo petrol",
+        "transmission": "9-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "AWD",
+        "trim": "2.0T",
+        "market_scope": "global-reference-only",
+        "market_name_confidence": "unknown",
+        "confidence_level": "medium",
+        "source_basis": "Global specs for 3rd Gen Haval H6 2.0T petrol. Israeli marketed name not confirmed; global model name used as reference only.",
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -422495,6 +423149,664 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_hybrid_2_speed_dht_suv_hybrid",
+        "make": "Haval",
+        "model": "h6",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "2-speed DHT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "HEV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T22:45:04.267183+00:00",
+        "updated_at": "2026-05-14T22:45:04.267183+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Haval",
+          "model": "h6",
+          "global_model_name": "Haval H6",
+          "official_marketed_name_il": null,
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "3rd Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo Hybrid",
+          "transmission": "2-speed DHT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "HEV",
+          "market_scope": "IL-likely",
+          "market_name_confidence": "unknown",
+          "confidence_level": "medium",
+          "source_basis": "Global specs for 3rd Gen Haval H6 HEV. Israeli market launch planned for 2026 according to local automotive press (Globes), but exact local marketed name and trim details are not yet fully confirmed; global model name used as reference.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_plug_in_hybrid_2_speed_dht_suv_plug_in_hybrid",
+        "make": "Haval",
+        "model": "h6",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo Plug-in Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "2-speed DHT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Plug-in Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "PHEV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T22:45:04.267289+00:00",
+        "updated_at": "2026-05-14T22:45:04.267289+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Haval",
+          "model": "h6",
+          "global_model_name": "Haval H6",
+          "official_marketed_name_il": null,
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "3rd Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo Plug-in Hybrid",
+          "transmission": "2-speed DHT",
+          "fuel_type": "Plug-in Hybrid",
+          "drivetrain": "FWD",
+          "trim": "PHEV",
+          "market_scope": "IL-likely",
+          "market_name_confidence": "unknown",
+          "confidence_level": "medium",
+          "source_basis": "Global specs for 3rd Gen Haval H6 PHEV. GWM announced a 2026 return to Israel with PHEV and HEV models, likely including the H6. Israeli marketed name not confirmed; global model name used as reference only.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "haval_h6_2022_2026_il_3rd_gen_1_5l_turbo_petrol_7_speed_dct_suv_petrol",
+        "make": "Haval",
+        "model": "h6",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "1.5T",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T22:45:04.267327+00:00",
+        "updated_at": "2026-05-14T22:45:04.267327+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Haval",
+          "model": "h6",
+          "global_model_name": "Haval H6",
+          "official_marketed_name_il": null,
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "3rd Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo petrol",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "1.5T",
+          "market_scope": "global-reference-only",
+          "market_name_confidence": "unknown",
+          "confidence_level": "medium",
+          "source_basis": "Global specs for 3rd Gen Haval H6 1.5T petrol. Israeli marketed name not confirmed; global model name used as reference only.",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "haval_h6_2022_2026_il_3rd_gen_2_0l_turbo_petrol_9_speed_dct_suv_petrol",
+        "make": "Haval",
+        "model": "h6",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "9-speed DCT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "2.0T",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T22:45:04.267358+00:00",
+        "updated_at": "2026-05-14T22:45:04.267358+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Haval",
+          "model": "h6",
+          "global_model_name": "Haval H6",
+          "official_marketed_name_il": null,
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "3rd Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L Turbo petrol",
+          "transmission": "9-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": "2.0T",
+          "market_scope": "global-reference-only",
+          "market_name_confidence": "unknown",
+          "confidence_level": "medium",
+          "source_basis": "Global specs for 3rd Gen Haval H6 2.0T petrol. Israeli marketed name not confirmed; global model name used as reference only.",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -422517,15 +423829,16 @@
       "status_rebuilt": true,
       "trim_merge_enabled": true,
       "inputs_loaded": {
-        "canonical_resume_package": 1323,
         "canonical_source": "local_canonical",
-        "imported_accumulated_dataset": 1323,
         "combined_clean": 0,
         "combined_old": 0,
         "vehicle_variants_verified": 0,
         "vehicle_variants_partial": 11,
         "run_history_embedded": 0,
-        "latest_batch_full_variants": 0
+        "latest_batch_full_variants": 0,
+        "historical_canonical_resume_package": 1323,
+        "historical_imported_accumulated_dataset": 1323,
+        "current_total_variants": 1519
       },
       "accumulation_counts": {
         "canonical_resume_package": 1323,
@@ -422534,9 +423847,10 @@
         "verified_output": 0,
         "partial_output": 11,
         "latest_batch_full_variants": 0,
-        "final_merged_variants": 1323,
-        "shrink_guard_previous_count": 1323,
-        "shrink_guard_new_count": 1323
+        "historical_final_merged_variants": 1323,
+        "historical_shrink_guard_previous_count": 1323,
+        "historical_shrink_guard_new_count": 1323,
+        "current_total_variants": 1519
       }
     }
   },
@@ -422545,7 +423859,6 @@
     "new_file": "resume_package (5).json",
     "base_variants": 258,
     "new_file_variants": 116,
-    "final_variants": 1323,
     "new_unique_added_from_new_file": 5,
     "batch_state_source": "resume_package (5).json",
     "safe_to_continue_if_ui_shows": {
@@ -422556,31 +423869,33 @@
     "previous_canonical_variants": 263,
     "new_unique_added": 1060,
     "pushed_to_github": true,
-    "last_push_commit_sha": "afaa76a5d311722a905df91fb5e00a37599e1458"
+    "last_push_commit_sha": "afaa76a5d311722a905df91fb5e00a37599e1458",
+    "historical_final_variants": 1323,
+    "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1519,
+    "total_variants": 1523,
     "verified": 788,
-    "partial": 731,
+    "partial": 735,
     "makes_count": 38,
-    "models_count": 436,
+    "models_count": 437,
     "unresolved": 1,
-    "processed_seeds": 438,
+    "processed_seeds": 439,
     "needs_retry_seeds": 0,
-    "variants": 1519,
+    "variants": 1523,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T22:11:23.080570+00:00"
+    "last_updated_at": "2026-05-14T22:45:04.436326+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
   "repair_metadata": {
-    "status": "cleaned_for_rerun_queue",
+    "status": "normal_batch_ready",
     "processed_before": 438,
-    "processed_after": 384,
-    "rerun_count": 54,
-    "first_rerun_seed": "bmw__850i__2018__2026__il",
+    "processed_after": 438,
+    "rerun_count": 0,
     "normal_continuation_seed": "haval__h6__2022__2026__il",
-    "created_at": "2026-05-10T18:19:24+00:00"
+    "created_at": "2026-05-10T18:19:24+00:00",
+    "completed_at": "2026-05-14T22:23:26+00:00"
   },
   "_metadata_repaired_from_accumulated": true
 }
