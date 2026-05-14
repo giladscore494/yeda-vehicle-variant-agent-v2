@@ -627,6 +627,144 @@ def test_haval_runs_once_then_blocked_without_catalog(workspace):
     assert haval_runs == 1, f"haval ran {haval_runs} times; expected exactly 1"
 
 
+# ---- counts accuracy tests ---------------------------------------------------
+
+def test_counts_partial_equals_partial_variants(workspace):
+    """counts.partial must equal the number of non-verified variants."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    actual_partial = sum(1 for v in variants if v.get("verification_status") != "verified")
+    counts = canonical.get("counts") or {}
+    assert counts.get("partial") == actual_partial, (
+        f"counts.partial={counts.get('partial')} != actual={actual_partial}"
+    )
+
+
+def test_counts_verified_equals_verified_variants(workspace):
+    """counts.verified must equal the number of verified variants."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    actual_verified = sum(1 for v in variants if v.get("verification_status") == "verified")
+    counts = canonical.get("counts") or {}
+    assert counts.get("verified") == actual_verified, (
+        f"counts.verified={counts.get('verified')} != actual={actual_verified}"
+    )
+    assert actual_verified == 788
+
+
+def test_counts_makes_count(workspace):
+    """counts.makes_count must equal the number of unique makes in variants."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    actual_makes = len({(v.get("make") or "").strip() for v in variants if (v.get("make") or "").strip()})
+    counts = canonical.get("counts") or {}
+    assert counts.get("makes_count") == actual_makes, (
+        f"counts.makes_count={counts.get('makes_count')} != actual={actual_makes}"
+    )
+    assert actual_makes == 38
+
+
+def test_counts_models_count(workspace):
+    """counts.models_count must equal unique (make, model) pairs in variants."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    actual_models = len({
+        ((v.get("make") or "").strip(), (v.get("model") or "").strip())
+        for v in variants
+    })
+    counts = canonical.get("counts") or {}
+    assert counts.get("models_count") == actual_models, (
+        f"counts.models_count={counts.get('models_count')} != actual={actual_models}"
+    )
+    assert actual_models == 436
+
+
+def test_processed_count_uses_processed_seed_ids(workspace):
+    """counts.processed_seeds must equal len(processed_seed_ids), not stale processed_seeds list."""
+    canonical = _load(workspace)
+    bs = canonical["batch_state"]
+    counts = canonical.get("counts") or {}
+    actual = len(bs.get("processed_seed_ids") or [])
+    assert counts.get("processed_seeds") == actual, (
+        f"counts.processed_seeds={counts.get('processed_seeds')} != len(processed_seed_ids)={actual}"
+    )
+    assert actual == CURRENT_PROCESSED
+
+
+def test_active_mode_is_normal_batch(workspace):
+    """batch_state.active_mode must be 'normal_batch' when needs_retry_seed_ids is empty."""
+    canonical = _load(workspace)
+    bs = canonical["batch_state"]
+    assert bs.get("needs_retry_seed_ids") == [], "precondition: needs_retry must be empty"
+    assert bs.get("active_mode") == "normal_batch", (
+        f"active_mode={bs.get('active_mode')} but needs_retry is empty; expected normal_batch"
+    )
+
+
+def test_empty_needs_retry_forces_normal_batch_dynamic(workspace):
+    """queue.get_mode must return normal_batch whenever needs_retry_seed_ids is empty."""
+    canonical = _load(workspace)
+    # Inject a synthetic active_mode to confirm dynamic calculation ignores it.
+    canonical["batch_state"]["active_mode"] = "rerun_queue_required"
+    canonical["batch_state"]["needs_retry_seed_ids"] = []
+    assert queue.get_mode(canonical) == "normal_batch"
+
+
+def test_processed_seeds_list_synced_to_processed_seed_ids(workspace):
+    """batch_state.processed_seeds list must have same length as processed_seed_ids."""
+    canonical = _load(workspace)
+    bs = canonical["batch_state"]
+    seed_ids = list(bs.get("processed_seed_ids") or [])
+    seeds_list = list(bs.get("processed_seeds") or [])
+    assert len(seeds_list) == len(seed_ids), (
+        f"len(processed_seeds)={len(seeds_list)} != len(processed_seed_ids)={len(seed_ids)}"
+    )
+
+
+def test_acceptance_diagnostics(workspace):
+    """All acceptance criteria must be satisfied simultaneously."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    bs = canonical["batch_state"]
+    counts = canonical.get("counts") or {}
+
+    vids = [v["variant_id"] for v in variants]
+    duplicate_count = len(vids) - len(set(vids))
+    verified_count = sum(1 for v in variants if v.get("verification_status") == "verified")
+    partial_count = len(variants) - verified_count
+    processed_count = len(bs.get("processed_seed_ids") or [])
+    needs_retry_count = len(bs.get("needs_retry_seed_ids") or [])
+    mode = queue.get_mode(canonical)
+    next_seed = bs.get("next_seed_id")
+    haval_in_failed = HAVAL in (bs.get("failed_seed_ids") or [])
+
+    # Print acceptance diagnostics
+    print(f"\n=== Acceptance Diagnostics ===")
+    print(f"variants = {len(variants)}")
+    print(f"verified = {verified_count}")
+    print(f"partial = {partial_count}")
+    print(f"counts.partial = {counts.get('partial')}")
+    print(f"processed_seed_ids = {processed_count}")
+    print(f"needs_retry_seed_ids = {needs_retry_count}")
+    print(f"active/effective mode = {mode}")
+    print(f"next_seed_id = {next_seed}")
+    print(f"duplicate_variant_id_count = {duplicate_count}")
+    print(f"haval_in_failed_seed_ids = {haval_in_failed}")
+
+    assert len(variants) == 1519
+    assert verified_count == 788
+    assert partial_count == 731
+    assert counts.get("partial") == 731
+    assert processed_count == 438
+    assert needs_retry_count == 0
+    assert mode == "normal_batch"
+    assert next_seed == HAVAL
+    assert duplicate_count == 0
+    assert haval_in_failed is False
+
+
+# ---- legacy reference test ---------------------------------------------------
+
 def test_no_imports_from_legacy_reference():
     """Production files must not import legacy_reference."""
     files_to_scan: list[Path] = []

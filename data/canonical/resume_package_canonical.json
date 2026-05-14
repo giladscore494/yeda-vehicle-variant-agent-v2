@@ -450,3078 +450,444 @@
       "infiniti__qx80__2010__2022__il"
     ],
     "processed_seeds": [
-      {
-        "seed_id": "abarth__124_spider__2016__2020__il",
-        "make": "Abarth",
-        "model": "124 Spider",
-        "year_start": 2016,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "abarth__500__2008__2026__il",
-        "make": "Abarth",
-        "model": "500",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "abarth__500e__2023__2026__il",
-        "make": "Abarth",
-        "model": "500e",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "abarth__600e__2024__2026__il",
-        "make": "Abarth",
-        "model": "600e",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "abarth__punto__2007__2015__il",
-        "make": "Abarth",
-        "model": "Punto",
-        "year_start": 2007,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aiways__u5__2021__2024__il",
-        "make": "Aiways",
-        "model": "U5",
-        "year_start": 2021,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aiways__u6__2022__2024__il",
-        "make": "Aiways",
-        "model": "U6",
-        "year_start": 2022,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__145__1994__2001__il",
-        "make": "Alfa Romeo",
-        "model": "145",
-        "year_start": 1994,
-        "year_end": 2001,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__146__1995__2001__il",
-        "make": "Alfa Romeo",
-        "model": "146",
-        "year_start": 1995,
-        "year_end": 2001,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__147__2000__2010__il",
-        "make": "Alfa Romeo",
-        "model": "147",
-        "year_start": 2000,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__155__1992__1998__il",
-        "make": "Alfa Romeo",
-        "model": "155",
-        "year_start": 1992,
-        "year_end": 1998,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__156__1997__2007__il",
-        "make": "Alfa Romeo",
-        "model": "156",
-        "year_start": 1997,
-        "year_end": 2007,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__159__2005__2011__il",
-        "make": "Alfa Romeo",
-        "model": "159",
-        "year_start": 2005,
-        "year_end": 2011,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__164__1990__1998__il",
-        "make": "Alfa Romeo",
-        "model": "164",
-        "year_start": 1990,
-        "year_end": 1998,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__166__1998__2007__il",
-        "make": "Alfa Romeo",
-        "model": "166",
-        "year_start": 1998,
-        "year_end": 2007,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__33__1990__1995__il",
-        "make": "Alfa Romeo",
-        "model": "33",
-        "year_start": 1990,
-        "year_end": 1995,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__4c__2013__2020__il",
-        "make": "Alfa Romeo",
-        "model": "4C",
-        "year_start": 2013,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__75__1990__1992__il",
-        "make": "Alfa Romeo",
-        "model": "75",
-        "year_start": 1990,
-        "year_end": 1992,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__brera__2005__2010__il",
-        "make": "Alfa Romeo",
-        "model": "Brera",
-        "year_start": 2005,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__giulia__2016__2026__il",
-        "make": "Alfa Romeo",
-        "model": "Giulia",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__giulietta__2010__2020__il",
-        "make": "Alfa Romeo",
-        "model": "Giulietta",
-        "year_start": 2010,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__gt__2003__2010__il",
-        "make": "Alfa Romeo",
-        "model": "GT",
-        "year_start": 2003,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__gtv__1995__2005__il",
-        "make": "Alfa Romeo",
-        "model": "GTV",
-        "year_start": 1995,
-        "year_end": 2005,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__junior__2024__2026__il",
-        "make": "Alfa Romeo",
-        "model": "Junior",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__mito__2008__2019__il",
-        "make": "Alfa Romeo",
-        "model": "MiTo",
-        "year_start": 2008,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__spider__1995__2005__il",
-        "make": "Alfa Romeo",
-        "model": "Spider",
-        "year_start": 1995,
-        "year_end": 2005,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__stelvio__2017__2026__il",
-        "make": "Alfa Romeo",
-        "model": "Stelvio",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alfa_romeo__tonale__2022__2026__il",
-        "make": "Alfa Romeo",
-        "model": "Tonale",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alpine__a110__2018__2026__il",
-        "make": "Alpine",
-        "model": "A110",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "alpine__a290__2024__2026__il",
-        "make": "Alpine",
-        "model": "A290",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__db11__2016__2026__il",
-        "make": "Aston Martin",
-        "model": "DB11",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__db12__2023__2026__il",
-        "make": "Aston Martin",
-        "model": "DB12",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__db9__2004__2016__il",
-        "make": "Aston Martin",
-        "model": "DB9",
-        "year_start": 2004,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__dbs_superleggera__2018__2024__il",
-        "make": "Aston Martin",
-        "model": "DBS Superleggera",
-        "year_start": 2018,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__dbx__2020__2026__il",
-        "make": "Aston Martin",
-        "model": "DBX",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__rapide__2010__2020__il",
-        "make": "Aston Martin",
-        "model": "Rapide",
-        "year_start": 2010,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "aston_martin__vantage__2005__2026__il",
-        "make": "Aston Martin",
-        "model": "Vantage",
-        "year_start": 2005,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__100__1990__1994__il",
-        "make": "Audi",
-        "model": "100",
-        "year_start": 1990,
-        "year_end": 1994,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__80__1990__1996__il",
-        "make": "Audi",
-        "model": "80",
-        "year_start": 1990,
-        "year_end": 1996,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a1__2010__2026__il",
-        "make": "Audi",
-        "model": "A1",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a3__1997__2026__il",
-        "make": "Audi",
-        "model": "A3",
-        "year_start": 1997,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a4__1995__2026__il",
-        "make": "Audi",
-        "model": "A4",
-        "year_start": 1995,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a5__2007__2026__il",
-        "make": "Audi",
-        "model": "A5",
-        "year_start": 2007,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a6__1994__2026__il",
-        "make": "Audi",
-        "model": "A6",
-        "year_start": 1994,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a7__2010__2026__il",
-        "make": "Audi",
-        "model": "A7",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__a8__1994__2026__il",
-        "make": "Audi",
-        "model": "A8",
-        "year_start": 1994,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__e-tron_gt__2021__2026__il",
-        "make": "Audi",
-        "model": "e-tron GT",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q2__2017__2026__il",
-        "make": "Audi",
-        "model": "Q2",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q3__2011__2026__il",
-        "make": "Audi",
-        "model": "Q3",
-        "year_start": 2011,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q4_e-tron__2021__2026__il",
-        "make": "Audi",
-        "model": "Q4 e-tron",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q5__2008__2026__il",
-        "make": "Audi",
-        "model": "Q5",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q6_e-tron__2024__2026__il",
-        "make": "Audi",
-        "model": "Q6 e-tron",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q7__2005__2026__il",
-        "make": "Audi",
-        "model": "Q7",
-        "year_start": 2005,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q8__2018__2026__il",
-        "make": "Audi",
-        "model": "Q8",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__q8_e-tron__2019__2026__il",
-        "make": "Audi",
-        "model": "Q8 e-tron",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__r8__2007__2026__il",
-        "make": "Audi",
-        "model": "R8",
-        "year_start": 2007,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__rs3__2011__2026__il",
-        "make": "Audi",
-        "model": "RS3",
-        "year_start": 2011,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__rs4__2006__2026__il",
-        "make": "Audi",
-        "model": "RS4",
-        "year_start": 2006,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__rs5__2010__2026__il",
-        "make": "Audi",
-        "model": "RS5",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__rs6__2008__2026__il",
-        "make": "Audi",
-        "model": "RS6",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__rs7__2013__2026__il",
-        "make": "Audi",
-        "model": "RS7",
-        "year_start": 2013,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__s3__2000__2026__il",
-        "make": "Audi",
-        "model": "S3",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__s4__1998__2026__il",
-        "make": "Audi",
-        "model": "S4",
-        "year_start": 1998,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__s5__2007__2026__il",
-        "make": "Audi",
-        "model": "S5",
-        "year_start": 2007,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__sq5__2013__2026__il",
-        "make": "Audi",
-        "model": "SQ5",
-        "year_start": 2013,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__sq7__2016__2026__il",
-        "make": "Audi",
-        "model": "SQ7",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__sq8__2019__2026__il",
-        "make": "Audi",
-        "model": "SQ8",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "audi__tt__1999__2024__il",
-        "make": "Audi",
-        "model": "TT",
-        "year_start": 1999,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bentley__bentayga__2016__2026__il",
-        "make": "Bentley",
-        "model": "Bentayga",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bentley__continental_gt__2003__2026__il",
-        "make": "Bentley",
-        "model": "Continental GT",
-        "year_start": 2003,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bentley__flying_spur__2005__2026__il",
-        "make": "Bentley",
-        "model": "Flying Spur",
-        "year_start": 2005,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__116i__2004__2025__il",
-        "make": "BMW",
-        "model": "116i",
-        "year_start": 2004,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__118d__2008__2018__il",
-        "make": "BMW",
-        "model": "118d",
-        "year_start": 2008,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__118i__2004__2026__il",
-        "make": "BMW",
-        "model": "118i",
-        "year_start": 2004,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__120i__2004__2026__il",
-        "make": "BMW",
-        "model": "120i",
-        "year_start": 2004,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__125i__2008__2019__il",
-        "make": "BMW",
-        "model": "125i",
-        "year_start": 2008,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__128ti__2020__2026__il",
-        "make": "BMW",
-        "model": "128ti",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__218i__2014__2026__il",
-        "make": "BMW",
-        "model": "218i",
-        "year_start": 2014,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__218i_gran_coupe__2020__2026__il",
-        "make": "BMW",
-        "model": "218i Gran Coupe",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__220i__2014__2026__il",
-        "make": "BMW",
-        "model": "220i",
-        "year_start": 2014,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__225xe_(active_tourer_phev)__2016__2026__il",
-        "make": "BMW",
-        "model": "225xe (Active Tourer PHEV)",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__230e_(active_tourer_phev)__2022__2026__il",
-        "make": "BMW",
-        "model": "230e (Active Tourer PHEV)",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__316i__1990__2015__il",
-        "make": "BMW",
-        "model": "316i",
-        "year_start": 1990,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__318d__2008__2020__il",
-        "make": "BMW",
-        "model": "318d",
-        "year_start": 2008,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__318i__1990__2026__il",
-        "make": "BMW",
-        "model": "318i",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__320e__2021__2026__il",
-        "make": "BMW",
-        "model": "320e",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__320i__1990__2026__il",
-        "make": "BMW",
-        "model": "320i",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__323i__1996__2000__il",
-        "make": "BMW",
-        "model": "323i",
-        "year_start": 1996,
-        "year_end": 2000,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__325i__1990__2012__il",
-        "make": "BMW",
-        "model": "325i",
-        "year_start": 1990,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__328i__1995__2016__il",
-        "make": "BMW",
-        "model": "328i",
-        "year_start": 1995,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__330e__2016__2026__il",
-        "make": "BMW",
-        "model": "330e",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__330i__2000__2026__il",
-        "make": "BMW",
-        "model": "330i",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__335i__2006__2015__il",
-        "make": "BMW",
-        "model": "335i",
-        "year_start": 2006,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__340i__2015__2026__il",
-        "make": "BMW",
-        "model": "340i",
-        "year_start": 2015,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__420i__2013__2026__il",
-        "make": "BMW",
-        "model": "420i",
-        "year_start": 2013,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__428i__2013__2016__il",
-        "make": "BMW",
-        "model": "428i",
-        "year_start": 2013,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__430i__2016__2026__il",
-        "make": "BMW",
-        "model": "430i",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__435i__2013__2016__il",
-        "make": "BMW",
-        "model": "435i",
-        "year_start": 2013,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__440i__2016__2026__il",
-        "make": "BMW",
-        "model": "440i",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__518i__1990__1996__il",
-        "make": "BMW",
-        "model": "518i",
-        "year_start": 1990,
-        "year_end": 1996,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__520d__2008__2020__il",
-        "make": "BMW",
-        "model": "520d",
-        "year_start": 2008,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__520i__1990__2026__il",
-        "make": "BMW",
-        "model": "520i",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__523i__1996__2011__il",
-        "make": "BMW",
-        "model": "523i",
-        "year_start": 1996,
-        "year_end": 2011,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__525i__1990__2010__il",
-        "make": "BMW",
-        "model": "525i",
-        "year_start": 1990,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__528i__1996__2016__il",
-        "make": "BMW",
-        "model": "528i",
-        "year_start": 1996,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__530e__2017__2026__il",
-        "make": "BMW",
-        "model": "530e",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__530i__2000__2026__il",
-        "make": "BMW",
-        "model": "530i",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__535i__1990__2017__il",
-        "make": "BMW",
-        "model": "535i",
-        "year_start": 1990,
-        "year_end": 2017,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__540i__1992__2026__il",
-        "make": "BMW",
-        "model": "540i",
-        "year_start": 1992,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__545e__2020__2026__il",
-        "make": "BMW",
-        "model": "545e",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__550i__2005__2023__il",
-        "make": "BMW",
-        "model": "550i",
-        "year_start": 2005,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__630i__2004__2010__il",
-        "make": "BMW",
-        "model": "630i",
-        "year_start": 2004,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__630i_gt__2017__2024__il",
-        "make": "BMW",
-        "model": "630i GT",
-        "year_start": 2017,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__640i__2011__2018__il",
-        "make": "BMW",
-        "model": "640i",
-        "year_start": 2011,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__640i_gt__2017__2024__il",
-        "make": "BMW",
-        "model": "640i GT",
-        "year_start": 2017,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__650i__2005__2018__il",
-        "make": "BMW",
-        "model": "650i",
-        "year_start": 2005,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__728i__1995__2001__il",
-        "make": "BMW",
-        "model": "728i",
-        "year_start": 1995,
-        "year_end": 2001,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__730i__1990__2022__il",
-        "make": "BMW",
-        "model": "730i",
-        "year_start": 1990,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__735i__1990__2001__il",
-        "make": "BMW",
-        "model": "735i",
-        "year_start": 1990,
-        "year_end": 2001,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__740e__2016__2026__il",
-        "make": "BMW",
-        "model": "740e",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__740i__1992__2026__il",
-        "make": "BMW",
-        "model": "740i",
-        "year_start": 1992,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__745i__2001__2005__il",
-        "make": "BMW",
-        "model": "745i",
-        "year_start": 2001,
-        "year_end": 2005,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__750i__1990__2022__il",
-        "make": "BMW",
-        "model": "750i",
-        "year_start": 1990,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__760i__2003__2015__il",
-        "make": "BMW",
-        "model": "760i",
-        "year_start": 2003,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__840i__2019__2026__il",
-        "make": "BMW",
-        "model": "840i",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__850i__1990__1999__il",
-        "make": "BMW",
-        "model": "850i",
-        "year_start": 1990,
-        "year_end": 1999,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i3__2013__2022__il",
-        "make": "BMW",
-        "model": "i3",
-        "year_start": 2013,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i3s__2018__2022__il",
-        "make": "BMW",
-        "model": "i3s",
-        "year_start": 2018,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i4_edrive35__2021__2026__il",
-        "make": "BMW",
-        "model": "i4 eDrive35",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i5_edrive40__2023__2026__il",
-        "make": "BMW",
-        "model": "i5 eDrive40",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i7_xdrive60__2022__2026__il",
-        "make": "BMW",
-        "model": "i7 xDrive60",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__i8__2014__2020__il",
-        "make": "BMW",
-        "model": "i8",
-        "year_start": 2014,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__ix_xdrive40__2021__2026__il",
-        "make": "BMW",
-        "model": "iX xDrive40",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__ix1_edrive20__2022__2026__il",
-        "make": "BMW",
-        "model": "iX1 eDrive20",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__ix2_edrive20__2023__2026__il",
-        "make": "BMW",
-        "model": "iX2 eDrive20",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__ix3__2020__2025__il",
-        "make": "BMW",
-        "model": "iX3",
-        "year_start": 2020,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m135i__2012__2026__il",
-        "make": "BMW",
-        "model": "M135i",
-        "year_start": 2012,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m2__2016__2026__il",
-        "make": "BMW",
-        "model": "M2",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m235i__2014__2026__il",
-        "make": "BMW",
-        "model": "M235i",
-        "year_start": 2014,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m3__1990__2026__il",
-        "make": "BMW",
-        "model": "M3",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m4__2014__2026__il",
-        "make": "BMW",
-        "model": "M4",
-        "year_start": 2014,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m5__1990__2026__il",
-        "make": "BMW",
-        "model": "M5",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m6__2005__2018__il",
-        "make": "BMW",
-        "model": "M6",
-        "year_start": 2005,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m760li__2016__2022__il",
-        "make": "BMW",
-        "model": "M760Li",
-        "year_start": 2016,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__m8__2019__2026__il",
-        "make": "BMW",
-        "model": "M8",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x1_sdrive18i__2010__2026__il",
-        "make": "BMW",
-        "model": "X1 sDrive18i",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x1_sdrive20i__2010__2026__il",
-        "make": "BMW",
-        "model": "X1 sDrive20i",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x1_xdrive25e__2020__2026__il",
-        "make": "BMW",
-        "model": "X1 xDrive25e",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x2_m35i__2019__2026__il",
-        "make": "BMW",
-        "model": "X2 M35i",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x2_sdrive18i__2018__2026__il",
-        "make": "BMW",
-        "model": "X2 sDrive18i",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x2_sdrive20i__2018__2026__il",
-        "make": "BMW",
-        "model": "X2 sDrive20i",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_2.0i__2004__2026__il",
-        "make": "BMW",
-        "model": "X3 2.0i",
-        "year_start": 2004,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_2.5i__2004__2010__il",
-        "make": "BMW",
-        "model": "X3 2.5i",
-        "year_start": 2004,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_m__2019__2026__il",
-        "make": "BMW",
-        "model": "X3 M",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_m40i__2018__2026__il",
-        "make": "BMW",
-        "model": "X3 M40i",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_xdrive20d__2008__2022__il",
-        "make": "BMW",
-        "model": "X3 xDrive20d",
-        "year_start": 2008,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_xdrive30e__2020__2026__il",
-        "make": "BMW",
-        "model": "X3 xDrive30e",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x3_xdrive30i__2018__2026__il",
-        "make": "BMW",
-        "model": "X3 xDrive30i",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x4_m40i__2016__2025__il",
-        "make": "BMW",
-        "model": "X4 M40i",
-        "year_start": 2016,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x4_xdrive20i__2014__2025__il",
-        "make": "BMW",
-        "model": "X4 xDrive20i",
-        "year_start": 2014,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x4_xdrive30i__2018__2025__il",
-        "make": "BMW",
-        "model": "X4 xDrive30i",
-        "year_start": 2018,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_3.0d__2002__2026__il",
-        "make": "BMW",
-        "model": "X5 3.0d",
-        "year_start": 2002,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_3.0i__2000__2010__il",
-        "make": "BMW",
-        "model": "X5 3.0i",
-        "year_start": 2000,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_4.4i__2000__2018__il",
-        "make": "BMW",
-        "model": "X5 4.4i",
-        "year_start": 2000,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_m__2009__2026__il",
-        "make": "BMW",
-        "model": "X5 M",
-        "year_start": 2009,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_m50i__2019__2026__il",
-        "make": "BMW",
-        "model": "X5 M50i",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_xdrive40e__2015__2018__il",
-        "make": "BMW",
-        "model": "X5 xDrive40e",
-        "year_start": 2015,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_xdrive40i__2018__2026__il",
-        "make": "BMW",
-        "model": "X5 xDrive40i",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_xdrive45e__2019__2023__il",
-        "make": "BMW",
-        "model": "X5 xDrive45e",
-        "year_start": 2019,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x5_xdrive50e__2023__2026__il",
-        "make": "BMW",
-        "model": "X5 xDrive50e",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x6_m__2009__2026__il",
-        "make": "BMW",
-        "model": "X6 M",
-        "year_start": 2009,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x6_xdrive30d__2008__2026__il",
-        "make": "BMW",
-        "model": "X6 xDrive30d",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x6_xdrive35i__2008__2026__il",
-        "make": "BMW",
-        "model": "X6 xDrive35i",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x6_xdrive50i__2008__2026__il",
-        "make": "BMW",
-        "model": "X6 xDrive50i",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x7_m50i__2019__2026__il",
-        "make": "BMW",
-        "model": "X7 M50i",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x7_xdrive30d__2019__2026__il",
-        "make": "BMW",
-        "model": "X7 xDrive30d",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__x7_xdrive40i__2019__2026__il",
-        "make": "BMW",
-        "model": "X7 xDrive40i",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__xm__2022__2026__il",
-        "make": "BMW",
-        "model": "XM",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__z3_1.8__1996__2002__il",
-        "make": "BMW",
-        "model": "Z3 1.8",
-        "year_start": 1996,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__z3_2.8__1997__2002__il",
-        "make": "BMW",
-        "model": "Z3 2.8",
-        "year_start": 1997,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__z3_m_roadster__1998__2002__il",
-        "make": "BMW",
-        "model": "Z3 M Roadster",
-        "year_start": 1998,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__z4_2.0i__2003__2008__il",
-        "make": "BMW",
-        "model": "Z4 2.0i",
-        "year_start": 2003,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "bmw__z4_sdrive20i__2009__2016__il",
-        "make": "BMW",
-        "model": "Z4 sDrive20i",
-        "year_start": 2009,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__atto_3__2022__2026__il",
-        "make": "BYD",
-        "model": "Atto 3",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__dolphin__2023__2026__il",
-        "make": "BYD",
-        "model": "Dolphin",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__han__2023__2026__il",
-        "make": "BYD",
-        "model": "Han",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__seal__2023__2026__il",
-        "make": "BYD",
-        "model": "Seal",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__seal_u__2024__2026__il",
-        "make": "BYD",
-        "model": "Seal U",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__sealion_7__2025__2026__il",
-        "make": "BYD",
-        "model": "Sealion 7",
-        "year_start": 2025,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__song_plus__2022__2026__il",
-        "make": "BYD",
-        "model": "Song Plus",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "byd__tang__2022__2026__il",
-        "make": "BYD",
-        "model": "Tang",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__ats__2012__2019__il",
-        "make": "Cadillac",
-        "model": "ATS",
-        "year_start": 2012,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__cts__2003__2019__il",
-        "make": "Cadillac",
-        "model": "CTS",
-        "year_start": 2003,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__escalade__1999__2026__il",
-        "make": "Cadillac",
-        "model": "Escalade",
-        "year_start": 1999,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__lyriq__2022__2026__il",
-        "make": "Cadillac",
-        "model": "Lyriq",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__srx__2004__2016__il",
-        "make": "Cadillac",
-        "model": "SRX",
-        "year_start": 2004,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__xt4__2018__2026__il",
-        "make": "Cadillac",
-        "model": "XT4",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__xt5__2016__2026__il",
-        "make": "Cadillac",
-        "model": "XT5",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cadillac__xt6__2019__2026__il",
-        "make": "Cadillac",
-        "model": "XT6",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chery__arrizo_8__2024__2026__il",
-        "make": "Chery",
-        "model": "Arrizo 8",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chery__tiggo_4_pro__2022__2026__il",
-        "make": "Chery",
-        "model": "Tiggo 4 Pro",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chery__tiggo_7_pro__2022__2026__il",
-        "make": "Chery",
-        "model": "Tiggo 7 Pro",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chery__tiggo_8_pro__2022__2026__il",
-        "make": "Chery",
-        "model": "Tiggo 8 Pro",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chery__tiggo_9__2025__2026__il",
-        "make": "Chery",
-        "model": "Tiggo 9",
-        "year_start": 2025,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__aveo__2002__2020__il",
-        "make": "Chevrolet",
-        "model": "Aveo",
-        "year_start": 2002,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__blazer_ev__2024__2026__il",
-        "make": "Chevrolet",
-        "model": "Blazer EV",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__bolt_ev__2017__2026__il",
-        "make": "Chevrolet",
-        "model": "Bolt EV",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__camaro__2010__2024__il",
-        "make": "Chevrolet",
-        "model": "Camaro",
-        "year_start": 2010,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__captiva__2006__2018__il",
-        "make": "Chevrolet",
-        "model": "Captiva",
-        "year_start": 2006,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__corvette__1997__2026__il",
-        "make": "Chevrolet",
-        "model": "Corvette",
-        "year_start": 1997,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__cruze__2008__2019__il",
-        "make": "Chevrolet",
-        "model": "Cruze",
-        "year_start": 2008,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__equinox__2005__2026__il",
-        "make": "Chevrolet",
-        "model": "Equinox",
-        "year_start": 2005,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__equinox_ev__2024__2026__il",
-        "make": "Chevrolet",
-        "model": "Equinox EV",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__malibu__2008__2023__il",
-        "make": "Chevrolet",
-        "model": "Malibu",
-        "year_start": 2008,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__orlando__2011__2018__il",
-        "make": "Chevrolet",
-        "model": "Orlando",
-        "year_start": 2011,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__silverado__2000__2026__il",
-        "make": "Chevrolet",
-        "model": "Silverado",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__spark__1998__2022__il",
-        "make": "Chevrolet",
-        "model": "Spark",
-        "year_start": 1998,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__tahoe__2000__2026__il",
-        "make": "Chevrolet",
-        "model": "Tahoe",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__traverse__2008__2026__il",
-        "make": "Chevrolet",
-        "model": "Traverse",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__trax__2013__2026__il",
-        "make": "Chevrolet",
-        "model": "Trax",
-        "year_start": 2013,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chevrolet__volt__2011__2019__il",
-        "make": "Chevrolet",
-        "model": "Volt",
-        "year_start": 2011,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__300c__2005__2023__il",
-        "make": "Chrysler",
-        "model": "300C",
-        "year_start": 2005,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__crossfire__2004__2008__il",
-        "make": "Chrysler",
-        "model": "Crossfire",
-        "year_start": 2004,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__pacifica__2017__2026__il",
-        "make": "Chrysler",
-        "model": "Pacifica",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__pt_cruiser__2000__2010__il",
-        "make": "Chrysler",
-        "model": "PT Cruiser",
-        "year_start": 2000,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__sebring__2000__2010__il",
-        "make": "Chrysler",
-        "model": "Sebring",
-        "year_start": 2000,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "chrysler__voyager__1990__2016__il",
-        "make": "Chrysler",
-        "model": "Voyager",
-        "year_start": 1990,
-        "year_end": 2016,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ami__2020__2026__il",
-        "make": "Citroen",
-        "model": "Ami",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__berlingo__1996__2026__il",
-        "make": "Citroen",
-        "model": "Berlingo",
-        "year_start": 1996,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c-elysee__2012__2020__il",
-        "make": "Citroen",
-        "model": "C-Elysee",
-        "year_start": 2012,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c1__2005__2022__il",
-        "make": "Citroen",
-        "model": "C1",
-        "year_start": 2005,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c2__2003__2009__il",
-        "make": "Citroen",
-        "model": "C2",
-        "year_start": 2003,
-        "year_end": 2009,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c3__2002__2026__il",
-        "make": "Citroen",
-        "model": "C3",
-        "year_start": 2002,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c3_aircross__2017__2026__il",
-        "make": "Citroen",
-        "model": "C3 Aircross",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c3_picasso__2009__2017__il",
-        "make": "Citroen",
-        "model": "C3 Picasso",
-        "year_start": 2009,
-        "year_end": 2017,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c4__2004__2026__il",
-        "make": "Citroen",
-        "model": "C4",
-        "year_start": 2004,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c4_picasso__2006__2022__il",
-        "make": "Citroen",
-        "model": "C4 Picasso",
-        "year_start": 2006,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c4_x__2022__2026__il",
-        "make": "Citroen",
-        "model": "C4 X",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c5__2001__2017__il",
-        "make": "Citroen",
-        "model": "C5",
-        "year_start": 2001,
-        "year_end": 2017,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c5_aircross__2018__2026__il",
-        "make": "Citroen",
-        "model": "C5 Aircross",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c5_x__2021__2026__il",
-        "make": "Citroen",
-        "model": "C5 X",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c6__2006__2012__il",
-        "make": "Citroen",
-        "model": "C6",
-        "year_start": 2006,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__c8__2002__2014__il",
-        "make": "Citroen",
-        "model": "C8",
-        "year_start": 2002,
-        "year_end": 2014,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ds3__2010__2019__il",
-        "make": "Citroen",
-        "model": "DS3",
-        "year_start": 2010,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ds4__2011__2018__il",
-        "make": "Citroen",
-        "model": "DS4",
-        "year_start": 2011,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ds5__2011__2018__il",
-        "make": "Citroen",
-        "model": "DS5",
-        "year_start": 2011,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__grand_c4_picasso__2006__2022__il",
-        "make": "Citroen",
-        "model": "Grand C4 Picasso",
-        "year_start": 2006,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__jumper__1994__2026__il",
-        "make": "Citroen",
-        "model": "Jumper",
-        "year_start": 1994,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__jumpy__1995__2026__il",
-        "make": "Citroen",
-        "model": "Jumpy",
-        "year_start": 1995,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__saxo__1996__2003__il",
-        "make": "Citroen",
-        "model": "Saxo",
-        "year_start": 1996,
-        "year_end": 2003,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__spacetourer__2016__2026__il",
-        "make": "Citroen",
-        "model": "SpaceTourer",
-        "year_start": 2016,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__xsara__1997__2006__il",
-        "make": "Citroen",
-        "model": "Xsara",
-        "year_start": 1997,
-        "year_end": 2006,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__xsara_picasso__1999__2012__il",
-        "make": "Citroen",
-        "model": "Xsara Picasso",
-        "year_start": 1999,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__zx__1991__1998__il",
-        "make": "Citroen",
-        "model": "ZX",
-        "year_start": 1991,
-        "year_end": 1998,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ë-berlingo__2021__2026__il",
-        "make": "Citroen",
-        "model": "ë-Berlingo",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ë-c3__2024__2026__il",
-        "make": "Citroen",
-        "model": "ë-C3",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "citroen__ë-c4__2020__2026__il",
-        "make": "Citroen",
-        "model": "ë-C4",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cupra__ateca__2020__2026__il",
-        "make": "Cupra",
-        "model": "Ateca",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cupra__born__2021__2026__il",
-        "make": "Cupra",
-        "model": "Born",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cupra__formentor__2020__2026__il",
-        "make": "Cupra",
-        "model": "Formentor",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cupra__leon__2020__2026__il",
-        "make": "Cupra",
-        "model": "Leon",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "cupra__tavascan__2024__2026__il",
-        "make": "Cupra",
-        "model": "Tavascan",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__bigster__2025__2026__il",
-        "make": "Dacia",
-        "model": "Bigster",
-        "year_start": 2025,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__dokker__2012__2021__il",
-        "make": "Dacia",
-        "model": "Dokker",
-        "year_start": 2012,
-        "year_end": 2021,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__duster__2010__2026__il",
-        "make": "Dacia",
-        "model": "Duster",
-        "year_start": 2010,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__jogger__2022__2026__il",
-        "make": "Dacia",
-        "model": "Jogger",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__lodgy__2012__2022__il",
-        "make": "Dacia",
-        "model": "Lodgy",
-        "year_start": 2012,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__logan__2005__2024__il",
-        "make": "Dacia",
-        "model": "Logan",
-        "year_start": 2005,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__sandero__2008__2026__il",
-        "make": "Dacia",
-        "model": "Sandero",
-        "year_start": 2008,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dacia__spring__2021__2026__il",
-        "make": "Dacia",
-        "model": "Spring",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__cielo__1995__2008__il",
-        "make": "Daewoo",
-        "model": "Cielo",
-        "year_start": 1995,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__espero__1993__1999__il",
-        "make": "Daewoo",
-        "model": "Espero",
-        "year_start": 1993,
-        "year_end": 1999,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__kalos__2002__2008__il",
-        "make": "Daewoo",
-        "model": "Kalos",
-        "year_start": 2002,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__lanos__1997__2008__il",
-        "make": "Daewoo",
-        "model": "Lanos",
-        "year_start": 1997,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__leganza__1997__2002__il",
-        "make": "Daewoo",
-        "model": "Leganza",
-        "year_start": 1997,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__matiz__1998__2011__il",
-        "make": "Daewoo",
-        "model": "Matiz",
-        "year_start": 1998,
-        "year_end": 2011,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__nubira__1997__2005__il",
-        "make": "Daewoo",
-        "model": "Nubira",
-        "year_start": 1997,
-        "year_end": 2005,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__tacuma__2000__2008__il",
-        "make": "Daewoo",
-        "model": "Tacuma",
-        "year_start": 2000,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daewoo__tico__1995__2001__il",
-        "make": "Daewoo",
-        "model": "Tico",
-        "year_start": 1995,
-        "year_end": 2001,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__charade__1990__2000__il",
-        "make": "Daihatsu",
-        "model": "Charade",
-        "year_start": 1990,
-        "year_end": 2000,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__cuore__1990__2013__il",
-        "make": "Daihatsu",
-        "model": "Cuore",
-        "year_start": 1990,
-        "year_end": 2013,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__gran_move__1996__2002__il",
-        "make": "Daihatsu",
-        "model": "Gran Move",
-        "year_start": 1996,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__materia__2006__2012__il",
-        "make": "Daihatsu",
-        "model": "Materia",
-        "year_start": 2006,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__move__1995__2006__il",
-        "make": "Daihatsu",
-        "model": "Move",
-        "year_start": 1995,
-        "year_end": 2006,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__sirion__1998__2015__il",
-        "make": "Daihatsu",
-        "model": "Sirion",
-        "year_start": 1998,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__terios__1997__2017__il",
-        "make": "Daihatsu",
-        "model": "Terios",
-        "year_start": 1997,
-        "year_end": 2017,
-        "market": "IL"
-      },
-      {
-        "seed_id": "daihatsu__yrv__2000__2005__il",
-        "make": "Daihatsu",
-        "model": "YRV",
-        "year_start": 2000,
-        "year_end": 2005,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__caliber__2006__2012__il",
-        "make": "Dodge",
-        "model": "Caliber",
-        "year_start": 2006,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__challenger__2008__2023__il",
-        "make": "Dodge",
-        "model": "Challenger",
-        "year_start": 2008,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__charger__2006__2023__il",
-        "make": "Dodge",
-        "model": "Charger",
-        "year_start": 2006,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__durango__2011__2026__il",
-        "make": "Dodge",
-        "model": "Durango",
-        "year_start": 2011,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__journey__2008__2020__il",
-        "make": "Dodge",
-        "model": "Journey",
-        "year_start": 2008,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__nitro__2007__2012__il",
-        "make": "Dodge",
-        "model": "Nitro",
-        "year_start": 2007,
-        "year_end": 2012,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dodge__ram__1990__2009__il",
-        "make": "Dodge",
-        "model": "Ram",
-        "year_start": 1990,
-        "year_end": 2009,
-        "market": "IL"
-      },
-      {
-        "seed_id": "dongfeng__box__2024__2026__il",
-        "make": "Dongfeng",
-        "model": "Box",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ds_automobiles__ds_3__2015__2026__il",
-        "make": "DS Automobiles",
-        "model": "DS 3",
-        "year_start": 2015,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ds_automobiles__ds_3_crossback__2018__2026__il",
-        "make": "DS Automobiles",
-        "model": "DS 3 Crossback",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ds_automobiles__ds_4__2021__2026__il",
-        "make": "DS Automobiles",
-        "model": "DS 4",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ds_automobiles__ds_7__2017__2026__il",
-        "make": "DS Automobiles",
-        "model": "DS 7",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__296_gtb__2022__2026__il",
-        "make": "Ferrari",
-        "model": "296 GTB",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__458_italia__2010__2015__il",
-        "make": "Ferrari",
-        "model": "458 Italia",
-        "year_start": 2010,
-        "year_end": 2015,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__488_gtb__2015__2019__il",
-        "make": "Ferrari",
-        "model": "488 GTB",
-        "year_start": 2015,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__812_superfast__2017__2024__il",
-        "make": "Ferrari",
-        "model": "812 Superfast",
-        "year_start": 2017,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__california__2008__2018__il",
-        "make": "Ferrari",
-        "model": "California",
-        "year_start": 2008,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__f8_tributo__2019__2024__il",
-        "make": "Ferrari",
-        "model": "F8 Tributo",
-        "year_start": 2019,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__gtc4lusso__2016__2020__il",
-        "make": "Ferrari",
-        "model": "GTC4Lusso",
-        "year_start": 2016,
-        "year_end": 2020,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__portofino__2018__2026__il",
-        "make": "Ferrari",
-        "model": "Portofino",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__purosangue__2023__2026__il",
-        "make": "Ferrari",
-        "model": "Purosangue",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__roma__2020__2026__il",
-        "make": "Ferrari",
-        "model": "Roma",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ferrari__sf90_stradale__2020__2026__il",
-        "make": "Ferrari",
-        "model": "SF90 Stradale",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__500__2007__2026__il",
-        "make": "Fiat",
-        "model": "500",
-        "year_start": 2007,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__500e__2020__2026__il",
-        "make": "Fiat",
-        "model": "500e",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__500l__2012__2022__il",
-        "make": "Fiat",
-        "model": "500L",
-        "year_start": 2012,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__500x__2014__2026__il",
-        "make": "Fiat",
-        "model": "500X",
-        "year_start": 2014,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__600e__2023__2026__il",
-        "make": "Fiat",
-        "model": "600e",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__croma__2005__2010__il",
-        "make": "Fiat",
-        "model": "Croma",
-        "year_start": 2005,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__doblo__2000__2026__il",
-        "make": "Fiat",
-        "model": "Doblo",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__ducato__1990__2026__il",
-        "make": "Fiat",
-        "model": "Ducato",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__fiorino__2007__2022__il",
-        "make": "Fiat",
-        "model": "Fiorino",
-        "year_start": 2007,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__fullback__2016__2019__il",
-        "make": "Fiat",
-        "model": "Fullback",
-        "year_start": 2016,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__marea__1996__2002__il",
-        "make": "Fiat",
-        "model": "Marea",
-        "year_start": 1996,
-        "year_end": 2002,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__multipla__1998__2010__il",
-        "make": "Fiat",
-        "model": "Multipla",
-        "year_start": 1998,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__panda__1990__2026__il",
-        "make": "Fiat",
-        "model": "Panda",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__punto__1993__2018__il",
-        "make": "Fiat",
-        "model": "Punto",
-        "year_start": 1993,
-        "year_end": 2018,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__qubo__2008__2019__il",
-        "make": "Fiat",
-        "model": "Qubo",
-        "year_start": 2008,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__scudo__2007__2026__il",
-        "make": "Fiat",
-        "model": "Scudo",
-        "year_start": 2007,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__stilo__2001__2007__il",
-        "make": "Fiat",
-        "model": "Stilo",
-        "year_start": 2001,
-        "year_end": 2007,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__tempra__1990__1996__il",
-        "make": "Fiat",
-        "model": "Tempra",
-        "year_start": 1990,
-        "year_end": 1996,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__tipo__1990__1995__il",
-        "make": "Fiat",
-        "model": "Tipo",
-        "year_start": 1990,
-        "year_end": 1995,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__topolino__2024__2026__il",
-        "make": "Fiat",
-        "model": "Topolino",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__ulysse__1994__2010__il",
-        "make": "Fiat",
-        "model": "Ulysse",
-        "year_start": 1994,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "fiat__uno__1990__1995__il",
-        "make": "Fiat",
-        "model": "Uno",
-        "year_start": 1990,
-        "year_end": 1995,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__bronco__2021__2026__il",
-        "make": "Ford",
-        "model": "Bronco",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__explorer__2020__2026__il",
-        "make": "Ford",
-        "model": "Explorer",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__f-150__2000__2026__il",
-        "make": "Ford",
-        "model": "F-150",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__fiesta__1990__2023__il",
-        "make": "Ford",
-        "model": "Fiesta",
-        "year_start": 1990,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__focus__1998__2025__il",
-        "make": "Ford",
-        "model": "Focus",
-        "year_start": 1998,
-        "year_end": 2025,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__galaxy__1995__2023__il",
-        "make": "Ford",
-        "model": "Galaxy",
-        "year_start": 1995,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__kuga__2008__2024__il",
-        "make": "Ford",
-        "model": "Kuga",
-        "year_start": 2008,
-        "year_end": 2024,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__maverick__2022__2026__il",
-        "make": "Ford",
-        "model": "Maverick",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__mondeo__1993__2022__il",
-        "make": "Ford",
-        "model": "Mondeo",
-        "year_start": 1993,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__mustang__1990__2026__il",
-        "make": "Ford",
-        "model": "Mustang",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__mustang_mach-e__2021__2026__il",
-        "make": "Ford",
-        "model": "Mustang Mach-E",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__puma__2019__2026__il",
-        "make": "Ford",
-        "model": "Puma",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__ranger__1998__2026__il",
-        "make": "Ford",
-        "model": "Ranger",
-        "year_start": 1998,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__s-max__2006__2023__il",
-        "make": "Ford",
-        "model": "S-MAX",
-        "year_start": 2006,
-        "year_end": 2023,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__tourneo_connect__2013__2026__il",
-        "make": "Ford",
-        "model": "Tourneo Connect",
-        "year_start": 2013,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__transit__1990__2026__il",
-        "make": "Ford",
-        "model": "Transit",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__transit_connect__2002__2026__il",
-        "make": "Ford",
-        "model": "Transit Connect",
-        "year_start": 2002,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "ford__transit_custom__2012__2026__il",
-        "make": "Ford",
-        "model": "Transit Custom",
-        "year_start": 2012,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "gac_-_aion__aion_v__2024__2026__il",
-        "make": "GAC / Aion",
-        "model": "Aion V",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "gac_-_aion__aion_y__2023__2026__il",
-        "make": "GAC / Aion",
-        "model": "Aion Y",
-        "year_start": 2023,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "geely__geometry_c__2021__2026__il",
-        "make": "Geely",
-        "model": "Geometry C",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "geely__starray__2024__2026__il",
-        "make": "Geely",
-        "model": "Starray",
-        "year_start": 2024,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__g70__2018__2026__il",
-        "make": "Genesis",
-        "model": "G70",
-        "year_start": 2018,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__g80__2017__2026__il",
-        "make": "Genesis",
-        "model": "G80",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__g90__2017__2026__il",
-        "make": "Genesis",
-        "model": "G90",
-        "year_start": 2017,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__gv60__2022__2026__il",
-        "make": "Genesis",
-        "model": "GV60",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__gv70__2021__2026__il",
-        "make": "Genesis",
-        "model": "GV70",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "genesis__gv80__2020__2026__il",
-        "make": "Genesis",
-        "model": "GV80",
-        "year_start": 2020,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "gmc__hummer_ev__2022__2026__il",
-        "make": "GMC",
-        "model": "Hummer EV",
-        "year_start": 2022,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "gmc__sierra__2000__2026__il",
-        "make": "GMC",
-        "model": "Sierra",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "gmc__yukon__2000__2026__il",
-        "make": "GMC",
-        "model": "Yukon",
-        "year_start": 2000,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__kona_n__2021__2026__il",
-        "make": "Hyundai",
-        "model": "Kona N",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__matrix__2001__2010__il",
-        "make": "Hyundai",
-        "model": "Matrix",
-        "year_start": 2001,
-        "year_end": 2010,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__palisade__2019__2026__il",
-        "make": "Hyundai",
-        "model": "Palisade",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__santa_fe__2001__2026__il",
-        "make": "Hyundai",
-        "model": "Santa Fe",
-        "year_start": 2001,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__sonata__1990__2026__il",
-        "make": "Hyundai",
-        "model": "Sonata",
-        "year_start": 1990,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__staria__2021__2026__il",
-        "make": "Hyundai",
-        "model": "Staria",
-        "year_start": 2021,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__terracan__2001__2007__il",
-        "make": "Hyundai",
-        "model": "Terracan",
-        "year_start": 2001,
-        "year_end": 2007,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__trajet__1999__2008__il",
-        "make": "Hyundai",
-        "model": "Trajet",
-        "year_start": 1999,
-        "year_end": 2008,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__tucson__2004__2026__il",
-        "make": "Hyundai",
-        "model": "Tucson",
-        "year_start": 2004,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__veloster__2011__2022__il",
-        "make": "Hyundai",
-        "model": "Veloster",
-        "year_start": 2011,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "hyundai__venue__2019__2026__il",
-        "make": "Hyundai",
-        "model": "Venue",
-        "year_start": 2019,
-        "year_end": 2026,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__g_series__2003__2013__il",
-        "make": "Infiniti",
-        "model": "G Series",
-        "year_start": 2003,
-        "year_end": 2013,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__q30__2016__2019__il",
-        "make": "Infiniti",
-        "model": "Q30",
-        "year_start": 2016,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__q50__2014__2022__il",
-        "make": "Infiniti",
-        "model": "Q50",
-        "year_start": 2014,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__q60__2016__2022__il",
-        "make": "Infiniti",
-        "model": "Q60",
-        "year_start": 2016,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__q70__2014__2019__il",
-        "make": "Infiniti",
-        "model": "Q70",
-        "year_start": 2014,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__qx30__2016__2019__il",
-        "make": "Infiniti",
-        "model": "QX30",
-        "year_start": 2016,
-        "year_end": 2019,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__qx50__2014__2022__il",
-        "make": "Infiniti",
-        "model": "QX50",
-        "year_start": 2014,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__qx60__2014__2022__il",
-        "make": "Infiniti",
-        "model": "QX60",
-        "year_start": 2014,
-        "year_end": 2022,
-        "market": "IL"
-      },
-      {
-        "seed_id": "infiniti__qx70__2009__2017__il",
-        "make": "Infiniti",
-        "model": "QX70",
-        "year_start": 2009,
-        "year_end": 2017,
-        "market": "IL"
-      },
-      {
-        "seed_id": "isuzu__d-max__2002__2026__il",
-        "make": "Isuzu",
-        "model": "D-Max",
-        "year_start": 2002,
-        "year_end": 2026,
-        "market": "IL"
-      }
+      "abarth__124_spider__2016__2020__il",
+      "abarth__500__2008__2026__il",
+      "abarth__500e__2023__2026__il",
+      "abarth__600e__2024__2026__il",
+      "abarth__punto__2007__2015__il",
+      "aiways__u5__2021__2024__il",
+      "aiways__u6__2022__2024__il",
+      "alfa_romeo__145__1994__2001__il",
+      "alfa_romeo__146__1995__2001__il",
+      "alfa_romeo__147__2000__2010__il",
+      "alfa_romeo__155__1992__1998__il",
+      "alfa_romeo__156__1997__2007__il",
+      "alfa_romeo__159__2005__2011__il",
+      "alfa_romeo__164__1990__1998__il",
+      "alfa_romeo__166__1998__2007__il",
+      "alfa_romeo__33__1990__1995__il",
+      "alfa_romeo__4c__2013__2020__il",
+      "alfa_romeo__75__1990__1992__il",
+      "alfa_romeo__brera__2005__2010__il",
+      "alfa_romeo__giulia__2016__2026__il",
+      "alfa_romeo__giulietta__2010__2020__il",
+      "alfa_romeo__gt__2003__2010__il",
+      "alfa_romeo__gtv__1995__2005__il",
+      "alfa_romeo__junior__2024__2026__il",
+      "alfa_romeo__mito__2008__2019__il",
+      "alfa_romeo__spider__1995__2005__il",
+      "alfa_romeo__stelvio__2017__2026__il",
+      "alfa_romeo__tonale__2022__2026__il",
+      "alpine__a110__2018__2026__il",
+      "alpine__a290__2024__2026__il",
+      "aston_martin__db11__2016__2026__il",
+      "aston_martin__db12__2023__2026__il",
+      "aston_martin__db9__2004__2016__il",
+      "aston_martin__dbs_superleggera__2018__2024__il",
+      "aston_martin__dbx__2020__2026__il",
+      "aston_martin__rapide__2010__2020__il",
+      "aston_martin__vantage__2005__2026__il",
+      "audi__100__1990__1994__il",
+      "audi__80__1990__1996__il",
+      "audi__a1__2010__2026__il",
+      "audi__a3__1997__2026__il",
+      "audi__a4__1995__2026__il",
+      "audi__a5__2007__2026__il",
+      "audi__a6__1994__2026__il",
+      "audi__a7__2010__2026__il",
+      "audi__a8__1994__2026__il",
+      "audi__e-tron_gt__2021__2026__il",
+      "audi__q2__2017__2026__il",
+      "audi__q3__2011__2026__il",
+      "audi__q4_e-tron__2021__2026__il",
+      "audi__q5__2008__2026__il",
+      "audi__q6_e-tron__2024__2026__il",
+      "audi__q7__2005__2026__il",
+      "audi__q8__2018__2026__il",
+      "audi__q8_e-tron__2019__2026__il",
+      "audi__r8__2007__2026__il",
+      "audi__rs3__2011__2026__il",
+      "audi__rs4__2006__2026__il",
+      "audi__rs5__2010__2026__il",
+      "audi__rs6__2008__2026__il",
+      "audi__rs7__2013__2026__il",
+      "audi__s3__2000__2026__il",
+      "audi__s4__1998__2026__il",
+      "audi__s5__2007__2026__il",
+      "audi__sq5__2013__2026__il",
+      "audi__sq7__2016__2026__il",
+      "audi__sq8__2019__2026__il",
+      "audi__tt__1999__2024__il",
+      "bentley__bentayga__2016__2026__il",
+      "bentley__continental_gt__2003__2026__il",
+      "bentley__flying_spur__2005__2026__il",
+      "bmw__116i__2004__2025__il",
+      "bmw__118d__2008__2018__il",
+      "bmw__118i__2004__2026__il",
+      "bmw__120i__2004__2026__il",
+      "bmw__125i__2008__2019__il",
+      "bmw__128ti__2020__2026__il",
+      "bmw__218i__2014__2026__il",
+      "bmw__218i_gran_coupe__2020__2026__il",
+      "bmw__220i__2014__2026__il",
+      "bmw__225xe_(active_tourer_phev)__2016__2026__il",
+      "bmw__230e_(active_tourer_phev)__2022__2026__il",
+      "bmw__316i__1990__2015__il",
+      "bmw__318d__2008__2020__il",
+      "bmw__318i__1990__2026__il",
+      "bmw__320e__2021__2026__il",
+      "bmw__320i__1990__2026__il",
+      "bmw__323i__1996__2000__il",
+      "bmw__325i__1990__2012__il",
+      "bmw__328i__1995__2016__il",
+      "bmw__330e__2016__2026__il",
+      "bmw__330i__2000__2026__il",
+      "bmw__335i__2006__2015__il",
+      "bmw__340i__2015__2026__il",
+      "bmw__420i__2013__2026__il",
+      "bmw__428i__2013__2016__il",
+      "bmw__430i__2016__2026__il",
+      "bmw__435i__2013__2016__il",
+      "bmw__440i__2016__2026__il",
+      "bmw__518i__1990__1996__il",
+      "bmw__520d__2008__2020__il",
+      "bmw__520i__1990__2026__il",
+      "bmw__523i__1996__2011__il",
+      "bmw__525i__1990__2010__il",
+      "bmw__528i__1996__2016__il",
+      "bmw__530e__2017__2026__il",
+      "bmw__530i__2000__2026__il",
+      "bmw__535i__1990__2017__il",
+      "bmw__540i__1992__2026__il",
+      "bmw__545e__2020__2026__il",
+      "bmw__550i__2005__2023__il",
+      "bmw__630i__2004__2010__il",
+      "bmw__630i_gt__2017__2024__il",
+      "bmw__640i__2011__2018__il",
+      "bmw__640i_gt__2017__2024__il",
+      "bmw__650i__2005__2018__il",
+      "bmw__728i__1995__2001__il",
+      "bmw__730i__1990__2022__il",
+      "bmw__735i__1990__2001__il",
+      "bmw__740e__2016__2026__il",
+      "bmw__740i__1992__2026__il",
+      "bmw__745i__2001__2005__il",
+      "bmw__750i__1990__2022__il",
+      "bmw__760i__2003__2015__il",
+      "bmw__840i__2019__2026__il",
+      "bmw__850i__1990__1999__il",
+      "bmw__i3__2013__2022__il",
+      "bmw__i3s__2018__2022__il",
+      "bmw__i4_edrive35__2021__2026__il",
+      "bmw__i5_edrive40__2023__2026__il",
+      "bmw__i7_xdrive60__2022__2026__il",
+      "bmw__i8__2014__2020__il",
+      "bmw__ix_xdrive40__2021__2026__il",
+      "bmw__ix1_edrive20__2022__2026__il",
+      "bmw__ix2_edrive20__2023__2026__il",
+      "bmw__ix3__2020__2025__il",
+      "bmw__m135i__2012__2026__il",
+      "bmw__m2__2016__2026__il",
+      "bmw__m235i__2014__2026__il",
+      "bmw__m3__1990__2026__il",
+      "bmw__m4__2014__2026__il",
+      "bmw__m5__1990__2026__il",
+      "bmw__m6__2005__2018__il",
+      "bmw__m760li__2016__2022__il",
+      "bmw__m8__2019__2026__il",
+      "bmw__x1_sdrive18i__2010__2026__il",
+      "bmw__x1_sdrive20i__2010__2026__il",
+      "bmw__x1_xdrive25e__2020__2026__il",
+      "bmw__x2_m35i__2019__2026__il",
+      "bmw__x2_sdrive18i__2018__2026__il",
+      "bmw__x2_sdrive20i__2018__2026__il",
+      "bmw__x3_2.0i__2004__2026__il",
+      "bmw__x3_2.5i__2004__2010__il",
+      "bmw__x3_m__2019__2026__il",
+      "bmw__x3_m40i__2018__2026__il",
+      "bmw__x3_xdrive20d__2008__2022__il",
+      "bmw__x3_xdrive30e__2020__2026__il",
+      "bmw__x3_xdrive30i__2018__2026__il",
+      "bmw__x4_m40i__2016__2025__il",
+      "bmw__x4_xdrive20i__2014__2025__il",
+      "bmw__x4_xdrive30i__2018__2025__il",
+      "bmw__x5_3.0d__2002__2026__il",
+      "bmw__x5_3.0i__2000__2010__il",
+      "bmw__x5_4.4i__2000__2018__il",
+      "bmw__x5_m__2009__2026__il",
+      "bmw__x5_m50i__2019__2026__il",
+      "bmw__x5_xdrive40e__2015__2018__il",
+      "bmw__x5_xdrive40i__2018__2026__il",
+      "bmw__x5_xdrive45e__2019__2023__il",
+      "bmw__x5_xdrive50e__2023__2026__il",
+      "bmw__x6_m__2009__2026__il",
+      "bmw__x6_xdrive30d__2008__2026__il",
+      "bmw__x6_xdrive35i__2008__2026__il",
+      "bmw__x6_xdrive50i__2008__2026__il",
+      "bmw__x7_m50i__2019__2026__il",
+      "bmw__x7_xdrive30d__2019__2026__il",
+      "bmw__x7_xdrive40i__2019__2026__il",
+      "bmw__xm__2022__2026__il",
+      "bmw__z3_1.8__1996__2002__il",
+      "bmw__z3_2.8__1997__2002__il",
+      "bmw__z3_m_roadster__1998__2002__il",
+      "bmw__z4_2.0i__2003__2008__il",
+      "bmw__z4_sdrive20i__2009__2016__il",
+      "byd__atto_3__2022__2026__il",
+      "byd__dolphin__2023__2026__il",
+      "byd__han__2023__2026__il",
+      "byd__seal__2023__2026__il",
+      "byd__seal_u__2024__2026__il",
+      "byd__sealion_7__2025__2026__il",
+      "byd__song_plus__2022__2026__il",
+      "byd__tang__2022__2026__il",
+      "cadillac__ats__2012__2019__il",
+      "cadillac__cts__2003__2019__il",
+      "cadillac__escalade__1999__2026__il",
+      "cadillac__lyriq__2022__2026__il",
+      "cadillac__srx__2004__2016__il",
+      "cadillac__xt4__2018__2026__il",
+      "cadillac__xt5__2016__2026__il",
+      "cadillac__xt6__2019__2026__il",
+      "chery__arrizo_8__2024__2026__il",
+      "chery__tiggo_4_pro__2022__2026__il",
+      "chery__tiggo_7_pro__2022__2026__il",
+      "chery__tiggo_8_pro__2022__2026__il",
+      "chery__tiggo_9__2025__2026__il",
+      "chevrolet__aveo__2002__2020__il",
+      "chevrolet__blazer_ev__2024__2026__il",
+      "chevrolet__bolt_ev__2017__2026__il",
+      "chevrolet__camaro__2010__2024__il",
+      "chevrolet__captiva__2006__2018__il",
+      "chevrolet__corvette__1997__2026__il",
+      "chevrolet__cruze__2008__2019__il",
+      "chevrolet__equinox__2005__2026__il",
+      "chevrolet__equinox_ev__2024__2026__il",
+      "chevrolet__malibu__2008__2023__il",
+      "chevrolet__orlando__2011__2018__il",
+      "chevrolet__silverado__2000__2026__il",
+      "chevrolet__spark__1998__2022__il",
+      "chevrolet__tahoe__2000__2026__il",
+      "chevrolet__traverse__2008__2026__il",
+      "chevrolet__trax__2013__2026__il",
+      "chevrolet__volt__2011__2019__il",
+      "chrysler__300c__2005__2023__il",
+      "chrysler__crossfire__2004__2008__il",
+      "chrysler__pacifica__2017__2026__il",
+      "chrysler__pt_cruiser__2000__2010__il",
+      "chrysler__sebring__2000__2010__il",
+      "chrysler__voyager__1990__2016__il",
+      "citroen__ami__2020__2026__il",
+      "citroen__berlingo__1996__2026__il",
+      "citroen__c-elysee__2012__2020__il",
+      "citroen__c1__2005__2022__il",
+      "citroen__c2__2003__2009__il",
+      "citroen__c3__2002__2026__il",
+      "citroen__c3_aircross__2017__2026__il",
+      "citroen__c3_picasso__2009__2017__il",
+      "citroen__c4__2004__2026__il",
+      "citroen__c4_picasso__2006__2022__il",
+      "citroen__c4_x__2022__2026__il",
+      "citroen__c5__2001__2017__il",
+      "citroen__c5_aircross__2018__2026__il",
+      "citroen__c5_x__2021__2026__il",
+      "citroen__c6__2006__2012__il",
+      "citroen__c8__2002__2014__il",
+      "citroen__ds3__2010__2019__il",
+      "citroen__ds4__2011__2018__il",
+      "citroen__ds5__2011__2018__il",
+      "citroen__grand_c4_picasso__2006__2022__il",
+      "citroen__jumper__1994__2026__il",
+      "citroen__jumpy__1995__2026__il",
+      "citroen__saxo__1996__2003__il",
+      "citroen__spacetourer__2016__2026__il",
+      "citroen__xsara__1997__2006__il",
+      "citroen__xsara_picasso__1999__2012__il",
+      "citroen__zx__1991__1998__il",
+      "citroen__ë-berlingo__2021__2026__il",
+      "citroen__ë-c3__2024__2026__il",
+      "citroen__ë-c4__2020__2026__il",
+      "cupra__ateca__2020__2026__il",
+      "cupra__born__2021__2026__il",
+      "cupra__formentor__2020__2026__il",
+      "cupra__leon__2020__2026__il",
+      "cupra__tavascan__2024__2026__il",
+      "dacia__bigster__2025__2026__il",
+      "dacia__dokker__2012__2021__il",
+      "dacia__duster__2010__2026__il",
+      "dacia__jogger__2022__2026__il",
+      "dacia__lodgy__2012__2022__il",
+      "dacia__logan__2005__2024__il",
+      "dacia__sandero__2008__2026__il",
+      "dacia__spring__2021__2026__il",
+      "daewoo__cielo__1995__2008__il",
+      "daewoo__espero__1993__1999__il",
+      "daewoo__kalos__2002__2008__il",
+      "daewoo__lanos__1997__2008__il",
+      "daewoo__leganza__1997__2002__il",
+      "daewoo__matiz__1998__2011__il",
+      "daewoo__nubira__1997__2005__il",
+      "daewoo__tacuma__2000__2008__il",
+      "daewoo__tico__1995__2001__il",
+      "daihatsu__charade__1990__2000__il",
+      "daihatsu__cuore__1990__2013__il",
+      "daihatsu__gran_move__1996__2002__il",
+      "daihatsu__materia__2006__2012__il",
+      "daihatsu__move__1995__2006__il",
+      "daihatsu__sirion__1998__2015__il",
+      "daihatsu__terios__1997__2017__il",
+      "daihatsu__yrv__2000__2005__il",
+      "dodge__caliber__2006__2012__il",
+      "dodge__challenger__2008__2023__il",
+      "dodge__charger__2006__2023__il",
+      "dodge__durango__2011__2026__il",
+      "dodge__journey__2008__2020__il",
+      "dodge__nitro__2007__2012__il",
+      "dodge__ram__1990__2009__il",
+      "dongfeng__box__2024__2026__il",
+      "ds_automobiles__ds_3__2015__2026__il",
+      "ds_automobiles__ds_3_crossback__2018__2026__il",
+      "ds_automobiles__ds_4__2021__2026__il",
+      "ds_automobiles__ds_7__2017__2026__il",
+      "ferrari__296_gtb__2022__2026__il",
+      "ferrari__458_italia__2010__2015__il",
+      "ferrari__488_gtb__2015__2019__il",
+      "ferrari__812_superfast__2017__2024__il",
+      "ferrari__california__2008__2018__il",
+      "ferrari__f8_tributo__2019__2024__il",
+      "ferrari__gtc4lusso__2016__2020__il",
+      "ferrari__portofino__2018__2026__il",
+      "ferrari__purosangue__2023__2026__il",
+      "ferrari__roma__2020__2026__il",
+      "ferrari__sf90_stradale__2020__2026__il",
+      "fiat__500__2007__2026__il",
+      "fiat__500e__2020__2026__il",
+      "fiat__500l__2012__2022__il",
+      "fiat__500x__2014__2026__il",
+      "fiat__600e__2023__2026__il",
+      "fiat__croma__2005__2010__il",
+      "fiat__doblo__2000__2026__il",
+      "fiat__ducato__1990__2026__il",
+      "fiat__fiorino__2007__2022__il",
+      "fiat__fullback__2016__2019__il",
+      "fiat__marea__1996__2002__il",
+      "fiat__multipla__1998__2010__il",
+      "fiat__panda__1990__2026__il",
+      "fiat__punto__1993__2018__il",
+      "fiat__qubo__2008__2019__il",
+      "fiat__scudo__2007__2026__il",
+      "fiat__stilo__2001__2007__il",
+      "fiat__tempra__1990__1996__il",
+      "fiat__tipo__1990__1995__il",
+      "fiat__topolino__2024__2026__il",
+      "fiat__ulysse__1994__2010__il",
+      "fiat__uno__1990__1995__il",
+      "ford__bronco__2021__2026__il",
+      "ford__explorer__2020__2026__il",
+      "ford__f-150__2000__2026__il",
+      "ford__fiesta__1990__2023__il",
+      "ford__focus__1998__2025__il",
+      "ford__galaxy__1995__2023__il",
+      "ford__kuga__2008__2024__il",
+      "ford__maverick__2022__2026__il",
+      "ford__mondeo__1993__2022__il",
+      "ford__mustang__1990__2026__il",
+      "ford__mustang_mach-e__2021__2026__il",
+      "ford__puma__2019__2026__il",
+      "ford__ranger__1998__2026__il",
+      "ford__s-max__2006__2023__il",
+      "ford__tourneo_connect__2013__2026__il",
+      "ford__transit__1990__2026__il",
+      "ford__transit_connect__2002__2026__il",
+      "ford__transit_custom__2012__2026__il",
+      "gac_-_aion__aion_v__2024__2026__il",
+      "gac_-_aion__aion_y__2023__2026__il",
+      "geely__geometry_c__2021__2026__il",
+      "geely__starray__2024__2026__il",
+      "genesis__g70__2018__2026__il",
+      "genesis__g80__2017__2026__il",
+      "genesis__g90__2017__2026__il",
+      "genesis__gv60__2022__2026__il",
+      "genesis__gv70__2021__2026__il",
+      "genesis__gv80__2020__2026__il",
+      "gmc__hummer_ev__2022__2026__il",
+      "gmc__sierra__2000__2026__il",
+      "gmc__yukon__2000__2026__il",
+      "hyundai__kona_n__2021__2026__il",
+      "hyundai__matrix__2001__2010__il",
+      "hyundai__palisade__2019__2026__il",
+      "hyundai__santa_fe__2001__2026__il",
+      "hyundai__sonata__1990__2026__il",
+      "hyundai__staria__2021__2026__il",
+      "hyundai__terracan__2001__2007__il",
+      "hyundai__trajet__1999__2008__il",
+      "hyundai__tucson__2004__2026__il",
+      "hyundai__veloster__2011__2022__il",
+      "hyundai__venue__2019__2026__il",
+      "infiniti__g_series__2003__2013__il",
+      "infiniti__q30__2016__2019__il",
+      "infiniti__q50__2014__2022__il",
+      "infiniti__q60__2016__2022__il",
+      "infiniti__q70__2014__2019__il",
+      "infiniti__qx30__2016__2019__il",
+      "infiniti__qx50__2014__2022__il",
+      "infiniti__qx60__2014__2022__il",
+      "infiniti__qx70__2009__2017__il",
+      "isuzu__d-max__2002__2026__il",
+      "bmw__850i__2018__2026__il",
+      "bmw__z4_sdrive20i__2019__2026__il",
+      "daewoo__lacetti__2003__2011__il",
+      "daihatsu__copen__2002__2012__il",
+      "ds_automobiles__ds_9__2020__2026__il",
+      "fiat__bravo__1995__2014__il",
+      "fiat__freemont__2011__2016__il",
+      "fiat__linea__2007__2018__il",
+      "fiat__tipo__2016__2026__il",
+      "ford__ecosport__2013__2022__il",
+      "geely__coolray__2023__2026__il",
+      "geely__monjaro__2023__2026__il",
+      "haval__jolion__2021__2026__il",
+      "honda__accord__1990__2024__il",
+      "honda__civic__1990__2026__il",
+      "honda__civic_type_r__2017__2023__il",
+      "honda__cr-v__1997__2026__il",
+      "honda__cr-z__2010__2016__il",
+      "honda__e:ny1__2023__2026__il",
+      "honda__fr-v__2004__2009__il",
+      "honda__hr-v__2015__2026__il",
+      "honda__insight__2009__2014__il",
+      "honda__insight__2018__2022__il",
+      "honda__jazz__2001__2026__il",
+      "honda__legend__2000__2012__il",
+      "honda__odyssey__1999__2020__il",
+      "honda__prelude__1992__2001__il",
+      "honda__stream__2001__2014__il",
+      "honda__zr-v__2023__2026__il",
+      "hongqi__e-hs9__2022__2026__il",
+      "hummer__h2__2003__2009__il",
+      "hummer__h3__2005__2010__il",
+      "hyundai__atos__1997__2014__il",
+      "hyundai__bayon__2021__2026__il",
+      "hyundai__casper__2022__2026__il",
+      "hyundai__coupe__1996__2009__il",
+      "hyundai__creta__2020__2026__il",
+      "hyundai__elantra__1990__2026__il",
+      "hyundai__excel__1990__1998__il",
+      "hyundai__getz__2002__2011__il",
+      "hyundai__grandeur__2006__2020__il",
+      "hyundai__h1__1997__2021__il",
+      "hyundai__i10__2008__2026__il",
+      "hyundai__i20__2009__2026__il",
+      "hyundai__i25__1994__2026__il",
+      "hyundai__i30__2007__2025__il",
+      "hyundai__i40__2011__2019__il",
+      "hyundai__ioniq_5__2021__2026__il",
+      "hyundai__ioniq_5_n__2024__2026__il",
+      "hyundai__ioniq_6__2023__2026__il",
+      "hyundai__ioniq__2016__2022__il",
+      "hyundai__ix35__2010__2015__il",
+      "hyundai__kona__2017__2026__il",
+      "infiniti__qx80__2010__2022__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -5094,7 +2460,7 @@
     "normal_seed_excluded_from_rerun_queue": [
       "haval__h6__2022__2026__il"
     ],
-    "active_mode": "rerun_queue_required",
+    "active_mode": "normal_batch",
     "rerun_queue_path": "data/output/rerun_queue.json"
   },
   "run_history": [],
@@ -425195,15 +422561,15 @@
   "counts": {
     "total_variants": 1519,
     "verified": 788,
-    "partial": 535,
-    "makes_count": 32,
-    "models_count": 386,
-    "unresolved": 0,
+    "partial": 731,
+    "makes_count": 38,
+    "models_count": 436,
+    "unresolved": 1,
     "processed_seeds": 438,
     "needs_retry_seeds": 0,
     "variants": 1519,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T21:52:14.806973+00:00"
+    "last_updated_at": "2026-05-14T22:11:23.080570+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
