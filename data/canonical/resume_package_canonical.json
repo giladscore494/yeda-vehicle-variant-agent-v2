@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:53:59.024249+00:00",
+    "updated_at": "2026-05-14T20:55:05.552523+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -425,7 +425,8 @@
       "honda__zr-v__2023__2026__il",
       "hongqi__e-hs9__2022__2026__il",
       "hummer__h2__2003__2009__il",
-      "hummer__h3__2005__2010__il"
+      "hummer__h3__2005__2010__il",
+      "hyundai__atos__1997__2014__il"
     ],
     "processed_seeds": [
       {
@@ -3523,7 +3524,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__atos__1997__2014__il",
       "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
       "hyundai__coupe__1996__2009__il",
@@ -3804,10 +3804,14 @@
         "resolved_at": "2026-05-14T12:51:51.057678+00:00"
       },
       "hyundai__atos__1997__2014__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__atos__1997__2014__il",
+        "variants_added_to_canonical": 3,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:55:05.552575+00:00"
       },
       "daihatsu__copen__2002__2012__il": {
         "seed_id": "daihatsu__copen__2002__2012__il",
@@ -379175,6 +379179,501 @@
             "trim": [
               "autoboom_il",
               "wiki_he"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_atos_1998_2003_il_first_generation_1_0l_epsilon_i4_55_58_hp_5_speed_manual_hatchback_petrol",
+        "make": "Hyundai",
+        "model": "Atos",
+        "aliases": [],
+        "year_start": {
+          "value": 1998,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Epsilon I4, 55-58 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "5-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GL",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T20:55:05.382278+00:00",
+        "updated_at": "2026-05-14T20:55:05.382278+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "Atos",
+          "year_start": 1998,
+          "year_end": 2003,
+          "generation": "First Generation",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L Epsilon I4, 55-58 hp",
+          "transmission": "5-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GL",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli automotive portals (iCar, Auto.co.il) and Levi Yitzhak price list. Sold in Israel from 1998 to 2003.",
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "seats": [
+              "auto_il_atos"
+            ],
+            "engine": [
+              "auto_il_atos",
+              "levi_yitzhak_atos"
+            ],
+            "transmission": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "fuel_type": [
+              "auto_il_atos"
+            ],
+            "drivetrain": [
+              "auto_il_atos"
+            ],
+            "generation": [
+              "auto_il_atos"
+            ],
+            "year_start": [
+              "icar_il_atos"
+            ],
+            "year_end": [
+              "levi_yitzhak_atos"
+            ],
+            "trim": [
+              "auto_il_atos"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_atos_1998_2003_il_first_generation_1_0l_epsilon_i4_55_58_hp_4_speed_automatic_hatchback_petrol",
+        "make": "Hyundai",
+        "model": "Atos",
+        "aliases": [],
+        "year_start": {
+          "value": 1998,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Epsilon I4, 55-58 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GL",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T20:55:05.382405+00:00",
+        "updated_at": "2026-05-14T20:55:05.382405+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Hyundai",
+          "model": "Atos",
+          "year_start": 1998,
+          "year_end": 2003,
+          "generation": "First Generation",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L Epsilon I4, 55-58 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GL",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli automotive portals (iCar, Auto.co.il) and Levi Yitzhak price list. Sold in Israel from 1998 to 2003.",
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "seats": [
+              "auto_il_atos"
+            ],
+            "engine": [
+              "auto_il_atos",
+              "levi_yitzhak_atos"
+            ],
+            "transmission": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "fuel_type": [
+              "auto_il_atos"
+            ],
+            "drivetrain": [
+              "auto_il_atos"
+            ],
+            "generation": [
+              "auto_il_atos"
+            ],
+            "year_start": [
+              "icar_il_atos"
+            ],
+            "year_end": [
+              "levi_yitzhak_atos"
+            ],
+            "trim": [
+              "auto_il_atos"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_atos_2001_2003_il_first_generation_facelift_1_0l_epsilon_i4_55_58_hp_4_speed_automatic_hatchback_petrol",
+        "make": "Hyundai",
+        "model": "Atos",
+        "aliases": [],
+        "year_start": {
+          "value": 2001,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2003,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "First Generation (Facelift)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Epsilon I4, 55-58 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "4-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Prime",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "auto_il_atos"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T20:55:05.382454+00:00",
+        "updated_at": "2026-05-14T20:55:05.382454+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Hyundai",
+          "model": "Atos",
+          "year_start": 2001,
+          "year_end": 2003,
+          "generation": "First Generation (Facelift)",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L Epsilon I4, 55-58 hp",
+          "transmission": "4-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Prime",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Atos Prime facelift confirmed by Israeli price lists (Gear.co.il, Levi Yitzhak) for years 2001-2003.",
+          "source_ids": [
+            "icar_il_atos",
+            "auto_il_atos",
+            "levi_yitzhak_atos"
+          ],
+          "field_sources": {
+            "body_type": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "seats": [
+              "auto_il_atos"
+            ],
+            "engine": [
+              "auto_il_atos",
+              "levi_yitzhak_atos"
+            ],
+            "transmission": [
+              "icar_il_atos",
+              "auto_il_atos"
+            ],
+            "fuel_type": [
+              "auto_il_atos"
+            ],
+            "drivetrain": [
+              "auto_il_atos"
+            ],
+            "generation": [
+              "auto_il_atos"
+            ],
+            "year_start": [
+              "icar_il_atos"
+            ],
+            "year_end": [
+              "levi_yitzhak_atos"
+            ],
+            "trim": [
+              "auto_il_atos"
             ]
           }
         },
