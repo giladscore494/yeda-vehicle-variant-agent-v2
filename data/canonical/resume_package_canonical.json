@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T22:45:04.425513+00:00",
+    "updated_at": "2026-05-14T23:16:57.551595+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -448,7 +448,8 @@
       "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il",
-      "haval__h6__2022__2026__il"
+      "haval__h6__2022__2026__il",
+      "volkswagen__polo__1990__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -889,15 +890,16 @@
       "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il",
-      "haval__h6__2022__2026__il"
+      "haval__h6__2022__2026__il",
+      "volkswagen__polo__1990__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "haval__h6__2022__2026__il",
-    "next_seed_id": "volkswagen__polo__1990__2026__il",
+    "last_completed_seed_id": "volkswagen__polo__1990__2026__il",
+    "next_seed_id": "volkswagen__up!__2012__2023__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1645,6 +1647,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T22:45:04.425568+00:00"
+      },
+      "volkswagen__polo__1990__2026__il": {
+        "seed_id": "volkswagen__polo__1990__2026__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:16:57.551685+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -213133,6 +213145,892 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_polo_2018_2026_il_mk6_1_0l_turbo_petrol_95_hp_7_speed_dct_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "polo",
+      "aliases": [],
+      "year_start": {
+        "value": 2018,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.0L Turbo Petrol, 95 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DCT",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Style",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 12,
+      "created_at": "2026-05-14T23:16:57.282267+00:00",
+      "updated_at": "2026-05-14T23:16:57.282267+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "polo",
+        "global_model_name": "Volkswagen Polo",
+        "official_marketed_name_il": "Volkswagen Polo",
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2018,
+        "year_end": 2026,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.0L Turbo Petrol, 95 hp",
+        "transmission": "7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Style / Comfortline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli automotive portals (Cartube, iCar) confirm the 1.0L 95hp variant marketed in Israel as Volkswagen Polo, available with a 7-speed DSG transmission.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_2"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1",
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1",
+            "src_2"
+          ],
+          "year_end": [
+            "src_1",
+            "src_2"
+          ],
+          "trim": [
+            "src_1",
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown",
+      "packages_or_editions": [
+        "Comfortline"
+      ]
+    },
+    {
+      "variant_id": "volkswagen_polo_2018_2026_il_mk6_1_0l_turbo_petrol_110_hp_115_hp_7_speed_dct_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "polo",
+      "aliases": [],
+      "year_start": {
+        "value": 2018,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.0L Turbo Petrol, 110 hp / 115 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DCT",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Style Plus",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 12,
+      "created_at": "2026-05-14T23:16:57.282371+00:00",
+      "updated_at": "2026-05-14T23:16:57.282371+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "polo",
+        "global_model_name": "Volkswagen Polo",
+        "official_marketed_name_il": "Volkswagen Polo",
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2018,
+        "year_end": 2026,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.0L Turbo Petrol, 110 hp / 115 hp",
+        "transmission": "7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Style Plus / Comfortline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli sources confirm the higher-output 1.0L TSI engine (initially 115 hp, later 110 hp) sold in Israel with a 7-speed DSG.",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_2"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1",
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1",
+            "src_2"
+          ],
+          "year_end": [
+            "src_1",
+            "src_2"
+          ],
+          "trim": [
+            "src_1",
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown",
+      "packages_or_editions": [
+        "Comfortline"
+      ]
+    },
+    {
+      "variant_id": "volkswagen_polo_2018_2026_il_mk6_2_0l_turbo_petrol_200_hp_207_hp_6_speed_dct_7_speed_dct_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "polo",
+      "aliases": [],
+      "year_start": {
+        "value": 2018,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L Turbo Petrol, 200 hp / 207 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "6-speed DCT / 7-speed DCT",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 12,
+      "created_at": "2026-05-14T23:16:57.282430+00:00",
+      "updated_at": "2026-05-14T23:16:57.282430+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Volkswagen",
+        "model": "polo",
+        "global_model_name": "Volkswagen Polo GTI",
+        "official_marketed_name_il": "Volkswagen Polo GTI",
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2018,
+        "year_end": 2026,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L Turbo Petrol, 200 hp / 207 hp",
+        "transmission": "6-speed DCT / 7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Cartube and iCar confirm the Polo GTI Mk6 was marketed in Israel with a 2.0L TSI engine (200 hp initially, updated to 207 hp).",
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_2"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_1",
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1",
+            "src_2"
+          ],
+          "year_end": [
+            "src_1",
+            "src_2"
+          ],
+          "trim": [
+            "src_1",
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_polo_2010_2017_il_mk5_1_2l_turbo_petrol_90_hp_105_hp_110_hp_7_speed_dct_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "polo",
+      "aliases": [],
+      "year_start": {
+        "value": 2010,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2017,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.2L Turbo Petrol, 90 hp / 105 hp / 110 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DCT",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Comfortline",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 12,
+      "created_at": "2026-05-14T23:16:57.282481+00:00",
+      "updated_at": "2026-05-14T23:16:57.282481+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 3,
+        "make": "Volkswagen",
+        "model": "polo",
+        "global_model_name": "Volkswagen Polo",
+        "official_marketed_name_il": "Volkswagen Polo",
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2010,
+        "year_end": 2017,
+        "generation": "Mk5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.2L Turbo Petrol, 90 hp / 105 hp / 110 hp",
+        "transmission": "7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Comfortline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Yad2 and iCar confirm the Mk5 Polo was sold in Israel with a 1.2L TSI engine across various outputs (105 hp pre-facelift, 90/110 hp post-facelift) and a 7-speed DSG.",
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2",
+            "src_3"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2",
+            "src_3"
+          ],
+          "transmission": [
+            "src_2",
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_2",
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2",
+            "src_3"
+          ],
+          "year_end": [
+            "src_2",
+            "src_3"
+          ],
+          "trim": [
+            "src_2",
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_polo_2010_2014_il_mk5_1_4l_petrol_85_hp_7_speed_dct_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "polo",
+      "aliases": [],
+      "year_start": {
+        "value": 2010,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2014,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.4L Petrol, 85 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DCT",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Comfortline",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 12,
+      "created_at": "2026-05-14T23:16:57.282526+00:00",
+      "updated_at": "2026-05-14T23:16:57.282526+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 4,
+        "make": "Volkswagen",
+        "model": "polo",
+        "global_model_name": "Volkswagen Polo",
+        "official_marketed_name_il": "Volkswagen Polo",
+        "local_brand_name_il": null,
+        "alternate_names": [],
+        "rebadged_as": null,
+        "year_start": 2010,
+        "year_end": 2014,
+        "generation": "Mk5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.4L Petrol, 85 hp",
+        "transmission": "7-speed DCT",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Comfortline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Yad2 and iCar confirm the naturally aspirated 1.4L 85 hp engine was available in the Mk5 Polo in Israel prior to the facelift.",
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2",
+            "src_3"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2",
+            "src_3"
+          ],
+          "transmission": [
+            "src_2",
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_2",
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2",
+            "src_3"
+          ],
+          "year_end": [
+            "src_2",
+            "src_3"
+          ],
+          "trim": [
+            "src_2",
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -423807,6 +424705,892 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_polo_2018_2026_il_mk6_1_0l_turbo_petrol_95_hp_7_speed_dct_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "polo",
+        "aliases": [],
+        "year_start": {
+          "value": 2018,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Turbo Petrol, 95 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Style",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T23:16:57.282267+00:00",
+        "updated_at": "2026-05-14T23:16:57.282267+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "polo",
+          "global_model_name": "Volkswagen Polo",
+          "official_marketed_name_il": "Volkswagen Polo",
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2018,
+          "year_end": 2026,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L Turbo Petrol, 95 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Style / Comfortline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (Cartube, iCar) confirm the 1.0L 95hp variant marketed in Israel as Volkswagen Polo, available with a 7-speed DSG transmission.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1",
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown",
+        "packages_or_editions": [
+          "Comfortline"
+        ]
+      },
+      {
+        "variant_id": "volkswagen_polo_2018_2026_il_mk6_1_0l_turbo_petrol_110_hp_115_hp_7_speed_dct_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "polo",
+        "aliases": [],
+        "year_start": {
+          "value": 2018,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Turbo Petrol, 110 hp / 115 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Style Plus",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T23:16:57.282371+00:00",
+        "updated_at": "2026-05-14T23:16:57.282371+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "polo",
+          "global_model_name": "Volkswagen Polo",
+          "official_marketed_name_il": "Volkswagen Polo",
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2018,
+          "year_end": 2026,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L Turbo Petrol, 110 hp / 115 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Style Plus / Comfortline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli sources confirm the higher-output 1.0L TSI engine (initially 115 hp, later 110 hp) sold in Israel with a 7-speed DSG.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1",
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown",
+        "packages_or_editions": [
+          "Comfortline"
+        ]
+      },
+      {
+        "variant_id": "volkswagen_polo_2018_2026_il_mk6_2_0l_turbo_petrol_200_hp_207_hp_6_speed_dct_7_speed_dct_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "polo",
+        "aliases": [],
+        "year_start": {
+          "value": 2018,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo Petrol, 200 hp / 207 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed DCT / 7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T23:16:57.282430+00:00",
+        "updated_at": "2026-05-14T23:16:57.282430+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Volkswagen",
+          "model": "polo",
+          "global_model_name": "Volkswagen Polo GTI",
+          "official_marketed_name_il": "Volkswagen Polo GTI",
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2018,
+          "year_end": 2026,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L Turbo Petrol, 200 hp / 207 hp",
+          "transmission": "6-speed DCT / 7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Cartube and iCar confirm the Polo GTI Mk6 was marketed in Israel with a 2.0L TSI engine (200 hp initially, updated to 207 hp).",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1",
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_polo_2010_2017_il_mk5_1_2l_turbo_petrol_90_hp_105_hp_110_hp_7_speed_dct_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "polo",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2017,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.2L Turbo Petrol, 90 hp / 105 hp / 110 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfortline",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T23:16:57.282481+00:00",
+        "updated_at": "2026-05-14T23:16:57.282481+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Volkswagen",
+          "model": "polo",
+          "global_model_name": "Volkswagen Polo",
+          "official_marketed_name_il": "Volkswagen Polo",
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2010,
+          "year_end": 2017,
+          "generation": "Mk5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.2L Turbo Petrol, 90 hp / 105 hp / 110 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfortline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Yad2 and iCar confirm the Mk5 Polo was sold in Israel with a 1.2L TSI engine across various outputs (105 hp pre-facelift, 90/110 hp post-facelift) and a 7-speed DSG.",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_2",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2",
+              "src_3"
+            ],
+            "year_end": [
+              "src_2",
+              "src_3"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_polo_2010_2014_il_mk5_1_4l_petrol_85_hp_7_speed_dct_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "polo",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2014,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L Petrol, 85 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfortline",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T23:16:57.282526+00:00",
+        "updated_at": "2026-05-14T23:16:57.282526+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Volkswagen",
+          "model": "polo",
+          "global_model_name": "Volkswagen Polo",
+          "official_marketed_name_il": "Volkswagen Polo",
+          "local_brand_name_il": null,
+          "alternate_names": [],
+          "rebadged_as": null,
+          "year_start": 2010,
+          "year_end": 2014,
+          "generation": "Mk5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L Petrol, 85 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfortline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Yad2 and iCar confirm the naturally aspirated 1.4L 85 hp engine was available in the Mk5 Polo in Israel prior to the facelift.",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2",
+              "src_3"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_2",
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2",
+              "src_3"
+            ],
+            "year_end": [
+              "src_2",
+              "src_3"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -423874,17 +425658,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1523,
+    "total_variants": 1528,
     "verified": 788,
-    "partial": 735,
-    "makes_count": 38,
-    "models_count": 437,
+    "partial": 740,
+    "makes_count": 39,
+    "models_count": 438,
     "unresolved": 1,
-    "processed_seeds": 439,
+    "processed_seeds": 440,
     "needs_retry_seeds": 0,
-    "variants": 1523,
+    "variants": 1528,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T22:59:42.893967+00:00"
+    "last_updated_at": "2026-05-14T23:16:57.561432+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
