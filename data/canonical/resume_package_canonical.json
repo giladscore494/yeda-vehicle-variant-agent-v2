@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T13:04:43.697943+00:00",
+    "updated_at": "2026-05-14T13:12:49.229963+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -410,7 +410,8 @@
       "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
       "honda__civic_type_r__2017__2023__il",
-      "honda__cr-v__1997__2026__il"
+      "honda__cr-v__1997__2026__il",
+      "honda__cr-z__2010__2016__il"
     ],
     "processed_seeds": [
       {
@@ -3508,7 +3509,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__cr-z__2010__2016__il",
       "honda__e:ny1__2023__2026__il",
       "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
@@ -3750,10 +3750,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__cr-z__2010__2016__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__cr-z__2010__2016__il",
+        "variants_added_to_canonical": 4,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T13:12:49.230000+00:00"
       },
       "honda__e:ny1__2023__2026__il": {
         "variant_count": 0,
@@ -371757,6 +371761,648 @@
             ],
             "trim": [
               "src_icar"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2010_2013_il_1st_gen_zf1_1_5l_i_vtec_ima_hybrid_124_hp_6_speed_manual_coupe_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (ZF1)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto_il",
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC IMA Hybrid, 124 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto_il",
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto_il",
+            "src_icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto_il",
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "1.5 IMA Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_auto_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T13:12:49.066657+00:00",
+        "updated_at": "2026-05-14T13:12:49.066657+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2010,
+          "year_end": 2013,
+          "generation": "1st Gen (ZF1)",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "1.5L i-VTEC IMA Hybrid, 124 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "1.5 IMA Hybrid",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli sources (Auto.co.il, iCar, Carzone). Sold in Israel from 2010 to 2012/2013 exclusively with a 6-speed manual transmission and a 124 hp hybrid powertrain. Body type marketed as Coupe.",
+          "source_ids": [
+            "src_auto_il",
+            "src_carzone_il",
+            "src_icar_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_auto_il",
+              "src_carzone_il"
+            ],
+            "seats": [
+              "src_wiki_global"
+            ],
+            "engine": [
+              "src_auto_il",
+              "src_carzone_il"
+            ],
+            "transmission": [
+              "src_auto_il",
+              "src_icar_il"
+            ],
+            "fuel_type": [
+              "src_auto_il",
+              "src_carzone_il"
+            ],
+            "drivetrain": [
+              "src_carzone_il"
+            ],
+            "generation": [
+              "src_wiki_global"
+            ],
+            "year_start": [
+              "src_auto_il",
+              "src_icar_il"
+            ],
+            "year_end": [
+              "src_auto_il",
+              "src_icar_il"
+            ],
+            "trim": [
+              "src_auto_il"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2010_2013_il_1st_gen_zf1_1_5l_i_vtec_ima_hybrid_124_hp_cvt_coupe_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2010,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (ZF1)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC IMA Hybrid, 124 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "1.5 IMA Hybrid CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:12:49.066724+00:00",
+        "updated_at": "2026-05-14T13:12:49.066724+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2010,
+          "year_end": 2013,
+          "generation": "1st Gen (ZF1)",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "1.5L i-VTEC IMA Hybrid, 124 hp",
+          "transmission": "CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "1.5 IMA Hybrid CVT",
+          "market_scope": "global-reference-only",
+          "confidence_level": "high",
+          "source_basis": "Global specs confirm a CVT version was available for the pre-facelift model. Israeli sources explicitly state the IL market only received the manual transmission, so this is included for global reference.",
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_wiki_global"
+            ],
+            "seats": [
+              "src_wiki_global"
+            ],
+            "engine": [
+              "src_wiki_global"
+            ],
+            "transmission": [
+              "src_wiki_global"
+            ],
+            "fuel_type": [
+              "src_wiki_global"
+            ],
+            "drivetrain": [
+              "src_wiki_global"
+            ],
+            "generation": [
+              "src_wiki_global"
+            ],
+            "year_start": [
+              "src_wiki_global"
+            ],
+            "year_end": [
+              "src_wiki_global"
+            ],
+            "trim": [
+              "src_wiki_global"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2013_2016_il_1st_gen_facelift_zf2_1_5l_i_vtec_ima_hybrid_130_137_hp_6_speed_manual_coupe_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift (ZF2)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC IMA Hybrid, 130-137 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_netcarshow"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "1.5 IMA Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:12:49.066760+00:00",
+        "updated_at": "2026-05-14T13:12:49.066760+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2013,
+          "year_end": 2016,
+          "generation": "1st Gen Facelift (ZF2)",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "1.5L i-VTEC IMA Hybrid, 130-137 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "1.5 IMA Hybrid",
+          "market_scope": "global-reference-only",
+          "confidence_level": "high",
+          "source_basis": "Global specs confirm a facelift in 2013 with a switch to a Lithium-ion battery and increased power (130-137 hp). Not officially imported to Israel as marketing ceased in late 2012.",
+          "source_ids": [
+            "src_wiki_global",
+            "src_netcarshow"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_wiki_global"
+            ],
+            "seats": [
+              "src_wiki_global"
+            ],
+            "engine": [
+              "src_netcarshow"
+            ],
+            "transmission": [
+              "src_wiki_global"
+            ],
+            "fuel_type": [
+              "src_wiki_global"
+            ],
+            "drivetrain": [
+              "src_wiki_global"
+            ],
+            "generation": [
+              "src_wiki_global"
+            ],
+            "year_start": [
+              "src_netcarshow"
+            ],
+            "year_end": [
+              "src_wiki_global"
+            ],
+            "trim": [
+              "src_wiki_global"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_cr_z_2013_2016_il_1st_gen_facelift_zf2_1_5l_i_vtec_ima_hybrid_130_137_hp_cvt_coupe_hybrid",
+        "make": "Honda",
+        "model": "CR-Z",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2016,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift (ZF2)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-VTEC IMA Hybrid, 130-137 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_netcarshow"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "1.5 IMA Hybrid CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wiki_global"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:12:49.066792+00:00",
+        "updated_at": "2026-05-14T13:12:49.066792+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "CR-Z",
+          "year_start": 2013,
+          "year_end": 2016,
+          "generation": "1st Gen Facelift (ZF2)",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "1.5L i-VTEC IMA Hybrid, 130-137 hp",
+          "transmission": "CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "1.5 IMA Hybrid CVT",
+          "market_scope": "global-reference-only",
+          "confidence_level": "high",
+          "source_basis": "Global specs confirm a facelift in 2013 with a switch to a Lithium-ion battery and increased power. CVT was available globally but not in Israel.",
+          "source_ids": [
+            "src_wiki_global",
+            "src_netcarshow"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_wiki_global"
+            ],
+            "seats": [
+              "src_wiki_global"
+            ],
+            "engine": [
+              "src_netcarshow"
+            ],
+            "transmission": [
+              "src_wiki_global"
+            ],
+            "fuel_type": [
+              "src_wiki_global"
+            ],
+            "drivetrain": [
+              "src_wiki_global"
+            ],
+            "generation": [
+              "src_wiki_global"
+            ],
+            "year_start": [
+              "src_netcarshow"
+            ],
+            "year_end": [
+              "src_wiki_global"
+            ],
+            "trim": [
+              "src_wiki_global"
             ]
           }
         },
