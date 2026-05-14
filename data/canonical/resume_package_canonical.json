@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T04:08:55.268945+00:00",
+    "updated_at": "2026-05-14T04:10:01.748453+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -397,7 +397,8 @@
       "bmw__850i__2018__2026__il",
       "bmw__z4_sdrive20i__2019__2026__il",
       "daewoo__lacetti__2003__2011__il",
-      "daihatsu__copen__2002__2012__il"
+      "daihatsu__copen__2002__2012__il",
+      "ds_automobiles__ds_9__2020__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3495,7 +3496,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
@@ -4014,10 +4014,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "ds_automobiles__ds_9__2020__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "ds_automobiles__ds_9__2020__2026__il",
+        "variants_added_to_canonical": 4,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T04:10:01.748495+00:00"
       },
       "hyundai__getz__2002__2011__il": {
         "variant_count": 0,
@@ -363189,6 +363193,609 @@
               "src_2",
               "src_3"
             ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "ds_automobiles_ds_9_2020_2026_il_1st_gen_1_6l_phev_225_hp_8_speed_automatic_sedan_plug_in_hybrid",
+        "make": "Ds Automobiles",
+        "model": "ds 9",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L PHEV, 225 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Plug-in Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Rivoli",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T04:10:01.621646+00:00",
+        "updated_at": "2026-05-14T04:10:01.621646+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Ds Automobiles",
+          "model": "ds 9",
+          "year_start": 2020,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L PHEV, 225 hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Plug-in Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Rivoli",
+          "market_scope": "global-reference-only",
+          "confidence_level": "medium",
+          "source_basis": "Global specs covered by Israeli media. Israeli importer Lubinski planned to import it, but reports indicate it was mainly imported for the Palestinian Authority and not officially sold in the IL market. Trims noted in global/IL media: Rivoli, Performance Line, Bastille.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "ds_automobiles_ds_9_2021_2026_il_1st_gen_1_6l_phev_250_hp_8_speed_automatic_sedan_plug_in_hybrid",
+        "make": "Ds Automobiles",
+        "model": "ds 9",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L PHEV, 250 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Plug-in Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Rivoli",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 5,
+        "created_at": "2026-05-14T04:10:01.621713+00:00",
+        "updated_at": "2026-05-14T04:10:01.621713+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Ds Automobiles",
+          "model": "ds 9",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L PHEV, 250 hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Plug-in Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Rivoli",
+          "market_scope": "global-reference-only",
+          "confidence_level": "medium",
+          "source_basis": "Global specs covered by Israeli media. E-Tense 250 version introduced slightly after the initial launch. IL market availability not confirmed.",
+          "source_ids": [
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "ds_automobiles_ds_9_2021_2026_il_1st_gen_1_6l_phev_dual_motors_360_hp_8_speed_automatic_sedan_plug_in_hybrid",
+        "make": "Ds Automobiles",
+        "model": "ds 9",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L PHEV + Dual Motors, 360 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Plug-in Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Opera",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T04:10:01.621747+00:00",
+        "updated_at": "2026-05-14T04:10:01.621747+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Ds Automobiles",
+          "model": "ds 9",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L PHEV + Dual Motors, 360 hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Plug-in Hybrid",
+          "drivetrain": "AWD",
+          "trim": "Opera",
+          "market_scope": "global-reference-only",
+          "confidence_level": "medium",
+          "source_basis": "Top-tier E-Tense 4x4 360 version. Covered by Israeli media during global launch. Trims noted: Opera, Performance Line.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_2"
+            ],
+            "seats": [],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "ds_automobiles_ds_9_2020_2026_il_1st_gen_1_6l_turbo_petrol_225_hp_8_speed_automatic_sedan_petrol",
+        "make": "Ds Automobiles",
+        "model": "ds 9",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "engine": {
+          "value": "1.6L turbo petrol, 225 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Rivoli",
+          "status": "unverified",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unverified from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 5,
+        "created_at": "2026-05-14T04:10:01.621775+00:00",
+        "updated_at": "2026-05-14T04:10:01.621775+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Ds Automobiles",
+          "model": "ds 9",
+          "year_start": 2020,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.6L turbo petrol, 225 hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Rivoli",
+          "market_scope": "global-reference-only",
+          "confidence_level": "medium",
+          "source_basis": "PureTech 225 petrol version. Mentioned in global specs and Israeli parts databases, but not officially sold in IL.",
+          "source_ids": [
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_4"
+            ],
+            "seats": [],
+            "engine": [
+              "src_4"
+            ],
+            "transmission": [
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_4"
+            ],
+            "generation": [],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [],
             "trim": []
           }
         },
