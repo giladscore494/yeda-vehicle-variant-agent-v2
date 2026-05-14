@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T13:17:21.211023+00:00",
+    "updated_at": "2026-05-14T13:18:14.423294+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -415,7 +415,8 @@
       "honda__e:ny1__2023__2026__il",
       "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
-      "honda__insight__2009__2014__il"
+      "honda__insight__2009__2014__il",
+      "honda__insight__2018__2022__il"
     ],
     "processed_seeds": [
       {
@@ -3513,7 +3514,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__insight__2018__2022__il",
       "honda__jazz__2001__2026__il",
       "honda__legend__2000__2012__il",
       "honda__odyssey__1999__2020__il",
@@ -3822,10 +3822,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__insight__2018__2022__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__insight__2018__2022__il",
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T13:18:14.423341+00:00"
       },
       "geely__monjaro__2023__2026__il": {
         "seed_id": "geely__monjaro__2023__2026__il",
@@ -373620,6 +373624,175 @@
               "src_1",
               "src_2",
               "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_insight_2019_2022_il_3rd_gen_1_5l_hybrid_151_hp_e_cvt_sedan_hybrid",
+        "make": "Honda",
+        "model": "Insight",
+        "aliases": [],
+        "year_start": {
+          "value": 2019,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Sedan",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Hybrid, 151 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "LX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T13:18:14.267740+00:00",
+        "updated_at": "2026-05-14T13:18:14.267740+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Insight",
+          "year_start": 2019,
+          "year_end": 2022,
+          "generation": "3rd Gen",
+          "body_type": "Sedan",
+          "seats": 5,
+          "engine": "1.5L Hybrid, 151 hp",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "LX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli spec site Carzone confirms the LX trim for the 3rd generation Insight in Israel, featuring a 1.5L hybrid powertrain producing 151 hp, FWD, and e-CVT.",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_1",
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_1",
+              "src_2"
+            ],
+            "generation": [
+              "src_1",
+              "src_2"
+            ],
+            "year_start": [
+              "src_1",
+              "src_2"
+            ],
+            "year_end": [
+              "src_1",
+              "src_2"
+            ],
+            "trim": [
+              "src_1"
             ]
           }
         },
