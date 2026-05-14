@@ -26,7 +26,7 @@ from engine import run_next
 from engine.canonical_store import load_canonical
 
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
-DAEWOO = "daewoo__lacetti__2003__2011__il"
+DAEWOO = "fiat__bravo__1995__2014__il"
 
 
 # ---------------------------------------------------------------------------
@@ -60,10 +60,10 @@ SEED_2018_2026 = {
 
 SEED_DAEWOO = {
     "seed_id": DAEWOO,
-    "make": "Daewoo",
-    "model": "Lacetti",
-    "year_start": 2003,
-    "year_end": 2011,
+    "make": "Fiat",
+    "model": "bravo",
+    "year_start": 1995,
+    "year_end": 2014,
     "market": "IL",
 }
 

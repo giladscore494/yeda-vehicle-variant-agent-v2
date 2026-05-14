@@ -310,6 +310,38 @@ def _check_engine(variant: dict) -> tuple[list[str], list[str]]:
     return errors, warnings
 
 
+def _check_il_marketed_name(variant: dict) -> tuple[list[str], list[str]]:
+    """Check Israeli marketed name requirements.
+
+    Rules:
+    - If market_scope == "IL-confirmed": official_marketed_name_il must exist
+      and source_basis should mention Israeli evidence.
+    - official_marketed_name_il missing does not hard-reject but caps quality
+      at "medium" (enforced in classify_quality_level).
+    """
+    errors: list[str] = []
+    warnings: list[str] = []
+
+    market_scope = str(variant.get("market_scope") or "").strip()
+    il_name = variant.get("official_marketed_name_il")
+    source_basis = str(variant.get("source_basis") or "").strip()
+
+    if market_scope == "IL-confirmed":
+        if _is_empty(il_name):
+            warnings.append(
+                "il_confirmed_but_no_official_marketed_name_il: "
+                "market_scope=IL-confirmed requires official_marketed_name_il"
+            )
+        if source_basis:
+            il_keywords = ("israel", "il-confirmed", "importer", "israeli", "local market")
+            if not any(kw in source_basis.lower() for kw in il_keywords):
+                warnings.append(
+                    "il_confirmed_but_source_basis_lacks_israeli_evidence"
+                )
+
+    return errors, warnings
+
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -364,6 +396,10 @@ def validate_variant_quality(variant: dict, seed: dict,
     all_errors.extend(errs)
     all_warnings.extend(warns)
 
+    errs, warns = _check_il_marketed_name(variant)
+    all_errors.extend(errs)
+    all_warnings.extend(warns)
+
     report: dict = {
         "variant_id": variant_id,
         "errors": all_errors,
@@ -395,12 +431,22 @@ def classify_quality_level(variant: dict, validation_report: dict) -> str:
     warning_count = len(warnings)
 
     if known_core >= 4 and has_source and warning_count <= 1:
-        return "high"
-    if known_core >= 3:
-        return "medium"
-    if known_core >= 1:
-        return "partial"
-    return "partial"
+        level = "high"
+    elif known_core >= 3:
+        level = "medium"
+    elif known_core >= 1:
+        level = "partial"
+    else:
+        level = "partial"
+
+    # Cap at "medium" when official_marketed_name_il is missing — never allow
+    # "high" quality when the Israeli marketed name was not confirmed.
+    # This applies regardless of market_scope, since a high-quality variant must
+    # have its Israeli marketed name verified.
+    if level == "high" and _is_empty(variant.get("official_marketed_name_il")):
+        level = "medium"
+
+    return level
 
 
 def normalize_variant_fields(variant: dict, seed: dict) -> dict:

@@ -21,15 +21,17 @@ from engine.canonical_store import load_canonical, save_canonical_atomic
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
 HAVAL = "haval__h6__2022__2026__il"
 GMC = "gmc__yukon__2000__2026__il"
-DAEWOO = "daewoo__lacetti__2003__2011__il"
-DAIHATSU = "daihatsu__copen__2002__2012__il"
-DS9 = "ds_automobiles__ds_9__2020__2026__il"
-INITIAL_VARIANTS = 1331
-INITIAL_PROCESSED = 386
-INITIAL_NEEDS_RETRY = 52
+# The following constants refer to the first three seeds currently in needs_retry.
+# Update these when the canonical advances.
+DAEWOO = "fiat__bravo__1995__2014__il"
+DAIHATSU = "fiat__freemont__2011__2016__il"
+DS9 = "fiat__linea__2007__2018__il"
+INITIAL_VARIANTS = 1340
+INITIAL_PROCESSED = 389
+INITIAL_NEEDS_RETRY = 49
 INITIAL_TOTAL_PROBLEMS = 54
-INITIAL_COMPLETED = 2
-INITIAL_POSITION = "3 / 54"
+INITIAL_COMPLETED = 5
+INITIAL_POSITION = "6 / 54"
 
 
 @pytest.fixture
@@ -187,7 +189,7 @@ def test_current_problem_seed_success_persists_before_progress(workspace):
     assert prog["total"] == INITIAL_TOTAL_PROBLEMS
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 1
     assert prog["completed"] == INITIAL_COMPLETED + 1
-    assert prog["current_position"] == "4 / 54"
+    assert prog["current_position"] == "7 / 54"
     assert prog["current_seed"] == DAIHATSU
 
     assert len(after["accumulated_clean_export"]["variants"]) >= variants_before
@@ -237,7 +239,7 @@ def test_second_problem_seed_after_first(workspace):
     assert prog["total"] == INITIAL_TOTAL_PROBLEMS
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 2
     assert prog["completed"] == INITIAL_COMPLETED + 2
-    assert prog["current_position"] == "5 / 54"
+    assert prog["current_position"] == "8 / 54"
     assert bs["needs_retry_seed_ids"][0] == DS9
 
 
@@ -324,7 +326,7 @@ def test_batch_size_20_sequential_success(workspace, monkeypatch):
     assert all(item["ok"] is True for item in result["results"])
     assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
     assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
-    assert result["final_state"]["position"] == "23 / 54"
+    assert result["final_state"]["position"] == "26 / 54"
     assert result["final_state"]["normal_next_seed_id"] == HAVAL
     assert result["final_state"]["normal_last_completed_seed_id"] == GMC
 
@@ -415,7 +417,7 @@ def test_progress_after_batch(workspace):
     assert result["ok"] is True, result
     assert result["final_state"]["completed"] == INITIAL_COMPLETED + 20
     assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
-    assert result["final_state"]["position"] == "23 / 54"
+    assert result["final_state"]["position"] == "26 / 54"
     assert result["final_state"]["selected_next_seed"] == initial_needs_retry[20]
 
 

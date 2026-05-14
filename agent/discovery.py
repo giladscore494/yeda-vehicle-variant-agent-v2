@@ -14,6 +14,16 @@ NORMALIZED_KEYS = (
     "source_ids", "field_sources",
 )
 
+# New optional IL-marketed-name fields — passed through when present, not forced.
+_IL_PASSTHROUGH_KEYS = (
+    "global_model_name",
+    "official_marketed_name_il",
+    "local_brand_name_il",
+    "alternate_names",
+    "rebadged_as",
+    "market_name_confidence",
+)
+
 
 def _inherit_variant_data(variant: dict, parent: dict) -> dict:
     merged = dict(variant or {})
@@ -33,6 +43,10 @@ def _normalize_candidate(candidate: dict) -> dict:
         cand.setdefault(key, [] if key == "source_ids" else None)
     if not isinstance(cand.get("field_sources"), dict):
         cand["field_sources"] = {}
+    # Pass through IL marketed-name fields when present; do not force-set to None.
+    for key in _IL_PASSTHROUGH_KEYS:
+        if key in candidate:
+            cand[key] = candidate[key]
     return cand
 
 

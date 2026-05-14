@@ -96,6 +96,86 @@ Do not invent drivetrain. If multiple drivetrains exist and are supported, split
 Normalize fuel_type to one of: Petrol | Diesel | Hybrid | Plug-in Hybrid | Electric | Mild Hybrid | LPG
 Do not mix fuel types within a single variant.
 
+==== ISRAELI MARKETED NAME (REQUIRED FIELD) ====
+The target market is Israel (IL).
+
+For every returned variant you MUST determine the exact name under which the
+model was marketed in Israel — this is not optional.
+
+Required fields per variant:
+  global_model_name         — the manufacturer's global/internal model name
+  official_marketed_name_il — the exact name used in Israeli marketing/sales
+  local_brand_name_il       — Israeli brand name if different from global brand
+  market_scope              — see allowed values below
+  confidence_level          — see confidence rules
+  source_basis              — must explicitly state whether IL name was confirmed
+
+Rules:
+
+1. Israeli marketed name takes priority over global/internal name.
+   Examples of rebadging/renaming to check:
+   - Daewoo Lacetti → Chevrolet Optra / Chevrolet Optra5 in Israel
+   - Old GM/Daewoo/Chevrolet models rebadged by Israeli importer
+   - DS/Citroën naming changes (e.g., DS 9 vs Citroën DS9)
+   - Japanese/Korean models sold under different local names
+   - Models where hatchback and sedan had different marketed names
+   If the Israeli name differs, use it as the main marketed name:
+     official_marketed_name_il = "Chevrolet Optra"
+     global_model_name = "Daewoo Lacetti"
+     market_scope = "IL-confirmed"  (only when supported by Israeli evidence)
+
+2. Do NOT assume the global name was used in Israel.
+   Actively verify whether: the brand name changed, the importer marketed it
+   under a different name, the model name changed, body variants had different
+   names, or the vehicle was a rebadge.
+
+3. If the exact Israeli marketed name cannot be confirmed:
+   - Do NOT invent one.
+   - Set official_marketed_name_il = null
+   - Set market_scope = "global-reference-only" or "IL-likely"
+   - Set confidence_level = "medium" or "partial"
+   - In source_basis write: "Israeli marketed name not confirmed; global model
+     name used as reference only."
+
+4. Do NOT set market_scope = "IL-confirmed" unless there is actual evidence for
+   the Israeli marketed name.
+
+Allowed market_scope values:
+  IL-confirmed         — Israeli marketed name confirmed from Israeli sources
+  IL-likely            — strong evidence but not fully confirmed
+  global-reference-only — no IL-specific confirmation found
+  uncertain            — insufficient data
+
+5. Source priority for Israeli marketed name:
+  1. Israeli importer/dealer official source
+  2. Israeli price list or spec sheet
+  3. Israeli car catalogue/spec site
+  4. Israeli used-car listings (supporting evidence only)
+  5. Global manufacturer/spec data (fallback only)
+
+6. Output discipline: source_basis must explicitly say whether the Israeli
+   marketed name was confirmed.
+
+   GOOD:
+   {
+     "global_model_name": "Daewoo Lacetti",
+     "official_marketed_name_il": "Chevrolet Optra",
+     "market_scope": "IL-confirmed",
+     "source_basis": "Israeli market sources identify the Lacetti-based sedan
+       as Chevrolet Optra; specs cross-checked with global Lacetti/Optra data."
+   }
+
+   BAD:
+   {
+     "model": "Daewoo Lacetti",
+     "market_scope": "IL-confirmed",
+     "source_basis": "Common model name."
+   }
+
+7. official_marketed_name_il is the primary field.
+   global_model_name, alternate_names, rebadged_as, previous_name are secondary
+   support fields only.
+
 ==== ISRAELI MARKET PRIORITY ====
 The primary target market is Israel (IL).
 
@@ -202,11 +282,17 @@ Candidate shape:
 {{
   "candidate_index": 0,
   "make": "", "model": "",
+  "global_model_name": "",
+  "official_marketed_name_il": "",
+  "local_brand_name_il": null,
+  "alternate_names": [],
+  "rebadged_as": null,
   "year_start": 2009, "year_end": 2014,
   "generation": "", "body_type": "", "seats": 5,
   "engine": "", "transmission": "", "fuel_type": "",
   "drivetrain": "", "trim": "",
-  "market_scope": "IL|IL-likely|global-reference-only|GLOBAL|EU|UNKNOWN",
+  "market_scope": "IL-confirmed|IL-likely|global-reference-only|uncertain",
+  "market_name_confidence": "confirmed|likely|unknown",
   "confidence_level": "high|medium|partial",
   "source_basis": "",
   "source_ids": [],

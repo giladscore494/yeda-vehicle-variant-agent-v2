@@ -9,6 +9,7 @@ import json
 import os
 import shutil
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +50,28 @@ def load_canonical(path: Path | None = None) -> dict:
     return data
 
 
+def refresh_canonical_counts(canonical: dict) -> dict:
+    """Recompute all counts from actual data in canonical.
+
+    Mutates the ``counts`` section of *canonical* in place and returns it.
+    Never trusts old counts — always recalculates from actual arrays/lists.
+    """
+    ace = canonical.get("accumulated_clean_export") or {}
+    variants = ace.get("variants") or []
+    bs = canonical.get("batch_state") or {}
+
+    counts = canonical.setdefault("counts", {})
+    total_variants = len(variants)
+    counts["total_variants"] = total_variants
+    counts["variants"] = total_variants  # legacy alias kept in sync
+    counts["processed_seeds"] = len(bs.get("processed_seed_ids") or [])
+    counts["needs_retry_seeds"] = len(bs.get("needs_retry_seed_ids") or [])
+    if bs.get("total_seeds") is not None:
+        counts["total_seeds"] = bs["total_seeds"]
+    counts["last_updated_at"] = datetime.now(timezone.utc).isoformat()
+    return canonical
+
+
 def validate_canonical(data: dict) -> tuple[bool, list[str]]:
     """Return (ok, errors). Used both before and after save."""
     errs: list[str] = []
@@ -72,6 +95,32 @@ def validate_canonical(data: dict) -> tuple[bool, list[str]]:
         for key in ("processed_seed_ids", "needs_retry_seed_ids"):
             if not isinstance(bs.get(key), list):
                 errs.append(f"missing_{key}")
+
+    # count consistency check
+    counts = data.get("counts")
+    if isinstance(counts, dict):
+        stored_total = counts.get("total_variants")
+        actual_total = len(variants)
+        if stored_total is not None and stored_total != actual_total:
+            errs.append(
+                f"counts_total_variants_mismatch: "
+                f"stored={stored_total} actual={actual_total}"
+            )
+        if isinstance(bs, dict):
+            stored_processed = counts.get("processed_seeds")
+            actual_processed = len(bs.get("processed_seed_ids") or [])
+            if stored_processed is not None and stored_processed != actual_processed:
+                errs.append(
+                    f"counts_processed_seeds_mismatch: "
+                    f"stored={stored_processed} actual={actual_processed}"
+                )
+            stored_retry = counts.get("needs_retry_seeds")
+            actual_retry = len(bs.get("needs_retry_seed_ids") or [])
+            if stored_retry is not None and stored_retry != actual_retry:
+                errs.append(
+                    f"counts_needs_retry_seeds_mismatch: "
+                    f"stored={stored_retry} actual={actual_retry}"
+                )
 
     # duplicate variant_id check
     seen: set[str] = set()
@@ -115,6 +164,9 @@ def save_canonical_atomic(data: dict, path: Path | None = None) -> dict:
     """
     p = Path(path) if path else canonical_path()
     p.parent.mkdir(parents=True, exist_ok=True)
+
+    # Always refresh counts from actual data before validating or writing.
+    refresh_canonical_counts(data)
 
     ok, errs = validate_canonical(data)
     if not ok:
