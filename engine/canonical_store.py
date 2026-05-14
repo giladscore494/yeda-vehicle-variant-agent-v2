@@ -104,7 +104,8 @@ def refresh_canonical_counts(canonical: dict) -> dict:
         mo = (v.get("model") or "").strip()
         if mk:
             makes.add(mk)
-        models.add((mk, mo))
+        if mk or mo:
+            models.add((mk, mo))
 
     processed_ids = list(bs.get("processed_seed_ids") or [])
     needs_retry_ids = list(bs.get("needs_retry_seed_ids") or [])

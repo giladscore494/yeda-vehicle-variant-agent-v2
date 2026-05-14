@@ -36,6 +36,11 @@ HAVAL_CATALOG_NEXT = "isuzu__xyz_test__2020__2026__il"
 CURRENT_VARIANTS = 1519
 CURRENT_PROCESSED = 438
 CURRENT_NEEDS_RETRY = 0
+# Expected counts derived from the 1519 variants.
+EXPECTED_VERIFIED = 788
+EXPECTED_PARTIAL = 731
+EXPECTED_MAKES_COUNT = 38
+EXPECTED_MODELS_COUNT = 436
 
 # Problem-queue test constants (used with workspace_pq fixture):
 #   54 total original problem seeds; 49 pending (49 synthetic); 5 completed.
@@ -649,7 +654,7 @@ def test_counts_verified_equals_verified_variants(workspace):
     assert counts.get("verified") == actual_verified, (
         f"counts.verified={counts.get('verified')} != actual={actual_verified}"
     )
-    assert actual_verified == 788
+    assert actual_verified == EXPECTED_VERIFIED
 
 
 def test_counts_makes_count(workspace):
@@ -661,7 +666,7 @@ def test_counts_makes_count(workspace):
     assert counts.get("makes_count") == actual_makes, (
         f"counts.makes_count={counts.get('makes_count')} != actual={actual_makes}"
     )
-    assert actual_makes == 38
+    assert actual_makes == EXPECTED_MAKES_COUNT
 
 
 def test_counts_models_count(workspace):
@@ -671,12 +676,13 @@ def test_counts_models_count(workspace):
     actual_models = len({
         ((v.get("make") or "").strip(), (v.get("model") or "").strip())
         for v in variants
+        if (v.get("make") or "").strip() or (v.get("model") or "").strip()
     })
     counts = canonical.get("counts") or {}
     assert counts.get("models_count") == actual_models, (
         f"counts.models_count={counts.get('models_count')} != actual={actual_models}"
     )
-    assert actual_models == 436
+    assert actual_models == EXPECTED_MODELS_COUNT
 
 
 def test_processed_count_uses_processed_seed_ids(workspace):
@@ -751,12 +757,12 @@ def test_acceptance_diagnostics(workspace):
     print(f"duplicate_variant_id_count = {duplicate_count}")
     print(f"haval_in_failed_seed_ids = {haval_in_failed}")
 
-    assert len(variants) == 1519
-    assert verified_count == 788
-    assert partial_count == 731
-    assert counts.get("partial") == 731
-    assert processed_count == 438
-    assert needs_retry_count == 0
+    assert len(variants) == CURRENT_VARIANTS
+    assert verified_count == EXPECTED_VERIFIED
+    assert partial_count == EXPECTED_PARTIAL
+    assert counts.get("partial") == EXPECTED_PARTIAL
+    assert processed_count == CURRENT_PROCESSED
+    assert needs_retry_count == CURRENT_NEEDS_RETRY
     assert mode == "normal_batch"
     assert next_seed == HAVAL
     assert duplicate_count == 0
