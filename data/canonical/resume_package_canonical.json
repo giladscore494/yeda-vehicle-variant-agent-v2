@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:55:05.552523+00:00",
+    "updated_at": "2026-05-14T20:56:13.790416+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -426,7 +426,8 @@
       "hongqi__e-hs9__2022__2026__il",
       "hummer__h2__2003__2009__il",
       "hummer__h3__2005__2010__il",
-      "hyundai__atos__1997__2014__il"
+      "hyundai__atos__1997__2014__il",
+      "hyundai__bayon__2021__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3524,7 +3525,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
       "hyundai__coupe__1996__2009__il",
       "hyundai__creta__2020__2026__il",
@@ -4166,10 +4166,14 @@
         "resolved_at": "2026-05-14T13:20:49.643869+00:00"
       },
       "hyundai__bayon__2021__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__bayon__2021__2026__il",
+        "variants_added_to_canonical": 2,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:56:13.790463+00:00"
       },
       "hyundai__casper__2022__2026__il": {
         "variant_count": 0,
@@ -379674,6 +379678,344 @@
             ],
             "trim": [
               "auto_il_atos"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_bayon_2022_2026_il_1st_gen_1_0l_turbo_100_hp_7_speed_dct_suv_petrol",
+        "make": "Hyundai",
+        "model": "Bayon",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_hyundai_catalog",
+            "src_icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Turbo, 100 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Prime",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube_il",
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T20:56:13.536631+00:00",
+        "updated_at": "2026-05-14T20:56:13.536631+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "Bayon",
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.0L Turbo, 100 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Prime",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer catalog and local automotive portals (iCar, Cartube) confirm the Prime trim with a 1.0L 100hp turbo petrol engine and 7-speed DCT for the IL market starting in August 2022.",
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il",
+            "src_hyundai_catalog"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_hyundai_catalog",
+              "src_icar_il"
+            ],
+            "seats": [
+              "src_hyundai_catalog"
+            ],
+            "engine": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "transmission": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "fuel_type": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "drivetrain": [
+              "src_hyundai_catalog"
+            ],
+            "generation": [
+              "src_icar_il"
+            ],
+            "year_start": [
+              "src_icar_il"
+            ],
+            "year_end": [
+              "src_cartube_il"
+            ],
+            "trim": [
+              "src_cartube_il",
+              "src_hyundai_catalog"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_bayon_2022_2026_il_1st_gen_1_0l_turbo_120_hp_7_speed_dct_suv_mild_hybrid",
+        "make": "Hyundai",
+        "model": "Bayon",
+        "aliases": [],
+        "year_start": {
+          "value": 2022,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_hyundai_catalog",
+            "src_icar_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L Turbo, 120 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Mild Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Supreme",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube_il",
+            "src_hyundai_catalog"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T20:56:13.536735+00:00",
+        "updated_at": "2026-05-14T20:56:13.536735+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Hyundai",
+          "model": "Bayon",
+          "year_start": 2022,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.0L Turbo, 120 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Mild Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Supreme",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer catalog and local automotive portals confirm the Supreme trim features a 1.0L 120hp turbo engine with a 48V mild-hybrid system and 7-speed DCT for the IL market.",
+          "source_ids": [
+            "src_icar_il",
+            "src_cartube_il",
+            "src_hyundai_catalog"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_hyundai_catalog",
+              "src_icar_il"
+            ],
+            "seats": [
+              "src_hyundai_catalog"
+            ],
+            "engine": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "transmission": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "fuel_type": [
+              "src_icar_il",
+              "src_cartube_il"
+            ],
+            "drivetrain": [
+              "src_hyundai_catalog"
+            ],
+            "generation": [
+              "src_icar_il"
+            ],
+            "year_start": [
+              "src_icar_il"
+            ],
+            "year_end": [
+              "src_cartube_il"
+            ],
+            "trim": [
+              "src_cartube_il",
+              "src_hyundai_catalog"
             ]
           }
         },
