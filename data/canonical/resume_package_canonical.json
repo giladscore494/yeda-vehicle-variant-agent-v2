@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:27:19.019842+00:00",
+    "updated_at": "2026-05-14T23:28:38.319681+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -451,7 +451,8 @@
       "haval__h6__2022__2026__il",
       "volkswagen__polo__1990__2026__il",
       "volkswagen__up!__2012__2023__il",
-      "volkswagen__e-up!__2014__2023__il"
+      "volkswagen__e-up!__2014__2023__il",
+      "volkswagen__golf__1990__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -895,15 +896,16 @@
       "haval__h6__2022__2026__il",
       "volkswagen__polo__1990__2026__il",
       "volkswagen__up!__2012__2023__il",
-      "volkswagen__e-up!__2014__2023__il"
+      "volkswagen__e-up!__2014__2023__il",
+      "volkswagen__golf__1990__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__e-up!__2014__2023__il",
-    "next_seed_id": "volkswagen__golf__1990__2026__il",
+    "last_completed_seed_id": "volkswagen__golf__1990__2026__il",
+    "next_seed_id": "volkswagen__golf_gti__1990__2026__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1681,6 +1683,16 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:27:19.019927+00:00"
+      },
+      "volkswagen__golf__1990__2026__il": {
+        "seed_id": "volkswagen__golf__1990__2026__il",
+        "variants_added_to_canonical": 8,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T23:28:38.319755+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -214911,6 +214923,1357 @@
         }
       },
       "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2024_2026_il_mk8_5_1_5l_etsi_turbo_150_hp_7_speed_dsg_hatchback_mild_hybrid",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.5L eTSI turbo, 150 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Mild Hybrid",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Style",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:28:38.108073+00:00",
+      "updated_at": "2026-05-14T23:28:38.108073+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk8.5",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 2024,
+        "year_end": 2026,
+        "generation": "Mk8.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.5L eTSI turbo, 150 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Mild Hybrid",
+        "drivetrain": "FWD",
+        "trim": "Style",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli official importer (Champion Motors) and spec sheets confirm the Mk8.5 Golf is marketed as 'Volkswagen Golf' with a 1.5L eTSI 150 hp mild-hybrid engine and 7-speed DSG in Style trim.",
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_4"
+          ],
+          "transmission": [
+            "src_1",
+            "src_4"
+          ],
+          "fuel_type": [
+            "src_1",
+            "src_4"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2024_2026_il_mk8_5_2_0l_tsi_turbo_265_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8.5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo, 265 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 9,
+      "created_at": "2026-05-14T23:28:38.108125+00:00",
+      "updated_at": "2026-05-14T23:28:38.108125+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 1,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf GTI Mk8.5",
+        "official_marketed_name_il": "Volkswagen Golf GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף GTI"
+        ],
+        "rebadged_as": null,
+        "year_start": 2024,
+        "year_end": 2026,
+        "generation": "Mk8.5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo, 265 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli official importer data confirms the Mk8.5 Golf GTI is marketed as 'Volkswagen Golf GTI' with a 2.0L TSI 265 hp engine and 7-speed DSG.",
+        "source_ids": [
+          "src_1",
+          "src_4"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1"
+          ],
+          "seats": [
+            "src_1"
+          ],
+          "engine": [
+            "src_1",
+            "src_4"
+          ],
+          "transmission": [
+            "src_1",
+            "src_4"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_1"
+          ],
+          "year_start": [
+            "src_1"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_1"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2020_2024_il_mk8_1_0l_tsi_turbo_110_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2020,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.0L TSI turbo, 110 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Life",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:28:38.108157+00:00",
+      "updated_at": "2026-05-14T23:28:38.108157+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 2,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk8",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 2020,
+        "year_end": 2024,
+        "generation": "Mk8",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.0L TSI turbo, 110 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Life",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli car catalogs (e.g., iCar, Gear) confirm the Mk8 Golf was sold with a 1.0L TSI 110 hp engine and 7-speed DSG in Life trim.",
+        "source_ids": [
+          "src_2"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2"
+          ],
+          "transmission": [
+            "src_2"
+          ],
+          "fuel_type": [
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2021_2024_il_mk8_2_0l_tsi_turbo_245_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2021,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk8",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "2.0L TSI turbo, 245 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_4"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "GTI",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 9,
+      "created_at": "2026-05-14T23:28:38.108184+00:00",
+      "updated_at": "2026-05-14T23:28:38.108184+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 3,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf GTI Mk8",
+        "official_marketed_name_il": "Volkswagen Golf GTI",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף GTI"
+        ],
+        "rebadged_as": null,
+        "year_start": 2021,
+        "year_end": 2024,
+        "generation": "Mk8",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "2.0L TSI turbo, 245 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "GTI",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli car catalogs confirm the Mk8 Golf GTI was sold with a 2.0L TSI 245 hp engine and 7-speed DSG.",
+        "source_ids": [
+          "src_2",
+          "src_4"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2",
+            "src_4"
+          ],
+          "transmission": [
+            "src_2",
+            "src_4"
+          ],
+          "fuel_type": [
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_2"
+          ],
+          "trim": [
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2013_2020_il_mk7_1_4l_tsi_turbo_125_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2013,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2020,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk7",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.4L TSI turbo, 125 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Trendline",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:28:38.108211+00:00",
+      "updated_at": "2026-05-14T23:28:38.108211+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 4,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk7",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 2013,
+        "year_end": 2020,
+        "generation": "Mk7",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.4L TSI turbo, 125 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Trendline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli used car listings and catalogs (Yad2, iCar) confirm the Mk7 Golf was sold with a 1.4L TSI 125 hp engine and 7-speed DSG in Trendline trim.",
+        "source_ids": [
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_2"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_2",
+            "src_3"
+          ],
+          "transmission": [
+            "src_2",
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_2"
+          ],
+          "drivetrain": [
+            "src_2"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2",
+            "src_3"
+          ],
+          "year_end": [
+            "src_2",
+            "src_3"
+          ],
+          "trim": [
+            "src_2",
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2009_2012_il_mk6_1_6l_mpi_102_hp_7_speed_dsg_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2009,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2012,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk6",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.6L MPI, 102 hp",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_3",
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "7-speed DSG",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_3",
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Trendline",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_3",
+          "src_5"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "created_at": "2026-05-14T23:28:38.108236+00:00",
+      "updated_at": "2026-05-14T23:28:38.108236+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 5,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk6",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 2009,
+        "year_end": 2012,
+        "generation": "Mk6",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.6L MPI, 102 hp",
+        "transmission": "7-speed DSG",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Trendline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli used car listings (Yad2, Carwiz) confirm the Mk6 Golf was sold with a 1.6L 102 hp engine and 7-speed DSG in Trendline trim.",
+        "source_ids": [
+          "src_3",
+          "src_5"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_3"
+          ],
+          "seats": [
+            "src_3"
+          ],
+          "engine": [
+            "src_3",
+            "src_5"
+          ],
+          "transmission": [
+            "src_3",
+            "src_5"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_3"
+          ],
+          "generation": [
+            "src_3"
+          ],
+          "year_start": [
+            "src_3",
+            "src_5"
+          ],
+          "year_end": [
+            "src_3",
+            "src_5"
+          ],
+          "trim": [
+            "src_3",
+            "src_5"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_2004_2008_il_mk5_1_6l_fsi_115_hp_automatic_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 2004,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2008,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk5",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.6L FSI, 115 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "Automatic",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Comfortline",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 7,
+      "created_at": "2026-05-14T23:28:38.108261+00:00",
+      "updated_at": "2026-05-14T23:28:38.108261+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 6,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk5",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 2004,
+        "year_end": 2008,
+        "generation": "Mk5",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.6L FSI, 115 hp",
+        "transmission": "Automatic",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": "Comfortline",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli used car listings (Yad2) confirm the Mk5 Golf was sold with a 1.6L 115 hp engine and automatic transmission in Comfortline trim.",
+        "source_ids": [
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_3"
+          ],
+          "seats": [
+            "src_3"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_3"
+          ],
+          "generation": [
+            "src_3"
+          ],
+          "year_start": [
+            "src_3"
+          ],
+          "year_end": [
+            "src_3"
+          ],
+          "trim": [
+            "src_3"
+          ]
+        }
+      },
+      "identity_confidence": "unknown"
+    },
+    {
+      "variant_id": "volkswagen_golf_1998_2004_il_mk4_1_6l_petrol_75_hp_automatic_hatchback_petrol",
+      "make": "Volkswagen",
+      "model": "golf",
+      "aliases": [],
+      "year_start": {
+        "value": 1998,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2004,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "Mk4",
+        "used_in_compare": false
+      },
+      "body_type": {
+        "value": "Hatchback",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "1.6L petrol, 75 hp",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "Automatic",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Petrol",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": null,
+        "status": "unknown",
+        "confidence": "low",
+        "sources_count": 0,
+        "source_ids": [],
+        "used_in_compare": false,
+        "reason": "unknown from 0 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 6,
+      "created_at": "2026-05-14T23:28:38.108286+00:00",
+      "updated_at": "2026-05-14T23:28:38.108286+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 7,
+        "make": "Volkswagen",
+        "model": "golf",
+        "global_model_name": "Volkswagen Golf Mk4",
+        "official_marketed_name_il": "Volkswagen Golf",
+        "local_brand_name_il": "פולקסווגן",
+        "alternate_names": [
+          "פולקסווגן גולף"
+        ],
+        "rebadged_as": null,
+        "year_start": 1998,
+        "year_end": 2004,
+        "generation": "Mk4",
+        "body_type": "Hatchback",
+        "seats": 5,
+        "engine": "1.6L petrol, 75 hp",
+        "transmission": "Automatic",
+        "fuel_type": "Petrol",
+        "drivetrain": "FWD",
+        "trim": null,
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "medium",
+        "source_basis": "Israeli used car listings (Yad2) confirm the Mk4 Golf was sold with a 1.6L 75 hp engine and automatic transmission.",
+        "source_ids": [
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_3"
+          ],
+          "seats": [
+            "src_3"
+          ],
+          "engine": [
+            "src_3"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_3"
+          ],
+          "drivetrain": [
+            "src_3"
+          ],
+          "generation": [
+            "src_3"
+          ],
+          "year_start": [
+            "src_3"
+          ],
+          "year_end": [
+            "src_3"
+          ],
+          "trim": []
+        }
+      },
+      "identity_confidence": "unknown"
     }
   ],
   "accumulated_clean_export": {
@@ -427327,6 +428690,1357 @@
           }
         },
         "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2024_2026_il_mk8_5_1_5l_etsi_turbo_150_hp_7_speed_dsg_hatchback_mild_hybrid",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L eTSI turbo, 150 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Mild Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Style",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:28:38.108073+00:00",
+        "updated_at": "2026-05-14T23:28:38.108073+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk8.5",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "Mk8.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.5L eTSI turbo, 150 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Mild Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Style",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli official importer (Champion Motors) and spec sheets confirm the Mk8.5 Golf is marketed as 'Volkswagen Golf' with a 1.5L eTSI 150 hp mild-hybrid engine and 7-speed DSG in Style trim.",
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_1",
+              "src_4"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2024_2026_il_mk8_5_2_0l_tsi_turbo_265_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8.5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo, 265 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T23:28:38.108125+00:00",
+        "updated_at": "2026-05-14T23:28:38.108125+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf GTI Mk8.5",
+          "official_marketed_name_il": "Volkswagen Golf GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף GTI"
+          ],
+          "rebadged_as": null,
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "Mk8.5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo, 265 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli official importer data confirms the Mk8.5 Golf GTI is marketed as 'Volkswagen Golf GTI' with a 2.0L TSI 265 hp engine and 7-speed DSG.",
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1",
+              "src_4"
+            ],
+            "transmission": [
+              "src_1",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_1"
+            ],
+            "year_start": [
+              "src_1"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2020_2024_il_mk8_1_0l_tsi_turbo_110_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.0L TSI turbo, 110 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Life",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:28:38.108157+00:00",
+        "updated_at": "2026-05-14T23:28:38.108157+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk8",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 2020,
+          "year_end": 2024,
+          "generation": "Mk8",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.0L TSI turbo, 110 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Life",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli car catalogs (e.g., iCar, Gear) confirm the Mk8 Golf was sold with a 1.0L TSI 110 hp engine and 7-speed DSG in Life trim.",
+          "source_ids": [
+            "src_2"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2021_2024_il_mk8_2_0l_tsi_turbo_245_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk8",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L TSI turbo, 245 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "GTI",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T23:28:38.108184+00:00",
+        "updated_at": "2026-05-14T23:28:38.108184+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf GTI Mk8",
+          "official_marketed_name_il": "Volkswagen Golf GTI",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף GTI"
+          ],
+          "rebadged_as": null,
+          "year_start": 2021,
+          "year_end": 2024,
+          "generation": "Mk8",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L TSI turbo, 245 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "GTI",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli car catalogs confirm the Mk8 Golf GTI was sold with a 2.0L TSI 245 hp engine and 7-speed DSG.",
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2",
+              "src_4"
+            ],
+            "transmission": [
+              "src_2",
+              "src_4"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_2"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2013_2020_il_mk7_1_4l_tsi_turbo_125_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2013,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk7",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L TSI turbo, 125 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Trendline",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:28:38.108211+00:00",
+        "updated_at": "2026-05-14T23:28:38.108211+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk7",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 2013,
+          "year_end": 2020,
+          "generation": "Mk7",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L TSI turbo, 125 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Trendline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car listings and catalogs (Yad2, iCar) confirm the Mk7 Golf was sold with a 1.4L TSI 125 hp engine and 7-speed DSG in Trendline trim.",
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2",
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2",
+              "src_3"
+            ],
+            "year_end": [
+              "src_2",
+              "src_3"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2009_2012_il_mk6_1_6l_mpi_102_hp_7_speed_dsg_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk6",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L MPI, 102 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_3",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DSG",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_3",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Trendline",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_3",
+            "src_5"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T23:28:38.108236+00:00",
+        "updated_at": "2026-05-14T23:28:38.108236+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk6",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 2009,
+          "year_end": 2012,
+          "generation": "Mk6",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L MPI, 102 hp",
+          "transmission": "7-speed DSG",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Trendline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car listings (Yad2, Carwiz) confirm the Mk6 Golf was sold with a 1.6L 102 hp engine and 7-speed DSG in Trendline trim.",
+          "source_ids": [
+            "src_3",
+            "src_5"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_3",
+              "src_5"
+            ],
+            "transmission": [
+              "src_3",
+              "src_5"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_3",
+              "src_5"
+            ],
+            "year_end": [
+              "src_3",
+              "src_5"
+            ],
+            "trim": [
+              "src_3",
+              "src_5"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_2004_2008_il_mk5_1_6l_fsi_115_hp_automatic_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2008,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk5",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L FSI, 115 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfortline",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T23:28:38.108261+00:00",
+        "updated_at": "2026-05-14T23:28:38.108261+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 6,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk5",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 2004,
+          "year_end": 2008,
+          "generation": "Mk5",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L FSI, 115 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfortline",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car listings (Yad2) confirm the Mk5 Golf was sold with a 1.6L 115 hp engine and automatic transmission in Comfortline trim.",
+          "source_ids": [
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_3"
+            ],
+            "year_end": [
+              "src_3"
+            ],
+            "trim": [
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "volkswagen_golf_1998_2004_il_mk4_1_6l_petrol_75_hp_automatic_hatchback_petrol",
+        "make": "Volkswagen",
+        "model": "golf",
+        "aliases": [],
+        "year_start": {
+          "value": 1998,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2004,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Mk4",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 75 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 6,
+        "created_at": "2026-05-14T23:28:38.108286+00:00",
+        "updated_at": "2026-05-14T23:28:38.108286+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 7,
+          "make": "Volkswagen",
+          "model": "golf",
+          "global_model_name": "Volkswagen Golf Mk4",
+          "official_marketed_name_il": "Volkswagen Golf",
+          "local_brand_name_il": "פולקסווגן",
+          "alternate_names": [
+            "פולקסווגן גולף"
+          ],
+          "rebadged_as": null,
+          "year_start": 1998,
+          "year_end": 2004,
+          "generation": "Mk4",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L petrol, 75 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "medium",
+          "source_basis": "Israeli used car listings (Yad2) confirm the Mk4 Golf was sold with a 1.6L 75 hp engine and automatic transmission.",
+          "source_ids": [
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_3"
+            ],
+            "seats": [
+              "src_3"
+            ],
+            "engine": [
+              "src_3"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_3"
+            ],
+            "drivetrain": [
+              "src_3"
+            ],
+            "generation": [
+              "src_3"
+            ],
+            "year_start": [
+              "src_3"
+            ],
+            "year_end": [
+              "src_3"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
       }
     ],
     "quality_gate": {
@@ -427394,17 +430108,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1533,
+    "total_variants": 1541,
     "verified": 788,
-    "partial": 745,
+    "partial": 753,
     "makes_count": 39,
-    "models_count": 440,
+    "models_count": 441,
     "unresolved": 1,
-    "processed_seeds": 442,
+    "processed_seeds": 443,
     "needs_retry_seeds": 0,
-    "variants": 1533,
+    "variants": 1541,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:27:19.031229+00:00"
+    "last_updated_at": "2026-05-14T23:28:38.329942+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
