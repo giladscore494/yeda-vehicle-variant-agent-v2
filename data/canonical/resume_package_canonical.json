@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T12:54:42.678186+00:00",
+    "updated_at": "2026-05-14T12:55:27.268529+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -402,7 +402,8 @@
       "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
-      "fiat__tipo__2016__2026__il"
+      "fiat__tipo__2016__2026__il",
+      "ford__ecosport__2013__2022__il"
     ],
     "processed_seeds": [
       {
@@ -3500,7 +3501,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "ford__ecosport__2013__2022__il",
       "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
@@ -3828,10 +3828,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "ford__ecosport__2013__2022__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "ford__ecosport__2013__2022__il",
+        "variants_added_to_canonical": 0,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": "model_not_sold_in_market",
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:55:27.268576+00:00"
       },
       "hyundai__i25__1994__2026__il": {
         "variant_count": 0,
@@ -4113,7 +4117,8 @@
       }
     },
     "no_variants_by_seed": {
-      "fiat__freemont__2011__2016__il": "model_not_sold_in_market"
+      "fiat__freemont__2011__2016__il": "model_not_sold_in_market",
+      "ford__ecosport__2013__2022__il": "model_not_sold_in_market"
     },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
