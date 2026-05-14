@@ -190,25 +190,21 @@ def _validate_successful_transition(before: dict, after: dict) -> list[str]:
 
 def _advance_normal_cursor(bs: dict, current_seed_id: str,
                            seed_catalog: list[str]) -> None:
-    """Advance ``batch_state.next_seed_id`` to the next unprocessed seed in catalog order.
+    """Advance ``batch_state.next_seed_id`` to the next runnable seed in catalog order.
 
     Finds *current_seed_id* in *seed_catalog* and sets ``next_seed_id`` to the
-    first entry after it that is not already in ``processed_seed_ids``.
+    first entry after it that is not already in ``processed_seed_ids``,
+    ``skipped_seed_ids``, or ``failed_seed_ids``.
     If no such entry exists the run is complete and ``next_seed_id`` is set to
     ``None``.
     """
-    processed: set[str] = set(bs.get("processed_seed_ids") or [])
-    try:
-        current_idx = seed_catalog.index(current_seed_id)
-    except ValueError:
-        current_idx = -1
-    for i in range(current_idx + 1, len(seed_catalog)):
-        candidate = seed_catalog[i]
-        if candidate not in processed:
-            bs["next_seed_id"] = candidate
-            return
-    # No more unprocessed seeds — mark batch complete.
-    bs["next_seed_id"] = None
+    bs["next_seed_id"] = queue.find_next_unprocessed_seed(
+        seed_catalog,
+        current_seed_id,
+        processed_seed_ids=bs.get("processed_seed_ids"),
+        skipped_seed_ids=bs.get("skipped_seed_ids"),
+        failed_seed_ids=bs.get("failed_seed_ids"),
+    )
 
 
 def _has_dedupe_or_no_variants_proof(seed_id: str, dedupe_proof: list[dict],
@@ -374,6 +370,16 @@ def run_selected_seed(seed_id: str, *,
     canonical = load_canonical()
     selection = queue.select_next_seed(canonical)
     mode = selection["mode"]
+
+    if mode == "normal_batch" and not seed_catalog:
+        return {
+            "ok": False,
+            "seed_id": seed_id,
+            "mode": mode,
+            "error": "normal cursor cannot advance: seed catalog is missing",
+            "save": None,
+            "push": None,
+        }
 
     runner = run_seed_fn or _default_run_seed
     run_result = runner(seed_id, retry_hint=retry_hint)
