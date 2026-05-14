@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T20:58:53.562769+00:00",
+    "updated_at": "2026-05-14T20:59:10.204313+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -3779,13 +3779,13 @@
       },
       "hyundai__coupe__1996__2009__il": {
         "seed_id": "hyundai__coupe__1996__2009__il",
-        "variants_added_to_canonical": 5,
+        "variants_added_to_canonical": 6,
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": null,
         "marked_processed": true,
         "status": "resolved",
-        "resolved_at": "2026-05-14T20:58:53.562833+00:00"
+        "resolved_at": "2026-05-14T20:59:10.204350+00:00"
       },
       "fiat__bravo__1995__2014__il": {
         "seed_id": "fiat__bravo__1995__2014__il",
@@ -380690,7 +380690,7 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_1996_2001_il_i_2_0l_petrol_139_hp_automatic_coupe_petrol",
+        "variant_id": "hyundai_coupe_1996_1999_il_generation_1_1_6l_petrol_114_hp_automatic_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -380699,12 +380699,12 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2001,
+          "value": 1999,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "I",
+          "value": "Generation 1",
           "used_in_compare": false
         },
         "body_type": {
@@ -380713,7 +380713,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380724,18 +380724,18 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.0L petrol, 139 hp",
+          "value": "1.6L petrol, 114 hp",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380746,7 +380746,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380757,7 +380757,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380768,7 +380768,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380786,56 +380786,57 @@
         "verification_status": "partial",
         "confidence": "medium",
         "sources_count": 6,
-        "created_at": "2026-05-14T20:58:53.404729+00:00",
-        "updated_at": "2026-05-14T20:58:53.404729+00:00",
+        "created_at": "2026-05-14T20:59:10.064706+00:00",
+        "updated_at": "2026-05-14T20:59:10.064706+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 0,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 1996,
-          "year_end": 2001,
-          "generation": "I",
+          "year_end": 1999,
+          "generation": "Generation 1",
           "body_type": "Coupe",
           "seats": 4,
-          "engine": "2.0L petrol, 139 hp",
+          "engine": "1.6L petrol, 114 hp",
           "transmission": "Automatic",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
           "trim": null,
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Yad2 price list confirms 1997-1999 2.0L 139hp automatic version with 4 seats in Israel.",
+          "source_basis": "Autoboom IL specs confirm 1.6L AT variant for Generation 1 (1996-1999) in Israel.",
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "field_sources": {
             "body_type": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "seats": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "engine": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "transmission": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "fuel_type": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "drivetrain": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "generation": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_start": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_end": [
-              "autoboom_il"
+              "autoboom_il_coupe",
+              "fxp_il_forum"
             ],
             "trim": []
           }
@@ -380843,7 +380844,7 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_1996_2001_il_i_2_0l_petrol_139_hp_manual_coupe_petrol",
+        "variant_id": "hyundai_coupe_1996_1999_il_generation_1_2_0l_petrol_139_hp_manual_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -380852,12 +380853,12 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2001,
+          "value": 1999,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "I",
+          "value": "Generation 1",
           "used_in_compare": false
         },
         "body_type": {
@@ -380866,7 +380867,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380877,7 +380878,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380888,19 +380889,21 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "transmission": {
           "value": "Manual",
-          "status": "unverified",
-          "confidence": "low",
-          "sources_count": 0,
-          "source_ids": [],
-          "used_in_compare": false,
-          "reason": "unverified from 0 source(s)"
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
         },
         "fuel_type": {
           "value": "Petrol",
@@ -380908,7 +380911,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380919,7 +380922,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -380936,17 +380939,17 @@
         "doors": null,
         "verification_status": "partial",
         "confidence": "medium",
-        "sources_count": 5,
-        "created_at": "2026-05-14T20:58:53.404781+00:00",
-        "updated_at": "2026-05-14T20:58:53.404781+00:00",
+        "sources_count": 6,
+        "created_at": "2026-05-14T20:59:10.064762+00:00",
+        "updated_at": "2026-05-14T20:59:10.064762+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 1,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 1996,
-          "year_end": 2001,
-          "generation": "I",
+          "year_end": 1999,
+          "generation": "Generation 1",
           "body_type": "Coupe",
           "seats": 4,
           "engine": "2.0L petrol, 139 hp",
@@ -380954,37 +380957,40 @@
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
           "trim": null,
-          "market_scope": "IL-likely",
-          "confidence_level": "medium",
-          "source_basis": "Manual transmission likely available for the 1st generation 2.0L in Israel, though Yad2 snippet specifically highlighted the automatic.",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom IL specs confirm 2.0L MT (139 hp) variant for Generation 1 (1996-1999) in Israel.",
           "source_ids": [
-            "yad2_price_list"
+            "autoboom_il_coupe"
           ],
           "field_sources": {
             "body_type": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "seats": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "engine": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
-            "transmission": [],
+            "transmission": [
+              "autoboom_il_coupe"
+            ],
             "fuel_type": [
-              "yad2_price_list"
+              "autoboom_il_coupe"
             ],
             "drivetrain": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "generation": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_start": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_end": [
-              "autoboom_il"
+              "autoboom_il_coupe",
+              "fxp_il_forum"
             ],
             "trim": []
           }
@@ -380992,7 +380998,7 @@
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_0l_petrol_138_143_hp_manual_coupe_petrol",
+        "variant_id": "hyundai_coupe_2002_2005_il_generation_2_2_0l_petrol_143_hp_automatic_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -381001,12 +381007,12 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2009,
+          "value": 2005,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "II",
+          "value": "Generation 2",
           "used_in_compare": false
         },
         "body_type": {
@@ -381015,7 +381021,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381026,48 +381032,43 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.0L petrol, 138-143 hp",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 3,
+          "value": "2.0L petrol, 143 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "ynet_2002",
-            "gear_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 3 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "transmission": {
-          "value": "Manual",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 3,
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "ynet_2002",
-            "gear_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 3 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "fuel_type": {
           "value": "Petrol",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "gear_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "drivetrain": {
           "value": "FWD",
@@ -381075,94 +381076,84 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "trim": {
-          "value": "FX",
-          "status": "partial",
-          "confidence": "medium",
-          "sources_count": 1,
-          "source_ids": [
-            "autoboom_il"
-          ],
-          "used_in_compare": true,
-          "reason": "partial from 1 source(s)"
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
         },
         "doors": null,
         "verification_status": "partial",
         "confidence": "medium",
-        "sources_count": 12,
-        "created_at": "2026-05-14T20:58:53.404822+00:00",
-        "updated_at": "2026-05-14T20:58:53.404822+00:00",
+        "sources_count": 6,
+        "created_at": "2026-05-14T20:59:10.064794+00:00",
+        "updated_at": "2026-05-14T20:59:10.064794+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 2,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 2002,
-          "year_end": 2009,
-          "generation": "II",
+          "year_end": 2005,
+          "generation": "Generation 2",
           "body_type": "Coupe",
           "seats": 4,
-          "engine": "2.0L petrol, 138-143 hp",
-          "transmission": "Manual",
+          "engine": "2.0L petrol, 143 hp",
+          "transmission": "Automatic",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
-          "trim": "FX",
+          "trim": null,
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Ynet (2002), Gear, and Autoboom confirm 2.0L 138-143hp manual version launched in Israel for the 2nd generation. Autoboom lists 'FX' trim.",
+          "source_basis": "Autoboom IL specs confirm 2.0L AT (143 hp) variant for Generation 2 (2002-2005) in Israel. Note: 1999-2002 models were generally not imported to IL.",
           "source_ids": [
-            "ynet_2002",
-            "gear_il",
-            "autoboom_il"
+            "autoboom_il_coupe",
+            "fxp_il_forum"
           ],
           "field_sources": {
             "body_type": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "seats": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "engine": [
-              "ynet_2002",
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "transmission": [
-              "ynet_2002",
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "fuel_type": [
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "drivetrain": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "generation": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_start": [
-              "ynet_2002",
-              "autoboom_il"
+              "autoboom_il_coupe",
+              "fxp_il_forum"
             ],
             "year_end": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
-            "trim": [
-              "autoboom_il"
-            ]
+            "trim": []
           }
         },
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_7l_v6_petrol_167_170_hp_automatic_coupe_petrol",
+        "variant_id": "hyundai_coupe_2002_2005_il_generation_2_2_7l_v6_petrol_170_hp_manual_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
@@ -381171,25 +381162,24 @@
           "used_in_compare": false
         },
         "year_end": {
-          "value": 2009,
+          "value": 2005,
           "used_in_compare": false
         },
         "market": "IL",
         "generation": {
-          "value": "II",
+          "value": "Generation 2",
           "used_in_compare": false
         },
         "body_type": {
           "value": "Coupe",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "seats": {
           "value": 4,
@@ -381197,158 +381187,131 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.7L V6 petrol, 167-170 hp",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 4,
-          "source_ids": [
-            "ynet_2002",
-            "icar_il",
-            "gear_il",
-            "autoboom_il"
-          ],
-          "used_in_compare": true,
-          "reason": "verified from 4 source(s)"
-        },
-        "transmission": {
-          "value": "Automatic",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 4,
-          "source_ids": [
-            "ynet_2002",
-            "icar_il",
-            "gear_il",
-            "autoboom_il"
-          ],
-          "used_in_compare": true,
-          "reason": "verified from 4 source(s)"
-        },
-        "fuel_type": {
-          "value": "Petrol",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
-          "source_ids": [
-            "gear_il",
-            "autoboom_il"
-          ],
-          "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
-        },
-        "drivetrain": {
-          "value": "FWD",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
-          "source_ids": [
-            "icar_il",
-            "autoboom_il"
-          ],
-          "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
-        },
-        "trim": {
-          "value": "FX",
+          "value": "2.7L V6 petrol, 170 hp",
           "status": "partial",
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
         "doors": null,
         "verification_status": "partial",
         "confidence": "medium",
-        "sources_count": 16,
-        "created_at": "2026-05-14T20:58:53.404851+00:00",
-        "updated_at": "2026-05-14T20:58:53.404851+00:00",
+        "sources_count": 6,
+        "created_at": "2026-05-14T20:59:10.064822+00:00",
+        "updated_at": "2026-05-14T20:59:10.064822+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 3,
           "make": "Hyundai",
           "model": "Coupe",
           "year_start": 2002,
-          "year_end": 2009,
-          "generation": "II",
+          "year_end": 2005,
+          "generation": "Generation 2",
           "body_type": "Coupe",
           "seats": 4,
-          "engine": "2.7L V6 petrol, 167-170 hp",
-          "transmission": "Automatic",
+          "engine": "2.7L V6 petrol, 170 hp",
+          "transmission": "Manual",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
-          "trim": "FX",
+          "trim": null,
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "Ynet (2002), iCar, and Gear confirm 2.7L V6 167-170hp automatic version launched in Israel. Autoboom lists 'FX' trim.",
+          "source_basis": "Autoboom IL specs confirm 2.7L V6 MT (170 hp) variant for Generation 2 (2002-2005) in Israel.",
           "source_ids": [
-            "ynet_2002",
-            "icar_il",
-            "gear_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "field_sources": {
             "body_type": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "seats": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "engine": [
-              "ynet_2002",
-              "icar_il",
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "transmission": [
-              "ynet_2002",
-              "icar_il",
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "fuel_type": [
-              "gear_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "drivetrain": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "generation": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_start": [
-              "ynet_2002",
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_end": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
-            "trim": [
-              "autoboom_il"
-            ]
+            "trim": []
           }
         },
         "identity_confidence": "unknown"
       },
       {
-        "variant_id": "hyundai_coupe_2002_2009_il_ii_2_7l_v6_petrol_167_170_hp_manual_coupe_petrol",
+        "variant_id": "hyundai_coupe_2005_2009_il_generation_2_facelift_2_0l_petrol_138_hp_manual_coupe_petrol",
         "make": "Hyundai",
         "model": "Coupe",
         "aliases": [],
         "year_start": {
-          "value": 2002,
+          "value": 2005,
           "used_in_compare": false
         },
         "year_end": {
@@ -381357,20 +381320,19 @@
         },
         "market": "IL",
         "generation": {
-          "value": "II",
+          "value": "Generation 2 Facelift",
           "used_in_compare": false
         },
         "body_type": {
           "value": "Coupe",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "seats": {
           "value": 4,
@@ -381378,34 +381340,32 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "engine": {
-          "value": "2.7L V6 petrol, 167-170 hp",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "value": "2.0L petrol, 138 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "transmission": {
           "value": "Manual",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "fuel_type": {
           "value": "Petrol",
@@ -381413,22 +381373,21 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
         },
         "drivetrain": {
           "value": "FWD",
-          "status": "verified",
-          "confidence": "high",
-          "sources_count": 2,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
-          "reason": "verified from 2 source(s)"
+          "reason": "partial from 1 source(s)"
         },
         "trim": {
           "value": "FX",
@@ -381436,7 +381395,7 @@
           "confidence": "medium",
           "sources_count": 1,
           "source_ids": [
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "used_in_compare": true,
           "reason": "partial from 1 source(s)"
@@ -381444,67 +381403,217 @@
         "doors": null,
         "verification_status": "partial",
         "confidence": "medium",
-        "sources_count": 11,
-        "created_at": "2026-05-14T20:58:53.404880+00:00",
-        "updated_at": "2026-05-14T20:58:53.404880+00:00",
+        "sources_count": 7,
+        "created_at": "2026-05-14T20:59:10.064850+00:00",
+        "updated_at": "2026-05-14T20:59:10.064850+00:00",
         "notes": [],
         "candidate_raw": {
           "candidate_index": 4,
           "make": "Hyundai",
           "model": "Coupe",
-          "year_start": 2002,
+          "year_start": 2005,
           "year_end": 2009,
-          "generation": "II",
+          "generation": "Generation 2 Facelift",
           "body_type": "Coupe",
           "seats": 4,
-          "engine": "2.7L V6 petrol, 167-170 hp",
+          "engine": "2.0L petrol, 138 hp",
           "transmission": "Manual",
           "fuel_type": "Petrol",
           "drivetrain": "FWD",
           "trim": "FX",
           "market_scope": "IL",
           "confidence_level": "high",
-          "source_basis": "iCar and Autoboom confirm 2.7L V6 manual version available in Israel for the 2nd generation.",
+          "source_basis": "Autoboom IL specs confirm 2.0L MT (138 hp) FX trim variant for Generation 2 Facelift (2005-2009) in Israel.",
           "source_ids": [
-            "icar_il",
-            "autoboom_il"
+            "autoboom_il_coupe"
           ],
           "field_sources": {
             "body_type": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "seats": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "engine": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "transmission": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "fuel_type": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "drivetrain": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "generation": [
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_start": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "year_end": [
-              "icar_il",
-              "autoboom_il"
+              "autoboom_il_coupe"
             ],
             "trim": [
-              "autoboom_il"
+              "autoboom_il_coupe"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_coupe_2005_2009_il_generation_2_facelift_2_7l_v6_petrol_167_hp_automatic_coupe_petrol",
+        "make": "Hyundai",
+        "model": "Coupe",
+        "aliases": [],
+        "year_start": {
+          "value": 2005,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "Generation 2 Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Coupe",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 4,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.7L V6 petrol, 167 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "FX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T20:59:10.064878+00:00",
+        "updated_at": "2026-05-14T20:59:10.064878+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Hyundai",
+          "model": "Coupe",
+          "year_start": 2005,
+          "year_end": 2009,
+          "generation": "Generation 2 Facelift",
+          "body_type": "Coupe",
+          "seats": 4,
+          "engine": "2.7L V6 petrol, 167 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "FX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Autoboom IL specs confirm 2.7L V6 AT (167 hp) FX trim variant for Generation 2 Facelift (2005-2009) in Israel.",
+          "source_ids": [
+            "autoboom_il_coupe"
+          ],
+          "field_sources": {
+            "body_type": [
+              "autoboom_il_coupe"
+            ],
+            "seats": [
+              "autoboom_il_coupe"
+            ],
+            "engine": [
+              "autoboom_il_coupe"
+            ],
+            "transmission": [
+              "autoboom_il_coupe"
+            ],
+            "fuel_type": [
+              "autoboom_il_coupe"
+            ],
+            "drivetrain": [
+              "autoboom_il_coupe"
+            ],
+            "generation": [
+              "autoboom_il_coupe"
+            ],
+            "year_start": [
+              "autoboom_il_coupe"
+            ],
+            "year_end": [
+              "autoboom_il_coupe"
+            ],
+            "trim": [
+              "autoboom_il_coupe"
             ]
           }
         },
