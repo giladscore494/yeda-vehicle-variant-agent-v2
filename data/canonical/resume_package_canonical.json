@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T12:55:54.016612+00:00",
+    "updated_at": "2026-05-14T12:57:05.195872+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -404,7 +404,8 @@
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
       "ford__ecosport__2013__2022__il",
-      "geely__coolray__2023__2026__il"
+      "geely__coolray__2023__2026__il",
+      "geely__monjaro__2023__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3502,7 +3503,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
       "honda__civic__1990__2026__il",
@@ -3816,10 +3816,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "geely__monjaro__2023__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "geely__monjaro__2023__2026__il",
+        "variants_added_to_canonical": 4,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:57:05.195915+00:00"
       },
       "hyundai__ioniq__2016__2022__il": {
         "variant_count": 0,
@@ -366613,6 +366617,671 @@
             "trim": [
               "src_cartube"
             ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_monjaro_2021_2026_il_1st_gen_kx11_2_0l_turbo_4_cylinder_235_238_hp_8_speed_automatic_suv_petrol",
+        "make": "Geely",
+        "model": "monjaro",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (KX11)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_geely_global"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo 4-cylinder, 235-238 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_geely_global",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "8-speed automatic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_geely_global",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_geely_global"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_geely_global",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-14T12:57:05.069325+00:00",
+        "updated_at": "2026-05-14T12:57:05.069325+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Geely",
+          "model": "monjaro",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen (KX11)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L Turbo 4-cylinder, 235-238 hp",
+          "transmission": "8-speed automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "AWD",
+          "trim": null,
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Global specs confirm 2.0L turbo high-output engine paired with 8-speed AT and AWD. Listed on Israeli aggregator Autoboom and parallel import sites, though the official IL importer (GEO Mobility) primarily focuses on EVs. Trims noted globally: GK, GF, GF+, Comfort, Premium, Flagship.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_geely_global",
+            "src_wikipedia"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il",
+              "src_geely_global"
+            ],
+            "seats": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_geely_global",
+              "src_wikipedia"
+            ],
+            "transmission": [
+              "src_geely_global",
+              "src_wikipedia"
+            ],
+            "fuel_type": [
+              "src_autoboom_il",
+              "src_geely_global"
+            ],
+            "drivetrain": [
+              "src_geely_global",
+              "src_wikipedia"
+            ],
+            "generation": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "year_start": [
+              "src_wikipedia"
+            ],
+            "year_end": [
+              "src_wikipedia"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_monjaro_2021_2026_il_1st_gen_kx11_2_0l_turbo_4_cylinder_215_218_hp_7_speed_dct_suv_petrol",
+        "make": "Geely",
+        "model": "monjaro",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (KX11)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "2.0L Turbo 4-cylinder, 215-218 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "7-speed DCT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:57:05.069377+00:00",
+        "updated_at": "2026-05-14T12:57:05.069377+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Geely",
+          "model": "monjaro",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen (KX11)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "2.0L Turbo 4-cylinder, 215-218 hp",
+          "transmission": "7-speed DCT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Global specs confirm a lower-output 2.0L turbo engine paired with a 7-speed dual-clutch transmission and FWD. Listed on Israeli aggregator Autoboom.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "seats": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "transmission": [
+              "src_wikipedia"
+            ],
+            "fuel_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "drivetrain": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "generation": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "year_start": [
+              "src_wikipedia"
+            ],
+            "year_end": [
+              "src_wikipedia"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_monjaro_2021_2026_il_1st_gen_kx11_1_5l_turbo_3_cylinder_4_cylinder_hybrid_3_speed_dht_suv_hybrid",
+        "make": "Geely",
+        "model": "monjaro",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (KX11)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo 3-cylinder/4-cylinder Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "3-speed DHT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:57:05.069410+00:00",
+        "updated_at": "2026-05-14T12:57:05.069410+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Geely",
+          "model": "monjaro",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen (KX11)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo 3-cylinder/4-cylinder Hybrid",
+          "transmission": "3-speed DHT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Global specs confirm a 1.5L turbo hybrid (HEV) variant with a 3-speed Dedicated Hybrid Transmission (DHT). Listed on Israeli aggregator Autoboom.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "seats": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "transmission": [
+              "src_wikipedia"
+            ],
+            "fuel_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "drivetrain": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "generation": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "year_start": [
+              "src_wikipedia"
+            ],
+            "year_end": [
+              "src_wikipedia"
+            ],
+            "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "geely_monjaro_2021_2026_il_1st_gen_kx11_1_5l_turbo_plug_in_hybrid_3_speed_dht_suv_plug_in_hybrid",
+        "make": "Geely",
+        "model": "monjaro",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen (KX11)",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.5L Turbo Plug-in Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "3-speed DHT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Plug-in Hybrid",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "unknown",
+          "confidence": "low",
+          "sources_count": 0,
+          "source_ids": [],
+          "used_in_compare": false,
+          "reason": "unknown from 0 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 11,
+        "created_at": "2026-05-14T12:57:05.069439+00:00",
+        "updated_at": "2026-05-14T12:57:05.069439+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Geely",
+          "model": "monjaro",
+          "year_start": 2021,
+          "year_end": 2026,
+          "generation": "1st Gen (KX11)",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "1.5L Turbo Plug-in Hybrid",
+          "transmission": "3-speed DHT",
+          "fuel_type": "Plug-in Hybrid",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-likely",
+          "confidence_level": "medium",
+          "source_basis": "Global specs confirm a 1.5L turbo plug-in hybrid (PHEV) variant with a 3-speed Dedicated Hybrid Transmission (DHT). Specifically listed on Israeli aggregator Autoboom as '1.5 AT plug-in'.",
+          "source_ids": [
+            "src_autoboom_il",
+            "src_wikipedia"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "seats": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "engine": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "transmission": [
+              "src_wikipedia"
+            ],
+            "fuel_type": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "drivetrain": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "generation": [
+              "src_autoboom_il",
+              "src_wikipedia"
+            ],
+            "year_start": [
+              "src_wikipedia"
+            ],
+            "year_end": [
+              "src_wikipedia"
+            ],
+            "trim": []
           }
         },
         "identity_confidence": "unknown"
