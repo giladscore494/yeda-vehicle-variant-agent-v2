@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T21:13:10.301113+00:00",
+    "updated_at": "2026-05-14T21:14:21.766864+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -440,7 +440,8 @@
       "hyundai__i20__2009__2026__il",
       "hyundai__i25__1994__2026__il",
       "hyundai__i30__2007__2025__il",
-      "hyundai__i40__2011__2019__il"
+      "hyundai__i40__2011__2019__il",
+      "hyundai__ioniq_5__2021__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3538,7 +3539,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__ioniq_5__2021__2026__il",
       "hyundai__ioniq_5_n__2024__2026__il",
       "hyundai__ioniq_6__2023__2026__il",
       "hyundai__ioniq__2016__2022__il",
@@ -3964,10 +3964,14 @@
         "resolved_at": "2026-05-14T14:10:42.525167+00:00"
       },
       "hyundai__ioniq_5__2021__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "hyundai__ioniq_5__2021__2026__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T21:14:21.766909+00:00"
       },
       "honda__prelude__1992__2001__il": {
         "seed_id": "honda__prelude__1992__2001__il",
@@ -389699,6 +389703,831 @@
             "trim": [
               "src_1",
               "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_2021_2024_il_1st_gen_electric_motor_217_hp_72_6_kwh_single_speed_ev_crossover_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_hyundai_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 217 hp (72.6 kWh)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_icar",
+            "src_auto",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_auto"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Prestige",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 12,
+        "created_at": "2026-05-14T21:14:21.599720+00:00",
+        "updated_at": "2026-05-14T21:14:21.599720+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Hyundai",
+          "model": "Ioniq 5",
+          "year_start": 2021,
+          "year_end": 2024,
+          "generation": "1st Gen",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "Electric motor, 217 hp (72.6 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "RWD",
+          "trim": "Prestige",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli sources (iCar, Auto, Cartube) as the primary RWD variant sold from launch until the 2024 facelift. Other available trims included Supreme, Elite, and Luxury.",
+          "source_ids": [
+            "src_icar",
+            "src_auto",
+            "src_cartube",
+            "src_hyundai_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar",
+              "src_hyundai_il"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_icar",
+              "src_auto",
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_hyundai_il"
+            ],
+            "drivetrain": [
+              "src_icar",
+              "src_auto"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_icar",
+              "src_auto"
+            ],
+            "year_end": [
+              "src_auto",
+              "src_cartube"
+            ],
+            "trim": [
+              "src_icar",
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_2021_2024_il_1st_gen_dual_electric_motors_305_hp_72_6_kwh_single_speed_ev_crossover_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5",
+        "aliases": [],
+        "year_start": {
+          "value": 2021,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Dual electric motors, 305 hp (72.6 kWh)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Elite 4X4",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T21:14:21.599809+00:00",
+        "updated_at": "2026-05-14T21:14:21.599809+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Hyundai",
+          "model": "Ioniq 5",
+          "year_start": 2021,
+          "year_end": 2024,
+          "generation": "1st Gen",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "Dual electric motors, 305 hp (72.6 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "AWD",
+          "trim": "Elite 4X4",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli sources (iCar, Cartube) as the AWD variant available before the 2024 facelift. Power output of 305 hp corresponds to the 72.6 kWh battery version sold in Israel. Also available in Luxury 4X4 trim.",
+          "source_ids": [
+            "src_icar",
+            "src_cartube"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_icar"
+            ],
+            "drivetrain": [
+              "src_icar",
+              "src_cartube"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_icar"
+            ],
+            "year_end": [
+              "src_cartube"
+            ],
+            "trim": [
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_2024_2026_il_1st_gen_facelift_electric_motor_229_hp_84_kwh_single_speed_ev_crossover_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 229 hp (84 kWh)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_hyundai_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "trim": {
+          "value": "Pure",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_auto",
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "created_at": "2026-05-14T21:14:21.599868+00:00",
+        "updated_at": "2026-05-14T21:14:21.599868+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Hyundai",
+          "model": "Ioniq 5",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "1st Gen Facelift",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "Electric motor, 229 hp (84 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "RWD",
+          "trim": "Pure",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli official importer data and auto magazines. The 2024 facelift introduced the 84 kWh battery with 229 hp. Trims include Pure, Ultra, Excellence, and Limited. AWD is no longer offered for the standard model in IL.",
+          "source_ids": [
+            "src_auto",
+            "src_cartube",
+            "src_hyundai_il"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_hyundai_il"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_auto",
+              "src_cartube"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_hyundai_il"
+            ],
+            "drivetrain": [
+              "src_auto",
+              "src_cartube"
+            ],
+            "generation": [
+              "src_auto"
+            ],
+            "year_start": [
+              "src_auto",
+              "src_cartube"
+            ],
+            "year_end": [
+              "src_auto",
+              "src_cartube"
+            ],
+            "trim": [
+              "src_auto",
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_2024_2026_il_1st_gen_facelift_electric_motor_170_hp_63_kwh_single_speed_ev_crossover_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Electric motor, 170 hp (63 kWh)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_cartube",
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "RWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Premium",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_cartube"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T21:14:21.599921+00:00",
+        "updated_at": "2026-05-14T21:14:21.599921+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Hyundai",
+          "model": "Ioniq 5",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "1st Gen Facelift",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "Electric motor, 170 hp (63 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "RWD",
+          "trim": "Premium",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli sources (Cartube, Gear) as the new entry-level variant introduced with the 2024 facelift, featuring a 63 kWh battery. Horsepower (170 hp) is based on standard global specs for the 63 kWh RWD powertrain.",
+          "source_ids": [
+            "src_cartube",
+            "src_gear"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_cartube"
+            ],
+            "seats": [
+              "src_cartube"
+            ],
+            "engine": [
+              "src_cartube",
+              "src_gear"
+            ],
+            "transmission": [
+              "src_cartube"
+            ],
+            "fuel_type": [
+              "src_cartube"
+            ],
+            "drivetrain": [
+              "src_cartube"
+            ],
+            "generation": [
+              "src_cartube"
+            ],
+            "year_start": [
+              "src_cartube",
+              "src_gear"
+            ],
+            "year_end": [
+              "src_cartube",
+              "src_gear"
+            ],
+            "trim": [
+              "src_cartube"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "hyundai_ioniq_5_2024_2026_il_1st_gen_facelift_dual_electric_motors_609_hp_84_kwh_single_speed_ev_crossover_electric",
+        "make": "Hyundai",
+        "model": "Ioniq 5",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Crossover",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Dual electric motors, 609 hp (84 kWh)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_gear",
+            "src_auto"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "AWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "N",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 8,
+        "created_at": "2026-05-14T21:14:21.599978+00:00",
+        "updated_at": "2026-05-14T21:14:21.599978+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Hyundai",
+          "model": "Ioniq 5",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "1st Gen Facelift",
+          "body_type": "Crossover",
+          "seats": 5,
+          "engine": "Dual electric motors, 609 hp (84 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "AWD",
+          "trim": "N",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by Israeli sources (Gear, Auto) as the high-performance N variant launched in Israel in mid-2024. Features 609 hp (up to 650 hp with N Grin Boost) and AWD. Uses a single-speed EV transmission with simulated 8-speed shifting.",
+          "source_ids": [
+            "src_gear",
+            "src_auto"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear"
+            ],
+            "seats": [
+              "src_gear"
+            ],
+            "engine": [
+              "src_gear",
+              "src_auto"
+            ],
+            "transmission": [
+              "src_gear"
+            ],
+            "fuel_type": [
+              "src_gear"
+            ],
+            "drivetrain": [
+              "src_gear"
+            ],
+            "generation": [
+              "src_gear"
+            ],
+            "year_start": [
+              "src_gear",
+              "src_auto"
+            ],
+            "year_end": [
+              "src_gear",
+              "src_auto"
+            ],
+            "trim": [
+              "src_gear"
             ]
           }
         },
