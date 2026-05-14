@@ -81,20 +81,58 @@ def refresh_canonical_counts(canonical: dict) -> dict:
 
     Mutates the ``counts`` section of *canonical* in place and returns it.
     Never trusts old counts — always recalculates from actual arrays/lists.
+    Also syncs batch_state.active_mode and batch_state.processed_seeds from
+    their authoritative sources so stale values cannot persist.
     """
     ace = canonical.get("accumulated_clean_export") or {}
     variants = ace.get("variants") or []
     bs = canonical.get("batch_state") or {}
 
+    # Compute verified/partial split and unique make/model counts from variants.
+    verified_count = 0
+    partial_count = 0
+    makes: set[str] = set()
+    models: set[tuple[str, str]] = set()
+    for v in variants:
+        if not isinstance(v, dict):
+            continue
+        if v.get("verification_status") == "verified":
+            verified_count += 1
+        else:
+            partial_count += 1
+        mk = (v.get("make") or "").strip()
+        mo = (v.get("model") or "").strip()
+        if mk:
+            makes.add(mk)
+        if mk or mo:
+            models.add((mk, mo))
+
+    processed_ids = list(bs.get("processed_seed_ids") or [])
+    needs_retry_ids = list(bs.get("needs_retry_seed_ids") or [])
+
     counts = canonical.setdefault("counts", {})
     total_variants = len(variants)
     counts["total_variants"] = total_variants
     counts["variants"] = total_variants  # legacy alias — kept in sync until migrated away
-    counts["processed_seeds"] = len(bs.get("processed_seed_ids") or [])
-    counts["needs_retry_seeds"] = len(bs.get("needs_retry_seed_ids") or [])
+    counts["verified"] = verified_count
+    counts["partial"] = partial_count
+    counts["makes_count"] = len(makes)
+    counts["models_count"] = len(models)
+    counts["processed_seeds"] = len(processed_ids)
+    counts["needs_retry_seeds"] = len(needs_retry_ids)
     if bs.get("total_seeds") is not None:
         counts["total_seeds"] = bs["total_seeds"]
+    counts["unresolved"] = len(bs.get("failed_seed_ids") or [])
     counts["last_updated_at"] = datetime.now(timezone.utc).isoformat()
+
+    # Fix active_mode: must reflect needs_retry_seed_ids, not stale stored value.
+    if isinstance(canonical.get("batch_state"), dict):
+        canonical["batch_state"]["active_mode"] = (
+            "normal_batch" if not needs_retry_ids else "rerun_queue_required"
+        )
+        # Sync processed_seeds list from processed_seed_ids (canonical source of truth).
+        canonical["batch_state"]["processed_seeds"] = processed_ids
+
     return canonical
 
 
@@ -122,6 +160,12 @@ def validate_canonical(data: dict) -> tuple[bool, list[str]]:
             if not isinstance(bs.get(key), list):
                 errs.append(f"missing_{key}")
 
+    # Compute actual verified/partial from variants for count consistency checks.
+    actual_verified = sum(
+        1 for v in variants if isinstance(v, dict) and v.get("verification_status") == "verified"
+    )
+    actual_partial = len(variants) - actual_verified
+
     # count consistency check
     counts = data.get("counts")
     if isinstance(counts, dict):
@@ -131,6 +175,18 @@ def validate_canonical(data: dict) -> tuple[bool, list[str]]:
             errs.append(
                 f"counts_total_variants_mismatch: "
                 f"stored={stored_total} actual={actual_total}"
+            )
+        stored_verified = counts.get("verified")
+        if stored_verified is not None and stored_verified != actual_verified:
+            errs.append(
+                f"counts_verified_mismatch: "
+                f"stored={stored_verified} actual={actual_verified}"
+            )
+        stored_partial = counts.get("partial")
+        if stored_partial is not None and stored_partial != actual_partial:
+            errs.append(
+                f"counts_partial_mismatch: "
+                f"stored={stored_partial} actual={actual_partial}"
             )
         if isinstance(bs, dict):
             stored_processed = counts.get("processed_seeds")
