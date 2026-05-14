@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T13:18:14.423294+00:00",
+    "updated_at": "2026-05-14T13:19:26.595796+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -416,7 +416,8 @@
       "honda__fr-v__2004__2009__il",
       "honda__hr-v__2015__2026__il",
       "honda__insight__2009__2014__il",
-      "honda__insight__2018__2022__il"
+      "honda__insight__2018__2022__il",
+      "honda__jazz__2001__2026__il"
     ],
     "processed_seeds": [
       {
@@ -3514,7 +3515,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "honda__jazz__2001__2026__il",
       "honda__legend__2000__2012__il",
       "honda__odyssey__1999__2020__il",
       "honda__prelude__1992__2001__il",
@@ -4050,10 +4050,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "honda__jazz__2001__2026__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "honda__jazz__2001__2026__il",
+        "variants_added_to_canonical": 5,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T13:19:26.595852+00:00"
       },
       "hyundai__i20__2009__2026__il": {
         "variant_count": 0,
@@ -373793,6 +373797,802 @@
             ],
             "trim": [
               "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_jazz_2015_2020_il_3rd_gen_1_3l_i_vtec_dohc_102_hp_cvt_hatchback_petrol",
+        "make": "Honda",
+        "model": "Jazz",
+        "aliases": [],
+        "year_start": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.3L i-VTEC DOHC, 102 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Comfort",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:19:26.410336+00:00",
+        "updated_at": "2026-05-14T13:19:26.410336+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Honda",
+          "model": "Jazz",
+          "year_start": 2015,
+          "year_end": 2020,
+          "generation": "3rd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.3L i-VTEC DOHC, 102 hp",
+          "transmission": "CVT",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Comfort",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer spec sheet confirms 1.3L i-VTEC engine with CVT for the 3rd generation. Trims noted in documentation: Trend, Comfort, Elegance.",
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_jazz_2015_2020_il_3rd_gen_1_3l_i_vtec_dohc_102_hp_manual_hatchback_petrol",
+        "make": "Honda",
+        "model": "Jazz",
+        "aliases": [],
+        "year_start": {
+          "value": 2015,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "3rd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.3L i-VTEC DOHC, 102 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Trend",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:19:26.410415+00:00",
+        "updated_at": "2026-05-14T13:19:26.410415+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Honda",
+          "model": "Jazz",
+          "year_start": 2015,
+          "year_end": 2020,
+          "generation": "3rd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.3L i-VTEC DOHC, 102 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Trend",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer spec sheet confirms a manual transmission option specifically for the base Trend trim of the 3rd generation.",
+          "source_ids": [
+            "src_1",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1"
+            ],
+            "seats": [
+              "src_1"
+            ],
+            "engine": [
+              "src_1"
+            ],
+            "transmission": [
+              "src_1"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_1"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_jazz_2020_2023_il_4th_gen_1_5l_i_mmd_e_hev_98_hp_petrol_109_hp_electric_e_cvt_hatchback_hybrid",
+        "make": "Honda",
+        "model": "Jazz",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-MMD e:HEV (98 hp petrol / 109 hp electric)",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Elegance",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_2",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T13:19:26.410456+00:00",
+        "updated_at": "2026-05-14T13:19:26.410456+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Honda",
+          "model": "Jazz",
+          "year_start": 2020,
+          "year_end": 2023,
+          "generation": "4th Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.5L i-MMD e:HEV (98 hp petrol / 109 hp electric)",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Elegance",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer spec sheet and local reviews confirm the 4th generation launch in 2020 with a 109 hp electric motor hybrid system. Trims noted: Comfort, Elegance, Executive.",
+          "source_ids": [
+            "src_2",
+            "src_3",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2",
+              "src_3"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_3",
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_2",
+              "src_3"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_jazz_2023_2026_il_4th_gen_facelift_1_5l_i_mmd_e_hev_107_hp_petrol_122_hp_electric_e_cvt_hatchback_hybrid",
+        "make": "Honda",
+        "model": "Jazz",
+        "aliases": [],
+        "year_start": {
+          "value": 2023,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Gen Facelift",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-MMD e:HEV (107 hp petrol / 122 hp electric)",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Advance",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:19:26.410493+00:00",
+        "updated_at": "2026-05-14T13:19:26.410493+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Honda",
+          "model": "Jazz",
+          "year_start": 2023,
+          "year_end": 2026,
+          "generation": "4th Gen Facelift",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.5L i-MMD e:HEV (107 hp petrol / 122 hp electric)",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Advance",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer spec sheet confirms the facelifted 4th generation (2023+) features an upgraded hybrid system with a 122 hp electric motor. Trims noted: Elegance, Advance, Advance Sport.",
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "honda_jazz_2020_2026_il_4th_gen_1_5l_i_mmd_e_hev_e_cvt_hatchback_hybrid",
+        "make": "Honda",
+        "model": "Jazz",
+        "aliases": [],
+        "year_start": {
+          "value": 2020,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "4th Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.5L i-MMD e:HEV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "e-CVT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Hybrid",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Crosstar",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T13:19:26.410525+00:00",
+        "updated_at": "2026-05-14T13:19:26.410525+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Honda",
+          "model": "Jazz",
+          "year_start": 2020,
+          "year_end": 2026,
+          "generation": "4th Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.5L i-MMD e:HEV",
+          "transmission": "e-CVT",
+          "fuel_type": "Hybrid",
+          "drivetrain": "FWD",
+          "trim": "Crosstar",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Official Israeli importer spec sheet confirms the Crosstar variant, which features crossover styling but is officially classified as a 5-door hatchback. Available throughout the 4th generation lifespan.",
+          "source_ids": [
+            "src_2",
+            "src_4"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_2"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_2"
+            ],
+            "transmission": [
+              "src_2"
+            ],
+            "fuel_type": [
+              "src_2"
+            ],
+            "drivetrain": [
+              "src_2"
+            ],
+            "generation": [
+              "src_4"
+            ],
+            "year_start": [
+              "src_4"
+            ],
+            "year_end": [
+              "src_4"
+            ],
+            "trim": [
+              "src_2"
             ]
           }
         },
