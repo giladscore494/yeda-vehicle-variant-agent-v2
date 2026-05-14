@@ -15,22 +15,35 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from engine import queue, run_next
-from engine.canonical_store import load_canonical, save_canonical_atomic
+from engine.canonical_store import load_canonical, save_canonical_atomic, validate_canonical
 
 
 CANONICAL_REL = "data/canonical/resume_package_canonical.json"
 HAVAL = "haval__h6__2022__2026__il"
 GMC = "gmc__yukon__2000__2026__il"
-# The following constants refer to the first three seeds currently in needs_retry.
-# Update these when the canonical advances.
-FIAT_BRAVO = "fiat__bravo__1995__2014__il"
-FIAT_FREEMONT = "fiat__freemont__2011__2016__il"
-FIAT_LINEA = "fiat__linea__2007__2018__il"
-INITIAL_VARIANTS = 1340
-INITIAL_PROCESSED = 389
+# Synthetic problem-queue seeds used by the pq fixture.
+# These seeds are injected into needs_retry_seed_ids so problem-queue tests
+# remain valid regardless of how far the real canonical has advanced.
+_SYNTH_PQ = [f"zztest__{i:02d}__2020__2026__il" for i in range(49)]
+SYNTH_FIRST = _SYNTH_PQ[0]
+SYNTH_SECOND = _SYNTH_PQ[1]
+SYNTH_THIRD = _SYNTH_PQ[2]
+# A seed guaranteed to be absent from processed_seed_ids used for catalog tests.
+HAVAL_CATALOG_NEXT = "isuzu__xyz_test__2020__2026__il"
+
+# Current canonical state (after the terminal problem-queue transition that
+# completed all 54 retry seeds and returned to normal_batch).
+CURRENT_VARIANTS = 1519
+CURRENT_PROCESSED = 438
+CURRENT_NEEDS_RETRY = 0
+
+# Problem-queue test constants (used with workspace_pq fixture):
+#   54 total original problem seeds; 49 pending (49 synthetic); 5 completed.
+INITIAL_VARIANTS = CURRENT_VARIANTS   # variant count is the same in both fixtures
+INITIAL_PROCESSED = CURRENT_PROCESSED
 INITIAL_NEEDS_RETRY = 49
 INITIAL_TOTAL_PROBLEMS = 54
-INITIAL_COMPLETED = 5
+INITIAL_COMPLETED = 5  # = 54 - 49
 INITIAL_POSITION = "6 / 54"
 
 
@@ -44,6 +57,28 @@ def workspace(tmp_path, monkeypatch):
     shutil.copy2(src, dst)
     monkeypatch.setenv("CANONICAL_PATH", str(dst))
     monkeypatch.chdir(tmp_path)
+    return tmp_path
+
+
+@pytest.fixture
+def workspace_pq(tmp_path, monkeypatch):
+    """Copy the real canonical with 49 synthetic problem-queue seeds injected.
+
+    Produces a state equivalent to the original mid-repair state:
+    needs_retry=49, completed=5, total=54 — without requiring the real
+    canonical to still be in problem_queue mode.
+    """
+    src = REPO_ROOT / CANONICAL_REL
+    dst_dir = tmp_path / "data" / "canonical"
+    dst_dir.mkdir(parents=True)
+    dst = dst_dir / "resume_package_canonical.json"
+    shutil.copy2(src, dst)
+    monkeypatch.setenv("CANONICAL_PATH", str(dst))
+    monkeypatch.chdir(tmp_path)
+    # Inject synthetic problem seeds
+    data = json.loads(dst.read_text(encoding="utf-8"))
+    data["batch_state"]["needs_retry_seed_ids"] = list(_SYNTH_PQ)
+    dst.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return tmp_path
 
 
@@ -131,16 +166,17 @@ def _recording_runner(calls: list[str]):
     return _runner
 
 
-# ---- tests -------------------------------------------------------------------
+# ---- current canonical state tests ------------------------------------------
 
 def test_clean_canonical_loads(workspace):
     canonical = _load(workspace)
     variants = canonical["accumulated_clean_export"]["variants"]
     bs = canonical["batch_state"]
-    assert len(variants) == INITIAL_VARIANTS
-    assert len(bs["processed_seed_ids"]) == INITIAL_PROCESSED
-    assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
-    assert bs["needs_retry_seed_ids"][0] == FIAT_BRAVO
+    assert len(variants) == CURRENT_VARIANTS
+    assert len(bs["processed_seed_ids"]) == CURRENT_PROCESSED
+    assert len(bs["needs_retry_seed_ids"]) == CURRENT_NEEDS_RETRY
+    assert bs["next_seed_id"] == HAVAL
+    assert bs["last_completed_seed_id"] == GMC
 
     text = json.dumps(canonical)
     assert '"s1"' not in text
@@ -149,40 +185,90 @@ def test_clean_canonical_loads(workspace):
     assert len(vids) == len(set(vids))
 
 
-def test_select_next_problem_seed(workspace):
+def test_canonical_state_valid(workspace):
+    """validate_canonical must pass on the current canonical without any repair."""
     canonical = _load(workspace)
+    ok, errs = validate_canonical(canonical)
+    assert ok, f"validate_canonical failed: {errs}"
+
+
+def test_accumulated_variants_1519(workspace):
+    """Exactly 1519 variants must be in accumulated_clean_export.variants."""
+    canonical = _load(workspace)
+    variants = canonical["accumulated_clean_export"]["variants"]
+    assert len(variants) == 1519
+
+
+def test_no_duplicate_variant_ids(workspace):
+    """No duplicate variant_id must exist in accumulated_clean_export.variants."""
+    canonical = _load(workspace)
+    vids = [v["variant_id"] for v in canonical["accumulated_clean_export"]["variants"]]
+    assert len(vids) == len(set(vids)), "Duplicate variant_id found"
+
+
+def test_haval_not_in_failed_seed_ids(workspace):
+    """haval__h6__2022__2026__il must not appear in failed_seed_ids after state repair."""
+    canonical = _load(workspace)
+    failed = canonical["batch_state"].get("failed_seed_ids") or []
+    assert HAVAL not in failed, f"{HAVAL} must not be in failed_seed_ids"
+
+
+def test_needs_retry_empty(workspace):
+    """needs_retry_seed_ids must be empty after the problem-queue completed."""
+    canonical = _load(workspace)
+    assert canonical["batch_state"]["needs_retry_seed_ids"] == []
+
+
+def test_mode_is_normal_batch(workspace):
+    """After problem queue is cleared, mode must be normal_batch."""
+    canonical = _load(workspace)
+    assert queue.get_mode(canonical) == "normal_batch"
+
+
+def test_selected_seed_is_haval(workspace):
+    """The selected next seed must be haval__h6__2022__2026__il."""
+    canonical = _load(workspace)
+    sel = queue.select_next_seed(canonical)
+    assert sel["selected_seed_id"] == HAVAL
+    assert sel["mode"] == "normal_batch"
+
+
+# ---- problem-queue mode tests (use workspace_pq) -----------------------------
+
+def test_select_next_problem_seed(workspace_pq):
+    canonical = _load(workspace_pq)
     selection = queue.select_next_seed(canonical)
     assert selection["mode"] == "problem_queue"
-    assert selection["selected_seed_id"] == FIAT_BRAVO
+    assert selection["selected_seed_id"] == SYNTH_FIRST
     bs = canonical["batch_state"]
     assert bs["next_seed_id"] == HAVAL
     assert bs["last_completed_seed_id"] == GMC
 
 
-def test_progress_before_current_problem_seed(workspace):
-    canonical = _load(workspace)
+def test_progress_before_current_problem_seed(workspace_pq):
+    canonical = _load(workspace_pq)
     prog = queue.compute_problem_queue_progress(canonical)
     assert prog["total"] == INITIAL_TOTAL_PROBLEMS
     assert prog["completed"] == INITIAL_COMPLETED
     assert prog["pending"] == INITIAL_NEEDS_RETRY
     assert prog["current_position"] == INITIAL_POSITION
-    assert prog["current_seed"] == FIAT_BRAVO
+    assert prog["current_seed"] == SYNTH_FIRST
 
 
-def test_current_problem_seed_success_persists_before_progress(workspace):
-    before = _load(workspace)
+def test_current_problem_seed_success_persists_before_progress(workspace_pq):
+    before = _load(workspace_pq)
     variants_before = len(before["accumulated_clean_export"]["variants"])
 
     result = run_next.run_selected_seed(
-        FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
+        SYNTH_FIRST, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
     )
     assert result["ok"] is True, result
-    assert result["seed_id"] == FIAT_BRAVO
+    assert result["seed_id"] == SYNTH_FIRST
 
-    after = _load(workspace)
+    after = _load(workspace_pq)
     bs = after["batch_state"]
-    assert FIAT_BRAVO not in bs["needs_retry_seed_ids"]
-    assert bs["needs_retry_seed_ids"][0] == FIAT_FREEMONT
+    assert SYNTH_FIRST not in bs["needs_retry_seed_ids"]
+    assert bs["needs_retry_seed_ids"][0] == SYNTH_SECOND
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY - 1
 
     prog = queue.compute_problem_queue_progress(after)
@@ -190,7 +276,7 @@ def test_current_problem_seed_success_persists_before_progress(workspace):
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 1
     assert prog["completed"] == INITIAL_COMPLETED + 1
     assert prog["current_position"] == "7 / 54"
-    assert prog["current_seed"] == FIAT_FREEMONT
+    assert prog["current_seed"] == SYNTH_SECOND
 
     assert len(after["accumulated_clean_export"]["variants"]) >= variants_before
     # Normal cursor frozen
@@ -198,8 +284,8 @@ def test_current_problem_seed_success_persists_before_progress(workspace):
     assert bs["last_completed_seed_id"] == GMC
 
 
-def test_failed_save_does_not_advance(workspace, monkeypatch):
-    before = _load(workspace)
+def test_failed_save_does_not_advance(workspace_pq, monkeypatch):
+    before = _load(workspace_pq)
     variants_before = len(before["accumulated_clean_export"]["variants"])
 
     # Force save to fail by monkeypatching save_canonical_atomic
@@ -209,14 +295,14 @@ def test_failed_save_does_not_advance(workspace, monkeypatch):
     monkeypatch.setattr("engine.run_next.save_canonical_atomic", _fake_save)
 
     result = run_next.run_selected_seed(
-        FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
+        SYNTH_FIRST, run_seed_fn=_runner_returning_one, push_fn=_noop_push,
     )
     assert result["ok"] is False
     assert "simulated save failure" in (result.get("error") or "")
 
-    after = _load(workspace)
+    after = _load(workspace_pq)
     bs = after["batch_state"]
-    assert bs["needs_retry_seed_ids"][0] == FIAT_BRAVO
+    assert bs["needs_retry_seed_ids"][0] == SYNTH_FIRST
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY
     assert len(after["accumulated_clean_export"]["variants"]) == variants_before
 
@@ -226,13 +312,13 @@ def test_failed_save_does_not_advance(workspace, monkeypatch):
     assert prog["current_position"] == INITIAL_POSITION
 
 
-def test_second_problem_seed_after_first(workspace):
-    r1 = run_next.run_selected_seed(FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+def test_second_problem_seed_after_first(workspace_pq):
+    r1 = run_next.run_selected_seed(SYNTH_FIRST, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r1["ok"] is True
-    r2 = run_next.run_selected_seed(FIAT_FREEMONT, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r2 = run_next.run_selected_seed(SYNTH_SECOND, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r2["ok"] is True
 
-    after = _load(workspace)
+    after = _load(workspace_pq)
     bs = after["batch_state"]
     assert len(bs["needs_retry_seed_ids"]) == INITIAL_NEEDS_RETRY - 2
     prog = queue.compute_problem_queue_progress(after)
@@ -240,57 +326,57 @@ def test_second_problem_seed_after_first(workspace):
     assert prog["pending"] == INITIAL_NEEDS_RETRY - 2
     assert prog["completed"] == INITIAL_COMPLETED + 2
     assert prog["current_position"] == "8 / 54"
-    assert bs["needs_retry_seed_ids"][0] == FIAT_LINEA
+    assert bs["needs_retry_seed_ids"][0] == SYNTH_THIRD
 
 
-def test_no_external_state(workspace, monkeypatch):
+def test_no_external_state(workspace_pq):
     # Create a stray data/output folder. It must not affect selection.
-    out = workspace / "data" / "output"
+    out = workspace_pq / "data" / "output"
     out.mkdir(parents=True, exist_ok=True)
     (out / "scratch.json").write_text("{}")
 
-    canonical = _load(workspace)
+    canonical = _load(workspace_pq)
     selection = queue.select_next_seed(canonical)
-    assert selection["selected_seed_id"] == FIAT_BRAVO
+    assert selection["selected_seed_id"] == SYNTH_FIRST
 
     # Deleting data/output also must not affect anything.
     shutil.rmtree(out)
-    canonical2 = _load(workspace)
-    assert queue.select_next_seed(canonical2)["selected_seed_id"] == FIAT_BRAVO
+    canonical2 = _load(workspace_pq)
+    assert queue.select_next_seed(canonical2)["selected_seed_id"] == SYNTH_FIRST
 
 
-def test_stale_external_files_ignored(workspace):
-    out = workspace / "data" / "output"
+def test_stale_external_files_ignored(workspace_pq):
+    out = workspace_pq / "data" / "output"
     out.mkdir(parents=True, exist_ok=True)
     (out / "batch_state.json").write_text(json.dumps({
         "current": "honda_legend",
         "next_seed_id": "honda_legend__2010__2014__il",
     }))
 
-    canonical = _load(workspace)
+    canonical = _load(workspace_pq)
     selection = queue.select_next_seed(canonical)
     assert selection["mode"] == "problem_queue"
-    assert selection["selected_seed_id"] == FIAT_BRAVO
+    assert selection["selected_seed_id"] == SYNTH_FIRST
     bs = canonical["batch_state"]
     assert bs["next_seed_id"] == HAVAL
 
 
-def test_normal_cursor_frozen(workspace):
-    r1 = run_next.run_selected_seed(FIAT_BRAVO, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+def test_normal_cursor_frozen(workspace_pq):
+    r1 = run_next.run_selected_seed(SYNTH_FIRST, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r1["ok"] is True
-    after_first = _load(workspace)
+    after_first = _load(workspace_pq)
     assert after_first["batch_state"]["next_seed_id"] == HAVAL
     assert after_first["batch_state"]["last_completed_seed_id"] == GMC
 
-    r2 = run_next.run_selected_seed(FIAT_FREEMONT, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+    r2 = run_next.run_selected_seed(SYNTH_SECOND, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
     assert r2["ok"] is True
-    after_second = _load(workspace)
+    after_second = _load(workspace_pq)
     assert after_second["batch_state"]["next_seed_id"] == HAVAL
     assert after_second["batch_state"]["last_completed_seed_id"] == GMC
 
 
-def test_batch_size_20_sequential_success(workspace, monkeypatch):
-    initial_needs_retry = _needs_retry_ids(workspace)
+def test_batch_size_20_sequential_success(workspace_pq, monkeypatch):
+    initial_needs_retry = _needs_retry_ids(workspace_pq)
     expected_order = initial_needs_retry[:20]
     runner_calls: list[str] = []
     save_calls: list[str] = []
@@ -331,8 +417,8 @@ def test_batch_size_20_sequential_success(workspace, monkeypatch):
     assert result["final_state"]["normal_last_completed_seed_id"] == GMC
 
 
-def test_batch_stops_on_save_failure(workspace, monkeypatch):
-    initial_needs_retry = _needs_retry_ids(workspace)
+def test_batch_stops_on_save_failure(workspace_pq, monkeypatch):
+    initial_needs_retry = _needs_retry_ids(workspace_pq)
     runner_calls: list[str] = []
     from engine.canonical_store import save_canonical_atomic as real_save
 
@@ -358,11 +444,11 @@ def test_batch_stops_on_save_failure(workspace, monkeypatch):
     assert "simulated save failure" in (result["stop_reason"] or "")
     assert runner_calls == initial_needs_retry[:2]
     assert result["results"][1]["seed_id"] == initial_needs_retry[1]
-    after = _load(workspace)
+    after = _load(workspace_pq)
     assert after["batch_state"]["needs_retry_seed_ids"][0] == initial_needs_retry[1]
 
 
-def test_batch_stops_on_push_failure(workspace):
+def test_batch_stops_on_push_failure(workspace_pq):
     runner_calls: list[str] = []
 
     result = run_next.run_next_model(
@@ -375,11 +461,11 @@ def test_batch_stops_on_push_failure(workspace):
     assert result["processed_count"] == 0
     assert result["stopped_early"] is True
     assert "ahead of GitHub" in (result["stop_reason"] or "")
-    assert runner_calls == [FIAT_BRAVO]
+    assert runner_calls == [SYNTH_FIRST]
     assert result["results"][0]["push_ok"] is False
 
 
-def test_batch_does_not_move_normal_cursor(workspace, monkeypatch):
+def test_batch_does_not_move_normal_cursor(workspace_pq, monkeypatch):
     observed_cursors: list[tuple[str | None, str | None]] = []
     from engine.canonical_store import save_canonical_atomic as real_save
 
@@ -405,8 +491,8 @@ def test_batch_does_not_move_normal_cursor(workspace, monkeypatch):
     assert result["final_state"]["normal_last_completed_seed_id"] == GMC
 
 
-def test_progress_after_batch(workspace):
-    initial_needs_retry = _needs_retry_ids(workspace)
+def test_progress_after_batch(workspace_pq):
+    initial_needs_retry = _needs_retry_ids(workspace_pq)
 
     result = run_next.run_next_model(
         batch_size=20,
@@ -419,6 +505,126 @@ def test_progress_after_batch(workspace):
     assert result["final_state"]["pending"] == INITIAL_NEEDS_RETRY - 20
     assert result["final_state"]["position"] == "26 / 54"
     assert result["final_state"]["selected_next_seed"] == initial_needs_retry[20]
+
+
+# ---- terminal problem-queue transition tests ---------------------------------
+
+def _make_workspace_with_n_pq_seeds(tmp_path, monkeypatch, n: int) -> Path:
+    """Helper: copy canonical into tmp_path with exactly *n* synthetic pq seeds."""
+    src = REPO_ROOT / CANONICAL_REL
+    dst_dir = tmp_path / "data" / "canonical"
+    dst_dir.mkdir(parents=True)
+    dst = dst_dir / "resume_package_canonical.json"
+    shutil.copy2(src, dst)
+    monkeypatch.setenv("CANONICAL_PATH", str(dst))
+    monkeypatch.chdir(tmp_path)
+    data = json.loads(dst.read_text(encoding="utf-8"))
+    data["batch_state"]["needs_retry_seed_ids"] = [
+        f"zzterm__{i:02d}__2020__2026__il" for i in range(n)
+    ]
+    dst.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    return tmp_path
+
+
+def test_terminal_problem_queue_transition(tmp_path, monkeypatch):
+    """Resolving the last retry seed must produce a clean normal_batch transition."""
+    ws = _make_workspace_with_n_pq_seeds(tmp_path, monkeypatch, n=1)
+    last_seed = "zzterm__00__2020__2026__il"
+
+    # Confirm we are in problem_queue mode before the run.
+    before_canon = _load(ws)
+    assert queue.get_mode(before_canon) == "problem_queue"
+    assert before_canon["batch_state"]["needs_retry_seed_ids"] == [last_seed]
+
+    result = run_next.run_next_model(
+        batch_size=1,
+        run_seed_fn=_runner_returning_one,
+        push_fn=_noop_push,
+    )
+
+    assert result["ok"] is True, f"terminal transition failed: {result.get('stop_reason')}"
+    assert result["stopped_early"] is False
+    assert result["final_state"]["needs_retry"] == 0
+    assert result["final_state"]["selected_next_seed"] == HAVAL
+    assert result["final_state"]["normal_next_seed_id"] == HAVAL
+
+    after = _load(ws)
+    assert queue.get_mode(after) == "normal_batch"
+    assert after["batch_state"]["needs_retry_seed_ids"] == []
+    assert after["batch_state"]["next_seed_id"] == HAVAL
+
+
+def test_after_terminal_pq_selected_seed_returns_to_normal(tmp_path, monkeypatch):
+    """After the last retry seed is resolved, selected_seed_id == normal next_seed_id."""
+    ws = _make_workspace_with_n_pq_seeds(tmp_path, monkeypatch, n=1)
+    last_seed = "zzterm__00__2020__2026__il"
+
+    run_next.run_selected_seed(last_seed, run_seed_fn=_runner_returning_one, push_fn=_noop_push)
+
+    after = _load(ws)
+    sel = queue.select_next_seed(after)
+    assert sel["mode"] == "normal_batch"
+    assert sel["selected_seed_id"] == after["batch_state"]["next_seed_id"]
+    assert sel["selected_seed_id"] == HAVAL
+
+
+# ---- normal-batch cursor advancement tests -----------------------------------
+
+def _build_test_catalog(processed_ids: list[str]) -> list[str]:
+    """Minimal catalog: sorted processed + haval + HAVAL_CATALOG_NEXT."""
+    return sorted(processed_ids) + [HAVAL, HAVAL_CATALOG_NEXT]
+
+
+def test_normal_batch_cursor_advances_with_catalog(workspace):
+    """After processing haval with a catalog, next_seed_id advances beyond haval."""
+    canonical = _load(workspace)
+    bs = canonical["batch_state"]
+    catalog = _build_test_catalog(list(bs.get("processed_seed_ids") or []))
+
+    result = run_next.run_next_model(
+        batch_size=1,
+        run_seed_fn=_runner_returning_one,
+        push_fn=_noop_push,
+        seed_catalog=catalog,
+    )
+    assert result["ok"] is True, result
+    assert result["processed_count"] == 1
+
+    after = _load(workspace)
+    assert after["batch_state"]["next_seed_id"] == HAVAL_CATALOG_NEXT
+    assert after["batch_state"]["next_seed_id"] != HAVAL
+    assert after["batch_state"]["last_completed_seed_id"] == HAVAL
+
+
+def test_normal_batch_cursor_blocked_without_catalog(workspace):
+    """Without a catalog, batch stops after one haval run with 'seed catalog is missing'."""
+    runner_calls: list[str] = []
+
+    result = run_next.run_next_model(
+        batch_size=5,
+        run_seed_fn=_recording_runner(runner_calls),
+        push_fn=_noop_push,
+        seed_catalog=None,
+    )
+
+    assert result["ok"] is False
+    assert "seed catalog is missing" in (result["stop_reason"] or "")
+    # Haval ran exactly once before the batch was blocked.
+    assert runner_calls == [HAVAL]
+
+
+def test_haval_runs_once_then_blocked_without_catalog(workspace):
+    """haval must not run more than once in the same batch when no catalog is present."""
+    runner_calls: list[str] = []
+    result = run_next.run_next_model(
+        batch_size=20,
+        run_seed_fn=_recording_runner(runner_calls),
+        push_fn=_noop_push,
+        seed_catalog=None,
+    )
+    assert result["ok"] is False
+    haval_runs = runner_calls.count(HAVAL)
+    assert haval_runs == 1, f"haval ran {haval_runs} times; expected exactly 1"
 
 
 def test_no_imports_from_legacy_reference():

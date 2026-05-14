@@ -23,6 +23,7 @@ from engine import queue
 from engine.canonical_store import (
     load_canonical,
     refresh_canonical_counts,
+    repair_canonical_buckets,
     save_canonical_atomic,
     validate_canonical,
 )
@@ -133,33 +134,81 @@ def _validate_successful_transition(before: dict, after: dict) -> list[str]:
     if after["variants"] < before["variants"]:
         errors.append("variants count decreased")
     if before["mode"] == "problem_queue":
-        if after["needs_retry"] >= before["needs_retry"]:
-            errors.append("needs_retry count did not decrease after a successful problem_queue seed")
+        # Detect terminal transition: last retry seed just resolved → queue now empty.
+        is_terminal = (before["needs_retry"] == 1 and after["needs_retry"] == 0)
+
+        if not is_terminal:
+            if after["needs_retry"] >= before["needs_retry"]:
+                errors.append("needs_retry count did not decrease after a successful problem_queue seed")
+        # Normal cursor must never move while in problem_queue mode.
         if before["next_seed_id"] != after["next_seed_id"]:
-            errors.append("normal next_seed_id changed while needs_retry is not empty")
+            errors.append("normal next_seed_id changed while in problem_queue mode")
         if before["last_completed_seed_id"] != after["last_completed_seed_id"]:
-            errors.append("normal last_completed_seed_id changed while needs_retry is not empty")
-        if after["problem_total"] != before["problem_total"]:
-            errors.append("problem queue total changed")
-        if after["problem_completed"] != (before["problem_completed"] + 1):
-            errors.append("problem queue completed count did not advance correctly")
-        if after["problem_pending"] != (before["problem_pending"] - 1):
-            errors.append("problem queue pending count did not advance correctly")
-        expected_position = _format_progress_position(
-            total=after["problem_total"],
-            completed=after["problem_completed"],
-            pending=after["problem_pending"],
-        )
-        if after["progress"] != expected_position:
-            errors.append("progress did not advance correctly")
-        if after["needs_retry"] > 0:
-            expected_ids = after.get("needs_retry_seed_ids") or []
-            expected_selected = expected_ids[0] if expected_ids else None
-            if after["selected_seed_id"] != expected_selected:
-                errors.append("selected next seed is not needs_retry_seed_ids[0]")
-            if after["selected_seed_id"] == after["next_seed_id"]:
-                errors.append("selected seed became normal next_seed_id while needs_retry is not empty")
+            errors.append("normal last_completed_seed_id changed while in problem_queue mode")
+
+        if is_terminal:
+            # Terminal: problem queue is now empty; mode must have switched to normal_batch.
+            if after["mode"] != "normal_batch":
+                errors.append("after terminal problem_queue completion, mode should be normal_batch")
+            # Selected seed must return to the normal next_seed_id.
+            if after["selected_seed_id"] != after["next_seed_id"]:
+                errors.append(
+                    "after terminal problem_queue completion, "
+                    "selected seed should equal normal next_seed_id"
+                )
+        else:
+            # Non-terminal: progress counters must advance exactly by 1.
+            if after["problem_total"] != before["problem_total"]:
+                errors.append("problem queue total changed")
+            if after["problem_completed"] != (before["problem_completed"] + 1):
+                errors.append("problem queue completed count did not advance correctly")
+            if after["problem_pending"] != (before["problem_pending"] - 1):
+                errors.append("problem queue pending count did not advance correctly")
+            expected_position = _format_progress_position(
+                total=after["problem_total"],
+                completed=after["problem_completed"],
+                pending=after["problem_pending"],
+            )
+            if after["progress"] != expected_position:
+                errors.append("progress did not advance correctly")
+            if after["needs_retry"] > 0:
+                expected_ids = after.get("needs_retry_seed_ids") or []
+                expected_selected = expected_ids[0] if expected_ids else None
+                if after["selected_seed_id"] != expected_selected:
+                    errors.append("selected next seed is not needs_retry_seed_ids[0]")
+                if after["selected_seed_id"] == after["next_seed_id"]:
+                    errors.append("selected seed became normal next_seed_id while needs_retry is not empty")
+    elif before["mode"] == "normal_batch":
+        # In normal_batch mode the cursor must advance after a successful seed.
+        # If next_seed_id did not change the seed would run again endlessly.
+        if after["selected_seed_id"] == before["selected_seed_id"]:
+            errors.append(
+                "normal cursor cannot advance: seed catalog is missing"
+            )
     return errors
+
+
+def _advance_normal_cursor(bs: dict, current_seed_id: str,
+                           seed_catalog: list[str]) -> None:
+    """Advance ``batch_state.next_seed_id`` to the next unprocessed seed in catalog order.
+
+    Finds *current_seed_id* in *seed_catalog* and sets ``next_seed_id`` to the
+    first entry after it that is not already in ``processed_seed_ids``.
+    If no such entry exists the run is complete and ``next_seed_id`` is set to
+    ``None``.
+    """
+    processed: set[str] = set(bs.get("processed_seed_ids") or [])
+    try:
+        current_idx = seed_catalog.index(current_seed_id)
+    except ValueError:
+        current_idx = -1
+    for i in range(current_idx + 1, len(seed_catalog)):
+        candidate = seed_catalog[i]
+        if candidate not in processed:
+            bs["next_seed_id"] = candidate
+            return
+    # No more unprocessed seeds — mark batch complete.
+    bs["next_seed_id"] = None
 
 
 def _has_dedupe_or_no_variants_proof(seed_id: str, dedupe_proof: list[dict],
@@ -200,7 +249,8 @@ def _record_seed_accounting(canonical: dict, seed_id: str, *,
 
 def merge_result_into_canonical(canonical: dict, seed_id: str, variants: list[dict],
                                 no_variants_reason: str | None,
-                                mode: str) -> dict:
+                                mode: str,
+                                seed_catalog: list[str] | None = None) -> dict:
     """Merge a runner result into a COPY of canonical and return a candidate
     canonical + merge metadata. Does NOT save anything.
     """
@@ -233,9 +283,11 @@ def merge_result_into_canonical(canonical: dict, seed_id: str, variants: list[di
         processed = bs.setdefault("processed_seed_ids", [])
         if seed_id not in processed:
             processed.append(seed_id)
-        # next_seed_id advancement requires the car-models catalog, which
-        # this engine does not own. We leave next_seed_id untouched here;
-        # the catalog/cursor module (if/when added) is responsible for it.
+        # Advance next_seed_id when a catalog is available.  Without a catalog
+        # the cursor stays put and the batch validator will report an error so
+        # the same seed is not silently re-run forever.
+        if seed_catalog:
+            _advance_normal_cursor(bs, seed_id, seed_catalog)
 
     _record_seed_accounting(
         candidate, seed_id,
@@ -262,9 +314,10 @@ def save_and_push_canonical(candidate: dict, *, push_fn: Callable | None = None,
     NOT attempted. If push fails, the on-disk canonical remains the new state
     but the caller may treat the overall operation as failed.
     """
-    # Refresh counts from actual data before validation so stale stored counts
-    # do not block the save.
+    # Refresh counts and top-level buckets from actual data before validation so
+    # stale stored counts / bucket sizes do not block the save.
     refresh_canonical_counts(candidate)
+    repair_canonical_buckets(candidate)
 
     ok, errs = validate_canonical(candidate)
     if not ok:
@@ -309,7 +362,8 @@ def _default_push_fn(canonical: dict, commit_message: str | None = None) -> dict
 def run_selected_seed(seed_id: str, *,
                       run_seed_fn: Callable | None = None,
                       push_fn: Callable | None = None,
-                      retry_hint: bool = False) -> dict:
+                      retry_hint: bool = False,
+                      seed_catalog: list[str] | None = None) -> dict:
     """Run a specific seed end-to-end.
 
     Flow: load -> select-mode -> run -> merge -> validate -> save -> push ->
@@ -358,6 +412,7 @@ def run_selected_seed(seed_id: str, *,
 
     merge_res = merge_result_into_canonical(
         canonical, seed_id, variants, no_variants_reason, mode,
+        seed_catalog=seed_catalog,
     )
 
     resolved = _has_dedupe_or_no_variants_proof(
@@ -419,7 +474,8 @@ def run_selected_seed(seed_id: str, *,
 def run_next_model(*, run_seed_fn: Callable | None = None,
                    batch_size: int = 1,
                    push_fn: Callable | None = None,
-                   retry_hint: bool = False) -> dict:
+                   retry_hint: bool = False,
+                   seed_catalog: list[str] | None = None) -> dict:
     """Run up to ``batch_size`` seeds sequentially."""
     try:
         requested_batch_size = int(batch_size)
@@ -458,6 +514,7 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
             run_seed_fn=run_seed_fn,
             push_fn=push_fn,
             retry_hint=retry_hint,
+            seed_catalog=seed_catalog,
         )
         canonical_after, reload_error = _reload_canonical_checked()
         after = _state_snapshot(canonical_after or canonical_before)
