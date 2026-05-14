@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T04:10:01.748453+00:00",
+    "updated_at": "2026-05-14T12:51:14.501954+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -398,7 +398,8 @@
       "bmw__z4_sdrive20i__2019__2026__il",
       "daewoo__lacetti__2003__2011__il",
       "daihatsu__copen__2002__2012__il",
-      "ds_automobiles__ds_9__2020__2026__il"
+      "ds_automobiles__ds_9__2020__2026__il",
+      "fiat__bravo__1995__2014__il"
     ],
     "processed_seeds": [
       {
@@ -3496,7 +3497,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__bravo__1995__2014__il",
       "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
@@ -3768,10 +3768,14 @@
         "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
       },
       "fiat__bravo__1995__2014__il": {
-        "variant_count": 0,
-        "repair_status": "moved_from_processed_to_needs_retry",
-        "repair_reason": "processed_seed_with_zero_variants",
-        "repair_timestamp": "2026-05-10T17:36:25.690176+00:00"
+        "seed_id": "fiat__bravo__1995__2014__il",
+        "variants_added_to_canonical": 6,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:51:14.501997+00:00"
       },
       "fiat__freemont__2011__2016__il": {
         "variant_count": 0,
@@ -363797,6 +363801,978 @@
             ],
             "year_end": [],
             "trim": []
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_1996_2001_il_1st_gen_1_6l_petrol_103_hp_automatic_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2001,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 103 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Automatic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "SX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T12:51:14.370386+00:00",
+        "updated_at": "2026-05-14T12:51:14.370386+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 1996,
+          "year_end": 2001,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L petrol, 103 hp",
+          "transmission": "Automatic",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "SX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car price lists (Yad2) and spec databases (Gear) confirm the 1.6L 103 hp engine with an automatic transmission for the 1st generation Bravo (3-door hatchback) in Israel between 1996 and 2001.",
+          "source_ids": [
+            "src_yad2",
+            "src_gear"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear"
+            ],
+            "seats": [
+              "src_gear"
+            ],
+            "engine": [
+              "src_yad2"
+            ],
+            "transmission": [
+              "src_yad2"
+            ],
+            "fuel_type": [
+              "src_gear"
+            ],
+            "drivetrain": [
+              "src_gear"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2"
+            ],
+            "year_end": [
+              "src_yad2"
+            ],
+            "trim": [
+              "src_yad2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_1996_2001_il_1st_gen_1_6l_petrol_103_hp_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2001,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.6L petrol, 103 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "SX",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T12:51:14.370440+00:00",
+        "updated_at": "2026-05-14T12:51:14.370440+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 1,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 1996,
+          "year_end": 2001,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.6L petrol, 103 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "SX",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car price lists (Yad2) confirm the 1.6L 103 hp engine with a manual transmission for the 1st generation Bravo in Israel.",
+          "source_ids": [
+            "src_yad2",
+            "src_gear"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear"
+            ],
+            "seats": [
+              "src_gear"
+            ],
+            "engine": [
+              "src_yad2"
+            ],
+            "transmission": [
+              "src_yad2"
+            ],
+            "fuel_type": [
+              "src_gear"
+            ],
+            "drivetrain": [
+              "src_gear"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2"
+            ],
+            "year_end": [
+              "src_yad2"
+            ],
+            "trim": [
+              "src_yad2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_1996_2001_il_1st_gen_2_0l_petrol_147_hp_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 1996,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2001,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "2.0L petrol, 147 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Manual",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "HGT",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 7,
+        "created_at": "2026-05-14T12:51:14.370471+00:00",
+        "updated_at": "2026-05-14T12:51:14.370471+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 2,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 1996,
+          "year_end": 2001,
+          "generation": "1st Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "2.0L petrol, 147 hp",
+          "transmission": "Manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "HGT",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli used car price lists (Yad2) confirm the HGT trim with a 2.0L 147 hp engine and manual transmission for the 1st generation Bravo in Israel.",
+          "source_ids": [
+            "src_yad2",
+            "src_gear"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear"
+            ],
+            "seats": [
+              "src_gear"
+            ],
+            "engine": [
+              "src_yad2"
+            ],
+            "transmission": [
+              "src_yad2"
+            ],
+            "fuel_type": [
+              "src_gear"
+            ],
+            "drivetrain": [
+              "src_gear"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2"
+            ],
+            "year_end": [
+              "src_yad2"
+            ],
+            "trim": [
+              "src_yad2"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_2009_2012_il_2nd_gen_1_4l_t_jet_turbo_petrol_120_hp_6_speed_automated_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "2nd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_gear",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_gear",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "engine": {
+          "value": "1.4L T-Jet turbo petrol, 120 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed automated manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_icar",
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_gear",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_gear"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Sensation",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 13,
+        "created_at": "2026-05-14T12:51:14.370502+00:00",
+        "updated_at": "2026-05-14T12:51:14.370502+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 3,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 2009,
+          "year_end": 2012,
+          "generation": "2nd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L T-Jet turbo petrol, 120 hp",
+          "transmission": "6-speed automated manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Sensation",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (iCar, Gear, Yad2) confirm the 2nd generation Bravo was sold in Israel from 2009 to 2012 with a 1.4L T-Jet 120 hp engine and a 6-speed Dualogic automated manual transmission. Sensation was the higher trim level.",
+          "source_ids": [
+            "src_yad2",
+            "src_icar",
+            "src_gear",
+            "src_carzone"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_gear",
+              "src_carzone"
+            ],
+            "seats": [
+              "src_gear",
+              "src_carzone"
+            ],
+            "engine": [
+              "src_icar",
+              "src_carzone"
+            ],
+            "transmission": [
+              "src_icar",
+              "src_gear"
+            ],
+            "fuel_type": [
+              "src_gear",
+              "src_carzone"
+            ],
+            "drivetrain": [
+              "src_gear"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2",
+              "src_icar"
+            ],
+            "year_end": [
+              "src_yad2",
+              "src_icar"
+            ],
+            "trim": [
+              "src_yad2",
+              "src_icar"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_2009_2012_il_2nd_gen_1_4l_t_jet_turbo_petrol_120_hp_6_speed_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "2nd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L T-Jet turbo petrol, 120 hp",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_carzone",
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Dynamic",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_carzone"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T12:51:14.370537+00:00",
+        "updated_at": "2026-05-14T12:51:14.370537+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 4,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 2009,
+          "year_end": 2012,
+          "generation": "2nd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L T-Jet turbo petrol, 120 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Dynamic",
+          "market_scope": "IL",
+          "confidence_level": "high",
+          "source_basis": "Israeli automotive portals (Carzone, Yad2) confirm a 6-speed manual transmission option was available for the 1.4L T-Jet 120 hp engine in the Dynamic trim.",
+          "source_ids": [
+            "src_yad2",
+            "src_carzone"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_carzone"
+            ],
+            "seats": [
+              "src_carzone"
+            ],
+            "engine": [
+              "src_carzone"
+            ],
+            "transmission": [
+              "src_carzone",
+              "src_yad2"
+            ],
+            "fuel_type": [
+              "src_carzone"
+            ],
+            "drivetrain": [
+              "src_carzone"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2"
+            ],
+            "year_end": [
+              "src_yad2"
+            ],
+            "trim": [
+              "src_yad2",
+              "src_carzone"
+            ]
+          }
+        },
+        "identity_confidence": "unknown"
+      },
+      {
+        "variant_id": "fiat_bravo_2009_2012_il_2nd_gen_1_4l_t_jet_turbo_petrol_150_hp_6_speed_manual_hatchback_petrol",
+        "make": "Fiat",
+        "model": "Bravo",
+        "aliases": [],
+        "year_start": {
+          "value": 2009,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2012,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "2nd Gen",
+          "used_in_compare": false
+        },
+        "body_type": {
+          "value": "Hatchback",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "1.4L T-Jet turbo petrol, 150 hp",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "6-speed manual",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_yad2",
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "fuel_type": {
+          "value": "Petrol",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_icar"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Dynamic",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_yad2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "created_at": "2026-05-14T12:51:14.370568+00:00",
+        "updated_at": "2026-05-14T12:51:14.370568+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 5,
+          "make": "Fiat",
+          "model": "Bravo",
+          "year_start": 2009,
+          "year_end": 2012,
+          "generation": "2nd Gen",
+          "body_type": "Hatchback",
+          "seats": 5,
+          "engine": "1.4L T-Jet turbo petrol, 150 hp",
+          "transmission": "6-speed manual",
+          "fuel_type": "Petrol",
+          "drivetrain": "FWD",
+          "trim": "Dynamic",
+          "market_scope": "IL",
+          "confidence_level": "medium",
+          "source_basis": "Israeli automotive portals (Yad2, iCar) list a 150 hp version of the 1.4L T-Jet engine with a manual transmission, though it was significantly less common than the 120 hp version.",
+          "source_ids": [
+            "src_yad2",
+            "src_icar"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_icar"
+            ],
+            "seats": [
+              "src_icar"
+            ],
+            "engine": [
+              "src_yad2",
+              "src_icar"
+            ],
+            "transmission": [
+              "src_yad2",
+              "src_icar"
+            ],
+            "fuel_type": [
+              "src_icar"
+            ],
+            "drivetrain": [
+              "src_icar"
+            ],
+            "generation": [
+              "src_icar"
+            ],
+            "year_start": [
+              "src_yad2"
+            ],
+            "year_end": [
+              "src_yad2"
+            ],
+            "trim": [
+              "src_yad2"
+            ]
           }
         },
         "identity_confidence": "unknown"
