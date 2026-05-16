@@ -224,50 +224,49 @@ class TestMarketScopeAndConfidenceLevel:
 class TestIdentityConfidenceDerived:
     """Unit tests for _derive_identity_confidence."""
 
-    def test_il_confirmed_high_with_sources_gives_high(self):
-        assert _derive_identity_confidence("IL-confirmed", "high", 2) == "high"
+    def test_il_confirmed_high_with_sources_gives_market_confirmed(self):
+        assert _derive_identity_confidence("IL-confirmed", "high", 2) == "market_confirmed"
 
-    def test_il_confirmed_high_one_source_gives_high(self):
-        assert _derive_identity_confidence("IL-confirmed", "high", 1) == "high"
+    def test_il_confirmed_high_one_source_gives_market_confirmed(self):
+        assert _derive_identity_confidence("IL-confirmed", "high", 1) == "market_confirmed"
 
-    def test_il_confirmed_high_no_sources_gives_low(self):
-        assert _derive_identity_confidence("IL-confirmed", "high", 0) == "low"
+    def test_il_confirmed_high_no_sources_gives_candidate_unverified(self):
+        assert _derive_identity_confidence("IL-confirmed", "high", 0) == "candidate_unverified"
 
-    def test_il_confirmed_medium_gives_medium(self):
-        assert _derive_identity_confidence("IL-confirmed", "medium", 1) == "medium"
+    def test_il_confirmed_medium_gives_market_plausible(self):
+        assert _derive_identity_confidence("IL-confirmed", "medium", 1) == "market_plausible"
 
-    def test_il_likely_high_gives_medium(self):
-        assert _derive_identity_confidence("IL-likely", "high", 1) == "medium"
+    def test_il_likely_high_gives_market_plausible(self):
+        assert _derive_identity_confidence("IL-likely", "high", 1) == "market_plausible"
 
-    def test_il_likely_medium_gives_medium(self):
-        # IL-likely + medium confidence with sources is still worth "medium" identity
-        assert _derive_identity_confidence("IL-likely", "medium", 1) == "medium"
+    def test_il_likely_medium_gives_market_plausible(self):
+        # IL-likely + medium confidence with sources → market_plausible
+        assert _derive_identity_confidence("IL-likely", "medium", 1) == "market_plausible"
 
-    def test_global_reference_gives_low(self):
-        assert _derive_identity_confidence("global-reference-only", "high", 5) == "low"
+    def test_global_reference_gives_candidate_unverified(self):
+        assert _derive_identity_confidence("global-reference-only", "high", 5) == "candidate_unverified"
 
-    def test_uncertain_gives_low(self):
-        assert _derive_identity_confidence("uncertain", "high", 5) == "low"
+    def test_uncertain_gives_candidate_unverified(self):
+        assert _derive_identity_confidence("uncertain", "high", 5) == "candidate_unverified"
 
-    def test_empty_scope_gives_low(self):
-        assert _derive_identity_confidence("", "high", 5) == "low"
+    def test_empty_scope_gives_candidate_unverified(self):
+        assert _derive_identity_confidence("", "high", 5) == "candidate_unverified"
 
-    def test_empty_level_gives_low(self):
-        assert _derive_identity_confidence("IL-confirmed", "", 1) == "low"
+    def test_empty_level_gives_candidate_unverified(self):
+        assert _derive_identity_confidence("IL-confirmed", "", 1) == "candidate_unverified"
 
-    def test_none_inputs_give_low(self):
-        assert _derive_identity_confidence(None, None, 0) == "low"  # type: ignore[arg-type]  # testing None guard in helper
+    def test_none_inputs_give_candidate_unverified(self):
+        assert _derive_identity_confidence(None, None, 0) == "candidate_unverified"  # type: ignore[arg-type]  # testing None guard in helper
 
     def test_identity_confidence_not_constant_in_variant(self):
         """Verify the variant dict itself has a non-constant identity_confidence."""
-        v_high = _candidate_to_variant(
+        v_confirmed = _candidate_to_variant(
             _make_candidate(market_scope="IL-confirmed", confidence_level="high"), _SEED
         )
-        v_low = _candidate_to_variant(
+        v_unverified = _candidate_to_variant(
             _make_candidate(market_scope="global-reference-only", confidence_level="medium"),
             _SEED,
         )
-        # They must not both be "unknown", and they must differ
-        assert v_high["identity_confidence"] != "unknown"
-        assert v_low["identity_confidence"] != "unknown"
-        assert v_high["identity_confidence"] != v_low["identity_confidence"]
+        assert v_confirmed["identity_confidence"] == "market_confirmed"
+        assert v_unverified["identity_confidence"] == "candidate_unverified"
+        assert v_confirmed["identity_confidence"] != v_unverified["identity_confidence"]

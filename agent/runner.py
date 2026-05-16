@@ -26,19 +26,20 @@ def _derive_identity_confidence(market_scope: str, confidence_level: str,
                                  sources_count: int) -> str:
     """Map candidate market_scope + confidence_level + source support to identity_confidence.
 
-    high   — IL-confirmed scope AND high confidence AND at least 1 source
-    medium — IL-confirmed/medium OR IL-likely/high, with at least 1 source
-    low    — global-reference-only, uncertain, partial confidence, or no sources
+    Returns one of the three canonical vocabulary values:
+      market_confirmed     — IL-confirmed scope AND high confidence AND at least 1 source
+      market_plausible     — IL-confirmed/medium OR IL-likely/high, with at least 1 source
+      candidate_unverified — global-reference-only, uncertain, partial/no confidence, or no sources
     """
     scope = _SCOPE_RANK.get((market_scope or "").lower().strip(), 0)
     level = _LEVEL_RANK.get((confidence_level or "").lower().strip(), 0)
     sc = int(sources_count or 0)
 
     if scope >= 3 and level >= 3 and sc >= 1:
-        return "high"
+        return "market_confirmed"
     if scope >= 2 and level >= 2 and sc >= 1:
-        return "medium"
-    return "low"
+        return "market_plausible"
+    return "candidate_unverified"
 
 
 def _now() -> str:
