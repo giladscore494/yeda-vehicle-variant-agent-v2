@@ -17,6 +17,29 @@ from core.variant_id import generate_variant_id
 
 FIELD_NAMES = ("body_type", "seats", "engine", "transmission", "fuel_type", "drivetrain", "trim", "doors")
 
+# Ordered from strongest to weakest market evidence.
+_SCOPE_RANK = {"il-confirmed": 3, "il-likely": 2, "global-reference-only": 1, "uncertain": 0}
+_LEVEL_RANK = {"high": 3, "medium": 2, "partial": 1, "low": 1}
+
+
+def _derive_identity_confidence(market_scope: str, confidence_level: str,
+                                 sources_count: int) -> str:
+    """Map candidate market_scope + confidence_level + source support to identity_confidence.
+
+    high   — IL-confirmed scope AND high confidence AND at least 1 source
+    medium — IL-confirmed/medium OR IL-likely/high, with at least 1 source
+    low    — global-reference-only, uncertain, partial confidence, or no sources
+    """
+    scope = _SCOPE_RANK.get((market_scope or "").lower().strip(), 0)
+    level = _LEVEL_RANK.get((confidence_level or "").lower().strip(), 0)
+    sc = int(sources_count or 0)
+
+    if scope >= 3 and level >= 3 and sc >= 1:
+        return "high"
+    if scope >= 2 and level >= 2 and sc >= 1:
+        return "medium"
+    return "low"
+
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -79,6 +102,8 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
     drivetrain = cand.get("drivetrain")
     seats = cand.get("seats")
     trim = cand.get("trim")
+    market_scope = str(cand.get("market_scope") or "").strip()
+    confidence_level = str(cand.get("confidence_level") or "").strip()
 
     variant_id = generate_variant_id(
         make, model, ys, ye, market,
@@ -96,6 +121,7 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
     now = _now()
     gen_ids = field_sources.get("generation") or []
     gen_ids = gen_ids if isinstance(gen_ids, list) else []
+    total_sources = sum(len(field_sources.get(n) or []) for n in FIELD_NAMES)
     variant: dict = {
         "variant_id": variant_id,
         "make": make,
@@ -115,12 +141,16 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
         "doors": None,
         "verification_status": "partial" if body_type or engine or fuel_type else "unresolved",
         "confidence": "medium" if body_type or engine or fuel_type else "low",
-        "sources_count": sum(len(field_sources.get(n) or []) for n in FIELD_NAMES),
+        "sources_count": total_sources,
+        "market_scope": market_scope or None,
+        "confidence_level": confidence_level or None,
         "created_at": now,
         "updated_at": now,
         "notes": [],
         "candidate_raw": cand,
-        "identity_confidence": "unknown",
+        "identity_confidence": _derive_identity_confidence(
+            market_scope, confidence_level, total_sources
+        ),
     }
     return variant
 
