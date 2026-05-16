@@ -255,7 +255,7 @@ class TestPlaceholderSourceIdsRejected:
     def test_meaningful_slug_is_not_placeholder(self):
         assert _looks_like_placeholder_source_id("yad2-listing-2024") is False
 
-    def test_opaque_non_numeric_suffix_not_placeholder(self):
+    def test_hyphenated_non_numeric_suffix_not_placeholder(self):
         assert _looks_like_placeholder_source_id("il-importer-abc") is False
 
     # --- proof-level rejection ---

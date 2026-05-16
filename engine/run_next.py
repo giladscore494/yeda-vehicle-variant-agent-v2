@@ -226,8 +226,8 @@ def _looks_like_placeholder_source_id(source_id: str) -> bool:
     """Return True when *source_id* looks like a generated/fake placeholder.
 
     Rejected patterns: src_1, src_2, src_3, src_4, source_1, source_2,
-    citation_1, ref_1, "1", "2", "3", and any ``<word>_<digits>`` variant
-    matching the same scheme.
+    citation_1, ref_1, "1", "2", "3", and any ID matching the scheme
+    ``(src|source|citation|ref)_<digits>`` or a bare digit string.
     """
     return bool(_PLACEHOLDER_SOURCE_ID_RE.match((source_id or "").strip()))
 
