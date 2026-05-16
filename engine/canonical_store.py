@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from core.source_ids import looks_like_placeholder_source_id as _looks_like_placeholder_source_id
+
 
 CANONICAL_PATH = Path("data/canonical/resume_package_canonical.json")
 BACKUP_PATH = Path("data/canonical/resume_package_backup_previous.json")
@@ -225,6 +227,25 @@ def validate_canonical(data: dict) -> tuple[bool, list[str]]:
         text = json.dumps(bs, ensure_ascii=False)
         if '"s1"' in text:
             errs.append("forbidden_s1_token_in_batch_state")
+
+    # Reject any seed_accounting entry that records proof_status="proven" but has
+    # only placeholder source_ids (e.g. src_1, src_2, src_3). Such entries were
+    # written by a bypass of run_selected_seed()'s proof guard and must never be
+    # allowed to persist in canonical.
+    if isinstance(bs, dict):
+        seed_accounting = bs.get("seed_accounting") or {}
+        for sa_seed_id, sa_entry in seed_accounting.items():
+            if not isinstance(sa_entry, dict):
+                continue
+            zvr = sa_entry.get("zero_variant_resolution")
+            if not isinstance(zvr, dict):
+                continue
+            if zvr.get("proof_status") == "proven":
+                sids = zvr.get("source_ids") or []
+                if sids and all(_looks_like_placeholder_source_id(str(s)) for s in sids):
+                    errs.append(
+                        f"invalid_placeholder_sources_in_proven_zvr:{sa_seed_id}"
+                    )
 
     return (len(errs) == 0), errs
 
