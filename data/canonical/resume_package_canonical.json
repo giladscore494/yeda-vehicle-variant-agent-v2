@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T18:32:15.011197+00:00",
+    "updated_at": "2026-05-16T18:32:54.510434+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -455,7 +455,8 @@
       "geely__coolray__2023__2026__il",
       "gac_-_aion__aion_y__2023__2026__il",
       "gac_-_aion__aion_v__2024__2026__il",
-      "fiat__freemont__2011__2016__il"
+      "fiat__freemont__2011__2016__il",
+      "ford__ecosport__2013__2022__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -903,7 +904,8 @@
       "geely__coolray__2023__2026__il",
       "gac_-_aion__aion_y__2023__2026__il",
       "gac_-_aion__aion_v__2024__2026__il",
-      "fiat__freemont__2011__2016__il"
+      "fiat__freemont__2011__2016__il",
+      "ford__ecosport__2013__2022__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -920,9 +922,7 @@
         "created_at": "2026-05-10T12:57:31.358172+00:00"
       }
     ],
-    "needs_retry_seed_ids": [
-      "ford__ecosport__2013__2022__il"
-    ],
+    "needs_retry_seed_ids": [],
     "false_processed_seed_ids": [
       "bmw__850i__2018__2026__il",
       "bmw__z4_sdrive20i__2019__2026__il",
@@ -1262,11 +1262,21 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T12:55:27.268576+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T18:32:54.510473+00:00",
+        "zero_variant_resolution": {
+          "resolved": true,
+          "reason": "model_not_sold_in_market",
+          "proof_status": "proven",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "source_basis": "Multiple Israeli automotive news sources confirm that the Ford EcoSport was never officially imported or sold in the Israeli market. The local importer (Delek Motors) considered importing it multiple times (in 2014, 2015, and 2017), but due to pricing issues and manufacturer constraints, it never reached the local market.",
+          "confidence": "high"
+        }
       },
       "hyundai__i25__1994__2026__il": {
         "seed_id": "hyundai__i25__1994__2026__il",
@@ -1804,7 +1814,8 @@
     "no_variants_by_seed": {
       "hyundai__creta__2020__2026__il": "model_not_sold_in_market",
       "geely__coolray__2023__2026__il": "model_not_sold_in_market",
-      "fiat__freemont__2011__2016__il": "model_not_sold_in_market"
+      "fiat__freemont__2011__2016__il": "model_not_sold_in_market",
+      "ford__ecosport__2013__2022__il": "model_not_sold_in_market"
     },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
@@ -2609,7 +2620,7 @@
     "normal_seed_excluded_from_rerun_queue": [
       "haval__h6__2022__2026__il"
     ],
-    "active_mode": "rerun_queue_required",
+    "active_mode": "normal_batch",
     "rerun_queue_path": "data/output/rerun_queue.json"
   },
   "run_history": [],
@@ -438571,11 +438582,11 @@
     "makes_count": 40,
     "models_count": 447,
     "unresolved": 1,
-    "processed_seeds": 446,
-    "needs_retry_seeds": 1,
+    "processed_seeds": 447,
+    "needs_retry_seeds": 0,
     "variants": 1566,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T18:32:15.022233+00:00"
+    "last_updated_at": "2026-05-16T18:32:54.521276+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
