@@ -525,7 +525,7 @@ def run_selected_seed(seed_id: str, *,
     if not resolved:
         # Zero variants and no valid proof: fail safe — do not save, do not advance.
         reason = (no_variants_reason or "").strip()
-        error_msg = "zero_variant_without_proof: no variants added/merged and no validated no_variants proof"
+        error_msg = "zero_variant_without_proof: no variants added/merged and no validated proof for zero-variant closure"
         return {
             "ok": False,
             "seed_id": seed_id,
@@ -534,7 +534,7 @@ def run_selected_seed(seed_id: str, *,
             "no_variants_reason": no_variants_reason,
             "no_variants_evidence": run_result.get("no_variants_evidence") or [],
             "closure_decision": "not_resolved",
-            "should_retry": reason not in _NO_VARIANTS_RETRY_REASONS,
+            "should_retry": reason in _NO_VARIANTS_RETRY_REASONS,
             "added_count": 0,
             "merged_count": 0,
             "save": None,
@@ -567,7 +567,7 @@ def run_selected_seed(seed_id: str, *,
             "ok": False,
             "seed_id": seed_id,
             "mode": mode,
-            "error": "zero_variant_without_proof: no variants added/merged and no validated no_variants proof",
+            "error": "zero_variant_without_proof: no variants added/merged and no validated proof for zero-variant closure",
             "no_variants_reason": no_variants_reason,
             "no_variants_evidence": run_result.get("no_variants_evidence") or [],
             "closure_decision": "not_resolved",
