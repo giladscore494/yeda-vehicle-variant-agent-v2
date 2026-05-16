@@ -33,6 +33,7 @@ from engine.run_next import (
     run_next_model,
     run_selected_seed,
 )
+from engine.canonical_store import validate_canonical
 
 
 # ---------------------------------------------------------------------------
@@ -805,3 +806,279 @@ class TestMergeResultCentralisedGuard:
             proof_valid=False,   # irrelevant when variants exist
         )
         assert result["added_count"] == 1
+
+
+# ---------------------------------------------------------------------------
+# 13. Regression: hyundai__creta__2020__2026__il — placeholder source_ids bypass
+#
+# Root cause: `validate_canonical()` did not check for placeholder source_ids in
+# `seed_accounting[*].zero_variant_resolution.source_ids`.  A direct canonical
+# write (bypassing `run_selected_seed()`'s proof guard) could set
+# proof_status="proven" with source_ids=["src_1","src_2","src_3"].
+#
+# This suite covers the FULL stack:
+#   A. _is_no_variants_proof_valid() rejects ["src_1","src_2","src_3"]
+#   B. run_selected_seed() returns ok=False, no save, no push, seed in needs_retry
+#   C. validate_canonical() rejects a canonical that has a "proven" ZVR with only
+#      placeholder source_ids (closes the direct-write bypass)
+# ---------------------------------------------------------------------------
+
+_CRETA_SEED = "hyundai__creta__2020__2026__il"
+_CRETA_SOURCE_BASIS = (
+    "Official Israeli importer data (Colmobil / Hyundai Israel) and local "
+    "automotive databases (Autoboom, Auto.co.il) confirm that the Hyundai Creta "
+    "is not officially marketed in Israel."
+)
+
+
+def _make_creta_pq_canonical() -> dict:
+    """Canonical with Creta in needs_retry_seed_ids (problem_queue mode)."""
+    return {
+        "accumulated_clean_export": {"variants": []},
+        "batch_state": {
+            "active_mode": "rerun_queue_required",
+            "next_seed_id": "volkswagen__jetta__1990__2026__il",
+            "last_completed_seed_id": "volkswagen__golf_plus__2005__2020__il",
+            "processed_seed_ids": [],
+            "processed_seeds": [],
+            "needs_retry_seed_ids": [_CRETA_SEED],
+            "false_processed_seed_ids": [_CRETA_SEED],
+            "skipped_seed_ids": [],
+            "failed_seed_ids": [],
+            "seed_accounting": {
+                _CRETA_SEED: {
+                    "seed_id": _CRETA_SEED,
+                    "status": "reset_for_rerun",
+                    "marked_processed": False,
+                    "reset_reason": "placeholder_source_ids_invalidated_zero_variant_closure",
+                }
+            },
+        },
+        "counts": {"total_variants": 0},
+        "metadata": {"schema_version": "3.0"},
+    }
+
+
+def _creta_placeholder_runner(seed_id: str, *, retry_hint: bool = False) -> dict:
+    """Stub runner that returns no variants with placeholder source_ids — the exact
+    shape that caused the Creta false-closure (model_not_sold_in_market +
+    source_ids=["src_1","src_2","src_3"] + high confidence + non-empty basis)."""
+    return {
+        "ok": True,
+        "seed": {
+            "seed_id": seed_id,
+            "make": "Hyundai",
+            "model": "Creta",
+            "year_start": 2020,
+            "year_end": 2026,
+            "market": "IL",
+        },
+        "variants": [],
+        "no_variants_reason": "model_not_sold_in_market",
+        "no_variants_evidence": [],
+        "no_variants_source_ids": ["src_1", "src_2", "src_3"],
+        "no_variants_source_basis": _CRETA_SOURCE_BASIS,
+        "no_variants_confidence": "high",
+        "no_variants_reason_detail": None,
+        "discovery": {"ok": True, "data": {}, "error": None, "gemini_metadata": {}},
+        "error": None,
+    }
+
+
+class TestCretaPlaceholderProofRejection:
+    """A. _is_no_variants_proof_valid rejects ["src_1","src_2","src_3"] even when
+    source_basis and confidence are otherwise valid."""
+
+    def test_src_1_2_3_high_confidence_is_false(self):
+        assert _is_no_variants_proof_valid(
+            "model_not_sold_in_market",
+            dedupe_proof=[],
+            no_variants_source_ids=["src_1", "src_2", "src_3"],
+            no_variants_source_basis=_CRETA_SOURCE_BASIS,
+            no_variants_confidence="high",
+        ) is False
+
+    def test_has_dedupe_proof_with_placeholders_is_false(self):
+        assert _has_dedupe_or_no_variants_proof(
+            _CRETA_SEED,
+            [],
+            0,
+            0,
+            "model_not_sold_in_market",
+            no_variants_source_ids=["src_1", "src_2", "src_3"],
+            no_variants_source_basis=_CRETA_SOURCE_BASIS,
+            no_variants_confidence="high",
+        ) is False
+
+
+class TestCretaPlaceholderProofPQRegression:
+    """B. run_selected_seed() with problem_queue mode must block placeholder source_ids:
+    ok=False, no save, no push, seed remains in needs_retry, not added to processed."""
+
+    def _stub_load(self, canonical: dict):
+        def _load():
+            return copy.deepcopy(canonical)
+        return _load
+
+    def test_ok_is_false(self, monkeypatch):
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+        result = run_selected_seed(
+            _CRETA_SEED,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=None,
+        )
+        assert result["ok"] is False
+
+    def test_error_contains_zero_variant_without_proof(self, monkeypatch):
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+        result = run_selected_seed(
+            _CRETA_SEED,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=None,
+        )
+        err = result.get("error") or ""
+        assert "zero_variant_without_proof" in err or "invalid_placeholder_sources" in err
+
+    def test_save_is_none(self, monkeypatch):
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+        result = run_selected_seed(
+            _CRETA_SEED,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=None,
+        )
+        assert result.get("save") is None
+
+    def test_push_is_none(self, monkeypatch):
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+        result = run_selected_seed(
+            _CRETA_SEED,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=None,
+        )
+        assert result.get("push") is None
+
+    def test_seed_remains_in_needs_retry_after_batch(self, monkeypatch):
+        """run_next_model() must leave Creta in needs_retry."""
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+
+        def _noop_push(c, commit_message=None):
+            return {"ok": True, "skipped": True}
+
+        result = run_next_model(
+            batch_size=1,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=_noop_push,
+        )
+        seed_result = result["results"][0]
+        assert seed_result.get("needs_retry_after") == 1
+
+    def test_seed_not_added_to_processed(self, monkeypatch):
+        """Seed must not appear in processed after failed run."""
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+
+        def _noop_push(c, commit_message=None):
+            return {"ok": True, "skipped": True}
+
+        result = run_next_model(
+            batch_size=1,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=_noop_push,
+        )
+        assert result.get("processed_count", 0) == 0
+
+    def test_save_ok_false_in_batch(self, monkeypatch):
+        """Per-seed save_ok must be false — no canonical written."""
+        canonical = _make_creta_pq_canonical()
+        monkeypatch.setattr("engine.run_next.load_canonical", self._stub_load(canonical))
+
+        def _noop_push(c, commit_message=None):
+            return {"ok": True, "skipped": True}
+
+        result = run_next_model(
+            batch_size=1,
+            run_seed_fn=_creta_placeholder_runner,
+            push_fn=_noop_push,
+        )
+        assert not result["results"][0].get("save_ok")
+
+
+class TestValidateCanonicalBlocksPlaceholderZVR:
+    """C. validate_canonical() must reject a canonical where seed_accounting
+    has proof_status='proven' with only placeholder source_ids — this closes
+    the direct-write bypass that allowed the Creta false-closure."""
+
+    def _canonical_with_proven_placeholder_zvr(self) -> dict:
+        """Build a canonical that has the exact bad state: proven ZVR with
+        source_ids=["src_1","src_2","src_3"]."""
+        return {
+            "accumulated_clean_export": {"variants": []},
+            "batch_state": {
+                "active_mode": "rerun_queue_required",
+                "next_seed_id": "volkswagen__jetta__1990__2026__il",
+                "last_completed_seed_id": "volkswagen__golf_plus__2005__2020__il",
+                "processed_seed_ids": [_CRETA_SEED],
+                "needs_retry_seed_ids": [],
+                "skipped_seed_ids": [],
+                "failed_seed_ids": [],
+                "seed_accounting": {
+                    _CRETA_SEED: {
+                        "seed_id": _CRETA_SEED,
+                        "status": "resolved",
+                        "marked_processed": True,
+                        "zero_variant_resolution": {
+                            "resolved": True,
+                            "reason": "model_not_sold_in_market",
+                            "proof_status": "proven",
+                            "source_ids": ["src_1", "src_2", "src_3"],
+                            "source_basis": _CRETA_SOURCE_BASIS,
+                            "confidence": "high",
+                        },
+                    }
+                },
+            },
+            "counts": {"total_variants": 0},
+            "metadata": {"schema_version": "3.0"},
+        }
+
+    def test_validate_rejects_proven_placeholder_zvr(self):
+        """validate_canonical() must return ok=False when a proven ZVR has only
+        placeholder source_ids."""
+        data = self._canonical_with_proven_placeholder_zvr()
+        ok, errs = validate_canonical(data)
+        assert ok is False
+        assert any("invalid_placeholder_sources_in_proven_zvr" in e for e in errs)
+
+    def test_error_names_the_seed(self):
+        """The error must name the offending seed_id for traceability."""
+        data = self._canonical_with_proven_placeholder_zvr()
+        _, errs = validate_canonical(data)
+        assert any(_CRETA_SEED in e for e in errs)
+
+    def test_valid_zvr_with_real_source_passes(self):
+        """A proven ZVR with real (non-placeholder) source_ids must still pass."""
+        data = self._canonical_with_proven_placeholder_zvr()
+        # Replace placeholder with real URL
+        data["batch_state"]["seed_accounting"][_CRETA_SEED]["zero_variant_resolution"][
+            "source_ids"
+        ] = ["https://www.colmobil.co.il/il-models", "yad2-creta-2024"]
+        # Fix processed/needs_retry count to match
+        ok, errs = validate_canonical(data)
+        placeholder_errors = [e for e in errs if "invalid_placeholder_sources_in_proven_zvr" in e]
+        assert not placeholder_errors, f"Unexpected placeholder errors: {placeholder_errors}"
+
+    def test_unproven_zvr_with_placeholders_passes(self):
+        """A ZVR with proof_status='invalid_placeholder_sources' (not 'proven') must
+        NOT be flagged by the new check."""
+        data = self._canonical_with_proven_placeholder_zvr()
+        data["batch_state"]["seed_accounting"][_CRETA_SEED]["zero_variant_resolution"][
+            "proof_status"
+        ] = "invalid_placeholder_sources"
+        ok, errs = validate_canonical(data)
+        placeholder_errors = [e for e in errs if "invalid_placeholder_sources_in_proven_zvr" in e]
+        assert not placeholder_errors
