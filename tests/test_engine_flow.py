@@ -38,6 +38,7 @@ HAVAL_CATALOG_NEXT = "isuzu__xyz_test__2020__2026__il"
 CURRENT_VARIANTS = 1523
 CURRENT_PROCESSED = 439
 CURRENT_NEEDS_RETRY = 0
+GOLF_VARIANT = "volkswagen__golf_variant__1993__2026__il"
 # Expected counts derived from the repaired 1523-variant canonical.
 EXPECTED_VERIFIED = 788
 EXPECTED_PARTIAL = 735
