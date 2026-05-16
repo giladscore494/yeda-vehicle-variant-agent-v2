@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-14T23:31:08.487285+00:00",
+    "updated_at": "2026-05-16T14:04:21.919939+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -454,7 +454,8 @@
       "volkswagen__e-up!__2014__2023__il",
       "volkswagen__golf__1990__2026__il",
       "volkswagen__golf_gti__1990__2026__il",
-      "volkswagen__golf_r__2010__2026__il"
+      "volkswagen__golf_r__2010__2026__il",
+      "volkswagen__golf_variant__1993__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -901,15 +902,16 @@
       "volkswagen__e-up!__2014__2023__il",
       "volkswagen__golf__1990__2026__il",
       "volkswagen__golf_gti__1990__2026__il",
-      "volkswagen__golf_r__2010__2026__il"
+      "volkswagen__golf_r__2010__2026__il",
+      "volkswagen__golf_variant__1993__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
     ],
     "skipped_seed_ids": [],
     "in_progress_seed_id": null,
-    "last_completed_seed_id": "volkswagen__golf_r__2010__2026__il",
-    "next_seed_id": "volkswagen__golf_variant__1993__2026__il",
+    "last_completed_seed_id": "volkswagen__golf_variant__1993__2026__il",
+    "next_seed_id": "volkswagen__golf_plus__2005__2020__il",
     "run_history": [],
     "failed_details": [
       {
@@ -1717,13 +1719,24 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-14T23:31:08.487372+00:00"
+      },
+      "volkswagen__golf_variant__1993__2026__il": {
+        "seed_id": "volkswagen__golf_variant__1993__2026__il",
+        "variants_added_to_canonical": 0,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": "model_not_sold_in_market",
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T14:04:21.920071+00:00"
       }
     },
     "no_variants_by_seed": {
       "fiat__freemont__2011__2016__il": "model_not_sold_in_market",
       "ford__ecosport__2013__2022__il": "model_not_sold_in_market",
       "geely__coolray__2023__2026__il": "model_not_sold_in_market",
-      "hyundai__creta__2020__2026__il": "model_not_sold_in_market"
+      "hyundai__creta__2020__2026__il": "model_not_sold_in_market",
+      "volkswagen__golf_variant__1993__2026__il": "model_not_sold_in_market"
     },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
@@ -433716,11 +433729,11 @@
     "makes_count": 39,
     "models_count": 443,
     "unresolved": 1,
-    "processed_seeds": 445,
+    "processed_seeds": 446,
     "needs_retry_seeds": 0,
     "variants": 1552,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-14T23:31:08.498090+00:00"
+    "last_updated_at": "2026-05-16T14:04:21.935625+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
