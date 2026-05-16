@@ -335,7 +335,23 @@ def merge_result_into_canonical(canonical: dict, seed_id: str, variants: list[di
                                 proof_valid: bool = True) -> dict:
     """Merge a runner result into a COPY of canonical and return a candidate
     canonical + merge metadata. Does NOT save anything.
+
+    Hard invariant: this function must never be called for a zero-variant seed
+    that has no validated closure proof.  run_selected_seed() enforces this
+    before calling here; the check below is a defence-in-depth safety net to
+    surface any future regression loudly rather than silently corrupting state.
     """
+    # Centralised zero-variant closure guard (defence in depth).
+    # proof_valid=True is always passed by run_selected_seed() because the
+    # pre-merge guard already returned early for the invalid-proof case.
+    # If proof_valid is ever False it means a caller bypassed the pre-check —
+    # raise immediately so the bug is caught rather than silently saving bad data.
+    if not proof_valid and not variants:
+        raise ValueError(
+            f"zero_variant_without_proof: merge_result_into_canonical called for "
+            f"{seed_id!r} with zero variants and proof_valid=False — "
+            f"the caller must run the closure-proof guard before reaching merge"
+        )
     candidate = copy.deepcopy(canonical)
     ace = candidate.setdefault("accumulated_clean_export", {})
     existing = ace.get("variants") or []
