@@ -5,3 +5,5 @@ __pycache__/
 *.egg-info/
 data/output/
 data/cache/
+data/canonical/*backup*.json
+data/canonical/*_backup_*.json
