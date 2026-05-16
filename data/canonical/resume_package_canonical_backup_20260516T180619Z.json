@@ -360,6 +360,8 @@
       "ford__transit__1990__2026__il",
       "ford__transit_connect__2002__2026__il",
       "ford__transit_custom__2012__2026__il",
+      "gac_-_aion__aion_v__2024__2026__il",
+      "gac_-_aion__aion_y__2023__2026__il",
       "geely__geometry_c__2021__2026__il",
       "geely__starray__2024__2026__il",
       "genesis__g70__2018__2026__il",
@@ -398,8 +400,11 @@
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
+      "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
+      "ford__ecosport__2013__2022__il",
+      "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
@@ -425,6 +430,7 @@
       "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
       "hyundai__coupe__1996__2009__il",
+      "hyundai__creta__2020__2026__il",
       "hyundai__elantra__1990__2026__il",
       "hyundai__excel__1990__1998__il",
       "hyundai__getz__2002__2011__il",
@@ -803,6 +809,8 @@
       "ford__transit__1990__2026__il",
       "ford__transit_connect__2002__2026__il",
       "ford__transit_custom__2012__2026__il",
+      "gac_-_aion__aion_v__2024__2026__il",
+      "gac_-_aion__aion_y__2023__2026__il",
       "geely__geometry_c__2021__2026__il",
       "geely__starray__2024__2026__il",
       "genesis__g70__2018__2026__il",
@@ -841,8 +849,11 @@
       "daihatsu__copen__2002__2012__il",
       "ds_automobiles__ds_9__2020__2026__il",
       "fiat__bravo__1995__2014__il",
+      "fiat__freemont__2011__2016__il",
       "fiat__linea__2007__2018__il",
       "fiat__tipo__2016__2026__il",
+      "ford__ecosport__2013__2022__il",
+      "geely__coolray__2023__2026__il",
       "geely__monjaro__2023__2026__il",
       "haval__jolion__2021__2026__il",
       "honda__accord__1990__2024__il",
@@ -868,6 +879,7 @@
       "hyundai__bayon__2021__2026__il",
       "hyundai__casper__2022__2026__il",
       "hyundai__coupe__1996__2009__il",
+      "hyundai__creta__2020__2026__il",
       "hyundai__elantra__1990__2026__il",
       "hyundai__excel__1990__1998__il",
       "hyundai__getz__2002__2011__il",
@@ -910,14 +922,7 @@
         "created_at": "2026-05-10T12:57:31.358172+00:00"
       }
     ],
-    "needs_retry_seed_ids": [
-      "hyundai__creta__2020__2026__il",
-      "geely__coolray__2023__2026__il",
-      "gac_-_aion__aion_y__2023__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il",
-      "fiat__freemont__2011__2016__il",
-      "ford__ecosport__2013__2022__il"
-    ],
+    "needs_retry_seed_ids": [],
     "false_processed_seed_ids": [
       "bmw__850i__2018__2026__il",
       "bmw__z4_sdrive20i__2019__2026__il",
@@ -973,9 +978,7 @@
       "hyundai__ix35__2010__2015__il",
       "hyundai__kona__2017__2026__il",
       "infiniti__qx80__2010__2022__il",
-      "volkswagen__golf_variant__1993__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il",
-      "gac_-_aion__aion_y__2023__2026__il"
+      "volkswagen__golf_variant__1993__2026__il"
     ],
     "zero_variant_repair_audit": {
       "schema_version": 1,
@@ -1176,11 +1179,9 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T12:51:51.057678+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:51:51.057678+00:00"
       },
       "hyundai__atos__1997__2014__il": {
         "seed_id": "hyundai__atos__1997__2014__il",
@@ -1248,11 +1249,9 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T12:55:27.268576+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:55:27.268576+00:00"
       },
       "hyundai__i25__1994__2026__il": {
         "seed_id": "hyundai__i25__1994__2026__il",
@@ -1420,11 +1419,9 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T12:55:54.016653+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T12:55:54.016653+00:00"
       },
       "hyundai__ioniq_6__2023__2026__il": {
         "seed_id": "hyundai__ioniq_6__2023__2026__il",
@@ -1652,11 +1649,9 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T20:59:53.915400+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-14T20:59:53.915400+00:00"
       },
       "haval__h6__2022__2026__il": {
         "seed_id": "haval__h6__2022__2026__il",
@@ -1747,23 +1742,14 @@
         "marked_processed": true,
         "status": "resolved",
         "resolved_at": "2026-05-16T15:22:17.291191+00:00"
-      },
-      "gac_-_aion__aion_v__2024__2026__il": {
-        "seed_id": "gac_-_aion__aion_v__2024__2026__il",
-        "status": "reset_for_rerun",
-        "marked_processed": false,
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
-      },
-      "gac_-_aion__aion_y__2023__2026__il": {
-        "seed_id": "gac_-_aion__aion_y__2023__2026__il",
-        "status": "reset_for_rerun",
-        "marked_processed": false,
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
       }
     },
-    "no_variants_by_seed": {},
+    "no_variants_by_seed": {
+      "fiat__freemont__2011__2016__il": "model_not_sold_in_market",
+      "ford__ecosport__2013__2022__il": "model_not_sold_in_market",
+      "geely__coolray__2023__2026__il": "model_not_sold_in_market",
+      "hyundai__creta__2020__2026__il": "model_not_sold_in_market"
+    },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
     "zero_variant_policy": "retry_then_block",
@@ -2567,7 +2553,7 @@
     "normal_seed_excluded_from_rerun_queue": [
       "haval__h6__2022__2026__il"
     ],
-    "active_mode": "rerun_queue_required",
+    "active_mode": "normal_batch",
     "rerun_queue_path": "data/output/rerun_queue.json"
   },
   "run_history": [],
@@ -437795,8 +437781,8 @@
     "makes_count": 39,
     "models_count": 445,
     "unresolved": 1,
-    "processed_seeds": 441,
-    "needs_retry_seeds": 6,
+    "processed_seeds": 447,
+    "needs_retry_seeds": 0,
     "variants": 1564,
     "total_seeds": 993,
     "last_updated_at": "2026-05-16T15:22:17.301930+00:00"
