@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T18:30:52.705312+00:00",
+    "updated_at": "2026-05-16T18:31:43.418673+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -453,7 +453,8 @@
       "volkswagen__golf_plus__2005__2020__il",
       "hyundai__creta__2020__2026__il",
       "geely__coolray__2023__2026__il",
-      "gac_-_aion__aion_y__2023__2026__il"
+      "gac_-_aion__aion_y__2023__2026__il",
+      "gac_-_aion__aion_v__2024__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -899,7 +900,8 @@
       "volkswagen__golf_plus__2005__2020__il",
       "hyundai__creta__2020__2026__il",
       "geely__coolray__2023__2026__il",
-      "gac_-_aion__aion_y__2023__2026__il"
+      "gac_-_aion__aion_y__2023__2026__il",
+      "gac_-_aion__aion_v__2024__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -917,7 +919,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "gac_-_aion__aion_v__2024__2026__il",
       "fiat__freemont__2011__2016__il",
       "ford__ecosport__2013__2022__il"
     ],
@@ -1771,10 +1772,13 @@
       },
       "gac_-_aion__aion_v__2024__2026__il": {
         "seed_id": "gac_-_aion__aion_v__2024__2026__il",
-        "status": "reset_for_rerun",
-        "marked_processed": false,
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T18:31:43.418710+00:00"
       },
       "gac_-_aion__aion_y__2023__2026__il": {
         "seed_id": "gac_-_aion__aion_y__2023__2026__il",
@@ -220353,6 +220357,193 @@
         }
       },
       "identity_confidence": "market_confirmed"
+    },
+    {
+      "variant_id": "gac_aion_aion_v_2024_2026_il_2nd_gen_204_hp_electric_motor_75_3_kwh_single_speed_ev_suv_electric",
+      "make": "Gac - Aion",
+      "model": "aion v",
+      "aliases": [],
+      "year_start": {
+        "value": 2024,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "2nd Gen",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_carzone_il",
+          "src_cartube_il"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 3,
+        "source_ids": [
+          "src_aion_il_official",
+          "src_carzone_il",
+          "src_cartube_il"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 3 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "204 hp Electric Motor (75.3 kWh)",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "transmission": {
+        "value": "Single-speed EV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Electric",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_aion_il_official",
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": "Base",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_carzone_il"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 10,
+      "market_scope": "IL-confirmed",
+      "confidence_level": "high",
+      "created_at": "2026-05-16T18:31:43.245921+00:00",
+      "updated_at": "2026-05-16T18:31:43.245921+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Gac - Aion",
+        "model": "aion v",
+        "global_model_name": "Aion V",
+        "official_marketed_name_il": "Aion V",
+        "local_brand_name_il": "Aion",
+        "alternate_names": [
+          "GAC Aion V",
+          "איון V"
+        ],
+        "rebadged_as": "Toyota bZ3X",
+        "year_start": 2024,
+        "year_end": 2026,
+        "generation": "2nd Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "204 hp Electric Motor (75.3 kWh)",
+        "transmission": "Single-speed EV",
+        "fuel_type": "Electric",
+        "drivetrain": "FWD",
+        "trim": "Base",
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Israeli importer Orion Mobility (Union Group) officially launched the 2nd generation Aion V in Israel. Specs confirmed via Carzone and official price lists: 204 hp, 75.3 kWh battery, FWD.",
+        "source_ids": [
+          "src_aion_il_official",
+          "src_carzone_il",
+          "src_cartube_il",
+          "src_jpost"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_aion_il_official",
+            "src_carzone_il",
+            "src_cartube_il"
+          ],
+          "seats": [
+            "src_carzone_il"
+          ],
+          "engine": [
+            "src_carzone_il"
+          ],
+          "transmission": [
+            "src_carzone_il"
+          ],
+          "fuel_type": [
+            "src_aion_il_official",
+            "src_carzone_il"
+          ],
+          "drivetrain": [
+            "src_carzone_il"
+          ],
+          "generation": [
+            "src_carzone_il",
+            "src_cartube_il"
+          ],
+          "year_start": [
+            "src_carzone_il",
+            "src_cartube_il"
+          ],
+          "year_end": [
+            "src_carzone_il"
+          ],
+          "trim": [
+            "src_carzone_il"
+          ]
+        }
+      },
+      "identity_confidence": "market_confirmed"
     }
   ],
   "accumulated_clean_export": {
@@ -438109,6 +438300,193 @@
           }
         },
         "identity_confidence": "market_confirmed"
+      },
+      {
+        "variant_id": "gac_aion_aion_v_2024_2026_il_2nd_gen_204_hp_electric_motor_75_3_kwh_single_speed_ev_suv_electric",
+        "make": "Gac - Aion",
+        "model": "aion v",
+        "aliases": [],
+        "year_start": {
+          "value": 2024,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "2nd Gen",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_carzone_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 3,
+          "source_ids": [
+            "src_aion_il_official",
+            "src_carzone_il",
+            "src_cartube_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 3 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "204 hp Electric Motor (75.3 kWh)",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_aion_il_official",
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": "Base",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_carzone_il"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 10,
+        "market_scope": "IL-confirmed",
+        "confidence_level": "high",
+        "created_at": "2026-05-16T18:31:43.245921+00:00",
+        "updated_at": "2026-05-16T18:31:43.245921+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Gac - Aion",
+          "model": "aion v",
+          "global_model_name": "Aion V",
+          "official_marketed_name_il": "Aion V",
+          "local_brand_name_il": "Aion",
+          "alternate_names": [
+            "GAC Aion V",
+            "איון V"
+          ],
+          "rebadged_as": "Toyota bZ3X",
+          "year_start": 2024,
+          "year_end": 2026,
+          "generation": "2nd Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "204 hp Electric Motor (75.3 kWh)",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": "Base",
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Israeli importer Orion Mobility (Union Group) officially launched the 2nd generation Aion V in Israel. Specs confirmed via Carzone and official price lists: 204 hp, 75.3 kWh battery, FWD.",
+          "source_ids": [
+            "src_aion_il_official",
+            "src_carzone_il",
+            "src_cartube_il",
+            "src_jpost"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_aion_il_official",
+              "src_carzone_il",
+              "src_cartube_il"
+            ],
+            "seats": [
+              "src_carzone_il"
+            ],
+            "engine": [
+              "src_carzone_il"
+            ],
+            "transmission": [
+              "src_carzone_il"
+            ],
+            "fuel_type": [
+              "src_aion_il_official",
+              "src_carzone_il"
+            ],
+            "drivetrain": [
+              "src_carzone_il"
+            ],
+            "generation": [
+              "src_carzone_il",
+              "src_cartube_il"
+            ],
+            "year_start": [
+              "src_carzone_il",
+              "src_cartube_il"
+            ],
+            "year_end": [
+              "src_carzone_il"
+            ],
+            "trim": [
+              "src_carzone_il"
+            ]
+          }
+        },
+        "identity_confidence": "market_confirmed"
       }
     ],
     "quality_gate": {
@@ -438176,17 +438554,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1565,
+    "total_variants": 1566,
     "verified": 788,
-    "partial": 777,
+    "partial": 778,
     "makes_count": 40,
-    "models_count": 446,
+    "models_count": 447,
     "unresolved": 1,
-    "processed_seeds": 444,
-    "needs_retry_seeds": 3,
-    "variants": 1565,
+    "processed_seeds": 445,
+    "needs_retry_seeds": 2,
+    "variants": 1566,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T18:30:52.715006+00:00"
+    "last_updated_at": "2026-05-16T18:31:43.430170+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
