@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T18:31:43.418673+00:00",
+    "updated_at": "2026-05-16T18:32:15.011197+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -454,7 +454,8 @@
       "hyundai__creta__2020__2026__il",
       "geely__coolray__2023__2026__il",
       "gac_-_aion__aion_y__2023__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il"
+      "gac_-_aion__aion_v__2024__2026__il",
+      "fiat__freemont__2011__2016__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -901,7 +902,8 @@
       "hyundai__creta__2020__2026__il",
       "geely__coolray__2023__2026__il",
       "gac_-_aion__aion_y__2023__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il"
+      "gac_-_aion__aion_v__2024__2026__il",
+      "fiat__freemont__2011__2016__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -919,7 +921,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "fiat__freemont__2011__2016__il",
       "ford__ecosport__2013__2022__il"
     ],
     "false_processed_seed_ids": [
@@ -1180,11 +1181,20 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-14T12:51:51.057678+00:00",
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T18:32:15.011236+00:00",
+        "zero_variant_resolution": {
+          "resolved": true,
+          "reason": "model_not_sold_in_market",
+          "proof_status": "proven",
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "source_basis": "Official Israeli automotive magazine Auto.co.il confirms that while a single Fiat Freemont was brought to Israel for testing in 2013, the model was officially not marketed in Israel to avoid competing with the identical Dodge Journey, which was already being sold by a different local importer.",
+          "confidence": "high"
+        }
       },
       "hyundai__atos__1997__2014__il": {
         "seed_id": "hyundai__atos__1997__2014__il",
@@ -1793,7 +1803,8 @@
     },
     "no_variants_by_seed": {
       "hyundai__creta__2020__2026__il": "model_not_sold_in_market",
-      "geely__coolray__2023__2026__il": "model_not_sold_in_market"
+      "geely__coolray__2023__2026__il": "model_not_sold_in_market",
+      "fiat__freemont__2011__2016__il": "model_not_sold_in_market"
     },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
@@ -438560,11 +438571,11 @@
     "makes_count": 40,
     "models_count": 447,
     "unresolved": 1,
-    "processed_seeds": 445,
-    "needs_retry_seeds": 2,
+    "processed_seeds": 446,
+    "needs_retry_seeds": 1,
     "variants": 1566,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T18:31:43.430170+00:00"
+    "last_updated_at": "2026-05-16T18:32:15.022233+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
