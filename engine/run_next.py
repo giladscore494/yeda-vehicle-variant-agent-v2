@@ -41,13 +41,18 @@ _GUARD_VERSION = "proof_guard_v3_validate_canonical_placeholder_check"
 
 
 def _get_git_commit() -> str:
-    """Return the short HEAD commit SHA, or 'unknown' when git is unavailable."""
+    """Return the short HEAD commit SHA (hex only), or 'unknown' when git is unavailable."""
     try:
-        return subprocess.check_output(
+        raw = subprocess.check_output(
             ["git", "rev-parse", "--short", "HEAD"],
             stderr=subprocess.DEVNULL,
             timeout=3,
         ).decode().strip()
+        # Accept only lowercase hex strings (7–40 chars) to guard against
+        # injected output if the git repository is in an unexpected state.
+        if raw and all(c in "0123456789abcdef" for c in raw) and 7 <= len(raw) <= 40:
+            return raw
+        return "unknown"
     except Exception:
         return "unknown"
 
