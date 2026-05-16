@@ -107,9 +107,13 @@ def normalize_drivetrain(value):
     # 4x4 -> 4WD
     if "4x4" in v:
         return "4WD"
-    # Preserve standard codes
-    vu = v.upper().replace(" ", "")
-    for code in ("FWD", "RWD", "AWD", "4WD"):
-        if code in vu:
-            return code
+    # Standard codes (preserve canonical casing)
+    if "fwd" in v:
+        return "FWD"
+    if "rwd" in v:
+        return "RWD"
+    if "awd" in v:
+        return "AWD"
+    if "4wd" in v:
+        return "4WD"
     return clean_text(value)

@@ -248,7 +248,7 @@ Also verify the candidate output shape explicitly includes:
 - `market_scope`
 - `confidence_level`
 
-If the candidate shape section does not include these fields, add them.
+Ensure every candidate variant you return includes all three of these fields.
 
 Expected candidate shape rule:
 - `generation`: non-empty string
