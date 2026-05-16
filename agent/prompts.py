@@ -200,6 +200,61 @@ Every returned variant must include a source_basis/evidence note that explains:
 Example evidence note:
   "Official manufacturer documentation confirms body style and powertrain with specific engine and transmission. IL-market availability not confirmed; marked IL-likely/global-reference."
 
+==== GENERATION FIELD — ALWAYS POPULATE ====
+The `generation` field must never be null or an empty string.
+
+Rules:
+1. Prefer chassis codes when widely known (E46, W204, B8, Mk7).
+2. If no chassis code exists, use ordinal: "1st Gen", "2nd Gen", etc.
+3. The generation must match the variant's year range.
+4. If a model spans multiple generations within the seed range, produce
+   SEPARATE candidates per generation with their own year_start/year_end.
+5. These boundaries are guidance for generation splitting. Do not contradict them unless reliable IL-market evidence proves a local overlap/transition year.
+
+Known IL-market generation boundaries:
+  BMW 3 Series:   E30(1982-91) E36(1992-98) E46(1998-2006) E90(2005-12) F30(2012-19) G20(2019-)
+  BMW 5 Series:   E34(1988-95) E39(1995-03) E60(2003-10) F10(2010-17) G30(2017-)
+  BMW 7 Series:   E32(1987-94) E38(1994-01) E65(2001-08) F01(2008-15) G11(2015-)
+  BMW X3:         E83(2003-10) F25(2010-17) G01(2017-)
+  BMW X5:         E53(1999-06) E70(2006-13) F15(2013-18) G05(2018-)
+  Audi A3:        8L(1996-03) 8P(2003-12) 8V(2012-20) 8Y(2020-)
+  Audi A4:        B5(1994-01) B6(2001-05) B7(2005-08) B8(2008-16) B9(2016-)
+  Audi A6:        C4(1994-97) C5(1997-04) C6(2004-11) C7(2011-18) C8(2018-)
+  Audi Q5:        8R(2008-17) FY(2017-)
+  VW Golf:        Mk4(1997-03) Mk5(2003-08) Mk6(2008-13) Mk7(2013-20) Mk8(2020-)
+  VW Passat:      B5(1996-05) B6(2005-10) B7(2010-14) B8(2014-)
+  Mercedes C:     W202(1993-00) W203(2000-07) W204(2007-14) W205(2014-21) W206(2021-)
+  Mercedes E:     W210(1995-02) W211(2002-09) W212(2009-16) W213(2016-)
+  Mercedes GLC:   X253(2015-22) X254(2022-)
+  Toyota Corolla: E11(1997-02) E12(2002-06) E15(2006-13) E16(2013-19) E21(2019-)
+  Toyota Camry:   V40(2006-11) V50(2011-17) V70(2017-)
+  Toyota RAV4:    XA20(2000-05) XA30(2005-12) XA40(2012-18) XA50(2018-)
+  Honda Civic:    7G(2001-05) 8G(2006-11) 9G(2012-15) 10G(2016-21) 11G(2022-)
+  Honda CR-V:     1G(1996-01) 2G(2001-06) 3G(2006-11) 4G(2012-16) 5G(2017-22) 6G(2023-)
+  Hyundai i30:    FD(2007-12) GD(2012-17) PD(2017-)
+  Hyundai Tucson: 1G(2004-09) 2G(2009-15) 3G(2015-21) 4G(2021-)
+  Kia Sportage:   SL(2010-15) QL(2016-21) NQ5(2022-)
+  Kia Ceed:       1G(2006-12) 2G(2012-18) 3G(2018-)
+  Mazda 3:        BK(2003-09) BL(2009-13) BM(2014-18) BP(2019-)
+  Mazda 6:        GG(2002-07) GH(2008-12) GJ(2013-)
+  Mazda CX-5:     1G(2012-17) 2G(2017-)
+  Subaru Forester: SG(2002-07) SH(2008-12) SJ(2012-18) SK(2018-)
+  Subaru Outback:  3G(2003-09) 4G(2009-14) 5G(2014-19) 6G(2019-)
+  Volvo XC60:     1G(2008-17) 2G(2017-)
+  Volvo V60:      1G(2010-18) 2G(2018-)
+
+Also verify the candidate output shape explicitly includes:
+- `generation`
+- `market_scope`
+- `confidence_level`
+
+Ensure every candidate variant you return includes all three of these fields.
+
+Expected candidate shape rule:
+- `generation`: non-empty string
+- `market_scope`: one of `IL-confirmed`, `IL-likely`, `global-reference-only`, `unknown`
+- `confidence_level`: one of `high`, `medium`, `low`
+
 ==== CONFIDENCE LEVELS ====
 high:
   - core fields complete (body_type, engine, transmission, drivetrain, fuel_type)
