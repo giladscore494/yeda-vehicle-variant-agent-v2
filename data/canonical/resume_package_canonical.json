@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T18:30:10.636528+00:00",
+    "updated_at": "2026-05-16T18:30:52.705312+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -452,7 +452,8 @@
       "volkswagen__golf_variant__1993__2026__il",
       "volkswagen__golf_plus__2005__2020__il",
       "hyundai__creta__2020__2026__il",
-      "geely__coolray__2023__2026__il"
+      "geely__coolray__2023__2026__il",
+      "gac_-_aion__aion_y__2023__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -897,7 +898,8 @@
       "volkswagen__golf_variant__1993__2026__il",
       "volkswagen__golf_plus__2005__2020__il",
       "hyundai__creta__2020__2026__il",
-      "geely__coolray__2023__2026__il"
+      "geely__coolray__2023__2026__il",
+      "gac_-_aion__aion_y__2023__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -915,7 +917,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "gac_-_aion__aion_y__2023__2026__il",
       "gac_-_aion__aion_v__2024__2026__il",
       "fiat__freemont__2011__2016__il",
       "ford__ecosport__2013__2022__il"
@@ -1777,10 +1778,13 @@
       },
       "gac_-_aion__aion_y__2023__2026__il": {
         "seed_id": "gac_-_aion__aion_y__2023__2026__il",
-        "status": "reset_for_rerun",
-        "marked_processed": false,
-        "reset_reason": "zero_match_processed_seed_reset",
-        "reset_at": "2026-05-16T18:06:19.069220+00:00"
+        "variants_added_to_canonical": 1,
+        "variants_deduped_or_merged": 0,
+        "dedupe_proof": [],
+        "no_variants_reason": null,
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T18:30:52.705347+00:00"
       }
     },
     "no_variants_by_seed": {
@@ -220169,6 +220173,186 @@
         }
       },
       "identity_confidence": "market_confirmed"
+    },
+    {
+      "variant_id": "gac_aion_aion_y_2025_2026_il_1st_gen_front_electric_motor_204_hp_63_2_kwh_battery_single_speed_ev_suv_electric",
+      "make": "Gac - Aion",
+      "model": "aion y",
+      "aliases": [],
+      "year_start": {
+        "value": 2025,
+        "used_in_compare": false
+      },
+      "year_end": {
+        "value": 2026,
+        "used_in_compare": false
+      },
+      "market": "IL",
+      "generation": {
+        "value": "1st Gen",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "body_type": {
+        "value": "SUV",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "seats": {
+        "value": 5,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "engine": {
+        "value": "Front electric motor, 204 hp, 63.2 kWh battery",
+        "status": "verified",
+        "confidence": "high",
+        "sources_count": 2,
+        "source_ids": [
+          "src_1",
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "verified from 2 source(s)"
+      },
+      "transmission": {
+        "value": "Single-speed EV",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_3"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "fuel_type": {
+        "value": "Electric",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "drivetrain": {
+        "value": "FWD",
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_1"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "trim": {
+        "value": null,
+        "status": "partial",
+        "confidence": "medium",
+        "sources_count": 1,
+        "source_ids": [
+          "src_2"
+        ],
+        "used_in_compare": true,
+        "reason": "partial from 1 source(s)"
+      },
+      "doors": null,
+      "verification_status": "partial",
+      "confidence": "medium",
+      "sources_count": 9,
+      "market_scope": "IL-confirmed",
+      "confidence_level": "high",
+      "created_at": "2026-05-16T18:30:52.541732+00:00",
+      "updated_at": "2026-05-16T18:30:52.541732+00:00",
+      "notes": [],
+      "candidate_raw": {
+        "candidate_index": 0,
+        "make": "Gac - Aion",
+        "model": "aion y",
+        "global_model_name": "Aion Y Plus",
+        "official_marketed_name_il": "Aion Y",
+        "local_brand_name_il": "Aion",
+        "alternate_names": [
+          "GAC Aion Y"
+        ],
+        "rebadged_as": null,
+        "year_start": 2025,
+        "year_end": 2026,
+        "generation": "1st Gen",
+        "body_type": "SUV",
+        "seats": 5,
+        "engine": "Front electric motor, 204 hp, 63.2 kWh battery",
+        "transmission": "Single-speed EV",
+        "fuel_type": "Electric",
+        "drivetrain": "FWD",
+        "trim": null,
+        "market_scope": "IL-confirmed",
+        "market_name_confidence": "confirmed",
+        "confidence_level": "high",
+        "source_basis": "Confirmed by official Israeli importer (Orion Mobility / Union Group) and local automotive press. Launched in Israel in September 2025. Marketed simply as 'Aion Y' in a single unnamed trim level. Features a 204 hp front motor and 63.2 kWh battery with 410 km WLTP range.",
+        "source_ids": [
+          "src_1",
+          "src_2",
+          "src_3"
+        ],
+        "field_sources": {
+          "body_type": [
+            "src_1",
+            "src_3"
+          ],
+          "seats": [
+            "src_2"
+          ],
+          "engine": [
+            "src_1",
+            "src_2"
+          ],
+          "transmission": [
+            "src_3"
+          ],
+          "fuel_type": [
+            "src_1"
+          ],
+          "drivetrain": [
+            "src_1"
+          ],
+          "generation": [
+            "src_2"
+          ],
+          "year_start": [
+            "src_2"
+          ],
+          "year_end": [
+            "src_1"
+          ],
+          "trim": [
+            "src_2"
+          ]
+        }
+      },
+      "identity_confidence": "market_confirmed"
     }
   ],
   "accumulated_clean_export": {
@@ -437745,6 +437929,186 @@
           }
         },
         "identity_confidence": "market_confirmed"
+      },
+      {
+        "variant_id": "gac_aion_aion_y_2025_2026_il_1st_gen_front_electric_motor_204_hp_63_2_kwh_battery_single_speed_ev_suv_electric",
+        "make": "Gac - Aion",
+        "model": "aion y",
+        "aliases": [],
+        "year_start": {
+          "value": 2025,
+          "used_in_compare": false
+        },
+        "year_end": {
+          "value": 2026,
+          "used_in_compare": false
+        },
+        "market": "IL",
+        "generation": {
+          "value": "1st Gen",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "body_type": {
+          "value": "SUV",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "seats": {
+          "value": 5,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "engine": {
+          "value": "Front electric motor, 204 hp, 63.2 kWh battery",
+          "status": "verified",
+          "confidence": "high",
+          "sources_count": 2,
+          "source_ids": [
+            "src_1",
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "verified from 2 source(s)"
+        },
+        "transmission": {
+          "value": "Single-speed EV",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_3"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "fuel_type": {
+          "value": "Electric",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "drivetrain": {
+          "value": "FWD",
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_1"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "trim": {
+          "value": null,
+          "status": "partial",
+          "confidence": "medium",
+          "sources_count": 1,
+          "source_ids": [
+            "src_2"
+          ],
+          "used_in_compare": true,
+          "reason": "partial from 1 source(s)"
+        },
+        "doors": null,
+        "verification_status": "partial",
+        "confidence": "medium",
+        "sources_count": 9,
+        "market_scope": "IL-confirmed",
+        "confidence_level": "high",
+        "created_at": "2026-05-16T18:30:52.541732+00:00",
+        "updated_at": "2026-05-16T18:30:52.541732+00:00",
+        "notes": [],
+        "candidate_raw": {
+          "candidate_index": 0,
+          "make": "Gac - Aion",
+          "model": "aion y",
+          "global_model_name": "Aion Y Plus",
+          "official_marketed_name_il": "Aion Y",
+          "local_brand_name_il": "Aion",
+          "alternate_names": [
+            "GAC Aion Y"
+          ],
+          "rebadged_as": null,
+          "year_start": 2025,
+          "year_end": 2026,
+          "generation": "1st Gen",
+          "body_type": "SUV",
+          "seats": 5,
+          "engine": "Front electric motor, 204 hp, 63.2 kWh battery",
+          "transmission": "Single-speed EV",
+          "fuel_type": "Electric",
+          "drivetrain": "FWD",
+          "trim": null,
+          "market_scope": "IL-confirmed",
+          "market_name_confidence": "confirmed",
+          "confidence_level": "high",
+          "source_basis": "Confirmed by official Israeli importer (Orion Mobility / Union Group) and local automotive press. Launched in Israel in September 2025. Marketed simply as 'Aion Y' in a single unnamed trim level. Features a 204 hp front motor and 63.2 kWh battery with 410 km WLTP range.",
+          "source_ids": [
+            "src_1",
+            "src_2",
+            "src_3"
+          ],
+          "field_sources": {
+            "body_type": [
+              "src_1",
+              "src_3"
+            ],
+            "seats": [
+              "src_2"
+            ],
+            "engine": [
+              "src_1",
+              "src_2"
+            ],
+            "transmission": [
+              "src_3"
+            ],
+            "fuel_type": [
+              "src_1"
+            ],
+            "drivetrain": [
+              "src_1"
+            ],
+            "generation": [
+              "src_2"
+            ],
+            "year_start": [
+              "src_2"
+            ],
+            "year_end": [
+              "src_1"
+            ],
+            "trim": [
+              "src_2"
+            ]
+          }
+        },
+        "identity_confidence": "market_confirmed"
       }
     ],
     "quality_gate": {
@@ -437812,17 +438176,17 @@
     "current_total_variants": 1519
   },
   "counts": {
-    "total_variants": 1564,
+    "total_variants": 1565,
     "verified": 788,
-    "partial": 776,
-    "makes_count": 39,
-    "models_count": 445,
+    "partial": 777,
+    "makes_count": 40,
+    "models_count": 446,
     "unresolved": 1,
-    "processed_seeds": 443,
-    "needs_retry_seeds": 4,
-    "variants": 1564,
+    "processed_seeds": 444,
+    "needs_retry_seeds": 3,
+    "variants": 1565,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T18:30:10.646661+00:00"
+    "last_updated_at": "2026-05-16T18:30:52.715006+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
