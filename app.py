@@ -110,6 +110,15 @@ def _main_run_tab(canonical: dict) -> None:
                     f"rejected={rejected}"
                 )
         st.json(result)
+        # --- Engine diagnostic ---
+        diag = result.get("_engine_diagnostic") or {}
+        if diag:
+            st.caption(
+                f"🔍 Engine diagnostic — "
+                f"code_path: `{diag.get('code_path')}` | "
+                f"guard: `{diag.get('guard_version')}` | "
+                f"git: `{diag.get('git_commit')}`"
+            )
 
 
 def _manual_tab() -> None:

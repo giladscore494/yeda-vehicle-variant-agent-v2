@@ -15,6 +15,7 @@ Critical rules:
 from __future__ import annotations
 
 import copy
+import subprocess
 from datetime import datetime, timezone
 from typing import Any, Callable
 
@@ -32,6 +33,23 @@ from engine.merge_variants import merge_variants
 from engine.quality_gate import validate_candidate_variants_quality
 
 MAX_BATCH_SIZE = 20
+
+# Increment this token whenever the proof-guard logic in run_selected_seed()
+# changes.  It is embedded in every run_next_model() result so that the UI
+# and logs can confirm which guard version executed the batch.
+_GUARD_VERSION = "proof_guard_v3_validate_canonical_placeholder_check"
+
+
+def _get_git_commit() -> str:
+    """Return the short HEAD commit SHA, or 'unknown' when git is unavailable."""
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            stderr=subprocess.DEVNULL,
+            timeout=3,
+        ).decode().strip()
+    except Exception:
+        return "unknown"
 
 
 def _now() -> str:
@@ -666,6 +684,11 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
             "stop_reason": stop_reason,
             "results": [],
             "final_state": _final_state_from_canonical(load_canonical()),
+            "_engine_diagnostic": {
+                "code_path": "app.py → run_next_model() → run_selected_seed()",
+                "guard_version": _GUARD_VERSION,
+                "git_commit": _get_git_commit(),
+            },
         }
 
     results: list[dict] = []
@@ -749,4 +772,9 @@ def run_next_model(*, run_seed_fn: Callable | None = None,
         "stop_reason": stop_reason,
         "results": results,
         "final_state": _final_state_from_canonical(final_canonical),
+        "_engine_diagnostic": {
+            "code_path": "app.py → run_next_model() → run_selected_seed()",
+            "guard_version": _GUARD_VERSION,
+            "git_commit": _get_git_commit(),
+        },
     }
