@@ -44,6 +44,10 @@ def normalize_body_type(value: str) -> BodyType:
 
 def normalize_fuel_type(value: str) -> FuelType:
     v = clean_text(value).lower()
+    # mild hybrid must be checked BEFORE petrol/diesel/hybrid because compound phrases like
+    # "petrol mild hybrid" or "mild hybrid diesel" contain those substrings
+    if _contains(v, "mild hybrid", "mild-hybrid", "mhev"):
+        return FuelType.mild_hybrid
     if _contains(v, "gasoline", "benzine", "petrol"):
         return FuelType.petrol
     if "diesel" in v:
@@ -94,8 +98,18 @@ def normalize_market(value: str) -> Market:
 def normalize_drivetrain(value):
     if not value:
         return None
-    v = clean_text(value).upper().replace(" ", "")
+    v = clean_text(value).lower()
+    # Branded AWD systems -> AWD
+    if _contains(v, "xdrive", "quattro", "4motion", "4matic", "all4",
+                 "h-trac", "htrac", "i-activ awd", "iactiv awd",
+                 "symmetrical awd", "e-awd", "eawd", "e4wd"):
+        return "AWD"
+    # 4x4 -> 4WD
+    if "4x4" in v:
+        return "4WD"
+    # Preserve standard codes
+    vu = v.upper().replace(" ", "")
     for code in ("FWD", "RWD", "AWD", "4WD"):
-        if code in v:
+        if code in vu:
             return code
     return clean_text(value)

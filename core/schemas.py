@@ -38,6 +38,7 @@ class BodyType(str, Enum):
 class FuelType(str, Enum):
     petrol = "petrol"
     diesel = "diesel"
+    mild_hybrid = "mild_hybrid"
     hybrid = "hybrid"
     plug_in_hybrid = "plug_in_hybrid"
     electric = "electric"

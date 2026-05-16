@@ -94,6 +94,8 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
         return _field(value, sources_count=len(ids), source_ids=ids)
 
     now = _now()
+    gen_ids = field_sources.get("generation") or []
+    gen_ids = gen_ids if isinstance(gen_ids, list) else []
     variant: dict = {
         "variant_id": variant_id,
         "make": make,
@@ -102,7 +104,7 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
         "year_start": {"value": ys, "used_in_compare": False},
         "year_end": {"value": ye, "used_in_compare": False},
         "market": market,
-        "generation": {"value": generation, "used_in_compare": False},
+        "generation": _field(generation, sources_count=len(gen_ids), source_ids=gen_ids),
         "body_type": fld("body_type", body_type),
         "seats": fld("seats", seats),
         "engine": fld("engine", engine),
