@@ -1,12 +1,19 @@
-"""Targeted canonical repair: reset 4 invalid zero-variant closure seeds to needs_retry.
+"""Targeted canonical repair: reset invalid zero-variant closure seeds to needs_retry.
 
-These seeds were processed during the 6-seed problem_queue run but their
-zero_variant_resolution.source_ids contain only placeholder IDs (src_1, src_2, …),
+These seeds were processed during a problem_queue run but their
+zero_variant_resolution.source_ids contained only placeholder IDs (src_1, src_2, …),
 making the "proven" proof_status invalid.
 
-Seeds to reset:
+Audit results (2026-05-16, guard: proof_guard_v3_validate_canonical_placeholder_check):
+  - hyundai__creta__2020__2026__il  → ALREADY RESET (in needs_retry, status=reset_for_rerun)
+  - geely__coolray__2023__2026__il  → VALID closure — re-run with non-placeholder
+                                       source_ids ["src_walla_cars", "src_autoboom_il"];
+                                       proof_status=proven, confidence=high. EXCLUDED.
+  - fiat__freemont__2011__2016__il  → INVALID (placeholder sources) — reset to needs_retry
+  - ford__ecosport__2013__2022__il  → INVALID (placeholder sources) — reset to needs_retry
+
+Seeds handled by this script (idempotent — safe to re-run):
   - hyundai__creta__2020__2026__il
-  - geely__coolray__2023__2026__il
   - fiat__freemont__2011__2016__il
   - ford__ecosport__2013__2022__il
 
@@ -32,9 +39,11 @@ CANONICAL_PATH = REPO_ROOT / "data/canonical/resume_package_canonical.json"
 # Seeds to repair
 # -------------------------------------------------------------------------
 
+# geely__coolray__2023__2026__il is intentionally excluded: it was re-run with
+# non-placeholder source_ids ["src_walla_cars", "src_autoboom_il"] (proof_status=proven,
+# confidence=high) and is a VALID zero-variant closure.  Do not reset it.
 INVALID_PLACEHOLDER_CLOSURE_SEEDS = [
     "hyundai__creta__2020__2026__il",
-    "geely__coolray__2023__2026__il",
     "fiat__freemont__2011__2016__il",
     "ford__ecosport__2013__2022__il",
 ]
@@ -139,7 +148,8 @@ def apply_reset(data: dict, now_ts: str) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Reset 4 invalid placeholder-closure seeds back to needs_retry in canonical."
+            "Reset invalid placeholder-closure seeds back to needs_retry in canonical. "
+            "Geely Coolray is excluded (valid non-placeholder sources confirmed)."
         )
     )
     parser.add_argument(
@@ -185,7 +195,7 @@ def main() -> None:
     print("\n=== Invalid Placeholder Closure Reset Report ===")
     if args.dry_run:
         print("(DRY RUN — no changes written)")
-    print(f"\nSeeds reset ({len(INVALID_PLACEHOLDER_CLOSURE_SEEDS)}):")
+    print(f"\nSeeds handled ({len(INVALID_PLACEHOLDER_CLOSURE_SEEDS)}):")
     for s in INVALID_PLACEHOLDER_CLOSURE_SEEDS:
         print(f"  [placeholder_closure]  {s}")
     print(f"\nProcessed seeds:   {processed_before} -> {processed_after}")
@@ -216,7 +226,9 @@ def main() -> None:
     except Exception as exc:
         print(f"WARNING: post-write validation failed: {exc}", file=sys.stderr)
 
-    print("\nSafe to continue: problem_queue rerun required for the 4 reset seeds.")
+    print("\nSafe to continue: problem_queue rerun required for the 3 reset seeds. "
+          "geely__coolray__2023__2026__il has a valid non-placeholder closure and "
+          "remains processed.")
 
 
 if __name__ == "__main__":
