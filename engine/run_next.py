@@ -207,9 +207,67 @@ def _advance_normal_cursor(bs: dict, current_seed_id: str,
     )
 
 
+_NO_VARIANTS_RETRY_REASONS = frozenset({
+    "no_reliable_sources_found",
+    "insufficient_grounded_data",
+    "source_conflict_unresolved",
+    "blocked_by_validation",
+})
+
+
+def _is_no_variants_proof_valid(no_variants_reason: str | None, *,
+                                dedupe_proof: list[dict],
+                                no_variants_source_ids: list,
+                                no_variants_source_basis: str | None,
+                                no_variants_confidence: str | None) -> bool:
+    """Return True only when there is validated proof for a zero-variant result.
+
+    Rules (see problem statement):
+    A. duplicate_existing_variant_only requires non-empty dedupe_proof.
+    B. model_not_sold_in_market requires structured evidence with source_ids,
+       source_basis, and confidence not lower than medium.
+    C. seed_out_of_scope — deterministic; always resolves.
+    D. no_reliable_sources_found / insufficient_grounded_data /
+       source_conflict_unresolved / blocked_by_validation — do NOT resolve.
+    E. model_discontinued_before_market_period — resolves only with sources or
+       at least source_basis proof.
+    """
+    reason = (no_variants_reason or "").strip()
+    if not reason:
+        return False
+
+    if reason in _NO_VARIANTS_RETRY_REASONS:
+        # These must NOT close a seed in a normal batch run.
+        return False
+
+    if reason == "duplicate_existing_variant_only":
+        return bool(dedupe_proof)
+
+    if reason == "model_not_sold_in_market":
+        has_sources = bool(no_variants_source_ids)
+        has_basis = bool((no_variants_source_basis or "").strip())
+        conf = (no_variants_confidence or "").strip().lower()
+        confidence_ok = conf in ("high", "medium")
+        return has_sources and has_basis and confidence_ok
+
+    if reason == "seed_out_of_scope":
+        return True
+
+    if reason == "model_discontinued_before_market_period":
+        has_sources = bool(no_variants_source_ids)
+        has_basis = bool((no_variants_source_basis or "").strip())
+        return has_sources or has_basis
+
+    # Unknown reason strings do not resolve.
+    return False
+
+
 def _has_dedupe_or_no_variants_proof(seed_id: str, dedupe_proof: list[dict],
                                      added_count: int, merged_count: int,
-                                     no_variants_reason: str | None) -> bool:
+                                     no_variants_reason: str | None, *,
+                                     no_variants_source_ids: list | None = None,
+                                     no_variants_source_basis: str | None = None,
+                                     no_variants_confidence: str | None = None) -> bool:
     """Closure rule: seed is resolved when one of these conditions holds."""
     if added_count > 0:
         return True
@@ -217,17 +275,39 @@ def _has_dedupe_or_no_variants_proof(seed_id: str, dedupe_proof: list[dict],
         return True
     if dedupe_proof:
         return True
-    if isinstance(no_variants_reason, str) and no_variants_reason.strip():
-        return True
-    return False
+    return _is_no_variants_proof_valid(
+        no_variants_reason,
+        dedupe_proof=dedupe_proof,
+        no_variants_source_ids=list(no_variants_source_ids or []),
+        no_variants_source_basis=no_variants_source_basis,
+        no_variants_confidence=no_variants_confidence,
+    )
 
 
 def _record_seed_accounting(canonical: dict, seed_id: str, *,
                             added: int, merged: int,
                             dedupe_proof: list[dict],
-                            no_variants_reason: str | None) -> None:
+                            no_variants_reason: str | None,
+                            no_variants_source_ids: list | None = None,
+                            no_variants_source_basis: str | None = None,
+                            no_variants_confidence: str | None = None,
+                            proof_valid: bool = True) -> None:
     bs = canonical["batch_state"]
     accounting = bs.setdefault("seed_accounting", {})
+
+    if no_variants_reason and added == 0 and merged == 0:
+        proof_status = "proven" if proof_valid else "unproven"
+        zero_variant_resolution = {
+            "resolved": proof_valid,
+            "reason": no_variants_reason,
+            "proof_status": proof_status,
+            "source_ids": list(no_variants_source_ids or []),
+            "source_basis": no_variants_source_basis or "",
+            "confidence": no_variants_confidence or "",
+        }
+    else:
+        zero_variant_resolution = None
+
     accounting[seed_id] = {
         "seed_id": seed_id,
         "variants_added_to_canonical": added,
@@ -237,6 +317,8 @@ def _record_seed_accounting(canonical: dict, seed_id: str, *,
         "marked_processed": True,
         "status": "resolved",
         "resolved_at": _now(),
+        **({"zero_variant_resolution": zero_variant_resolution}
+           if zero_variant_resolution is not None else {}),
     }
     if no_variants_reason:
         nvbs = bs.setdefault("no_variants_by_seed", {})
@@ -246,7 +328,11 @@ def _record_seed_accounting(canonical: dict, seed_id: str, *,
 def merge_result_into_canonical(canonical: dict, seed_id: str, variants: list[dict],
                                 no_variants_reason: str | None,
                                 mode: str,
-                                seed_catalog: list[str] | None = None) -> dict:
+                                seed_catalog: list[str] | None = None,
+                                no_variants_source_ids: list | None = None,
+                                no_variants_source_basis: str | None = None,
+                                no_variants_confidence: str | None = None,
+                                proof_valid: bool = True) -> dict:
     """Merge a runner result into a COPY of canonical and return a candidate
     canonical + merge metadata. Does NOT save anything.
     """
@@ -291,6 +377,10 @@ def merge_result_into_canonical(canonical: dict, seed_id: str, variants: list[di
         merged=merge_res["merged_count"],
         dedupe_proof=merge_res["dedupe_proof"],
         no_variants_reason=no_variants_reason,
+        no_variants_source_ids=no_variants_source_ids,
+        no_variants_source_basis=no_variants_source_basis,
+        no_variants_confidence=no_variants_confidence,
+        proof_valid=proof_valid,
     )
 
     return {
@@ -396,6 +486,9 @@ def run_selected_seed(seed_id: str, *,
 
     variants = run_result.get("variants") or []
     no_variants_reason = run_result.get("no_variants_reason")
+    no_variants_source_ids: list = run_result.get("no_variants_source_ids") or []
+    no_variants_source_basis: str | None = run_result.get("no_variants_source_basis")
+    no_variants_confidence: str | None = run_result.get("no_variants_confidence")
     seed_info = run_result.get("seed") or {}
 
     # Run quality gate: filter and normalise variants before merging into canonical.
@@ -416,17 +509,57 @@ def run_selected_seed(seed_id: str, *,
             }
         variants = quality_report["accepted_variant_objects"]
 
+    # Evaluate closure proof BEFORE writing into canonical so that we never
+    # save a zero-variant result that has no validated proof.
+    resolved = _has_dedupe_or_no_variants_proof(
+        seed_id,
+        [],  # dedupe_proof is unknown before merge; checked again after
+        len(variants),   # proxy: >0 means added_count will be >0
+        0,
+        no_variants_reason,
+        no_variants_source_ids=no_variants_source_ids,
+        no_variants_source_basis=no_variants_source_basis,
+        no_variants_confidence=no_variants_confidence,
+    ) or bool(variants)
+
+    if not resolved:
+        # Zero variants and no valid proof: fail safe — do not save, do not advance.
+        reason = (no_variants_reason or "").strip()
+        error_msg = "zero_variant_without_proof: no variants added/merged and no validated no_variants proof"
+        return {
+            "ok": False,
+            "seed_id": seed_id,
+            "mode": mode,
+            "error": error_msg,
+            "no_variants_reason": no_variants_reason,
+            "no_variants_evidence": run_result.get("no_variants_evidence") or [],
+            "closure_decision": "not_resolved",
+            "should_retry": reason not in _NO_VARIANTS_RETRY_REASONS,
+            "added_count": 0,
+            "merged_count": 0,
+            "save": None,
+            "push": None,
+        }
+
     merge_res = merge_result_into_canonical(
         canonical, seed_id, variants, no_variants_reason, mode,
         seed_catalog=seed_catalog,
+        no_variants_source_ids=no_variants_source_ids,
+        no_variants_source_basis=no_variants_source_basis,
+        no_variants_confidence=no_variants_confidence,
+        proof_valid=resolved,
     )
 
+    # Re-evaluate with actual merge counts (handles dedupe_proof from merge).
     resolved = _has_dedupe_or_no_variants_proof(
         seed_id,
         merge_res["dedupe_proof"],
         merge_res["added_count"],
         merge_res["merged_count"],
         no_variants_reason,
+        no_variants_source_ids=no_variants_source_ids,
+        no_variants_source_basis=no_variants_source_basis,
+        no_variants_confidence=no_variants_confidence,
     )
     if not resolved:
         # No proof of resolution: do not save, do not advance.
@@ -434,7 +567,11 @@ def run_selected_seed(seed_id: str, *,
             "ok": False,
             "seed_id": seed_id,
             "mode": mode,
-            "error": "closure_rule_failed: no variants added/merged and no no_variants_reason",
+            "error": "zero_variant_without_proof: no variants added/merged and no validated no_variants proof",
+            "no_variants_reason": no_variants_reason,
+            "no_variants_evidence": run_result.get("no_variants_evidence") or [],
+            "closure_decision": "not_resolved",
+            "should_retry": True,
             "added_count": merge_res["added_count"],
             "merged_count": merge_res["merged_count"],
             "save": None,
