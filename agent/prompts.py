@@ -323,7 +323,9 @@ If the answer to any question is NO:
 
 ==== OUTPUT FORMAT ====
 Return max 8 candidate_variants and max 5 sources.
-Top-level keys: search_queries, sources, candidate_variants, no_variants_reason, conflicts, unresolved, unresolved_reason.
+Top-level keys: search_queries, sources, candidate_variants, no_variants_reason,
+no_variants_source_ids, no_variants_source_basis, no_variants_confidence,
+no_variants_reason_detail, conflicts, unresolved, unresolved_reason.
 
 If no candidate variants can be found, return:
   candidate_variants: []
@@ -332,6 +334,30 @@ If no candidate variants can be found, return:
     duplicate_existing_variant_only | seed_out_of_scope | model_discontinued_before_market_period |
     source_conflict_unresolved | blocked_by_validation
 Never return an empty candidate_variants list without no_variants_reason.
+
+IMPORTANT — when candidate_variants is empty, no_variants_reason alone is NOT enough.
+You MUST also return the following evidence fields:
+  no_variants_source_ids: []          — list of source_id strings that support the claim
+  no_variants_source_basis: ""        — explanation of why no variants exist
+  no_variants_confidence: "high|medium|low"
+  no_variants_reason_detail: ""       — extra detail or evidence summary
+
+Rules for no_variants_reason:
+- Use model_not_sold_in_market ONLY if you have reliable IL-market evidence
+  confirming non-availability. Vague absence of results is NOT enough.
+  You must supply no_variants_source_ids (non-empty), no_variants_source_basis,
+  and no_variants_confidence of medium or high.
+- If you only failed to find reliable sources, use no_reliable_sources_found or
+  insufficient_grounded_data — NOT model_not_sold_in_market.
+- For body-style derivatives such as Variant, Touring, Avant, SW, Estate, Wagon,
+  Break: do NOT claim model_not_sold_in_market unless you have direct IL-market
+  evidence. If global evidence confirms the body style but IL evidence is missing,
+  prefer returning a global-reference-only or IL-likely candidate instead of
+  empty candidates.
+- Never use duplicate_existing_variant_only unless you can identify the duplicate
+  existing variant_id in your response.
+- model_discontinued_before_market_period requires either source_ids or
+  source_basis explaining why the model's end year precedes the seed year_start.
 
 Candidate shape:
 {{

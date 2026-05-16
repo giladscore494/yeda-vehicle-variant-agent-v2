@@ -187,6 +187,11 @@ def run_seed(seed_id: str, *, retry_hint: bool = False, discovery_fn=None) -> di
         "seed": seed,
         "variants": variants,
         "no_variants_reason": data.get("no_variants_reason"),
+        "no_variants_evidence": data.get("no_variants_evidence") or [],
+        "no_variants_source_ids": data.get("no_variants_source_ids") or [],
+        "no_variants_source_basis": data.get("no_variants_source_basis"),
+        "no_variants_confidence": data.get("no_variants_confidence"),
+        "no_variants_reason_detail": data.get("no_variants_reason_detail"),
         "discovery": discovery,
         "error": None,
     }
