@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T18:32:54.510434+00:00",
+    "updated_at": "2026-05-16T19:14:19.181204+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -452,7 +452,8 @@
       "volkswagen__golf_variant__1993__2026__il",
       "volkswagen__golf_plus__2005__2020__il",
       "gac_-_aion__aion_y__2023__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il"
+      "gac_-_aion__aion_v__2024__2026__il",
+      "hyundai__creta__2020__2026__il"
     ],
     "processed_seeds": [
       "abarth__124_spider__2016__2020__il",
@@ -897,7 +898,8 @@
       "volkswagen__golf_variant__1993__2026__il",
       "volkswagen__golf_plus__2005__2020__il",
       "gac_-_aion__aion_y__2023__2026__il",
-      "gac_-_aion__aion_v__2024__2026__il"
+      "gac_-_aion__aion_v__2024__2026__il",
+      "hyundai__creta__2020__2026__il"
     ],
     "failed_seed_ids": [
       "hyundai__nexo__2019__2026__il"
@@ -915,7 +917,6 @@
       }
     ],
     "needs_retry_seed_ids": [
-      "hyundai__creta__2020__2026__il",
       "geely__coolray__2023__2026__il",
       "fiat__freemont__2011__2016__il",
       "ford__ecosport__2013__2022__il"
@@ -1688,22 +1689,21 @@
         "variants_deduped_or_merged": 0,
         "dedupe_proof": [],
         "no_variants_reason": "model_not_sold_in_market",
-        "marked_processed": false,
-        "status": "reset_for_rerun",
-        "resolved_at": "2026-05-16T18:29:43.183350+00:00",
+        "marked_processed": true,
+        "status": "resolved",
+        "resolved_at": "2026-05-16T19:14:19.181237+00:00",
         "zero_variant_resolution": {
           "resolved": true,
           "reason": "model_not_sold_in_market",
-          "proof_status": "invalid_placeholder_sources",
+          "proof_status": "proven",
           "source_ids": [
             "src_1",
-            "src_2"
+            "src_2",
+            "src_3"
           ],
-          "source_basis": "Israeli automotive sources explicitly state that the Hyundai Creta is intended for emerging markets (Asia, South America, Russia) and lacks the European standardization required for the Israeli market. Hyundai markets the Kona and Venue in Israel instead.",
+          "source_basis": "Official Israeli importer data (Colmobil / Hyundai Israel) and local automotive databases (Autoboom, Auto.co.il) confirm that the Hyundai Creta is not officially marketed in Israel. The B-SUV segment in Israel is instead covered by the Hyundai Venue and Hyundai Kona. Autoboom explicitly lists the 2nd generation (2020-present) as 'Not available in Israel'.",
           "confidence": "high"
-        },
-        "reset_reason": "placeholder_source_ids_invalidated_zero_variant_closure",
-        "reset_at": "2026-05-16T19:04:32.716161+00:00"
+        }
       },
       "haval__h6__2022__2026__il": {
         "seed_id": "haval__h6__2022__2026__il",
@@ -1816,7 +1816,9 @@
         "resolved_at": "2026-05-16T18:30:52.705347+00:00"
       }
     },
-    "no_variants_by_seed": {},
+    "no_variants_by_seed": {
+      "hyundai__creta__2020__2026__il": "model_not_sold_in_market"
+    },
     "dedupe_proof_by_seed": {},
     "zero_variant_seed_ids": [],
     "zero_variant_policy": "retry_then_block",
@@ -438582,11 +438584,11 @@
     "makes_count": 40,
     "models_count": 447,
     "unresolved": 1,
-    "processed_seeds": 443,
-    "needs_retry_seeds": 4,
+    "processed_seeds": 444,
+    "needs_retry_seeds": 3,
     "variants": 1566,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T18:32:54.521276+00:00"
+    "last_updated_at": "2026-05-16T19:14:19.190443+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
