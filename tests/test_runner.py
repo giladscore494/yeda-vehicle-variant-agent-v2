@@ -256,7 +256,7 @@ class TestIdentityConfidenceDerived:
         assert _derive_identity_confidence("IL-confirmed", "", 1) == "low"
 
     def test_none_inputs_give_low(self):
-        assert _derive_identity_confidence(None, None, 0) == "low"  # type: ignore[arg-type]
+        assert _derive_identity_confidence(None, None, 0) == "low"  # type: ignore[arg-type]  # testing None guard in helper
 
     def test_identity_confidence_not_constant_in_variant(self):
         """Verify the variant dict itself has a non-constant identity_confidence."""

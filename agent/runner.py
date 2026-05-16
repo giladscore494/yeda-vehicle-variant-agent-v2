@@ -102,8 +102,8 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
     drivetrain = cand.get("drivetrain")
     seats = cand.get("seats")
     trim = cand.get("trim")
-    market_scope = str(cand.get("market_scope") or "").strip()
-    confidence_level = str(cand.get("confidence_level") or "").strip()
+    market_scope = (cand.get("market_scope") or "").strip()
+    confidence_level = (cand.get("confidence_level") or "").strip()
 
     variant_id = generate_variant_id(
         make, model, ys, ye, market,
@@ -142,8 +142,8 @@ def _candidate_to_variant(candidate: dict, seed: dict) -> dict:
         "verification_status": "partial" if body_type or engine or fuel_type else "unresolved",
         "confidence": "medium" if body_type or engine or fuel_type else "low",
         "sources_count": total_sources,
-        "market_scope": market_scope or None,
-        "confidence_level": confidence_level or None,
+        "market_scope": market_scope if market_scope else None,
+        "confidence_level": confidence_level if confidence_level else None,
         "created_at": now,
         "updated_at": now,
         "notes": [],
