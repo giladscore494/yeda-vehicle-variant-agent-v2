@@ -31,6 +31,15 @@ def test_build_discovery_prompt_haval_h6_il():
     assert "}" in prompt
 
 
+def test_discovery_prompt_no_placeholder_source_id_rule():
+    """Prompt must instruct the model never to use placeholder source IDs."""
+    prompt = build_discovery_prompt(SEED_HAVAL_H6, market="IL")
+    assert "placeholder source IDs" in prompt
+    assert "src_1" in prompt          # referenced in the rule as a forbidden example
+    assert "no_variants_source_ids" in prompt
+    assert "no_reliable_sources_found" in prompt
+
+
 def test_build_retry_discovery_prompt_haval_h6_il():
     prompt = build_retry_discovery_prompt(SEED_HAVAL_H6, market="IL")
 

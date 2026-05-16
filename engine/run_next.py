@@ -15,6 +15,7 @@ Critical rules:
 from __future__ import annotations
 
 import copy
+import re
 from datetime import datetime, timezone
 from typing import Any, Callable
 
@@ -214,6 +215,22 @@ _NO_VARIANTS_RETRY_REASONS = frozenset({
     "blocked_by_validation",
 })
 
+# Placeholder source-ID pattern: src_1, src_2, source_1, citation_1, ref_1, "1", "2", ...
+_PLACEHOLDER_SOURCE_ID_RE = re.compile(
+    r"^(?:src|source|citation|ref)_\d+$|^\d+$",
+    re.IGNORECASE,
+)
+
+
+def _looks_like_placeholder_source_id(source_id: str) -> bool:
+    """Return True when *source_id* looks like a generated/fake placeholder.
+
+    Rejected patterns: src_1, src_2, src_3, src_4, source_1, source_2,
+    citation_1, ref_1, "1", "2", "3", and any ID matching the scheme
+    ``(src|source|citation|ref)_<digits>`` or a bare digit string.
+    """
+    return bool(_PLACEHOLDER_SOURCE_ID_RE.match((source_id or "").strip()))
+
 
 def _is_no_variants_proof_valid(no_variants_reason: str | None, *,
                                 dedupe_proof: list[dict],
@@ -248,7 +265,12 @@ def _is_no_variants_proof_valid(no_variants_reason: str | None, *,
         has_basis = bool((no_variants_source_basis or "").strip())
         conf = (no_variants_confidence or "").strip().lower()
         confidence_ok = conf in ("high", "medium")
-        return has_sources and has_basis and confidence_ok
+        if not (has_sources and has_basis and confidence_ok):
+            return False
+        # Reject proof if any source_id is a recognisable placeholder
+        if any(_looks_like_placeholder_source_id(sid) for sid in no_variants_source_ids):
+            return False
+        return True
 
     if reason == "seed_out_of_scope":
         return True
