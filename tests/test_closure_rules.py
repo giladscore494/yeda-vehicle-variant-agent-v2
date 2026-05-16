@@ -28,6 +28,7 @@ import pytest
 from engine.run_next import (
     _has_dedupe_or_no_variants_proof,
     _is_no_variants_proof_valid,
+    _looks_like_placeholder_source_id,
     merge_result_into_canonical,
     run_next_model,
     run_selected_seed,
@@ -162,7 +163,7 @@ class TestModelNotSoldWithProof:
     def test_medium_confidence_resolves(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1"],
+            source_ids=["https://www.il-importer.co.il/models/x"],
             source_basis="IL market evidence: model never listed by importer.",
             confidence="medium",
         ) is True
@@ -170,7 +171,7 @@ class TestModelNotSoldWithProof:
     def test_high_confidence_resolves(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1", "src_2"],
+            source_ids=["https://www.il-importer.co.il/x", "yad2-listing-2024"],
             source_basis="Official IL importer confirmed no listing.",
             confidence="high",
         ) is True
@@ -178,7 +179,7 @@ class TestModelNotSoldWithProof:
     def test_multiple_source_ids(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1", "src_2", "src_3"],
+            source_ids=["il-importer-2024", "carbibles-il-spec-2023", "gov-il-registry"],
             source_basis="Multiple IL sources confirm absence.",
             confidence="medium",
         ) is True
@@ -192,7 +193,7 @@ class TestModelNotSoldLowConfidenceRejected:
     def test_low_confidence_rejected(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1"],
+            source_ids=["https://real-source.co.il"],
             source_basis="Some evidence.",
             confidence="low",
         ) is False
@@ -200,7 +201,7 @@ class TestModelNotSoldLowConfidenceRejected:
     def test_partial_confidence_rejected(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1"],
+            source_ids=["https://real-source.co.il"],
             source_basis="Some evidence.",
             confidence="partial",
         ) is False
@@ -208,9 +209,120 @@ class TestModelNotSoldLowConfidenceRejected:
     def test_empty_confidence_rejected(self):
         assert _proof(
             reason="model_not_sold_in_market",
-            source_ids=["src_1"],
+            source_ids=["https://real-source.co.il"],
             source_basis="Some evidence.",
             confidence="",
+        ) is False
+
+
+# ---------------------------------------------------------------------------
+# 7b. model_not_sold_in_market with placeholder source IDs is rejected
+# ---------------------------------------------------------------------------
+
+class TestPlaceholderSourceIdsRejected:
+    """_is_no_variants_proof_valid must reject placeholder source_ids for
+    model_not_sold_in_market even when all other fields are valid."""
+
+    # --- _looks_like_placeholder_source_id unit tests ---
+
+    def test_src_1_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("src_1") is True
+
+    def test_src_4_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("src_4") is True
+
+    def test_source_1_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("source_1") is True
+
+    def test_source_2_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("source_2") is True
+
+    def test_citation_1_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("citation_1") is True
+
+    def test_ref_1_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("ref_1") is True
+
+    def test_bare_digit_1_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("1") is True
+
+    def test_bare_digit_3_is_placeholder(self):
+        assert _looks_like_placeholder_source_id("3") is True
+
+    def test_url_is_not_placeholder(self):
+        assert _looks_like_placeholder_source_id("https://www.il-importer.co.il/x") is False
+
+    def test_meaningful_slug_is_not_placeholder(self):
+        assert _looks_like_placeholder_source_id("yad2-listing-2024") is False
+
+    def test_opaque_non_numeric_suffix_not_placeholder(self):
+        assert _looks_like_placeholder_source_id("il-importer-abc") is False
+
+    # --- proof-level rejection ---
+
+    def test_src_1_src_2_high_confidence_rejected(self):
+        """model_not_sold_in_market + ["src_1", "src_2"] + high is rejected."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=["src_1", "src_2"],
+            source_basis="Official IL importer confirmed no listing.",
+            confidence="high",
+        ) is False
+
+    def test_source_1_rejected(self):
+        """model_not_sold_in_market + ["source_1"] is rejected."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=["source_1"],
+            source_basis="No IL listing found.",
+            confidence="medium",
+        ) is False
+
+    def test_empty_source_ids_rejected(self):
+        """model_not_sold_in_market + [] is rejected."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=[],
+            source_basis="No IL listing found.",
+            confidence="high",
+        ) is False
+
+    def test_mixed_real_and_placeholder_rejected(self):
+        """A single placeholder among otherwise real IDs still rejects."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=["https://real-source.co.il", "src_2"],
+            source_basis="IL market evidence.",
+            confidence="high",
+        ) is False
+
+    def test_realistic_url_source_id_passes(self):
+        """model_not_sold_in_market + realistic URL source ID + medium passes."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=["https://www.il-importer.co.il/models/x"],
+            source_basis="IL market evidence: model never listed by importer.",
+            confidence="medium",
+        ) is True
+
+    def test_realistic_slug_source_id_passes(self):
+        """model_not_sold_in_market + realistic slug source ID + high passes."""
+        assert _proof(
+            reason="model_not_sold_in_market",
+            source_ids=["yad2-listing-2024", "gov-il-registry-2023"],
+            source_basis="Multiple IL sources confirm absence.",
+            confidence="high",
+        ) is True
+
+    def test_duplicate_existing_variant_only_still_requires_dedupe_proof(self):
+        """duplicate_existing_variant_only must still require dedupe_proof."""
+        assert _proof(
+            reason="duplicate_existing_variant_only",
+            dedupe_proof=[{"variant_id": "x"}],
+        ) is True
+        assert _proof(
+            reason="duplicate_existing_variant_only",
+            dedupe_proof=[],
         ) is False
 
 

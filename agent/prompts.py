@@ -358,6 +358,12 @@ Rules for no_variants_reason:
   existing variant_id in your response.
 - model_discontinued_before_market_period requires either source_ids or
   source_basis explaining why the model's end year precedes the seed year_start.
+- NEVER use placeholder source IDs such as src_1, src_2, source_1, citation_1,
+  ref_1, or bare numbers ("1", "2") in no_variants_source_ids.
+  Every ID in no_variants_source_ids MUST reference an actual source object from
+  the sources array returned in this response. If no real source supports
+  non-availability, use no_reliable_sources_found or insufficient_grounded_data
+  instead of model_not_sold_in_market.
 
 Candidate shape:
 {{
