@@ -15,11 +15,11 @@ Critical rules:
 from __future__ import annotations
 
 import copy
-import re
 from datetime import datetime, timezone
 from typing import Any, Callable
 
 from agent.runner import run_seed as _default_run_seed
+from core.source_ids import looks_like_placeholder_source_id as _looks_like_placeholder_source_id
 from engine import queue
 from engine.canonical_store import (
     load_canonical,
@@ -215,21 +215,9 @@ _NO_VARIANTS_RETRY_REASONS = frozenset({
     "blocked_by_validation",
 })
 
-# Placeholder source-ID pattern: src_1, src_2, source_1, citation_1, ref_1, "1", "2", ...
-_PLACEHOLDER_SOURCE_ID_RE = re.compile(
-    r"^(?:src|source|citation|ref)_\d+$|^\d+$",
-    re.IGNORECASE,
-)
-
-
-def _looks_like_placeholder_source_id(source_id: str) -> bool:
-    """Return True when *source_id* looks like a generated/fake placeholder.
-
-    Rejected patterns: src_1, src_2, src_3, src_4, source_1, source_2,
-    citation_1, ref_1, "1", "2", "3", and any ID matching the scheme
-    ``(src|source|citation|ref)_<digits>`` or a bare digit string.
-    """
-    return bool(_PLACEHOLDER_SOURCE_ID_RE.match((source_id or "").strip()))
+# _looks_like_placeholder_source_id is imported from core.source_ids at the top of this
+# module.  The import alias preserves the private name used throughout this file
+# and by external callers (e.g. tests) that import it from here.
 
 
 def _is_no_variants_proof_valid(no_variants_reason: str | None, *,
