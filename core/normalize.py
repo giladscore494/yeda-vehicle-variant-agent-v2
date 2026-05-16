@@ -67,13 +67,15 @@ def normalize_fuel_type(value: str) -> FuelType:
 
 def normalize_transmission(value: str) -> Transmission:
     v = clean_text(value).lower()
-    if _contains(v, "dct", "dsg", "dual clutch"):
+    # Dual-clutch / DCT variants: DSG, S tronic (Audi), Powershift (Ford/Mazda), twin clutch
+    if _contains(v, "dct", "dsg", "dual clutch", "s-tronic", "s tronic", "powershift", "twin clutch"):
         return Transmission.dual_clutch
     if _contains(v, "e-cvt", "ecvt"):
         return Transmission.e_cvt
     if "cvt" in v:
         return Transmission.cvt
-    if _contains(v, "single speed", "single-speed", "ev reduction"):
+    # Single-speed EV / direct-drive reduction units
+    if _contains(v, "single speed", "single-speed", "ev reduction", "direct drive", "direct-drive"):
         return Transmission.single_speed_ev
     if _contains(v, "manual", " mt"):
         return Transmission.manual
