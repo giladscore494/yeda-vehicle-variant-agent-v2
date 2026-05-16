@@ -255,6 +255,30 @@ Expected candidate shape rule:
 - `market_scope`: one of `IL-confirmed`, `IL-likely`, `global-reference-only`, `unknown`
 - `confidence_level`: one of `high`, `medium`, `low`
 
+==== GENERATION FIELD SOURCES (field_sources.generation) ====
+Populate `field_sources.generation` with source_ids when ANY source you consulted
+directly supports the generation, platform, or year-boundary:
+
+1. Chassis code or platform code found in a source (e.g. E46, W204, B8, MQB, F30).
+2. Official generation name stated in a source (e.g. "4th Generation", "Mk7").
+3. Explicit generation year range stated in a source.
+4. Official platform or body-generation name stated in a source.
+5. Source-backed year boundary that justifies splitting two candidates at a
+   generation transition point.
+
+If generation is derived ONLY from the known IL-market generation boundary table
+above (not directly backed by any consulted source):
+  - still return the generation value
+  - leave field_sources.generation as [] (empty list)
+  - do NOT claim high confidence solely because of the table
+  - treat as inferred/partial, not verified
+
+Do NOT leave field_sources.generation empty when the source text you consulted
+clearly mentions the chassis code, platform code, generation name, or year boundary.
+
+When a candidate is split at a generation boundary, include in field_sources.generation
+the source_ids that justify that split when available.
+
 ==== CONFIDENCE LEVELS ====
 high:
   - core fields complete (body_type, engine, transmission, drivetrain, fuel_type)

@@ -180,6 +180,46 @@ class TestGenerationFieldShape:
         v = self._build(generation=None)
         assert v["generation"]["value"] is None
 
+    def test_generation_with_source_ids_is_partial_or_verified(self):
+        """Generation with at least one source_id must NOT be status=unknown/unverified."""
+        v = self._build()  # field_sources["generation"] = ["src_1"]
+        assert v["generation"]["sources_count"] >= 1
+        assert v["generation"]["status"] in {"partial", "verified"}
+
+    def test_generation_without_source_ids_is_not_verified(self):
+        """Generation that has no source_ids must not be status=verified."""
+        cand = _make_candidate()
+        cand["field_sources"] = {}  # remove all sources including generation
+        v = _candidate_to_variant(cand, _SEED)
+        assert v["generation"]["sources_count"] == 0
+        assert v["generation"]["status"] not in {"verified"}
+
+    def test_generation_inferred_table_only_treated_as_unverified(self):
+        """When generation is present but field_sources.generation is empty (table-only
+        inference), the runner must NOT mark the generation as verified."""
+        cand = _make_candidate(generation="F30")
+        cand["field_sources"] = {
+            "body_type": ["src_1"],
+            "engine": ["src_1", "src_2"],
+            # generation intentionally absent — table-only inference
+        }
+        v = _candidate_to_variant(cand, _SEED)
+        # sources_count == 0 for generation
+        assert v["generation"]["sources_count"] == 0
+        # status must be unverified or unknown, never verified
+        assert v["generation"]["status"] in {"unverified", "unknown"}, (
+            f"Table-only generation must not be verified; got {v['generation']['status']!r}"
+        )
+
+    def test_empty_generation_remains_low_confidence(self):
+        """Generation with None value and no source_ids yields unknown/low confidence."""
+        cand = _make_candidate(generation=None)
+        cand["field_sources"] = {}  # no sources, including no generation sources
+        v = _candidate_to_variant(cand, _SEED)
+        assert v["generation"]["value"] is None
+        assert v["generation"]["status"] in {"unknown", "unverified"}
+        assert v["generation"]["confidence"] == "low"
+
 
 # ---------------------------------------------------------------------------
 # 4. market_scope and confidence_level preserved as top-level fields

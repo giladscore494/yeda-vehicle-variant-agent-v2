@@ -52,3 +52,15 @@ def test_build_retry_discovery_prompt_haval_h6_il():
     assert GOOD_IL_NAME_EXAMPLE in prompt
     assert "BAD:\n   {" in prompt
     assert "}" in prompt
+
+
+def test_prompt_generation_field_sources_rule():
+    """Prompt must contain explicit generation field_sources rules."""
+    prompt = build_discovery_prompt(SEED_HAVAL_H6, market="IL")
+    # The generation field_sources section must be present
+    assert "GENERATION FIELD SOURCES" in prompt
+    assert "field_sources.generation" in prompt
+    # Instruction to leave empty when table-only inference
+    assert "inferred" in prompt.lower() or "table" in prompt.lower()
+    # Instruction to populate when chassis/platform found in source
+    assert "chassis" in prompt.lower() or "platform code" in prompt.lower()
