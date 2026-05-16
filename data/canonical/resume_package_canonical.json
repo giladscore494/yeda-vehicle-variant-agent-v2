@@ -6,7 +6,7 @@
     "schema_version": "batch_state_v1",
     "market": "IL",
     "created_at": "2026-05-08T16:44:55.429137+00:00",
-    "updated_at": "2026-05-16T19:50:36.696059+00:00",
+    "updated_at": "2026-05-16T19:50:49.827146+00:00",
     "last_batch_id": "e92f0fef-de4e-42a7-95c1-e7d10c53cb6b",
     "total_seeds": 993,
     "processed_seed_ids": [
@@ -1448,16 +1448,16 @@
         "no_variants_reason": "model_not_sold_in_market",
         "marked_processed": true,
         "status": "resolved",
-        "resolved_at": "2026-05-16T19:50:36.696107+00:00",
+        "resolved_at": "2026-05-16T19:50:49.827200+00:00",
         "zero_variant_resolution": {
           "resolved": true,
           "reason": "model_not_sold_in_market",
           "proof_status": "proven",
           "source_ids": [
-            "src_walla_rechev",
+            "src_walla_cars",
             "src_autoboom_il"
           ],
-          "source_basis": "Multiple Israeli automotive sources, including Walla Rechev and Autoboom, explicitly state that the Geely Coolray is not sold in Israel ('לא נמכר בארץ' / 'לא זמין בישראל'). Geely's official presence in Israel during the 2023-2026 period focuses on other models such as the Geometry C, EX5, and Starray.",
+          "source_basis": "Multiple Israeli automotive sources explicitly state that the Geely Coolray is not sold in Israel.",
           "confidence": "high"
         }
       },
@@ -438588,7 +438588,7 @@
     "needs_retry_seeds": 3,
     "variants": 1566,
     "total_seeds": 993,
-    "last_updated_at": "2026-05-16T19:50:36.708093+00:00"
+    "last_updated_at": "2026-05-16T19:50:49.840248+00:00"
   },
   "_candidate_source": "merged_candidate",
   "unresolved": [],
